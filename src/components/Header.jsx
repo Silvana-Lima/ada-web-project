@@ -1,4 +1,4 @@
-import { ChevronDownIcon } from '@chakra-ui/icons'
+import { ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import {
   Box,
   Button,
@@ -15,6 +15,7 @@ import {
   Portal,
   Text,
 } from '@chakra-ui/react'
+import { FaInstagram } from 'react-icons/fa'
 
 import logoAdaFuscia from '../assets/logo-fucsia.png'
 
@@ -26,12 +27,12 @@ export const Header = () => {
         px={'48px'}
         py={'8px'}
         position={'relative'}
-        bg={'tomato'}
+        bg="#ff7d00"
       >
-        <Box>
+        <Flex alignItems="center" gap={'8px'}>
+          <FaInstagram />
           Seguinos en nuestro Instagram y no te pierdas de las últimas novedades
-        </Box>
-
+        </Flex>
         <CloseButton position={'absolute'} right={'48px'} />
       </Flex>
       <Flex
@@ -47,31 +48,55 @@ export const Header = () => {
         <Grid
           columns={6}
           templateColumns="repeat(6, auto)"
-          gap={10}
+          gap={'32px'}
           alignItems="center"
         >
-          <Link maxW={'max-content'}>Sobre nosotros</Link>
+          <Link maxW={'max-content'} px={'8px'} py={'10px'}>
+            Sobre nosotros
+          </Link>
           <Menu>
-            <MenuButton rightIcon={<ChevronDownIcon />} maxW={'max-content'}>
-              Oferta educativa
+            <MenuButton maxW={'max-content'} px={'8px'} py={'10px'}>
+              Oferta educativa <ChevronDownIcon pl={'4px'} />
             </MenuButton>
             <Portal>
               <MenuList p={'24px'}>
                 <Text fontWeight={'bold'}>Carreras</Text>
-                <MenuItem>Desarrollo web front-end</MenuItem>
-                <MenuItem>Desarrollo web back-end</MenuItem>
+                <MenuItem icon={<ChevronRightIcon />}>
+                  Desarrollo web front-end
+                </MenuItem>
+                <MenuItem icon={<ChevronRightIcon />}>
+                  Desarrollo web back-end
+                </MenuItem>
                 <Text fontWeight={'bold'}>Cursos</Text>
-                <MenuItem>Diseño UX/UI</MenuItem>
-                <MenuItem>Introducción al desarrollo web front-end</MenuItem>
-                <MenuItem>Analista QA</MenuItem>
-                <MenuItem>Programación en Pyton</MenuItem>
+                <MenuItem icon={<ChevronRightIcon />}>Diseño UX/UI</MenuItem>
+                <MenuItem icon={<ChevronRightIcon />}>
+                  Introducción al desarrollo web front-end
+                </MenuItem>
+                <MenuItem icon={<ChevronRightIcon />}>Analista QA</MenuItem>
+                <MenuItem icon={<ChevronRightIcon />}>
+                  Programación en Pyton
+                </MenuItem>
               </MenuList>
             </Portal>
           </Menu>
-          <Link maxW={'max-content'}>Blog</Link>
-          <Link maxW={'max-content'}>Contrata talento</Link>
-          <Link maxW={'max-content'}>Colaborar</Link>
-          <Button>Incribite ahora</Button>
+          <Link maxW={'max-content'} px={'8px'} py={'10px'}>
+            Blog
+          </Link>
+          <Link maxW={'max-content'} px={'8px'} py={'10px'}>
+            Contrata talento
+          </Link>
+          <Link
+            maxW={'max-content'}
+            px={'8px'}
+            py={'10px'}
+            color={'#ff7d00'}
+            textDecoration="underline"
+          >
+            Colaborar
+          </Link>
+          <Button bg={'#cd0055'} color={'white'}>
+            Incribite ahora
+          </Button>
         </Grid>
       </Flex>
     </Container>
