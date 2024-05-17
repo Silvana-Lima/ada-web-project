@@ -43,7 +43,7 @@ export const Footer = () => {
         </GridItem>
         <GridItem colSpan={1} justifySelf={['center', 'center', 'end']}>
           <VStack alignItems={'center'}>
-            <Image src={imageFooter} alt="Logo Ada" />
+            <Image src={imageFooter} alt="Logo Ada" h={'185px'} />
             <HStack>
               <IconLink
                 href="https://www.instagram.com/adaitw/"
