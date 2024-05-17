@@ -2,7 +2,6 @@ import { ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import {
   Box,
   Button,
-  CloseButton,
   Container,
   Flex,
   Grid,
@@ -15,26 +14,15 @@ import {
   Portal,
   Text,
 } from '@chakra-ui/react'
-import { FaInstagram } from 'react-icons/fa'
 
 import logoAdaFuscia from '../assets/logo-fucsia.png'
+import { InstagramCta } from './InstagramCta'
 
 export const Header = () => {
   return (
     <Container maxW={'1440'}>
-      <Flex
-        justifyContent={'center'}
-        px={'48px'}
-        py={'8px'}
-        position={'relative'}
-        bg="#ff7d00"
-      >
-        <Flex alignItems="center" gap={'8px'}>
-          <FaInstagram />
-          Seguinos en nuestro Instagram y no te pierdas de las últimas novedades
-        </Flex>
-        <CloseButton position={'absolute'} right={'48px'} />
-      </Flex>
+      <InstagramCta />
+
       <Flex
         justifyContent={'space-between'}
         alignItems="center"
