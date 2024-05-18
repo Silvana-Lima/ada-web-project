@@ -1,10 +1,10 @@
-import { CloseButton, Flex, useDisclosure } from '@chakra-ui/react'
+import { CloseButton, Container, Flex, useDisclosure } from '@chakra-ui/react'
 import { FaInstagram } from 'react-icons/fa'
 
 export const InstagramCta = () => {
   const { isOpen, onClose } = useDisclosure({ defaultIsOpen: true })
   return (
-    <>
+    <Container maxW={'1440'}>
       {isOpen && (
         <Flex
           justifyContent={'center'}
@@ -21,6 +21,6 @@ export const InstagramCta = () => {
           <CloseButton position={'absolute'} right={'48px'} onClick={onClose} />
         </Flex>
       )}
-    </>
+    </Container>
   )
 }

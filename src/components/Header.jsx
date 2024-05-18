@@ -16,13 +16,12 @@ import {
 } from '@chakra-ui/react'
 
 import logoAdaFuscia from '../assets/logo-fucsia.png'
-import { InstagramCta } from './InstagramCta'
+import { InstagramCta } from '../components/InstagramCta'
 
 export const Header = () => {
   return (
     <Container maxW={'1440'} p={0}>
       <InstagramCta />
-
       <Flex
         justifyContent={'space-between'}
         alignItems="center"
