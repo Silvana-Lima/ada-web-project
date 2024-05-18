@@ -1,6 +1,6 @@
 import { Button, Container, Heading, Text, VStack } from '@chakra-ui/react'
 
-import imgFondo from '../assets/fondo-home.png'
+import imgFondo from '@/fondo-home.png'
 
 export const Banner = () => {
   return (
@@ -8,7 +8,7 @@ export const Banner = () => {
       backgroundImage={imgFondo}
       bgRepeat={'no-repeat'}
       bgSize={'cover'}
-      h={'100vh'}
+      minH={'100vh'}
       maxW={['100%', '1440px']}
       display={'flex'}
       alignItems={'center'}

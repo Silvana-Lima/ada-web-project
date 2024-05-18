@@ -20,7 +20,7 @@ import { InstagramCta } from './InstagramCta'
 
 export const Header = () => {
   return (
-    <Container maxW={'1440'}>
+    <Container maxW={'1440'} p={0}>
       <InstagramCta />
 
       <Flex
