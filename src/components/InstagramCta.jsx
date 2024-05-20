@@ -13,12 +13,22 @@ export const InstagramCta = () => {
           position={'relative'}
           bg="#ff7d00"
         >
-          <Flex alignItems="center" gap={'8px'}>
+          <Flex
+            alignItems="center"
+            gap={'8px'}
+            fontWeight={'bold'}
+            color={'gray.0'}
+          >
             <FaInstagram />
             Seguinos en nuestro Instagram y no te pierdas de las últimas
             novedades
           </Flex>
-          <CloseButton position={'absolute'} right={'48px'} onClick={onClose} />
+          <CloseButton
+            position={'absolute'}
+            right={'48px'}
+            onClick={onClose}
+            color={'orange.800'}
+          />
         </Flex>
       )}
     </Container>

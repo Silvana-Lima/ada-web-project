@@ -76,7 +76,7 @@ export const Header = () => {
             maxW={'max-content'}
             px={'8px'}
             py={'10px'}
-            color={'#ff7d00'}
+            color={'orange.400'}
             textDecoration="underline"
           >
             Colaborar

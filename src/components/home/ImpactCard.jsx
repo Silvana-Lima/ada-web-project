@@ -14,13 +14,18 @@ export const ImpactCard = ({ image, number, description }) => {
       borderWidth="1px"
       borderRadius="md"
       color={'#4A4A4A'}
-      p={5}
+      py={5}
     >
       <Image src={image} />
-      <Text fontSize={['30px', '30px', '30px', '36px']} fontWeight={'bold'}>
+      <Text fontSize={'h2'} fontWeight={'bold'} color={'gray.800'}>
         {number}
       </Text>
-      <Text align={'center'}>{description}</Text>
+      <Text fontSize={'midTxt1'} align={'center'}>
+        {description}
+      </Text>
+      {/* <Text fontSize={['30px', '30px', '30px', '36px']} fontWeight={'bold'}>
+        {number}
+      </Text> */}
     </Container>
   )
 }
