@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'klavikaBold';
+  src: url('/src/assets/fonts/klavika-bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'klavikaMedium';
+  src: url('/src/assets/fonts/klavika-medium.otf');
+  font-weight: semibold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'klavikaLight';
+  src: url('/src/assets/fonts/klavika-light.otf');
+  font-weight: normal;
+  font-style: normal;
+}

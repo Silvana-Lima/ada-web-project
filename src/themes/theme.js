@@ -4,14 +4,17 @@ const theme = extendTheme({
   // Tamaño de fuentes
   fontSizes: {
     h1: '56px',
-    h2: '48px',
-    h3: '40px',
-    h4: '32px',
-    h5: '24px',
-    h6: '20px',
+    h2: '36px',
+    h3: '34px',
+    h4: '24px',
     largeTxt: '24px',
     midTxt: '20px',
     midTxt1: '18px',
+  },
+  fonts: {
+    heading: "'klavikaBold', sans-serif",
+    text: "'klavikaLight', sans-serif",
+    kMid: "'klavikaMedium', sans-serif",
   },
   // Peso de fuente
   fontWeights: {
@@ -50,7 +53,7 @@ const theme = extendTheme({
     global: {
       body: {
         color: 'gray.600',
-        fontFamily: 'Klavika, sans-serif',
+        fontFamily: 'klavikaLight, sans-serif',
       },
     },
   },

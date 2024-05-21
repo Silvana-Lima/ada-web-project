@@ -27,24 +27,22 @@ export const Impact = () => {
         pb={[5, 5, 0]}
       >
         <VStack
-          // maxWidth={['100%', '100%', '100%', '38%']}
-          maxW={'448px'}
+          maxWidth={['100%', '100%', '100%', '38%']}
+          // maxW={'448px'}
           justifyContent={'center'}
           my={[5, 5, 5, 0]}
           mr={[0, 5, 5, 8]}
         >
           <Heading
             as="h1"
-            fontSize={'h1'}
-            // fontSize={['24px', '24px', '24px', '50px']}
+            fontSize={['largeTxt', 'largeTxt', 'largeTxt', 'h1']}
             color={'gray.800'}
             textAlign={['center', 'center', 'center', 'start']}
           >
             Nuestro impacto en datos
           </Heading>
           <Text
-            fontSize={'largeTxt'}
-            // fontSize={['16px', '16px', '16px', '24px']}
+            fontSize={['midTxt1', 'midTxt1', 'midTxt1', 'largeTxt']}
             align={['center', 'center', 'center', 'start']}
           >
             Capacitamos en Tecnología a mujeres y feminidades en Latinoamérica

@@ -36,6 +36,7 @@ export const Banner = () => {
           px={['8px', '8px', '32px']}
           py={['8px', '8px', '16px']}
           fontSize={['14px', '14px', '14px', '24px']}
+          fontFamily={'heading'}
         >
           Conoce nuestras capacitaciones
         </Button>
