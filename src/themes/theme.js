@@ -18,11 +18,13 @@ const theme = extendTheme({
     largeTxt: { base: '16px', lg: '20px', xl: '24px' },
     midTxt: { base: '14px', lg: '18px', xl: '20px' },
     midTxt1: { base: '14px', lg: '16px', xl: '18px' },
+    smTxt: { base: '12px', lg: '14px', xl: '16px' },
   },
   fonts: {
     heading: "'klavikaBold', sans-serif",
     body: "'klavikaLight', sans-serif",
     kMid: "'klavikaMedium', sans-serif",
+    kRegItalic: "'klavikaRegularItalic', sans-serif",
   },
   // Peso de fuente
   fontWeights: {

@@ -36,7 +36,15 @@ export const Footer = () => {
               />
             </Link>
 
-            <Text textAlign={['center', 'center', 'start']}>
+            <Text
+              textAlign={['center', 'center', 'start']}
+              fontSize={[
+                'midTxt.base',
+                'midTxt.base',
+                'largeTxt.lg',
+                'largeTxt.xl',
+              ]}
+            >
               Empoderamos mujeres a través de la tecnología.
             </Text>
           </VStack>
@@ -68,7 +76,16 @@ export const Footer = () => {
             </HStack>
             <HStack>
               <LiaCopyright />
-              <Text textAlign={'center'}>
+              <Text
+                textAlign={'center'}
+                fontSize={[
+                  'midTxt1.base',
+                  'midTxt1.base',
+                  'midTxt1.lg',
+                  'midTxt1.xl',
+                ]}
+              >
+                {' '}
                 2024 Ada ITW, todos los derechos reservados.
               </Text>
             </HStack>

@@ -25,7 +25,14 @@ export const Banner = () => {
         <Heading as="h1" fontSize={['h1.base', 'h1.base', 'h1.lg', 'h1.xl']}>
           Empoderamos mujeres a través de la tecnología{' '}
         </Heading>
-        <Text fontSize={['14px', '14px', '14px', '24px']}>
+        <Text
+          fontSize={[
+            'largeTxt.base',
+            'largeTxt.base',
+            'largeTxt.lg',
+            'largeTxt.xl',
+          ]}
+        >
           Brindamos capacitaciones en tecnología y potenciamos a mujeres y
           feminidades para que lideren la revolución tecnológica y den forma a
           un mañana inclusivo.
@@ -35,7 +42,12 @@ export const Banner = () => {
           color={'white'}
           px={['8px', '8px', '32px']}
           py={['8px', '8px', '16px']}
-          fontSize={['14px', '14px', '14px', '24px']}
+          fontSize={[
+            'largeTxt.base',
+            'largeTxt.base',
+            'largeTxt.lg',
+            'largeTxt.xl',
+          ]}
           fontFamily={'heading'}
         >
           Conoce nuestras capacitaciones
