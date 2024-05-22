@@ -22,7 +22,7 @@ export const Banner = () => {
         alignItems={'flex-start'}
         gap={[5, 7]}
       >
-        <Heading as="h1" fontSize={['24px', '24px', '24px', '58px']}>
+        <Heading as="h1" fontSize={['h1.base', 'h1.base', 'h1.lg', 'h1.xl']}>
           Empoderamos mujeres a través de la tecnología{' '}
         </Heading>
         <Text fontSize={['14px', '14px', '14px', '24px']}>

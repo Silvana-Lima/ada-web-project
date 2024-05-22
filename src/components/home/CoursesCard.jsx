@@ -17,37 +17,50 @@ export const CoursesCard = ({ title, career, description, date, duration }) => {
     <Card maxW="sm">
       <CardBody>
         <Stack mt="6" spacing="3">
-          <Heading size="md">{title}</Heading>
-          <Divider />
-          <Text fontWeight={'bold'}>{career} </Text>
-          <Text>{description}</Text>
+          <Heading as={'h4'} size="md" fontFamily={'kMid'} fontSize={['26px']}>
+            {title}
+          </Heading>
+          <Divider borderColor={'#222222'} borderWidth={'1.5px'} />
+          <Text fontSize={'midTxt'} color={'magenta.400'}>
+            {career}{' '}
+          </Text>
+          <Text fontSize={'midTxt1'}>{description}</Text>
           <HStack>
             <Icon
               icon="clarity:calendar-line"
-              color="#cd0055"
-              fontSize={'40px'}
+              color={'#cd0055'}
+              fontSize={'26px'}
             />
-            <Text>{date}</Text>
+            <Text fontSize={'16px'}>{date}</Text>
           </HStack>
           <HStack>
-            <Icon icon="ph:clock" color="#cd0055" fontSize={'40px'} />
-            <Text>{duration} </Text>
+            <Icon icon="ph:clock" color="#cd0055" fontSize={'26px'} />
+            <Text fontSize={'16px'}>{duration} </Text>
           </HStack>
 
           <HStack>
             <Icon
               icon="pepicons-print:dollar"
               color="#cd0055"
-              fontSize={'40px'}
+              fontSize={'26px'}
             />
-            <Text>Distintos métodos de financiación disponibles</Text>
+            <Text fontSize={'16px'}>
+              Distintos métodos de financiación disponibles
+            </Text>
           </HStack>
         </Stack>
       </CardBody>
 
       <CardFooter>
-        <Button variant="solid" colorScheme="blue">
-          Inscribite ahora
+        <Button
+          variant="solid"
+          colorScheme="blue"
+          fontFamily={'kMid'}
+          fontSize={'midTxt1'}
+          w={'100%'}
+          bg={'#222222'}
+        >
+          Inscríbete ahora
         </Button>
       </CardFooter>
     </Card>

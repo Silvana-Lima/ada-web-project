@@ -1,19 +1,27 @@
 import { extendTheme } from '@chakra-ui/react'
 
+const breakpoints = {
+  sm: '30em', // 480px
+  md: '48em', // 768px
+  lg: '62em', // 992px
+  xl: '80em', // 1280px
+}
+
 const theme = extendTheme({
+  breakpoints,
   // Tamaño de fuentes
   fontSizes: {
-    h1: '56px',
-    h2: '36px',
-    h3: '34px',
-    h4: '24px',
-    largeTxt: '24px',
-    midTxt: '20px',
-    midTxt1: '18px',
+    h1: { base: '24px', lg: '36px', xl: '56px' },
+    h2: { base: '20px', lg: '32px', xl: '36px' },
+    h3: { base: '16px', lg: '24px', xl: '34px' },
+    h4: { base: '16px', lg: '20px', xl: '26px' },
+    largeTxt: { base: '16px', lg: '20px', xl: '24px' },
+    midTxt: { base: '14px', lg: '18px', xl: '20px' },
+    midTxt1: { base: '14px', lg: '16px', xl: '18px' },
   },
   fonts: {
     heading: "'klavikaBold', sans-serif",
-    text: "'klavikaLight', sans-serif",
+    body: "'klavikaLight', sans-serif",
     kMid: "'klavikaMedium', sans-serif",
   },
   // Peso de fuente
@@ -53,7 +61,6 @@ const theme = extendTheme({
     global: {
       body: {
         color: 'gray.600',
-        fontFamily: 'klavikaLight, sans-serif',
       },
     },
   },
