@@ -37,19 +37,7 @@ export const Banner = () => {
           feminidades para que lideren la revolución tecnológica y den forma a
           un mañana inclusivo.
         </Text>
-        <Button
-          bg={'#cd0055'}
-          color={'white'}
-          px={['8px', '8px', '32px']}
-          py={['8px', '8px', '16px']}
-          fontSize={[
-            'largeTxt.base',
-            'largeTxt.base',
-            'largeTxt.lg',
-            'largeTxt.xl',
-          ]}
-          fontFamily={'heading'}
-        >
+        <Button variant={'button-primary'} size={'lg'}>
           Conoce nuestras capacitaciones
         </Button>
       </VStack>

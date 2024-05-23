@@ -1,4 +1,5 @@
 import { extendTheme } from '@chakra-ui/react'
+//import type { StyleFunctionProps } from '@chakra-ui/styled-system'
 
 const breakpoints = {
   sm: '30em', // 480px
@@ -42,7 +43,7 @@ const theme = extendTheme({
       0: '#FFFFFF',
       400: '#bcbcbc',
       600: '#4a4a4a',
-      800: '391f1f',
+      800: '#222222',
     },
     orange: {
       200: '#ffbf7d',
@@ -72,6 +73,46 @@ const theme = extendTheme({
       baseStyle: {
         px: 0,
         py: 0,
+      },
+    },
+    // Botón customizado
+    Button: {
+      baseStyle: {},
+      sizes: {
+        lg: {
+          fontSize: [
+            'largeTxt.base',
+            'largeTxt.base',
+            'largeTxt.lg',
+            'largeTxt.xl',
+          ],
+          px: ['8px', '8px', '32px'],
+          py: ['8px', '8px', '16px'],
+        },
+        md: {
+          fontSize: ['midTxt.base', 'midTxt.base', 'midTxt.lg', 'midTxt.xl'],
+          px: ['8px', '8px', '8px', '16px'],
+          py: ['4px', '4px', '8px', '8px'],
+        },
+      },
+      variants: {
+        'button-primary': {
+          bg: 'magenta.400',
+          color: 'gray.0',
+          fontFamily: 'heading',
+          _hover: { bg: 'magenta.600' },
+        },
+        'button-secondary': {
+          bg: 'gray.800',
+          color: 'gray.0',
+          fontFamily: 'heading',
+          _hover: { bg: 'gray.600' },
+        },
+      },
+      defaultProps: {
+        size: 'md',
+        variant: 'button-primary',
+        fontFamily: 'heading',
       },
     },
   },

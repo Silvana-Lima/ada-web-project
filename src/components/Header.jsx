@@ -83,8 +83,6 @@ export const Header = () => {
             Colaborar
           </Link>
           <Button
-            bg={'#cd0055'}
-            color={'white'}
             fontSize={['midTxt.base', 'midTxt.base', 'midTxt.lg', 'midTxt.xl']}
           >
             Incribite ahora

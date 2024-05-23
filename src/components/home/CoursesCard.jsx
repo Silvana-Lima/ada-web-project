@@ -99,14 +99,7 @@ export const CoursesCard = ({ title, career, description, date, duration }) => {
       </CardBody>
 
       <CardFooter>
-        <Button
-          variant="solid"
-          colorScheme="blue"
-          fontFamily={'kMid'}
-          fontSize={'midTxt1'}
-          w={'100%'}
-          bg={'#222222'}
-        >
+        <Button variant="button-secondary" size={'md'} w={'100%'}>
           Inscríbete ahora
         </Button>
       </CardFooter>
