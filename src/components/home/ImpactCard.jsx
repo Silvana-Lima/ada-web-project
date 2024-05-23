@@ -1,7 +1,10 @@
-import { Container, Image, Text } from '@chakra-ui/react'
+import { Container, Text } from '@chakra-ui/react'
+import { useTheme } from '@chakra-ui/react'
+import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
 
-export const ImpactCard = ({ image, number, description }) => {
+export const ImpactCard = ({ icon, number, description }) => {
+  const theme = useTheme()
   return (
     <Container
       maxW={'346px'}
@@ -16,7 +19,13 @@ export const ImpactCard = ({ image, number, description }) => {
       color={'#4A4A4A'}
       p={5}
     >
-      <Image src={image} />
+      <Icon
+        icon={icon}
+        style={{
+          fontSize: `calc(${theme.fontSizes.h2.xl} + 2vw)`,
+          color: '#ff7d00',
+        }}
+      />
       <Text
         fontSize={['h2.base', 'h2.base', 'h2.lg', 'h2.xl']}
         fontWeight={'bold'}
@@ -35,7 +44,7 @@ export const ImpactCard = ({ image, number, description }) => {
 }
 
 ImpactCard.propTypes = {
-  image: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 }

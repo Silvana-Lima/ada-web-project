@@ -1,10 +1,5 @@
 import { Container, Grid, Heading, Text, VStack } from '@chakra-ui/react'
 
-import dolar from '@/dolar.png'
-import hands from '@/hands.png'
-import happyFace from '@/happy-face.png'
-import peopleIcon from '@/people.png'
-
 import { ImpactCard } from './ImpactCard'
 
 export const Impact = () => {
@@ -65,22 +60,22 @@ export const Impact = () => {
           gap={4}
         >
           <ImpactCard
-            image={peopleIcon}
+            icon={'pepicons-print:people'}
             number={'+2.100'}
             description={'Egresadas en nuestras capacitaciones'}
           />
           <ImpactCard
-            image={hands}
+            icon={'pepicons-print:handshake'}
             number={'+100'}
             description={'Empresas contratantes'}
           />
           <ImpactCard
-            image={dolar}
+            icon={'pepicons-print:dollar'}
             number={'+700 USD'}
             description={'Salario promedio mensual de nuestras egresAdas'}
           />
           <ImpactCard
-            image={happyFace}
+            icon={'pepicons-print:face-smiling'}
             number={'+90%'}
             description={'Satisfacción al terminar la capacitación'}
           />
