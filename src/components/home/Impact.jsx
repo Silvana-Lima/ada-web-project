@@ -35,14 +35,19 @@ export const Impact = () => {
         >
           <Heading
             as="h1"
-            fontSize={['largeTxt', 'largeTxt', 'largeTxt', 'h1']}
+            fontSize={['h1.base', 'h1.base', 'h1.lg', 'h1.xl']}
             color={'gray.800'}
-            textAlign={['center', 'center', 'center', 'start']}
+            textAlign={['center', 'center', 'center', 'left']}
           >
             Nuestro impacto en datos
           </Heading>
           <Text
-            fontSize={['midTxt1', 'midTxt1', 'midTxt1', 'largeTxt']}
+            fontSize={[
+              'largeTxt.xl.base',
+              'largeTxt.base',
+              'largeTxt.lg',
+              'largeTxt.xl',
+            ]}
             align={['center', 'center', 'center', 'start']}
           >
             Capacitamos en Tecnología a mujeres y feminidades en Latinoamérica

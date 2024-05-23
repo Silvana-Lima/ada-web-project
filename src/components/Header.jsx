@@ -42,7 +42,7 @@ export const Header = () => {
           templateColumns="repeat(6, auto)"
           gap={'32px'}
           alignItems="center"
-          fontSize={'midTxt'}
+          fontSize={['midTxt.base', 'midTxt.base', 'midTxt.lg', 'midTxt.xl']}
         >
           <Link maxW={'max-content'} px={'8px'} py={'10px'}>
             Sobre nosotros
@@ -65,7 +65,9 @@ export const Header = () => {
           >
             Colaborar
           </Link>
-          <Button bg={'#cd0055'} color={'white'} fontSize={'midTxt'}>
+          <Button
+            fontSize={['midTxt.base', 'midTxt.base', 'midTxt.lg', 'midTxt.xl']}
+          >
             Incribite ahora
           </Button>
         </Grid>

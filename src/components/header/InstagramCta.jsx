@@ -16,8 +16,14 @@ export const InstagramCta = () => {
           <Flex
             alignItems="center"
             gap={'8px'}
-            fontWeight={'bold'}
+            fontFamily={'kMid'}
             color={'gray.0'}
+            fontSize={[
+              'midTxt1.base',
+              'midTxt1.base',
+              'midTxt1.lg',
+              'midTxt1.lg',
+            ]}
           >
             <FaInstagram />
             Seguinos en nuestro Instagram y no te pierdas de las últimas
