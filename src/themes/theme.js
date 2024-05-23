@@ -116,6 +116,13 @@ const theme = extendTheme({
       },
     },
   },
+  space: {
+    spacingXl: { base: '32px', lg: '32px', xl: '48px' },
+    spacingL: { base: '24px', lg: '24px', xl: '24px' },
+    spacingM: { base: '16px', lg: '16px', xl: '16px' },
+    spacingS: { base: '8px', lg: '8px', xl: '16px' },
+    spacingXs: { base: '4px', lg: '4px', xl: '8px' },
+  },
 })
 
 export default theme
