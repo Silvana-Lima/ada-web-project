@@ -1,4 +1,3 @@
-import { ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import {
   Box,
   Button,
@@ -7,21 +6,20 @@ import {
   Grid,
   Image,
   Link,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  Portal,
-  Text,
+  Show,
 } from '@chakra-ui/react'
 
 import logoAdaFuscia from '../assets/logo-fucsia.png'
-import { InstagramCta } from '../components/InstagramCta'
+import { BurgerMenu } from './header/BurgerMenu'
+import { EducationMenu } from './header/EducationMenu'
+import { InstagramCta } from './header/InstagramCta'
 
 export const Header = () => {
   return (
     <Container maxW={'1440'} p={0}>
+      {/* Instagram - llamada a la acción */}
       <InstagramCta />
+
       <Flex
         justifyContent={'space-between'}
         alignItems="center"
@@ -29,9 +27,16 @@ export const Header = () => {
         px={'48px'}
         py={'16px'}
       >
+        {/* Logo */}
         <Box>
           <Image src={logoAdaFuscia} alt="Logo ADA" />
         </Box>
+
+        {/* menu hamburguesa */}
+        <Show breakpoint="(max-width: 360px)">
+          <BurgerMenu />
+        </Show>
+
         <Grid
           columns={6}
           templateColumns="repeat(6, auto)"
@@ -42,31 +47,9 @@ export const Header = () => {
           <Link maxW={'max-content'} px={'8px'} py={'10px'}>
             Sobre nosotros
           </Link>
-          <Menu>
-            <MenuButton maxW={'max-content'} px={'8px'} py={'10px'}>
-              Oferta educativa <ChevronDownIcon pl={'4px'} />
-            </MenuButton>
-            <Portal>
-              <MenuList p={'24px'}>
-                <Text fontWeight={'bold'}>Carreras</Text>
-                <MenuItem icon={<ChevronRightIcon />}>
-                  Desarrollo web front-end
-                </MenuItem>
-                <MenuItem icon={<ChevronRightIcon />}>
-                  Desarrollo web back-end
-                </MenuItem>
-                <Text fontWeight={'bold'}>Cursos</Text>
-                <MenuItem icon={<ChevronRightIcon />}>Diseño UX/UI</MenuItem>
-                <MenuItem icon={<ChevronRightIcon />}>
-                  Introducción al desarrollo web front-end
-                </MenuItem>
-                <MenuItem icon={<ChevronRightIcon />}>Analista QA</MenuItem>
-                <MenuItem icon={<ChevronRightIcon />}>
-                  Programación en Pyton
-                </MenuItem>
-              </MenuList>
-            </Portal>
-          </Menu>
+          {/* Ofertas educativas */}
+          <EducationMenu />
+
           <Link maxW={'max-content'} px={'8px'} py={'10px'}>
             Blog
           </Link>
