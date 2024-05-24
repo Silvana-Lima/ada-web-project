@@ -12,8 +12,8 @@ export const Impact = () => {
       flexDirection={['column', 'column', 'column', 'row']}
       justifyContent={'center'}
       alignItems={'center'}
-      p={5}
-      bg={'red'}
+      p={[0, 0, 5, 5]}
+      py={[5, 5, 0, 0]}
     >
       <VStack
         maxWidth={['100%', '100%', '100%', '38%']}
