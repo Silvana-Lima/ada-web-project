@@ -18,6 +18,7 @@ export const ImpactCard = ({ icon, number, description }) => {
       borderRadius="md"
       color={'#4A4A4A'}
       p={5}
+      _hover={{ boxShadow: 'lg' }}
     >
       <Icon
         icon={icon}
