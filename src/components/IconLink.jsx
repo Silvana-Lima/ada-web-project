@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 export const IconLink = ({ icon, ...props }) => {
   return (
     <Link
-      color={'#d07efc'}
+      color={'purple.400'}
       fontSize={'35px'}
-      _hover={{ color: '#eac3ff' }}
+      _hover={{ color: 'purple.200' }}
       {...props}
     >
       {icon}

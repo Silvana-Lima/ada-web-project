@@ -116,6 +116,7 @@ const theme = extendTheme({
       },
     },
   },
+  // Tamaños de espaciado
   space: {
     spacingXl: { base: '32px', lg: '32px', xl: '48px' },
     spacingL: { base: '24px', lg: '24px', xl: '24px' },
