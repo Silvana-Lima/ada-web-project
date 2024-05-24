@@ -1,4 +1,5 @@
 import {
+  Icon,
   IconButton,
   Menu,
   MenuButton,
@@ -14,12 +15,14 @@ export const BurgerMenu = () => {
       <MenuButton
         as={IconButton}
         aria-label="Options"
-        icon={<RxHamburgerMenu />}
+        icon={<Icon as={RxHamburgerMenu} boxSize="32px" />}
         variant="unstyled"
         border="none"
         boxShadow="none"
         color={'magenta.400'}
-        size="lg"
+        size="xl"
+        display="flex"
+        justifyContent="flex-end"
       />
       <MenuList>
         <MenuItem>Sobre nosotros</MenuItem>
