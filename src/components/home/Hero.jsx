@@ -1,26 +1,53 @@
-import { Button, Container, Heading, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Container, Heading, Text, VStack } from '@chakra-ui/react'
 
-import imgFondo from '@/fondo-home.png'
+import bgVideo from '@/mujer-programacion.mp4'
 
 export const Hero = () => {
   return (
     <Container
-      backgroundImage={imgFondo}
-      bgRepeat={'no-repeat'}
-      bgSize={'cover'}
-      bgPosition={['-560px', '0']}
+      position="relative"
       minH={'100vh'}
       maxW={['100%', '1440px']}
       display={'flex'}
       alignItems={'center'}
       color={'#ffffff'}
+      overflow="hidden"
     >
+      <Box
+        as="video"
+        autoPlay
+        loop
+        muted
+        src={bgVideo}
+        type="video/mp4"
+        position="absolute"
+        top={0}
+        left={0}
+        width="100%"
+        height="100%"
+        objectFit="cover"
+        zIndex={-2}
+      />
+
+      <Box
+        position="absolute"
+        top={0}
+        left={0}
+        width="100%"
+        height="100%"
+        bgGradient="linear(to-t, rgba(0,0,0,0.30), rgba(158,0,70,0.16))"
+        zIndex={-1}
+        pointerEvents="none"
+      />
+
       <VStack
         maxW={['60%', '50%']}
         h={'50%'}
         marginLeft={['6%', '10%']}
         alignItems={'flex-start'}
         gap={[5, 7]}
+        position="relative"
+        zIndex={1}
       >
         <Heading as="h1" fontSize={['h1.base', 'h1.base', 'h1.lg', 'h1.xl']}>
           Empoderamos mujeres a través de la tecnología{' '}
