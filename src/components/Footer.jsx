@@ -1,6 +1,5 @@
 import { Grid, GridItem, HStack, Image, Text, VStack } from '@chakra-ui/react'
 import {
-  LiaCopyright,
   LiaFacebook,
   LiaInstagram,
   LiaLinkedin,
@@ -75,7 +74,6 @@ export const Footer = () => {
               />
             </HStack>
             <HStack>
-              <LiaCopyright />
               <Text
                 textAlign={'center'}
                 fontSize={[
@@ -86,7 +84,7 @@ export const Footer = () => {
                 ]}
               >
                 {' '}
-                2024 Ada ITW, todos los derechos reservados.
+                © 2024 Ada ITW, todos los derechos reservados.
               </Text>
             </HStack>
           </VStack>
