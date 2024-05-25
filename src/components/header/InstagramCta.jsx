@@ -1,8 +1,19 @@
-import { CloseButton, Container, Flex, useDisclosure } from '@chakra-ui/react'
+import {
+  CloseButton,
+  Container,
+  Flex,
+  useBreakpointValue,
+  useDisclosure,
+} from '@chakra-ui/react'
 import { FaInstagram } from 'react-icons/fa'
 
 export const InstagramCta = () => {
   const { isOpen, onClose } = useDisclosure({ defaultIsOpen: true })
+
+  const text = useBreakpointValue({
+    base: 'Siguenos en nuestro Instagram',
+    md: 'Seguinos en nuestro Instagram y no te pierdas de las últimas novedades',
+  })
   return (
     <Container maxW={'1440'}>
       {isOpen && (
@@ -26,14 +37,14 @@ export const InstagramCta = () => {
             ]}
           >
             <FaInstagram />
-            Seguinos en nuestro Instagram y no te pierdas de las últimas
-            novedades
+            {text}
           </Flex>
           <CloseButton
             position={'absolute'}
             right={'48px'}
             onClick={onClose}
             color={'orange.800'}
+            background="none"
           />
         </Flex>
       )}
