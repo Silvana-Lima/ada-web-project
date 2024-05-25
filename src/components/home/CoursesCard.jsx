@@ -18,8 +18,8 @@ export const CoursesCard = ({ title, career, description, date, duration }) => {
   const theme = useTheme()
 
   return (
-    <Card maxW="sm">
-      <CardBody>
+    <Card maxW="sm" p={'32px'}>
+      <CardBody p={0}>
         <Stack mt="6" spacing="3">
           <Heading
             as={'h4'}

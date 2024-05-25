@@ -7,6 +7,7 @@ import { Banner } from '../components/home/Banner'
 import { Beginnings } from '../components/home/Beginnings'
 import { Hero } from '../components/home/Hero'
 import { Impact } from '../components/home/Impact'
+import { NextBeginnings } from '../components/home/NextBeginnings'
 
 export const Home = () => {
   return (
@@ -32,6 +33,7 @@ export const Home = () => {
         bgColor={'orange.200'}
       />
       <Beginnings />
+      <NextBeginnings />
     </Container>
   )
 }
