@@ -11,21 +11,22 @@ import PropTypes from 'prop-types'
 
 export const Banner = ({ img, title, description, btnText, bgColor }) => {
   return (
-    <Stack bg={bgColor} minH={'100vh'} justifyContent={'center'}>
+    <Stack bg={bgColor} justifyContent={'center'}>
       <Container
-        maxW={['328px', '328px', '1195px']}
+        maxW={['360px', '360px', '1235px', '1235px']}
         color={'magenta.600'}
         display={'flex'}
         flexDirection={['column', 'column', 'column', 'row']}
         alignItems={'center'}
-        gap={5}
-        p={[0, 0, 5, 5]}
+        gap={'spacingM.base'}
+        py={['spacingXl.base', 'spacingXl.base', 'spacingXl.base', '80px']}
+        px={['spacingM.base', '', '', '40px']}
       >
-        <Image src={img} w={['100%', '100%', '462px']} />
+        <Image src={img} maxW={['100%', '100%', '462px']} />
         <VStack
           maxW={['100%', '682px']}
           alignItems={['center', 'center', 'center', 'flex-start']}
-          gap={10}
+          gap={['spacingS.base', 'spacingXl.base']}
         >
           <Heading
             as={'h2'}
@@ -47,7 +48,7 @@ export const Banner = ({ img, title, description, btnText, bgColor }) => {
             {description}
           </Text>
 
-          <Button size={'lg'} w={['100%', '23rem']}>
+          <Button size={'lg'} w={['100%', '382px']}>
             {btnText}
           </Button>
         </VStack>
