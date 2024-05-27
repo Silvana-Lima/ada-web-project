@@ -12,6 +12,7 @@ export const Hero = () => {
       alignItems={'center'}
       color={'#ffffff'}
       overflow="hidden"
+      mb={'spacingXl.base'}
     >
       <Box
         as="video"
@@ -45,7 +46,7 @@ export const Hero = () => {
         h={'50%'}
         marginLeft={['6%', '10%']}
         alignItems={'flex-start'}
-        gap={[5, 7]}
+        gap={['spacingM.base', 'spacingL.base']}
         position="relative"
         zIndex={1}
       >
