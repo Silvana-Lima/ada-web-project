@@ -18,9 +18,15 @@ export const CoursesCard = ({ title, career, description, date, duration }) => {
   const theme = useTheme()
 
   return (
-    <Card maxW="sm" p={'32px'}>
+    <Card
+      maxW={{ base: '100%', md: '399px' }}
+      maxH={{ base: '100%', md: '520px' }}
+      p={'32px'}
+      bg={'green.200'}
+      overflow="hidden" // Evita que el contenido se desborde
+    >
       <CardBody p={0}>
-        <Stack mt="6" spacing="3">
+        <Stack>
           <Heading
             as={'h4'}
             size="md"
@@ -40,7 +46,7 @@ export const CoursesCard = ({ title, career, description, date, duration }) => {
             fontFamily={'kMid'}
             color={'magenta.400'}
           >
-            {career}{' '}
+            {career}
           </Text>
           <Text
             fontSize={[
@@ -77,7 +83,7 @@ export const CoursesCard = ({ title, career, description, date, duration }) => {
             <Text
               fontSize={['smTxt.base', 'smTxt.base', 'smTxt.lg', 'smTxt.xl']}
             >
-              {duration}{' '}
+              {duration}
             </Text>
           </HStack>
 
@@ -96,13 +102,12 @@ export const CoursesCard = ({ title, career, description, date, duration }) => {
             </Text>
           </HStack>
         </Stack>
+        <CardFooter>
+          <Button variant="button-secondary" size={'md'} w={'100%'}>
+            Inscríbete ahora
+          </Button>
+        </CardFooter>
       </CardBody>
-
-      <CardFooter>
-        <Button variant="button-secondary" size={'md'} w={'100%'}>
-          Inscríbete ahora
-        </Button>
-      </CardFooter>
     </Card>
   )
 }

@@ -4,10 +4,11 @@ import allData from '@/all-the-data.svg'
 import imageCareers from '@/img-banner-carreras.svg'
 
 import { Banner } from '../components/home/Banner'
-import { Beginnings } from '../components/home/Beginnings'
+// import { Beginnings } from '../components/home/Beginnings'
 import { Hero } from '../components/home/Hero'
 import { Impact } from '../components/home/Impact'
 import { NextBeginnings } from '../components/home/NextBeginnings'
+import { CareersCardCarousel } from '../components/home/swiper/CareersCardCarousel'
 
 export const Home = () => {
   return (
@@ -32,8 +33,9 @@ export const Home = () => {
         btnText={'Ir a cursos'}
         bgColor={'orange.200'}
       />
-      <Beginnings />
+      {/* <Beginnings /> */}
       <NextBeginnings />
+      {/* <CareersCardCarousel /> */}
     </Container>
   )
 }

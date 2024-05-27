@@ -1,9 +1,9 @@
 // Import Swiper styles
 import 'swiper/css'
-import 'swiper/css/pagination'
 import './styles.css'
+import 'swiper/css/pagination'
 
-import { Box } from '@chakra-ui/react'
+import { HStack } from '@chakra-ui/react'
 // import required modules
 import { Pagination } from 'swiper/modules'
 // Import Swiper React components
@@ -13,15 +13,34 @@ import { Beginnings } from '../Beginnings'
 
 export const CareersCardCarousel = () => {
   return (
-    <Box>
+    <HStack bg="yellow.200" >
       <Swiper
-        slidesPerView={4}
-        spaceBetween={40}
-        centeredSlides={true}
+        slidesPerView={1}
+        spaceBetween={16}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
+        className="mySwiper"
+        // Responsive breakpoints
+        breakpoints={{
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+          },
+          768: {
+            slidesPerView: 2.3,
+            spaceBetween: 16,
+          },
+          992: {
+            slidesPerView: 2.5,
+            spaceBetween: 40,
+          },
+          1280: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        }}
       >
         <SwiperSlide>
           <Beginnings />
@@ -35,19 +54,7 @@ export const CareersCardCarousel = () => {
         <SwiperSlide>
           <Beginnings />
         </SwiperSlide>
-        <SwiperSlide>
-          <Beginnings />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Beginnings />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Beginnings />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Beginnings />
-        </SwiperSlide>
       </Swiper>
-    </Box>
+    </HStack>
   )
 }

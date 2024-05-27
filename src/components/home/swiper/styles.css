@@ -1,6 +1,4 @@
-.swiper {
-  width: 1290px;
-
-  padding-top: 40px;
-  padding-bottom: 40px;
+.mySwiper {
+  max-height: 520px;
+  padding: 35px; /* Ajusta este valor según lo necesites */
 }
