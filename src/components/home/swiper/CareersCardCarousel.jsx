@@ -13,7 +13,7 @@ import { Beginnings } from '../Beginnings'
 
 export const CareersCardCarousel = () => {
   return (
-    <HStack bg="yellow.200" >
+    <HStack bg="yellow.200">
       <Swiper
         slidesPerView={1}
         spaceBetween={16}

@@ -43,14 +43,14 @@ export const Header = () => {
         </Box>
 
         {/* menu hamburguesa */}
-        <Show below="md">
+        <Show below="lg">
           <Box>
             <BurgerMenu />
           </Box>
         </Show>
 
         {/* Menu de navegacion  */}
-        <Hide below="md">
+        <Hide below="lg">
           <Box>
             <Grid
               columns={6}
