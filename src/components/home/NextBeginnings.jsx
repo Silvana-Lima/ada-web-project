@@ -9,7 +9,6 @@ export const NextBeginnings = () => {
       p={0}
       px={{ base: '16px', md: '48px' }}
       py={{ base: '32px', md: '80px' }}
-      bg="blue.300"
     >
       <Stack maxW={'1386px'} alignItems="center" align="start">
         <Box
@@ -24,7 +23,15 @@ export const NextBeginnings = () => {
             Próximos comienzos
           </Heading>
           <Box pb={'24px'}>
-            <Text display={{ base: 'none', md: 'block' }}>
+            <Text
+              display={{ base: 'none', md: 'block' }}
+              fontSize={[
+                'largeTxt.base',
+                'largeTxt.base',
+                'largeTxt.lg',
+                'largeTxt.xl',
+              ]}
+            >
               ¡Atrévete a ser tu protagonista en el mundo tecnológico! Nuestros
               cursos para mujeres están aquí para impulsar tu carrera.
               ¡Incríbete ya y comienza a construir tu futuro en la tecnología!

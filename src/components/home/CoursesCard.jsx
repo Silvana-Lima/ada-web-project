@@ -26,12 +26,12 @@ export const CoursesCard = ({
 
   return (
     <Card
-      maxW={['224px', '224px', '224px', '399px']}
-      //maxH={['340px', '340px', '340px', '520px']}
+      w={'100%'}
+      h={'100%'}
+      maxW={['224px', '300px', '350px', '399px']}
+      // maxH={['340px', '340px', '340px', '520px']}
       py={['spacingL.xl', 'spacingL.xl', 'spacingL.xl', 'spacingXl.base']}
       px={['spacingM.xl', 'spacingM.xl', 'spacingM.xl', 'spacingXl.base']}
-      // bg={'green.200'}
-      overflow="hidden" // Evita que el contenido se desborde
     >
       <Heading
         as={'h4'}

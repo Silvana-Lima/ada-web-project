@@ -13,15 +13,14 @@ import { Beginnings } from '../Beginnings'
 
 export const CareersCardCarousel = () => {
   return (
-    <HStack bg="yellow.200">
+    <HStack bg={'blue.200'}>
       <Swiper
-        slidesPerView={1}
+        slidesPerView={1.5}
         spaceBetween={16}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper"
         // Responsive breakpoints
         breakpoints={{
           480: {
@@ -29,19 +28,31 @@ export const CareersCardCarousel = () => {
             spaceBetween: 16,
           },
           768: {
-            slidesPerView: 2.3,
+            slidesPerView: 2.5,
             spaceBetween: 16,
           },
           992: {
             slidesPerView: 2.5,
-            spaceBetween: 40,
+            spaceBetween: 20,
           },
           1280: {
             slidesPerView: 3,
-            spaceBetween: 30,
+            spaceBetween: 40,
           },
         }}
       >
+        <SwiperSlide>
+          <Beginnings />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Beginnings />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Beginnings />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Beginnings />
+        </SwiperSlide>
         <SwiperSlide>
           <Beginnings />
         </SwiperSlide>
