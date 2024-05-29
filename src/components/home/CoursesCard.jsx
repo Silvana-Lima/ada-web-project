@@ -32,6 +32,7 @@ export const CoursesCard = ({
       px={['spacingM.xl', 'spacingM.xl', 'spacingM.xl', 'spacingXl.base']}
       // bg={'green.200'}
       overflow="hidden" // Evita que el contenido se desborde
+      color={'gray.600'}
     >
       <Heading
         as={'h4'}
@@ -99,7 +100,10 @@ export const CoursesCard = ({
               fontSize: `calc(${theme.fontSizes.h4.base} + 1vw)`,
             }}
           />
-          <Text fontSize={['smTxt.base', 'smTxt.base', 'smTxt.lg', 'smTxt.xl']}>
+          <Text
+            lineHeight="1.2"
+            fontSize={['smTxt.base', 'smTxt.base', 'smTxt.lg', 'smTxt.xl']}
+          >
             {date}
           </Text>
         </HStack>
@@ -111,7 +115,10 @@ export const CoursesCard = ({
               fontSize: `calc(${theme.fontSizes.h4.base} + 1vw)`,
             }}
           />
-          <Text fontSize={['smTxt.base', 'smTxt.base', 'smTxt.lg', 'smTxt.xl']}>
+          <Text
+            lineHeight="1.2"
+            fontSize={['smTxt.base', 'smTxt.base', 'smTxt.lg', 'smTxt.xl']}
+          >
             {duration}
           </Text>
         </HStack>
@@ -123,7 +130,10 @@ export const CoursesCard = ({
               fontSize: `calc(${theme.fontSizes.h4.base} + 1vw)`,
             }}
           />
-          <Text fontSize={['smTxt.base', 'smTxt.base', 'smTxt.lg', 'smTxt.xl']}>
+          <Text
+            lineHeight="1.2"
+            fontSize={['smTxt.base', 'smTxt.base', 'smTxt.lg', 'smTxt.xl']}
+          >
             Distintos métodos de financiación disponibles
           </Text>
         </HStack>
