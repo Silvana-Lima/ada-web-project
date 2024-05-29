@@ -1,4 +1,53 @@
-.mySwiper {
+.swiper {
+  max-width: 1290px;
   max-height: 520px;
-  padding: 35px; /* Ajusta este valor según lo necesites */
 }
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* hiring companies */
+.swiper-hiring-companies {
+  background-color: aqua;
+  width: 12000px;
+  height: 100px;
+}
+
+.swiper-hiring-companies .swiper-wrapper {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+.swiper-hiring-companies .swiper-slide {
+  flex: 0 0 auto; /* Ensure slides are not shrinking or growing */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper {
+    max-width: 328px;
+    max-height: 340px;
+    background: blueviolet;
+  }
+}
+
+/* @media (min-width: 768px) {
+  .swiper {
+    max-width: 600px;
+    max-height: 600px;
+    background: rgb(107, 184, 76);
+  }
+} */
