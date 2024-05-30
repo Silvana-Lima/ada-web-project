@@ -1,6 +1,6 @@
 .swiper {
   max-width: 1290px;
-  max-height: 520px;
+  max-height: 620px;
 }
 
 .swiper-slide {
@@ -51,3 +51,20 @@
     background: rgb(107, 184, 76);
   }
 } */
+
+.swiper-container-custom {
+  position: relative;
+  padding-bottom: 50px; /* Espacio para la paginación */
+}
+
+.swiper-pagination-custom {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  text-align: center;
+  /* Anulación de estilos predeterminados */
+  right: auto !important;
+  left: 50% !important;
+}

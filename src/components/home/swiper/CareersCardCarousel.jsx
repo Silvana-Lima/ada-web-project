@@ -3,7 +3,7 @@ import 'swiper/css'
 import './styles.css'
 import 'swiper/css/pagination'
 
-import { HStack } from '@chakra-ui/react'
+import { Box, HStack } from '@chakra-ui/react'
 // import required modules
 import { Pagination } from 'swiper/modules'
 // Import Swiper React components
@@ -19,7 +19,9 @@ export const CareersCardCarousel = () => {
         spaceBetween={16}
         pagination={{
           clickable: true,
+          el: '.swiper-pagination-custom', // Clase personalizada para paginación
         }}
+        className="swiper-container-custom"
         modules={[Pagination]}
         // Responsive breakpoints
         breakpoints={{
@@ -65,6 +67,7 @@ export const CareersCardCarousel = () => {
         <SwiperSlide>
           <Beginnings />
         </SwiperSlide>
+        <Box className="swiper-pagination-custom"></Box>
       </Swiper>
     </HStack>
   )
