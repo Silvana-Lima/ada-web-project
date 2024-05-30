@@ -8,6 +8,7 @@ import { Hero } from '../components/home/Hero'
 import { Impact } from '../components/home/Impact'
 import { NextBeginnings } from '../components/home/NextBeginnings'
 import { HiringFirms } from '../components/home/swiper/HiringFirms'
+import { WhyUs } from '../components/home/WhyUs'
 
 export const Home = () => {
   return (
@@ -34,6 +35,7 @@ export const Home = () => {
       />
 
       <NextBeginnings />
+      <WhyUs />
       <HiringFirms />
     </Container>
   )
