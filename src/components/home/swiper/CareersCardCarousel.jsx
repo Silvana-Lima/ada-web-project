@@ -3,7 +3,7 @@ import 'swiper/css'
 import './styles.css'
 import 'swiper/css/pagination'
 
-import { Box, HStack } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 // import required modules
 import { Pagination } from 'swiper/modules'
 // Import Swiper React components
@@ -13,7 +13,7 @@ import { Beginnings } from '../Beginnings'
 
 export const CareersCardCarousel = () => {
   return (
-    <HStack bg={'blue.200'}>
+    <>
       <Swiper
         slidesPerView={1.5}
         spaceBetween={16}
@@ -31,11 +31,11 @@ export const CareersCardCarousel = () => {
           },
           768: {
             slidesPerView: 2.5,
-            spaceBetween: 16,
+            spaceBetween: 10,
           },
           992: {
             slidesPerView: 2.5,
-            spaceBetween: 20,
+            spaceBetween: 16,
           },
           1280: {
             slidesPerView: 3,
@@ -69,6 +69,6 @@ export const CareersCardCarousel = () => {
         </SwiperSlide>
         <Box className="swiper-pagination-custom"></Box>
       </Swiper>
-    </HStack>
+    </>
   )
 }
