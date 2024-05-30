@@ -10,10 +10,14 @@ export const NextBeginnings = () => {
       px={{ base: '16px', md: '48px' }}
       py={{ base: '32px', md: '80px' }}
     >
-      <Stack maxW={'1386px'} alignItems="center" align="start">
+      <Stack
+        maxW={'1386px'}
+        alignItems={{ base: 'start', md: 'center' }}
+        align="start"
+      >
         <Box
           maxW={'838px'}
-          // h={{ base: '24px', md: '196px' }}
+          maxH={{ base: '40px', md: '196px' }} // base: 24px h mas los 16 de padding
           textAlign={'center'}
         >
           <Heading

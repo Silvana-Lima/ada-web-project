@@ -3,6 +3,7 @@ import { Container } from '@chakra-ui/react'
 import allData from '@/all-the-data.svg'
 import imageCareers from '@/img-banner-carreras.svg'
 
+import { HiringCompanies } from '../components/HiringCompanies'
 import { Banner } from '../components/home/Banner'
 import { Hero } from '../components/home/Hero'
 import { Impact } from '../components/home/Impact'
