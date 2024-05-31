@@ -5,8 +5,7 @@ import PropTypes from 'prop-types'
 export const WhyUsCard = ({ title, description }) => {
   return (
     <HStack
-      w={'406px'}
-      h={'200px'}
+      maxW={'406px'}
       justify={'center'}
       alignItems={'center'}
       gap={'spacingL.xl'}
@@ -16,6 +15,7 @@ export const WhyUsCard = ({ title, description }) => {
       color={'gray.800'}
       _hover={{ boxShadow: 'lg' }}
       bg={'gray.0'}
+      p={5}
     >
       <Icon
         icon={'iconoir:community'}
@@ -23,7 +23,7 @@ export const WhyUsCard = ({ title, description }) => {
           fontSize: '80px',
         }}
       />
-      <Flex w={'262px'} direction={'column'}>
+      <Flex maxW={'262px'} direction={'column'}>
         <Heading as={'h4'} fontSize={'largeTxt.xl'}>
           {title}
         </Heading>
