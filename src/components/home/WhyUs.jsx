@@ -4,25 +4,43 @@ import {
   Grid,
   Heading,
   Highlight,
+  Image,
   Text,
   VStack,
 } from '@chakra-ui/react'
+
+import vector from '@/vector-why-us.svg'
 
 import { WhyUsCard } from './WhyUsCard'
 
 export const WhyUs = () => {
   return (
-    <Container maxW={['360px', '1235px']} bg={'#fbfbfb'}>
-      {/* 1155px + 80px padding */}
+    <Container
+      maxW={'100%'}
+      h={'100vh'}
+      bg={'gray.200'}
+      display={'flex'}
+      alignItems={'center'}
+      justifyContent={'center'}
+      position="relative"
+      zIndex={-3}
+    >
+      <Image
+        src={vector}
+        maxW={'571px'}
+        position="absolute"
+        left={'100px'}
+        zIndex={-1}
+      />
       <Flex
-        maxW={'100%'}
         color={'gray.800'}
         flexDirection={['column', 'column', 'column', 'row']}
         alignItems={'center'}
         gap={['', '', '', 'spacingXl.lg']}
-        pt={['spacingXl.base', 'spacingXl.base', 'spacingXl.base', '80px']}
-        pb={['spacingXl.base', 'spacingXl.base', 'spacingXl.base', '160px']}
-        px={['spacingM.base', '40px', '40px', '40px']}
+        px={['spacingM.base', '40px', '40px', '20px']}
+        py={'40px'}
+        position="relative"
+        zIndex={1}
       >
         <VStack
           maxWidth={['100%', '100%', '100%', '342px']}
@@ -64,7 +82,6 @@ export const WhyUs = () => {
             'repeat(2, 1fr)',
           ]}
           gap={'spacingM.xl'}
-          maxW={'850px'}
         >
           <WhyUsCard
             title={'Habilidades blandas'}
