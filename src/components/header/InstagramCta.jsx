@@ -41,7 +41,7 @@ export const InstagramCta = () => {
           </Flex>
           <CloseButton
             position={'absolute'}
-            right={'48px'}
+            right={{ base: '25px', md: '48px' }}
             onClick={onClose}
             color={'orange.800'}
             background="none"

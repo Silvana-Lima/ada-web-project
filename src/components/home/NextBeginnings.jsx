@@ -9,6 +9,8 @@ export const NextBeginnings = () => {
       p={0}
       px={{ base: '16px', md: '48px' }}
       py={{ base: '32px', md: '80px' }}
+      bg={'gray.200'}
+      spacing={{ base: '16px', md: '40px' }}
     >
       <Stack
         maxW={'1386px'}

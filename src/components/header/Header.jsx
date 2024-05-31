@@ -8,7 +8,6 @@ import {
   Image,
   Link,
   Show,
-  useTheme,
 } from '@chakra-ui/react'
 
 import logoAdaFuscia from '../../assets/logo-fucsia.png'
@@ -17,9 +16,15 @@ import { EducationMenu } from './EducationMenu'
 import { InstagramCta } from './InstagramCta'
 
 export const Header = () => {
-  const theme = useTheme()
   return (
-    <Container maxW={'1440'} p={0}>
+    <Container
+      maxW={'1440'}
+      p={0}
+      position={'sticky'}
+      top={0}
+      bg="gray.0"
+      zIndex={'1000'}
+    >
       {/* Instagram - llamada a la acción */}
       <InstagramCta />
 
@@ -55,11 +60,7 @@ export const Header = () => {
             <Grid
               columns={6}
               templateColumns="repeat(6, auto)"
-              gap={[
-                theme.space.spacingXs.base,
-                theme.space.spacingXs.lg,
-                theme.space.spacingXs.xl,
-              ]}
+              gap={['spacingXs.base', 'spacingXs.lg', 'spacingXs.xl']}
               alignItems="center"
               fontSize={[
                 'midTxt1.base',

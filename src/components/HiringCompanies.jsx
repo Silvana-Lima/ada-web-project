@@ -1,15 +1,17 @@
 import { Box, Button, Heading, Stack, Text } from '@chakra-ui/react'
 
-import { CarouselHiringCompanies } from './home/swiper/CarouselHiringCompanies'
+import { HiringCompaniesCarousel } from './home/swiper/HiringCompaniesCarousel'
 
 export const HiringCompanies = () => {
   return (
     <Stack
       maxW={'1440'}
       p={0}
-      px={{ base: '16px', md: '48px' }}
-      py={{ base: '32px', md: '32px' }}
+      px={{ base: '32px', md: '32px' }}
+      py={{ base: '32px', md: '160px' }}
       alignItems={'center'}
+      bg={'gray.0'}
+      spacing={{ base: '16px', md: '40px' }}
     >
       <Stack maxW={'1386px'} alignItems="center" align="start">
         <Box
@@ -41,7 +43,7 @@ export const HiringCompanies = () => {
           </Box>
         </Box>
       </Stack>
-      <CarouselHiringCompanies />
+      <HiringCompaniesCarousel />
       <Button
         variant="button-secondary"
         size={'md'}
