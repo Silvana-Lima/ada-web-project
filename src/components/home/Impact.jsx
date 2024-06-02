@@ -30,7 +30,7 @@ export const Impact = () => {
           </Heading>
           <Text
             fontSize={[
-              'largeTxt.xl.base',
+              'largeTxt.base',
               'largeTxt.base',
               'largeTxt.lg',
               'largeTxt.xl',
