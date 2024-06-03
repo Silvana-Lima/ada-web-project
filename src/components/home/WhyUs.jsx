@@ -59,7 +59,7 @@ export const WhyUs = () => {
           </Heading>
           <Text
             fontSize={[
-              'largeTxt.xl.base',
+              'largeTxt.base',
               'largeTxt.base',
               'largeTxt.lg',
               'largeTxt.lg',

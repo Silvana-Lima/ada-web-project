@@ -8,6 +8,7 @@ import { Banner } from '../components/home/Banner'
 import { Hero } from '../components/home/Hero'
 import { Impact } from '../components/home/Impact'
 import { NextBeginnings } from '../components/home/NextBeginnings'
+import { Testimonials } from '../components/home/Testimonials'
 import { WhyUs } from '../components/home/WhyUs'
 
 export const Home = () => {
@@ -38,6 +39,7 @@ export const Home = () => {
       <Show above="lg">
         <WhyUs />
       </Show>
+      <Testimonials />
 
       <HiringCompanies />
     </Container>

@@ -20,6 +20,13 @@
 }
 
 @font-face {
+  font-family: 'klavikaLightItalic';
+  src: url('/src/assets/fonts/klavika-light-italic.otf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
   font-family: 'klavikaRegularItalic';
   src: url('/src/assets/fonts/klavika-regular-italic.otf');
   font-weight: normal;
