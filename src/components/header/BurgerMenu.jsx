@@ -1,4 +1,3 @@
-import { ChevronRightIcon } from '@chakra-ui/icons'
 import {
   Accordion,
   AccordionButton,
@@ -12,11 +11,12 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
-  Text,
 } from '@chakra-ui/react'
 import { useState } from 'react'
 import { IoClose } from 'react-icons/io5'
 import { RxHamburgerMenu } from 'react-icons/rx'
+
+import { CoursesMenuBox } from './CoursesMenuBox'
 
 // personalizado de menu item
 const menuItemStyles = {
@@ -25,7 +25,6 @@ const menuItemStyles = {
   _active: { bg: 'none' },
 }
 
-// import { EducationMenu } from './EducationMenu'
 export const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -48,6 +47,8 @@ export const BurgerMenu = () => {
       />
       <MenuList w={'100vw'} h={'100vh'} pt={'40px'} px={'24px'}>
         <MenuItem {...menuItemStyles}>Sobre nosotros</MenuItem>
+
+        {/* desplegable para ofertas educativas */}
         <Accordion allowToggle>
           <AccordionItem>
             <AccordionButton
@@ -61,32 +62,8 @@ export const BurgerMenu = () => {
               <Box textAlign="left">Ofertas educativas</Box>
             </AccordionButton>
             <AccordionPanel pb={4}>
-              <Box>
-                <Text fontWeight={'bold'} textAlign="left">
-                  Carreras
-                </Text>
-                <MenuItem icon={<ChevronRightIcon color={'magenta.400'} />}>
-                  Desarrollo web front-end
-                </MenuItem>
-                <MenuItem icon={<ChevronRightIcon color={'magenta.400'} />}>
-                  Desarrollo web back-end
-                </MenuItem>
-                <Text fontWeight={'bold'} textAlign="left">
-                  Cursos
-                </Text>
-                <MenuItem icon={<ChevronRightIcon color={'magenta.400'} />}>
-                  Diseño UX/UI
-                </MenuItem>
-                <MenuItem icon={<ChevronRightIcon color={'magenta.400'} />}>
-                  Introducción al desarrollo web front-end
-                </MenuItem>
-                <MenuItem icon={<ChevronRightIcon color={'magenta.400'} />}>
-                  Analista QA
-                </MenuItem>
-                <MenuItem icon={<ChevronRightIcon color={'magenta.400'} />}>
-                  Programación en Pyton
-                </MenuItem>
-              </Box>
+              {/* items del menu */}
+              <CoursesMenuBox />
             </AccordionPanel>
           </AccordionItem>
         </Accordion>

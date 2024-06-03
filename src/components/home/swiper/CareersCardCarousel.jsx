@@ -9,7 +9,8 @@ import { Pagination } from 'swiper/modules'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import { Beginnings } from '../Beginnings'
+import { beginningCards } from '../../../utils/constants'
+import { CoursesCard } from '../CoursesCard'
 
 export const CareersCardCarousel = () => {
   return (
@@ -43,30 +44,29 @@ export const CareersCardCarousel = () => {
           },
         }}
       >
-        <SwiperSlide>
-          <Beginnings />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Beginnings />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Beginnings />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Beginnings />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Beginnings />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Beginnings />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Beginnings />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Beginnings />
-        </SwiperSlide>
+        {beginningCards.map(
+          ({
+            id,
+            title,
+            career,
+            descriptionL,
+            descriptionS,
+            date,
+            duration,
+          }) => (
+            <SwiperSlide key={id}>
+              <CoursesCard
+                title={title}
+                career={career}
+                descriptionL={descriptionL}
+                descriptionS={descriptionS}
+                date={date}
+                duration={duration}
+              />
+            </SwiperSlide>
+          )
+        )}
+
         <Box className="swiper-pagination-custom"></Box>
       </Swiper>
     </>

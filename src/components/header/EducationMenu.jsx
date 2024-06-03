@@ -1,18 +1,14 @@
-import {
-  ChevronDownIcon,
-  ChevronRightIcon,
-  ChevronUpIcon,
-} from '@chakra-ui/icons'
+import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons'
 import {
   Box,
   Menu,
   MenuButton,
-  MenuItem,
   MenuList,
   Portal,
-  Text,
   useDisclosure,
 } from '@chakra-ui/react'
+
+import { CoursesMenuBox } from './CoursesMenuBox'
 
 // eslint-disable-next-line react/prop-types
 export const EducationMenu = ({ hideChevronIcon }) => {
@@ -44,27 +40,9 @@ export const EducationMenu = ({ hideChevronIcon }) => {
           zIndex="1000"
           position={'relative'}
         >
-          <Box position="absolute" left="60%" w="25%" maxW="max-content">
-            <Text fontWeight={'bold'}>Carreras</Text>
-            <MenuItem icon={<ChevronRightIcon color={'magenta.400'} />}>
-              Desarrollo web front-end
-            </MenuItem>
-            <MenuItem icon={<ChevronRightIcon color={'magenta.400'} />}>
-              Desarrollo web back-end
-            </MenuItem>
-            <Text fontWeight={'bold'}>Cursos</Text>
-            <MenuItem icon={<ChevronRightIcon color={'magenta.400'} />}>
-              Diseño UX/UI
-            </MenuItem>
-            <MenuItem icon={<ChevronRightIcon color={'magenta.400'} />}>
-              Introducción al desarrollo web front-end
-            </MenuItem>
-            <MenuItem icon={<ChevronRightIcon color={'magenta.400'} />}>
-              Analista QA
-            </MenuItem>
-            <MenuItem icon={<ChevronRightIcon color={'magenta.400'} />}>
-              Programación en Pyton
-            </MenuItem>
+          {/* items del menu */}
+          <Box position="absolute" left="60%" w="30%" maxW="max-content">
+            <CoursesMenuBox />
           </Box>
         </MenuList>
       </Portal>
