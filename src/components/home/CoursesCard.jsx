@@ -48,7 +48,9 @@ export const CoursesCard = ({
         borderWidth={'1px'}
         mb={'spacingXs.xl'}
       />
+      {/* Carrera y descripcion */}
       <Stack
+        h={{ base: '170px', md: '200px', lg: '300px' }}
         py={['spacingXs.lg', 'spacingXs.lg', 'spacingXs.lg', 'spacingXs.xl']}
       >
         <Text
@@ -94,51 +96,54 @@ export const CoursesCard = ({
         align={'flex-start'}
         py={['spacingS.base', 'spacingS.base', 'spacingS.base', 'spacingL.xl']}
       >
-        <HStack>
-          <Icon
-            icon="clarity:calendar-line"
-            color={'#cd0055'}
-            style={{
-              fontSize: `calc(${theme.fontSizes.h4.base} + 1vw)`,
-            }}
-          />
-          <Text
-            lineHeight="1.2"
-            fontSize={['smTxt.base', 'smTxt.base', 'smTxt.lg', 'smTxt.xl']}
-          >
-            {date}
-          </Text>
-        </HStack>
-        <HStack>
-          <Icon
-            icon="ph:clock"
-            color="#cd0055"
-            style={{
-              fontSize: `calc(${theme.fontSizes.h4.base} + 1vw)`,
-            }}
-          />
-          <Text
-            lineHeight="1.2"
-            fontSize={['smTxt.base', 'smTxt.base', 'smTxt.lg', 'smTxt.xl']}
-          >
-            {duration}
-          </Text>
-        </HStack>
-        <HStack>
-          <Icon
-            icon="pepicons-print:dollar"
-            color="#cd0055"
-            style={{
-              fontSize: `calc(${theme.fontSizes.h4.base} + 1vw)`,
-            }}
-          />
-          <Text
-            lineHeight="1.2"
-            fontSize={['smTxt.base', 'smTxt.base', 'smTxt.lg', 'smTxt.xl']}
-          >
-            Distintos métodos de financiación disponibles
-          </Text>
-        </HStack>
+        {/* iconos - fecha - duracion -financiacion */}
+        <Stack>
+          <HStack>
+            <Icon
+              icon="clarity:calendar-line"
+              color={'#cd0055'}
+              style={{
+                fontSize: `calc(${theme.fontSizes.h4.base} + 1vw)`,
+              }}
+            />
+            <Text
+              lineHeight="1.2"
+              fontSize={['smTxt.base', 'smTxt.base', 'smTxt.lg', 'smTxt.xl']}
+            >
+              {date}
+            </Text>
+          </HStack>
+          <HStack>
+            <Icon
+              icon="ph:clock"
+              color="#cd0055"
+              style={{
+                fontSize: `calc(${theme.fontSizes.h4.base} + 1vw)`,
+              }}
+            />
+            <Text
+              lineHeight="1.2"
+              fontSize={['smTxt.base', 'smTxt.base', 'smTxt.lg', 'smTxt.xl']}
+            >
+              {duration}
+            </Text>
+          </HStack>
+          <HStack>
+            <Icon
+              icon="pepicons-print:dollar"
+              color="#cd0055"
+              style={{
+                fontSize: `calc(${theme.fontSizes.h4.base} + 1vw)`,
+              }}
+            />
+            <Text
+              lineHeight="1.2"
+              fontSize={['smTxt.base', 'smTxt.base', 'smTxt.lg', 'smTxt.xl']}
+            >
+              Distintos métodos de financiación disponibles
+            </Text>
+          </HStack>
+        </Stack>
       </Stack>
 
       <Button variant="button-secondary" size={'md'} w={'100%'}>
