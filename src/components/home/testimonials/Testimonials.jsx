@@ -1,8 +1,6 @@
-import { Container, Grid, Heading, Text } from '@chakra-ui/react'
+import { Container, Heading, Text } from '@chakra-ui/react'
 
-import { studentTestimonials } from '#/constants.js'
-
-import { TestimonyCard } from './TestimonyCard'
+import { TestimonialsCarousel } from './TestimonialsCarousel'
 
 export const Testimonials = () => {
   return (
@@ -44,36 +42,7 @@ export const Testimonials = () => {
           </Text>
         </Container>
         <Container maxW={'100%'} centerContent>
-          <Grid
-            templateColumns={[
-              'repeat(1, 1fr)',
-              'repeat(1, 1fr)',
-              'repeat(1, 1fr)',
-              'repeat(2, 1fr)',
-            ]}
-            templateRows={[
-              'repeat(4, 1fr)',
-              'repeat(4, 1fr)',
-              'repeat(4, 1fr)',
-              'repeat(2, 1fr)',
-            ]}
-            gap={[
-              'spacingM.base',
-              'spacingM.base',
-              'spacingM.base',
-              'spacingXl.lg',
-            ]}
-          >
-            {studentTestimonials.map(({ name, career, comment, photo, id }) => (
-              <TestimonyCard
-                key={id}
-                comment={comment}
-                name={name}
-                career={career}
-                photo={photo}
-              />
-            ))}
-          </Grid>
+          <TestimonialsCarousel />
         </Container>
       </Container>
     </Container>

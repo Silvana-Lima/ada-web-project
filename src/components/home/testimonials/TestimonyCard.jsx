@@ -20,8 +20,10 @@ export const TestimonyCard = ({ comment, name, career, photo }) => {
   })
   return (
     <Stack
-      maxW={'555px'}
-      maxH={'320px'}
+      // maxW={'555px'}
+      h={'320px'}
+      maxW={'100%'}
+      //maxH={'100%'}
       borderWidth="1px"
       borderRadius="md"
       borderLeftColor={'magenta.600'}
@@ -48,7 +50,11 @@ export const TestimonyCard = ({ comment, name, career, photo }) => {
         {comment}
       </Text>
       <HStack position={'relative'}>
-        <Image src={photo} borderRadius="full" boxSize="72px" />
+        <Image
+          src={photo}
+          borderRadius="full"
+          boxSize={['48px', '48px', '48px', '72px']}
+        />
         <Stack>
           <Stack position={'relative'} zIndex={1}>
             <Text

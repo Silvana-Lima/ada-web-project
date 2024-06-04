@@ -17,7 +17,7 @@ export const WhyUs = () => {
   return (
     <Container
       maxW={'100%'}
-      h={'100vh'}
+      maxH={'805px'}
       bg={'gray.200'}
       display={'flex'}
       alignItems={'center'}
