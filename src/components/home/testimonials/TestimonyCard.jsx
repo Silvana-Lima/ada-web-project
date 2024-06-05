@@ -30,7 +30,6 @@ export const TestimonyCard = ({ comment, name, career, photo }) => {
       borderLeftWidth={'8px'}
       borderLeftRadius={'xl'}
       color={'gray.800'}
-      _hover={{ boxShadow: 'lg' }}
       bg={'gray.0'}
       p={'spacingM.base'}
       px={['spacingM.base', 'spacingM.base', 'spacingM.base', 'spacingL.base']}

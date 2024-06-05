@@ -23,16 +23,16 @@ export const TestimonialsCarousel = () => {
           columns: 2,
           fill: 'row',
         }}
-        spaceBetween={20}
+        spaceBetween={40}
         pagination={{
           clickable: true,
-          el: 'swiper-pagination-testimonial',
+          el: '.swiper-pagination-testimonial',
         }}
         className="swiper-container-testimonial"
         modules={[Grid, Pagination]}
       >
         {studentTestimonials.map(({ name, career, comment, photo, id }) => (
-          <SwiperSlide key={id} className="testimonialSwiperSlide">
+          <SwiperSlide key={id} className="testimonial-swiper-slide">
             <TestimonyCard
               comment={comment}
               name={name}
