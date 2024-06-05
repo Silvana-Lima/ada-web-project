@@ -1,10 +1,10 @@
 .swiper-container-testimonial {
   width: 100%;
-  /* height: 900px !important; ver altura y padding left de swiper en styles */
+  height: 760px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
 }
 
 .swiper-pagination-testimonial {
