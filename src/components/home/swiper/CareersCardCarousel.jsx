@@ -22,7 +22,7 @@ export const CareersCardCarousel = () => {
           clickable: true,
           el: '.swiper-pagination-custom', // Clase personalizada para paginación
         }}
-        className="swiper-container-custom"
+        className="swiper-next-beginning"
         modules={[Pagination]}
         // Responsive breakpoints
         breakpoints={{

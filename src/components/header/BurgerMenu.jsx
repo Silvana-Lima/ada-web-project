@@ -11,6 +11,7 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  Stack,
 } from '@chakra-ui/react'
 import { useState } from 'react'
 import { IoClose } from 'react-icons/io5'
@@ -69,9 +70,11 @@ export const BurgerMenu = () => {
         </Accordion>
         <MenuItem>Blog</MenuItem>
         <MenuItem pb={'40px'}>Contrata talento</MenuItem>
-        <Button size={'md'} w={['100%', '382px']}>
-          Inscríbete
-        </Button>
+        <Stack align={{ base: 'center', md: 'start' }}>
+          <Button size={'md'} w={['100%', '382px']}>
+            Inscríbete
+          </Button>
+        </Stack>
       </MenuList>
     </Menu>
   )
