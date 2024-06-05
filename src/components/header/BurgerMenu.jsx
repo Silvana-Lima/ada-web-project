@@ -51,13 +51,15 @@ export const BurgerMenu = () => {
 
         {/* desplegable para ofertas educativas */}
         <Accordion allowToggle>
-          <AccordionItem>
+          <AccordionItem w={'max-content'}>
             <AccordionButton
               _expanded={{
                 bg: 'purple.200',
                 color: 'magenta.400',
                 borderBottom: '2px ',
                 borderColor: 'magenta.400',
+                padding: '12px 24px',
+                width: ['100%', '382px'],
               }}
             >
               <Box textAlign="left">Ofertas educativas</Box>
@@ -70,7 +72,7 @@ export const BurgerMenu = () => {
         </Accordion>
         <MenuItem>Blog</MenuItem>
         <MenuItem pb={'40px'}>Contrata talento</MenuItem>
-        <Stack align={{ base: 'center', md: 'start' }}>
+        <Stack align={{ md: 'start' }}>
           <Button size={'md'} w={['100%', '382px']}>
             Inscríbete
           </Button>
