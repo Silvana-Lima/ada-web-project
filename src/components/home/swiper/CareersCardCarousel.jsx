@@ -54,7 +54,7 @@ export const CareersCardCarousel = () => {
             date,
             duration,
           }) => (
-            <SwiperSlide key={id}>
+            <SwiperSlide className=".swiper-slide-beggining" key={id}>
               <CoursesCard
                 title={title}
                 career={career}
