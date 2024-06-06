@@ -20,10 +20,8 @@ export const TestimonyCard = ({ comment, name, career, photo }) => {
   })
   return (
     <Stack
-      // maxW={'555px'}
-      h={'320px'}
       maxW={'100%'}
-      //maxH={'100%'}
+      h={['312px', '312px', '312px', '320px']}
       borderWidth="1px"
       borderRadius="md"
       borderLeftColor={'magenta.600'}
@@ -33,6 +31,7 @@ export const TestimonyCard = ({ comment, name, career, photo }) => {
       bg={'gray.0'}
       p={'spacingM.base'}
       px={['spacingM.base', 'spacingM.base', 'spacingM.base', 'spacingL.base']}
+      justifyContent="space-between"
     >
       <Icon
         icon={'ri:double-quotes-l'}
@@ -45,10 +44,11 @@ export const TestimonyCard = ({ comment, name, career, photo }) => {
         fontSize={['midTxt1.base', 'midTxt1.base', 'midTxt1.xl', 'midTxt1.xl']}
         textAlign={'justify'}
         fontFamily={'klavikaLightItalic'}
+        h={{ base: '108px', md: '160px', lg: '160px' }}
       >
         {comment}
       </Text>
-      <HStack position={'relative'}>
+      <HStack position={'relative'} mt="auto">
         <Image
           src={photo}
           borderRadius="full"

@@ -17,19 +17,28 @@ export const TestimonialsCarousel = () => {
   return (
     <>
       <Swiper
-        slidesPerView={2}
+        slidesPerView={1}
         grid={{
           rows: 2,
-          columns: 2,
-          fill: 'row',
+          columns: 1,
         }}
-        spaceBetween={40}
+        spaceBetween={16}
         pagination={{
           clickable: true,
           el: '.swiper-pagination-testimonial',
         }}
         className="swiper-container-testimonial"
         modules={[Grid, Pagination]}
+        breakpoints={{
+          1280: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+            grid: {
+              rows: 2,
+              columns: 2,
+            },
+          },
+        }}
       >
         {studentTestimonials.map(({ name, career, comment, photo, id }) => (
           <SwiperSlide key={id} className="testimonial-swiper-slide">

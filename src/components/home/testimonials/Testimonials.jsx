@@ -15,7 +15,7 @@ export const Testimonials = () => {
             as="h1"
             fontSize={['h1.base', 'h1.base', 'h1.lg', 'h1.xl']}
             color={'gray.800'}
-            textAlign={'center'}
+            textAlign={['start', 'start', 'center', 'center']}
             mb={[
               'spacingM.base',
               'spacingM.base',
@@ -32,7 +32,7 @@ export const Testimonials = () => {
               'largeTxt.lg',
               'largeTxt.xl',
             ]}
-            align={'center'}
+            textAlign={['start', 'start', 'center', 'center']}
             mb={['spacingL.xl', 'spacingL.xl', 'spacingL.xl', '']}
           >
             En nuestra organización social, nos enorgullece empoderar a las

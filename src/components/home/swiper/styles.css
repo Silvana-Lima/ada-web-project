@@ -26,6 +26,10 @@
   left: 50% !important;
 }
 
+.swiper-pagination-bullet {
+  background-color: rgb(205, 0, 85);
+}
+
 @media (min-width: 768px) {
   .swiper-next-beginning {
     width: 100%;
