@@ -18,18 +18,17 @@ import ourGoalImg from '../../assets/ourGoalImg.png'
 export const OurGoald = () => {
   const [isMobile] = useMediaQuery('(max-width: 768px)')
   return (
-    <Container maxW={'1440px'} ali>
-      <SimpleGrid
-        columns={{ base: 1, lg: 2 }}
-        maxW={'1440px'}
-        h={{ base: '480px', lg: '600px' }}
-        px={{ base: '32px', lg: '80px' }}
-        py={{ base: '32px', lg: '80px' }}
-        bg="yellow.100"
-      >
+    <Container
+      maxW={'1440px'}
+      px={{ base: '32px', md: '80px' }}
+      py={{ base: '32px', md: '80px' }}
+      h={{ base: '480px', lg: '600px' }}
+      bg="yellow.100"
+    >
+      <SimpleGrid columns={{ base: 1, lg: 2 }}>
         {/* TEXTO */}
         <Stack
-          w={{ base: '360px', md: '450px' }}
+          w={{ base: '300px', md: '450px' }}
           maxH={{ base: '200px', md: '420px' }}
           order={{ base: 2, lg: 1 }}
         >
