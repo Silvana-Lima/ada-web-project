@@ -7,6 +7,7 @@ import { Banner } from '../components/home/Banner'
 import { Hero } from '../components/home/Hero'
 import { HiringCompanies } from '../components/home/HiringCompanies'
 import { Impact } from '../components/home/Impact'
+import { NetworkBuilder } from '../components/home/NetworkBuilder'
 import { NextBeginnings } from '../components/home/NextBeginnings'
 import { OurGoald } from '../components/home/OurGoald'
 import { Testimonials } from '../components/home/testimonials/Testimonials'
@@ -43,6 +44,7 @@ export const Home = () => {
       <Testimonials />
       <OurGoald />
       <HiringCompanies />
+      <NetworkBuilder />
     </Container>
   )
 }
