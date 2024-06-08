@@ -52,7 +52,8 @@ const theme = extendTheme({
       800: '#e14d00',
     },
     yellow: {
-      600: 'f0f000',
+      100: '#fdfccc',
+      600: '#f0f000',
     },
     purple: {
       200: '#eac4ff',

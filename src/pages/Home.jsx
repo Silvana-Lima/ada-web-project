@@ -3,12 +3,14 @@ import { Container, Show } from '@chakra-ui/react'
 import allData from '@/all-the-data.svg'
 import imageCareers from '@/img-banner-carreras.svg'
 
-import { HiringCompanies } from '../components/HiringCompanies'
 import { Awards } from '../components/home/Awards'
 import { Banner } from '../components/home/Banner'
 import { Hero } from '../components/home/Hero'
+import { HiringCompanies } from '../components/home/HiringCompanies'
 import { Impact } from '../components/home/Impact'
+import { NetworkBuilder } from '../components/home/NetworkBuilder'
 import { NextBeginnings } from '../components/home/NextBeginnings'
+import { OurGoald } from '../components/home/OurGoald'
 import { Testimonials } from '../components/home/testimonials/Testimonials'
 import { WhyUs } from '../components/home/WhyUs'
 
@@ -41,8 +43,10 @@ export const Home = () => {
         <WhyUs />
       </Show>
       <Testimonials />
+      <OurGoald />
       <HiringCompanies />
       <Awards />
+      <NetworkBuilder />
     </Container>
   )
 }

@@ -6,7 +6,6 @@
   max-height: 500px;
   position: relative;
   padding-bottom: 50px; /* Espacio para la paginación */
-  background: coral;
 }
 
 .swiper-slide-beggining {
@@ -15,7 +14,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
 
 .swiper-pagination-custom {
@@ -70,12 +68,10 @@
   display: flex;
   animation: scroll 30s linear infinite;
   width: calc(120px * 12);
-  background: rgb(236, 110, 6);
 }
 
 .swiper-hiring-companies .swiper-slide {
   width: 80px;
-  background: chartreuse;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,7 +163,6 @@
 
   .swiper-hiring-companies .swiper-wrapper {
     width: calc(180px * 12);
-    background: rgb(255, 80, 217);
   }
 
   .swiper-hiring-companies .swiper-slide {
