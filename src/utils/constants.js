@@ -107,3 +107,56 @@ export const beginningCards = [
     duration: '3 meses : 2 clases semanales',
   },
 ]
+
+export const awards = [
+  {
+    id: '1',
+    logo: '/awards/equals.svg',
+    name: 'Leadership in Tech Winner 2021',
+  },
+  {
+    id: '2',
+    logo: '/awards/santander.svg',
+    name: 'Proyecto ganador de la categoría Re-Skill 2020',
+  },
+  {
+    id: '3',
+    logo: '/awards/ylai.svg',
+    name: 'Young Leader of the Americas Initiative',
+  },
+  {
+    id: '4',
+    logo: '/awards/equals_global.svg',
+    name: "Part of the ITU Telecom World's delegation",
+  },
+  {
+    id: '5',
+    logo: '/awards/google.svg',
+    name: 'Change Agent Award Winner, por Google US y Anita Borg Institute of Technology',
+  },
+  {
+    id: '6',
+    logo: '/awards/global_enterpreneurship.svg',
+    name: 'Global Entrepreneurship Summit',
+  },
+  {
+    id: '7',
+    logo: '/awards/council.svg',
+    name: 'Council on Integrity in Results Reporting',
+  },
+  {
+    id: '8',
+    logo: '/awards/globant.svg',
+    name: 'Nomination: Inspiring leader en Globant Awards - Women that builds 2023 edition',
+  },
+  {
+    id: '9',
+    logo: '/awards/anita.svg',
+    name: 'Change Agent Award Winner, por Google US y Anita Borg Institute of Technology',
+  },
+  {
+    id: '10',
+    logo: '/awards/forbes.svg',
+    name: '30 Promesas de los Negocios',
+  },
+]

@@ -5,12 +5,11 @@
   margin-right: auto;
   position: relative;
   padding-bottom: 50px;
-  background: rgb(194, 112, 235);
 }
 
 .swiper-pagination-testimonial {
   position: absolute;
-  bottom: 50px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   width: auto;
@@ -18,4 +17,10 @@
   /* Anulación de estilos predeterminados */
   right: auto !important;
   left: 50% !important;
+}
+
+@media (max-width: 992px) {
+  .swiper-container-testimonial {
+    height: 700px;
+  }
 }

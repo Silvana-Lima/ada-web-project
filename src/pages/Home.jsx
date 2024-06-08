@@ -4,6 +4,7 @@ import allData from '@/all-the-data.svg'
 import imageCareers from '@/img-banner-carreras.svg'
 
 import { HiringCompanies } from '../components/HiringCompanies'
+import { Awards } from '../components/home/Awards'
 import { Banner } from '../components/home/Banner'
 import { Hero } from '../components/home/Hero'
 import { Impact } from '../components/home/Impact'
@@ -40,8 +41,8 @@ export const Home = () => {
         <WhyUs />
       </Show>
       <Testimonials />
-
       <HiringCompanies />
+      <Awards />
     </Container>
   )
 }
