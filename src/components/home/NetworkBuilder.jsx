@@ -1,6 +1,7 @@
 import { Box, Heading, Image, Link, Mark, Stack, Text } from '@chakra-ui/react'
 
 import networkingImg from '../../assets/networkingImg.png'
+import vectorWavyLines from '../../assets/vector-wavyLines.svg'
 
 export const NetworkBuilder = () => {
   return (
@@ -11,8 +12,22 @@ export const NetworkBuilder = () => {
       px={{ base: '20px', md: '48px' }}
       py={{ base: '16px', md: '80px' }}
       alignItems={'center'}
-      bg={'magenta.400'}
+      bgGradient="radial(magenta.400 0%, magenta.800 100%)"
       spacing={{ base: '16px', md: '24px' }}
+      position="relative"
+      _before={{
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundImage: `url(${vectorWavyLines})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        zIndex: 1,
+      }}
+      zIndex={2}
     >
       {/* IMAGEN */}
       <Box maxW={'400px'} maxH={'230px'}>

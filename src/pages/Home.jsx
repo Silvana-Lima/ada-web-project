@@ -5,6 +5,7 @@ import imageCareers from '@/img-banner-carreras.svg'
 
 import { Awards } from '../components/home/Awards'
 import { Banner } from '../components/home/Banner'
+import { CivicHouseShowcase } from '../components/home/CivicHouseShowcase'
 import { Hero } from '../components/home/Hero'
 import { HiringCompanies } from '../components/home/HiringCompanies'
 import { Impact } from '../components/home/Impact'
@@ -47,6 +48,7 @@ export const Home = () => {
       <HiringCompanies />
       <Awards />
       <NetworkBuilder />
+      <CivicHouseShowcase />
     </Container>
   )
 }
