@@ -17,7 +17,7 @@ export const WhyUs = () => {
   return (
     <Container
       maxW={'100%'}
-      maxH={'805px'}
+      h={'805px'}
       bg={'gray.200'}
       display={'flex'}
       alignItems={'center'}
@@ -34,53 +34,37 @@ export const WhyUs = () => {
       />
       <Flex
         color={'gray.800'}
-        flexDirection={['column', 'column', 'column', 'row']}
+        flexDirection={'row'}
+        wrap={'wrap'}
         alignItems={'center'}
-        gap={['', '', '', 'spacingXl.lg']}
-        px={['spacingM.base', '40px', '40px', '20px']}
+        gap={'spacingXl.lg'}
+        px={'20px'}
         py={'40px'}
         position="relative"
         zIndex={1}
+        justifyContent={'center'}
       >
-        <VStack
-          maxWidth={['100%', '100%', '100%', '342px']}
-          gap={['spacingS.base', 'spacingM.base']}
-        >
+        <VStack maxWidth={'342px'} gap={'spacingM.base'}>
           <Heading
             as="h1"
-            fontSize={['h1.base', 'h1.base', 'h1.lg', 'h1.xl']}
+            fontSize={'h1.xl'}
             color={'gray.800'}
-            textAlign={['center', 'center', 'center', 'left']}
+            textAlign={'left'}
           >
             ¿Por qué estudiar en{' '}
             <Highlight query="ada itw?" styles={{ color: 'magenta.400' }}>
               ADA ITW?
             </Highlight>{' '}
           </Heading>
-          <Text
-            fontSize={[
-              'largeTxt.base',
-              'largeTxt.base',
-              'largeTxt.lg',
-              'largeTxt.lg',
-            ]}
-            align={['center', 'center', 'center', 'start']}
-            mb={['spacingL.xl', 'spacingL.xl', 'spacingL.xl', '']}
-            textAlign={'justify'}
-          >
+          <Text fontSize={'largeTxt.lg'} align={'start'} textAlign={'justify'}>
             Nuestra misión es reducir la brecha de género en tecnología y esto
             lo hacemos a través del empoderamiento de las mujeres con cursos de
             programación.
           </Text>
         </VStack>
         <Grid
-          templateColumns={['', '', 'repeat(2, 1fr)', 'repeat(2, 1fr)']}
-          templateRows={[
-            'repeat(4, 1fr)',
-            'repeat(4, 1fr)',
-            'repeat(2, 1fr)',
-            'repeat(2, 1fr)',
-          ]}
+          templateColumns={'repeat(2, 1fr)'}
+          templateRows={'repeat(2, 1fr)'}
           gap={'spacingM.xl'}
         >
           <WhyUsCard
