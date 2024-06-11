@@ -9,6 +9,7 @@ import {
   Link,
   Show,
 } from '@chakra-ui/react'
+import { NavLink } from 'react-router-dom'
 
 import logoAdaFuscia from '../../assets/logo-fucsia.png'
 import { BurgerMenu } from './BurgerMenu'
@@ -69,7 +70,13 @@ export const Header = () => {
                 'midTxt1.xl',
               ]}
             >
-              <Link maxW={'max-content'} px={'8px'} py={'10px'}>
+              <Link
+                as={NavLink}
+                to="/aboutUs"
+                maxW={'max-content'}
+                px={'8px'}
+                py={'10px'}
+              >
                 Sobre nosotros
               </Link>
               {/* Ofertas educativas */}

@@ -3,7 +3,7 @@ import { extendTheme } from '@chakra-ui/react'
 
 const breakpoints = {
   sm: '30em', // 480px
-  md: '48em', // 768px - modifique el tamaño de 48 a 55 para que el burguer menu se siga viendo -
+  md: '48em', // 768px 
   lg: '62em', // 992px
   xl: '80em', // 1280px
 }
