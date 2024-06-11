@@ -69,16 +69,43 @@ export const Header = () => {
                 'midTxt1.xl',
               ]}
             >
-              <Link maxW={'max-content'} px={'8px'} py={'10px'}>
+              <Link
+                maxW={'max-content'}
+                px={'8px'}
+                py={'10px'}
+                _hover={{
+                  color: 'orange.400',
+                  textDecoration: 'underline',
+                  textUnderlineOffset: '10px',
+                }}
+              >
                 Sobre nosotros
               </Link>
               {/* Ofertas educativas */}
               <EducationMenu />
 
-              <Link maxW={'max-content'} px={'8px'} py={'10px'}>
+              <Link
+                maxW={'max-content'}
+                px={'8px'}
+                py={'10px'}
+                _hover={{
+                  color: 'orange.400',
+                  textDecoration: 'underline',
+                  textUnderlineOffset: '10px',
+                }}
+              >
                 Blog
               </Link>
-              <Link maxW={'max-content'} px={'8px'} py={'10px'}>
+              <Link
+                maxW={'max-content'}
+                px={'8px'}
+                py={'10px'}
+                _hover={{
+                  color: 'orange.400',
+                  textDecoration: 'underline',
+                  textUnderlineOffset: '10px',
+                }}
+              >
                 Contrata talento
               </Link>
               <Link
@@ -87,6 +114,10 @@ export const Header = () => {
                 py={'10px'}
                 color={'orange.400'}
                 textDecoration="underline"
+                textUnderlineOffset="10px"
+                _hover={{
+                  color: 'magenta.400',
+                }}
               >
                 Colaborar
               </Link>
