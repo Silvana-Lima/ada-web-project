@@ -25,19 +25,29 @@ export const Awards = () => {
         maxW={['360px', '1238px']}
         bg={'gray.0'}
         textAlign={'center'}
-        borderRadius={['8px', '15px', '20px', '24px']}
+        borderRadius={['spacingXs.xl', '15px', '20px', 'spacingL.xl']}
         boxShadow={'md'}
       >
         <Heading
           color={'gray.0'}
           bg={'purple.400'}
           textAlign={'center'}
-          borderRadius={['4px', '8px']}
-          fontSize={['midTxt.lg', 'midTxt.lg', 'midTxt.lg', 'h2.lg']}
-          py={['4px', '8px']}
-          px={['10px', '24px']}
+          borderRadius={[
+            'spacingXs.base',
+            'spacingXs.base',
+            'spacingXs.base',
+            'spacingXs.xl',
+          ]}
+          fontSize={['midTxt.lg', 'midTxt.lg', 'midTxt.xl', 'h2.lg']}
+          py={[
+            'spacingXs.base',
+            'spacingXs.base',
+            'spacingXs.base',
+            'spacingXs.xl',
+          ]}
+          px={['spacingS.lg', 'spacingS.lg', 'spacingS.lg', 'spacingL.xl']}
           position={'relative'}
-          top={'-25px'}
+          top={['-17px', '-17px', '-17px', '-25px']}
           display="inline-block"
         >
           Premios y reconocimientos
@@ -50,33 +60,29 @@ export const Awards = () => {
             wrap={'wrap'}
             alignItems={'center'}
             justify={'center'}
-            columnGap={[
-              'spacingL.base',
-              'spacingL.base',
-              'spacingL.base',
-              '46px',
-            ]}
-            rowGap={('spacingL.base', 'spacingL.base', '', '')}
-            py={['spacingXl.base', 'spacingXl.base', 'spacingXl.base', '72px']}
-            px={['spacingM.base', 'spacingM.base', 'spacingM.base', '40px']}
+            columnGap={['', 'spacingL.base', 'spacingL.base', '46px']}
+            py={['', 'spacingXl.base', 'spacingXl.base', '72px']}
+            px={['', 'spacingM.base', 'spacingM.base', '40px']}
+            marginTop={['', '-17px', '-17px', '-47px']}
           >
             {awards.map(({ id, logo, name }) => (
               <Box
                 key={id}
-                w={['100px', '100px', '100px', '140px']}
-                h={['116px', '150px', '180px', '280px']}
+                w={['', '100px', '100px', '140px']}
+                h={['', '190px', '200px', '280px']}
               >
                 <Flex
-                  maxW={['104px', '104px', '104px', '140px']}
-                  h={['80px', '80px', '80px', '110px']}
+                  maxW={['', '104px', '104px', '140px']}
+                  h={['', '80px', '80px', '110px']}
                   justifyContent={'center'}
                 >
                   <Image src={logo} />
                 </Flex>
 
                 <Text
-                  px={3}
-                  fontSize={['10px', '10px', '10px', '18px']}
+                  h={['', '110px', '120px', '170px']}
+                  px={[0, 1, 2, 3]}
+                  fontSize={['', 'smTxt.base', 'smTxt.base', 'midTxt1.xl']}
                   textAlign={'center'}
                 >
                   {name}
@@ -89,9 +95,10 @@ export const Awards = () => {
         <Show below="sm">
           <Grid
             templateColumns={'84px 100px'}
-            gap={['spacingL.base', '', '', '']}
-            py={['spacingXl.base', 'spacingXl.base', 'spacingXl.base', '72px']}
-            px={['40px', '40px', '40px', '40px']}
+            gap={'spacingL.base'}
+            py={'spacingXl.base'}
+            px={'40px'}
+            marginTop={'-17px'}
             justifyContent="center"
             alignItems="center"
           >
@@ -101,17 +108,13 @@ export const Awards = () => {
                 display={'flex'}
                 flexDirection={'column'}
                 alignItems={'center'}
-                gap={'10px'}
+                gap={'spacingS.lg'}
               >
-                <Flex maxW={['80px', '140px']}>
+                <Flex maxW={'80px'}>
                   <Image src={logo} />
                 </Flex>
 
-                <Text
-                  px={3}
-                  fontSize={['10px', '10px', '12px', '18px']}
-                  textAlign={'center'}
-                >
+                <Text px={1} fontSize={'10px'} textAlign={'center'}>
                   {name}
                 </Text>
               </GridItem>
