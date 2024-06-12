@@ -11,8 +11,8 @@ import {
 import { useState } from 'react'
 import { FiVolume2 } from 'react-icons/fi'
 
+import aboutUsVideo from '../../assets/aboutUsVideo.mp4'
 import AboutUsImg from '../../assets/image/bannerUsImg.png'
-// import videoAboutADA from '../../assets/videoAboutUs.mp4'
 
 export const AboutUsSection = () => {
   const isMobile = useBreakpointValue({
@@ -21,11 +21,11 @@ export const AboutUsSection = () => {
     lg: false,
   })
 
-  // const [isMuted, setIsMuted] = useState(true)
+  const [isMuted, setIsMuted] = useState(true)
 
-  // const handleUnmute = () => {
-  //   setIsMuted(false)
-  // }
+  const handleUnmute = () => {
+    setIsMuted(false)
+  }
   return (
     <Container bg="magenta.400" maxW={'1440px'}>
       {isMobile ? (
@@ -62,14 +62,11 @@ export const AboutUsSection = () => {
             ejecutiva:
           </Text>
 
-          {/* COMENTO ESTO YA QUE NO ME DEJA SUBIR EL VIDEO
-APARENTEMENTE EXCEDE LOS LIMITES DE GITHUB QUE ES HASTA 100.00MG */}
-
-          {/* <Box pos={'relative'}>
+          <Box pos={'relative'}>
             <Box
               as="video"
               w="100%"
-              src={videoAboutADA}
+              src={aboutUsVideo}
               controls
               autoPlay
               loop
@@ -96,9 +93,10 @@ APARENTEMENTE EXCEDE LOS LIMITES DE GITHUB QUE ES HASTA 100.00MG */}
                 </Button>
               </Box>
             )}
-          </Box> */}
+          </Box>
         </Stack>
       ) : (
+        // DESKTOP
         <Stack
           px={'80px'}
           py={'80px'}
@@ -106,31 +104,18 @@ APARENTEMENTE EXCEDE LOS LIMITES DE GITHUB QUE ES HASTA 100.00MG */}
           flexDirection={'row'}
           justifyContent={'space-between'}
           alignItems={'center'}
-
-          // px={{ base: '32px', lg: '80px' }}
-          // py={{ base: '32px', md: '24px', lg: '80px' }}
-          // spacing={{ base: '16px', md: '16px', lg: '80px' }}
-          // flexDirection={{ base: 'column', md: 'row', lg: 'row' }}
-          // justifyContent={'space-between'}
-          // alignItems={'center'}
         >
-          <Box
-            maxW={{ md: '300px', xl: '432px' }}
-            // maxW={{ base: '100%', md: '300px', xl: '432px' }}
-            fontWeight={'bold'}
-          >
+          <Box maxW={{ md: '300px', xl: '432px' }} fontWeight={'bold'}>
             <Text
               color={'gray.0'}
-              fontSize={{ md: 'h3.lg', lg: '40px' }}
-              // fontSize={['h1.base', 'h1.base', 'h3.lg', '40px']}
+              fontSize={{ md: 'h3.lg', lg: 'h2.lg', xl: '40px' }}
             >
               Creemos que la tecnología tiene un{'  '}
               <Heading
                 as={'span'}
                 color={'gray.600'}
                 bg="yellow.600"
-                fontSize={{ md: 'h2.lg', lg: '64px' }}
-                // fontSize={['h1.base', 'h2.lg', 'h2.lg', '64px']}
+                fontSize={{ md: 'h2.lg', lg: '40px', xl: '64px' }}
                 fontWeight={'bold'}
                 maxW={'max-content'}
               >
@@ -139,10 +124,7 @@ APARENTEMENTE EXCEDE LOS LIMITES DE GITHUB QUE ES HASTA 100.00MG */}
               y buscamos generar oportunidades para todas las mujeres
             </Text>
           </Box>
-          <Box
-            maxW={{ md: '100%', lg: '624px' }}
-            // maxW={{ base: '100%', md: '100%', xl: '624px' }}
-          >
+          <Box maxW={{ md: '100%', lg: '624px' }}>
             <Image
               src={AboutUsImg}
               width="100%"
