@@ -61,7 +61,11 @@ export const AboutUsSection = () => {
             Conoce más sobre nuestro trabajo de la mano de nuestra directora
             ejecutiva:
           </Text>
-          <Box pos={'relative'}>
+
+          {/* COMENTO ESTO YA QUE NO ME DEJA SUBIR EL VIDEO
+APARENTEMENTE EXCEDE LOS LIMITES DE GITHUB QUE ES HASTA 100.00MG */}
+
+          {/* <Box pos={'relative'}>
             <Box
               as="video"
               w="100%"
@@ -92,7 +96,7 @@ export const AboutUsSection = () => {
                 </Button>
               </Box>
             )}
-          </Box>
+          </Box> */}
         </Stack>
       ) : (
         <Stack
