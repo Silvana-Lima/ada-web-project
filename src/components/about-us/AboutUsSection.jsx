@@ -12,7 +12,7 @@ import { useState } from 'react'
 import { FiVolume2 } from 'react-icons/fi'
 
 import AboutUsImg from '../../assets/image/bannerUsImg.png'
-import videoAboutADA from '../../assets/videoAboutUs.mp4'
+// import videoAboutADA from '../../assets/videoAboutUs.mp4'
 
 export const AboutUsSection = () => {
   const isMobile = useBreakpointValue({
@@ -21,11 +21,11 @@ export const AboutUsSection = () => {
     lg: false,
   })
 
-  const [isMuted, setIsMuted] = useState(true)
+  // const [isMuted, setIsMuted] = useState(true)
 
-  const handleUnmute = () => {
-    setIsMuted(false)
-  }
+  // const handleUnmute = () => {
+  //   setIsMuted(false)
+  // }
   return (
     <Container bg="magenta.400" maxW={'1440px'}>
       {isMobile ? (
