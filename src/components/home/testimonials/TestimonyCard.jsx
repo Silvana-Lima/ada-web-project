@@ -44,7 +44,8 @@ export const TestimonyCard = ({ comment, name, career, photo }) => {
         fontSize={['midTxt1.base', 'midTxt1.base', 'midTxt1.xl', 'midTxt1.xl']}
         textAlign={'justify'}
         fontFamily={'klavikaLightItalic'}
-        h={{ base: '108px', md: '160px', lg: '160px' }}
+        // modifique los altos para que no se superpongan texto con avatar
+        h={{ base: '200px', md: '160px', lg: '200px' }}
       >
         {comment}
       </Text>
@@ -87,6 +88,8 @@ export const TestimonyCard = ({ comment, name, career, photo }) => {
               position: 'absolute',
               zIndex: 0,
               right: rightValue,
+              // agregue bottom para acomodar mas o menos las comillas
+              bottom: '-5px',
             }}
           />
         </Stack>

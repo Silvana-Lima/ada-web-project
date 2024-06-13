@@ -1,58 +1,63 @@
 const testimonials = [
   {
-    name: 'Elvia Sansonetty 1',
-    career: 'Egresada de la carrera de back-end 2022',
+    name: 'Florencia Navarro',
+    career: 'Becada desarrollo front-end',
     comment:
-      'Mi tiempo en ADA, aprendiendo Front-End, cambió mi vida. Me permitió entender la interconexión entre diseño y funcionalidad. Hoy trabajo en una empresa tech, aportando soluciones innovadoras. ADA no solo me formó, también me dio la confianza para destacar en un mercado laboral desafiante. dio la confianza para destacar en un mercado laboral desafiante.',
-    photo: '/testimonials/testimony-photo.svg',
+      'Soy madre de 2 hijos y trabajé como cocinera, pero mi plan siempre fue estudiar. Obtuve la beca para desarrollo front-end en ADA, y descubrí que la programación podía ser mi forma de vida, quería dedicarme a la  programación. Me siento super feliz. Tuve la oportunidad de volver a empezar, de tener una profesión, y de volver a trabajar en algo que me permita estar con mis hijos. Mi objetivo es seguir creciendo en el mundo IT.',
+    photo: '/testimonials/florencia-navarro.png',
   },
   {
-    name: 'Elvia Sansonetty 2',
-    career: 'Egresada de la carrera de back-end 2022',
+    name: 'Daniela Loponte',
+    career: 'Muejr trans - Becada desarrollo back-end',
     comment:
-      'Estudiar Back-End en ADA fue transformador. Me empoderó al brindarme las herramientas para crear aplicaciones desde cero. Gracias a esta experiencia, logré entrar en la industria tech, donde ahora contribuyo en proyectos significativos, impulsando mi crecimiento personal y profesional.',
-    photo: '/testimonials/testimony-photo.svg',
+      'La beca de Ada me abrió una puerta a la programación que fue totalmente nueva para mi. Me abrió muchas puertas en lo económico y laboral, que de otra forma hubiera sido muy difícil, ya que las personas trans tenemos ciertas dificultades a los accesos de los recursos tanto académicos como profesionales. Quiero decirles al equipo de Ada que el esfuerzo que hacen no pasa desapercibido y es muy importante.',
+    photo: '/testimonials/daniela-loponte.png',
   },
   {
-    name: 'Elvia Sansonetty 3',
-    career: 'Egresada de la carrera de back-end 2022',
+    name: 'Banco Interamericano de desarrollo',
+    career: '',
     comment:
-      'Mi tiempo en ADA, aprendiendo Front-End, cambió mi vida. Me permitió entender la interconexión entre diseño y funcionalidad. Hoy trabajo en una empresa tech, aportando soluciones innovadoras. ADA no solo me formó, también me dio la confianza para destacar en un mercado laboral desafiante. dio la confianza para destacar en un mercado laboral desafiante.',
-    photo: '/testimonials/testimony-photo.svg',
+      'Juntos, hemos llevado a cabo programas innovadores que fomentan el desarrollo de habilidades tecnológicas y el empoderamiento de las mujeres, lo que ha resultado en un aumento significativo de la representación femenina en roles tecnológicos clave. Esta colaboración es un ejemplo inspirador de cómo la inversión en la igualdad de género en el sector de la tecnología puede tener un impacto transformador en la sociedad y la economía.',
+    photo: '/testimonials/bid.png',
   },
   {
-    name: 'Elvia Sansonetty 4',
-    career: 'Egresada de la carrera de back-end 2022',
+    name: 'Accenture',
+    career: '',
     comment:
-      'Estudiar Back-End en ADA fue transformador. Me empoderó al brindarme las herramientas para crear aplicaciones desde cero. Gracias a esta experiencia, logré entrar en la industria tech, donde ahora contribuyo en proyectos significativos, impulsando mi crecimiento personal y profesional.',
-    photo: '/testimonials/testimony-photo.svg',
+      'Las talentosas mujeres que han pasado por las aulas de ADA ITW han demostrado un nivel excepcional de conocimiento y habilidades técnicas, así como un compromiso innegable con la excelencia en el campo de la tecnología. Estas profesionales no solo han enriquecido nuestra fuerza laboral con su experiencia y creatividad, sino que también han desempeñado un papel fundamental en la creación de un ambiente inclusivo y diverso en Accenture.',
+    photo: '/testimonials/accenture.png',
   },
   {
-    name: 'Elvia Sansonetty 5',
-    career: 'Egresada de la carrera de back-end 2022',
+    name: 'Ailén Páez',
+    career: 'Alumna de la comision 15va. de back-end',
     comment:
-      'Mi tiempo en ADA, aprendiendo Front-End, cambió mi vida. Me permitió entender la interconexión entre diseño y funcionalidad. Hoy trabajo en una empresa tech, aportando soluciones innovadoras. ADA no solo me formó, también me dio la confianza para destacar en un mercado laboral desafiante. dio la confianza para destacar en un mercado laboral desafiante.',
-    photo: '/testimonials/testimony-photo.svg',
+      // se adapta el texto original a la cantidad de caracteres necesarios sin modificar la idea original
+      'Hace un año decidí dar un volantazo en mi vida y estudiar programación, un mundo desconocido para mí. Elegí Ada por las facilidades de pago, sin ellas no habría podido acceder a una carrera IT. Invertí en mi futuro, y cada clase me deja más contenta. Estoy ansiosa por trabajar de esto, aprendo cada día y mi mente está activa como nunca. He conocido gente maravillosa que me ayuda en cada duda, en la cursada nos apoyamos mutuamente.',
+    // falta foto - aun no tenemos acceso al drive para poder bajarla
+    photo: '/testimonials/ailen-paez.png',
   },
   {
-    name: 'Elvia Sansonetty 6',
-    career: 'Egresada de la carrera de back-end 2022',
+    name: 'Yanina Lorena Rios',
+    career: 'Introducción a desarrollo front-end',
     comment:
-      'Estudiar Back-End en ADA fue transformador. Me empoderó al brindarme las herramientas para crear aplicaciones desde cero. Gracias a esta experiencia, logré entrar en la industria tech, donde ahora contribuyo en proyectos significativos, impulsando mi crecimiento personal y profesional.',
-    photo: '/testimonials/testimony-photo.svg',
+      'Mi experiencia fue muy linda aprendí cosas que no tenía idea. Yo solo tenía algo de conocimiento del celular y nada de computación. Lo que más me gustó fué las compañeras y la profe siempre poniendo todo de ella para que aprendamos y nos saquemos el miedo.',
+    // falta foto - aun no tenemos acceso al drive para poder bajarla
+    photo: '/testimonials/yanina-lorena-rios.png',
   },
   {
-    name: 'Elvia Sansonetty 7',
-    career: 'Egresada de la carrera de back-end 2022',
+    name: 'Karina',
+    career: 'Diseño UX/Ui',
     comment:
-      'Mi tiempo en ADA, aprendiendo Front-End, cambió mi vida. Me permitió entender la interconexión entre diseño y funcionalidad. Hoy trabajo en una empresa tech, aportando soluciones innovadoras. ADA no solo me formó, también me dio la confianza para destacar en un mercado laboral desafiante. dio la confianza para destacar en un mercado laboral desafiante.',
-    photo: '/testimonials/testimony-photo.svg',
+      'Me gusta mucho de ADA  el acompañamiento del profesor y las clases activas ayudan a que sea entretenido y te inspiran a continuar.  Pienso que es importante acercarse a los nuevos recursos tecnológicos para aplicarlo en diferentes áreas y facilitar nuestras tareas. El mayor desafío es pensar que no podés, pero al hacerlo entendés que si se puede, solo tenés que invertir tiempo.',
+    // falta foto - aun no tenemos acceso al drive para poder bajarla
+    photo: '/testimonials/karina.png',
   },
   {
-    name: 'Elvia Sansonetty 8',
-    career: 'Egresada de la carrera de back-end 2022',
+    name: 'Aylen Montofarno',
+    career: 'Introducción diseño UX/Ui',
     comment:
-      'Estudiar Back-End en ADA fue transformador. Me empoderó al brindarme las herramientas para crear aplicaciones desde cero. Gracias a esta experiencia, logré entrar en la industria tech, donde ahora contribuyo en proyectos significativos, impulsando mi crecimiento personal y profesional.',
+      'Me pareció interesante la propuesta enfocada a las mujeres. La programación solía ser más que nada un nicho para masculinidades. Antes de estudiar UXUI en ADA, estudie programación y análisis de datos. Mi consejo para quien puiera estudiar programación es que tenga paciencia y predisposición para practicar. También tener en cuenta la frustración que conlleva el codeo. Relajar, practicar, apoyarse en comunidades afines donde se pueda hacer Preguntas y buscar info relevante.',
+    // No tenemos foto - ver si ponemos una foto cualquiera o un icono de imagen o un fondo de color... 🤔
     photo: '/testimonials/testimony-photo.svg',
   },
 ]
@@ -62,7 +67,6 @@ export const studentTestimonials = testimonials.map((testimonial, index) => ({
   ...testimonial,
 }))
 
-// confirmar en todos los casos la fecha de inicio
 export const beginningCards = [
   {
     id: 1,
@@ -72,8 +76,8 @@ export const beginningCards = [
       'Dominarás el lenguaje de programación JavaScript para dar vida a experiencias web y móviles sorprendentes. Desde la optimización de recursos hasta el diseño de interfaces de usuario, este campo te desafiará a crear soluciones innovadoras y cautivadoras. ',
     descriptionS:
       'Conviértete en desarrolladora front-end y crea sitios web utilizándo las últimas tecnologías del mercado.', // confirmar texto - se usaria para mobile
-    date: 'Fecha estimada de inicio: Octubre 2023',
-    duration: '9 meses : 3 clases semanales', // confirmar la duracion - porque no esta en el programa
+    date: 'Fecha estimada de inicio a confirmar',
+    duration: '9 meses : 3 clases por semana (9hs semanales).', // confirmar la duracion - porque no esta en el programa
   },
   {
     id: 2,
@@ -83,28 +87,30 @@ export const beginningCards = [
       ' Exploramos el corazón de las aplicaciones, donde los datos cobran vida y la seguridad es primordial. Descubre cómo optimizamos la funcionalidad y la eficiencia para crear experiencias digitales sólidas y confiables para los usuarios.',
     descriptionS:
       'Conviértete en desarrolladora front-end y crea sitios web utilizándo las últimas tecnologías del mercado.', // confirmar texto - se usaria para mobile
-    date: 'Fecha estimada de inicio: Octubre 2023',
-    duration: '9 meses : 3 clases semanales',
+    date: 'Fecha estimada de inicio a confirmar',
+    duration: '9 meses : 3 clases por semana (9hs semanales).',
   },
   {
     id: 3,
     title: 'Curso',
-    career: 'UX/UI',
-    descriptionL: ' NO TENEMOS TEXTO',
-    descriptionS: 'NO TENEMOS TEXTO',
-    date: 'Fecha estimada de inicio: Octubre 2023',
-    duration: '10 semanas : 2 clases semanales', // confirmar
+    career: ' Intensivo. Diseño UX/UI',
+    descriptionL:
+      ' Conviértete en diseñadora UX UI y aprende a investigar, organizar la arquitectura de la información y a diseñar interfaces.',
+    descriptionS:
+      'Conviértete en diseñadora UX UI y aprende a investigar, organizar la arquitectura de la información y a diseñar interfaces.',
+    date: 'Fecha estimada de inicio a confirmar',
+    duration: '3 meses : 2 clases semanales (6hs semanales).',
   },
   {
     id: 4,
     title: 'Curso',
-    career: 'Python',
+    career: 'Programación en Python',
     descriptionL:
       ' En este curso dominarás los fundamentos de la programación y crearás tus primeros programas. Python es versátil y fácil de aprender, ideal para principiantes',
     descriptionS:
-      'En este curso dominarás los fundamentos de la programación y crearás tus primeros programas. Python es versátil y fácil de aprender, ideal para principiantes', //confirmar texto
-    date: 'Fecha estimada de inicio: Octubre 2023',
-    duration: '3 meses : 2 clases semanales',
+      'En este curso introductorio aprenderás el lenguaje de programación Phyton.',
+    date: 'Fecha estimada de inicio a confirmar',
+    duration: '3 meses : 2 clases semanales (6hs semanales).',
   },
 ]
 
