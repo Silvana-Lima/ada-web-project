@@ -8,7 +8,7 @@ const testimonials = [
   },
   {
     name: 'Daniela Loponte',
-    career: 'Muejr trans - Becada desarrollo back-end',
+    career: 'Mujer trans - Becada desarrollo back-end',
     comment:
       'La beca de Ada me abrió una puerta a la programación que fue totalmente nueva para mi. Me abrió muchas puertas en lo económico y laboral, que de otra forma hubiera sido muy difícil, ya que las personas trans tenemos ciertas dificultades a los accesos de los recursos tanto académicos como profesionales. Quiero decirles al equipo de Ada que el esfuerzo que hacen no pasa desapercibido y es muy importante.',
     photo: '/testimonials/daniela-loponte.png',

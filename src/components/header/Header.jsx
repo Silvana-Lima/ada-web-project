@@ -76,6 +76,11 @@ export const Header = () => {
                 maxW={'max-content'}
                 px={'8px'}
                 py={'10px'}
+                _hover={{
+                  color: 'orange.400',
+                  textDecoration: 'underline',
+                  textUnderlineOffset: '10px',
+                }}
               >
                 Sobre nosotros
               </Link>

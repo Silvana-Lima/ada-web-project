@@ -5,6 +5,7 @@ import {
   Grid,
   GridItem,
   Heading,
+  Hide,
   Image,
   Show,
   Stack,
@@ -52,7 +53,7 @@ export const Awards = () => {
         >
           Premios y reconocimientos
         </Heading>
-        <Show above="sm">
+        <Hide below="sm">
           <Flex
             maxW={'100%'}
             color={'gray.600'}
@@ -90,7 +91,7 @@ export const Awards = () => {
               </Box>
             ))}
           </Flex>
-        </Show>
+        </Hide>
 
         <Show below="sm">
           <Grid
