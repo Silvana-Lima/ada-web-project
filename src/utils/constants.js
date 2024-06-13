@@ -57,8 +57,7 @@ const testimonials = [
     career: 'Introducción diseño UX/Ui',
     comment:
       'Me pareció interesante la propuesta enfocada a las mujeres. La programación solía ser más que nada un nicho para masculinidades. Antes de estudiar UXUI en ADA, estudie programación y análisis de datos. Mi consejo para quien puiera estudiar programación es que tenga paciencia y predisposición para practicar. También tener en cuenta la frustración que conlleva el codeo. Relajar, practicar, apoyarse en comunidades afines donde se pueda hacer Preguntas y buscar info relevante.',
-    // No tenemos foto - ver si ponemos una foto cualquiera o un icono de imagen o un fondo de color... 🤔
-    photo: '/testimonials/testimony-photo.svg',
+    photo: '/testimonials/icon-person.svg',
   },
 ]
 
