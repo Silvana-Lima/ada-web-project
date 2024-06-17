@@ -36,8 +36,8 @@ export const Header = () => {
         px={{ base: '16px', md: '48px' }}
         py={'16px'}
       >
-        {/* Logo */}
-        <Box>
+        {/* Logo Ada */}
+        <Link as={NavLink} to="/">
           <Image
             src={logoAdaFuscia}
             alt="Logo ADA"
@@ -46,7 +46,7 @@ export const Header = () => {
             width="auto"
             height="auto"
           />
-        </Box>
+        </Link>
 
         {/* menu hamburguesa */}
         <Show below="lg">
