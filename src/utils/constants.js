@@ -7,18 +7,18 @@ const testimonials = [
     photo: '/testimonials/florencia-navarro.png',
   },
   {
-    name: 'Daniela Loponte',
-    career: 'Mujer trans - Becada desarrollo back-end',
-    comment:
-      'La beca de Ada me abrió una puerta a la programación que fue totalmente nueva para mi. Me abrió muchas puertas en lo económico y laboral, que de otra forma hubiera sido muy difícil, ya que las personas trans tenemos ciertas dificultades a los accesos de los recursos tanto académicos como profesionales. Quiero decirles al equipo de Ada que el esfuerzo que hacen no pasa desapercibido y es muy importante.',
-    photo: '/testimonials/daniela-loponte.png',
-  },
-  {
     name: 'Banco Interamericano de desarrollo',
     career: '',
     comment:
       'Juntos, hemos llevado a cabo programas innovadores que fomentan el desarrollo de habilidades tecnológicas y el empoderamiento de las mujeres, lo que ha resultado en un aumento significativo de la representación femenina en roles tecnológicos clave. Esta colaboración es un ejemplo inspirador de cómo la inversión en la igualdad de género en el sector de la tecnología puede tener un impacto transformador en la sociedad y la economía.',
     photo: '/testimonials/bid.png',
+  },
+  {
+    name: 'Daniela Loponte',
+    career: 'Mujer trans - Becada desarrollo back-end',
+    comment:
+      'La beca de Ada me abrió una puerta a la programación que fue totalmente nueva para mi. Me abrió muchas puertas en lo económico y laboral, que de otra forma hubiera sido muy difícil, ya que las personas trans tenemos ciertas dificultades a los accesos de los recursos tanto académicos como profesionales. Quiero decirles al equipo de Ada que el esfuerzo que hacen no pasa desapercibido y es muy importante.',
+    photo: '/testimonials/daniela-loponte.png',
   },
   {
     name: 'Accenture',
