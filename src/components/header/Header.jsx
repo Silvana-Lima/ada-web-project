@@ -124,7 +124,7 @@ export const Header = () => {
               >
                 Colaborar
               </Link>
-              <Button variant={'button-primary'}>Incribite ahora</Button>
+              <Button variant={'button-primary'}>Inscríbete ahora</Button>
             </Grid>
           </Box>
         </Hide>

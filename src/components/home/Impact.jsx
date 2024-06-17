@@ -11,6 +11,7 @@ export const Impact = () => {
         color={'gray.800'}
         flexDirection={['column', 'column', 'column', 'row']}
         alignItems={'center'}
+        justifyContent={'space-between'}
         gap={['', '', '', 'spacingM.xl']}
         pt={['spacingXl.base', 'spacingXl.base', 'spacingXl.base', '80px']}
         pb={['spacingXl.base', 'spacingXl.base', 'spacingXl.base', '160px']}
@@ -51,7 +52,7 @@ export const Impact = () => {
             'repeat(2, 1fr)',
           ]}
           gap={'spacingM.xl'}
-          maxW={'708px'}
+          w={'708px'}
         >
           <ImpactCard
             icon={'pepicons-print:people'}

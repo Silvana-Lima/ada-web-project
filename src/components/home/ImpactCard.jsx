@@ -7,8 +7,8 @@ export const ImpactCard = ({ icon, number, description }) => {
   const theme = useTheme()
   return (
     <Container
-      maxW={'346px'}
-      maxH={'193px'}
+      maxW={['280px', '346px']}
+      maxH={['120px', '193px']}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'center'}
@@ -17,7 +17,8 @@ export const ImpactCard = ({ icon, number, description }) => {
       borderWidth="1px"
       borderRadius="md"
       color={'#4A4A4A'}
-      p={5}
+      pt={[2, 2, 4, 5]}
+      pb={[2, 2, 3, 3]}
       _hover={{ boxShadow: 'lg' }}
     >
       <Icon
@@ -35,8 +36,9 @@ export const ImpactCard = ({ icon, number, description }) => {
         {number}
       </Text>
       <Text
-        fontSize={['midTxt1.base', 'midTxt1.base', 'midTxt1.lg', 'midTxt1.lg']}
+        fontSize={['midTxt1.base', 'midTxt1.base', 'midTxt1.xl', 'midTxt1.xl']}
         align={'center'}
+        w={'279px'}
       >
         {description}
       </Text>
