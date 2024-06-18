@@ -24,7 +24,7 @@ export const Header = () => {
       position={'sticky'}
       top={0}
       bg="gray.0"
-      zIndex={'1000'}
+      zIndex={100}
     >
       {/* Instagram - llamada a la acción */}
       <InstagramCta />

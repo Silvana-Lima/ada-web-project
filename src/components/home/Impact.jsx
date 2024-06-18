@@ -52,7 +52,7 @@ export const Impact = () => {
             'repeat(2, 1fr)',
           ]}
           gap={'spacingM.xl'}
-          w={'708px'}
+          w={['', '', '708px', '708px']}
         >
           <ImpactCard
             icon={'pepicons-print:people'}
