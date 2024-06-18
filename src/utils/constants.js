@@ -8,7 +8,7 @@ const testimonials = [
   },
   {
     name: 'Daniela Loponte',
-    career: 'Muejr trans - Becada desarrollo back-end',
+    career: 'Mujer trans - Becada desarrollo back-end',
     comment:
       'La beca de Ada me abrió una puerta a la programación que fue totalmente nueva para mi. Me abrió muchas puertas en lo económico y laboral, que de otra forma hubiera sido muy difícil, ya que las personas trans tenemos ciertas dificultades a los accesos de los recursos tanto académicos como profesionales. Quiero decirles al equipo de Ada que el esfuerzo que hacen no pasa desapercibido y es muy importante.',
     photo: '/testimonials/daniela-loponte.png',
@@ -57,8 +57,7 @@ const testimonials = [
     career: 'Introducción diseño UX/Ui',
     comment:
       'Me pareció interesante la propuesta enfocada a las mujeres. La programación solía ser más que nada un nicho para masculinidades. Antes de estudiar UXUI en ADA, estudie programación y análisis de datos. Mi consejo para quien puiera estudiar programación es que tenga paciencia y predisposición para practicar. También tener en cuenta la frustración que conlleva el codeo. Relajar, practicar, apoyarse en comunidades afines donde se pueda hacer Preguntas y buscar info relevante.',
-    // No tenemos foto - ver si ponemos una foto cualquiera o un icono de imagen o un fondo de color... 🤔
-    photo: '/testimonials/testimony-photo.svg',
+    photo: '/testimonials/icon-person.svg',
   },
 ]
 

@@ -1,4 +1,5 @@
 import {
+  Box,
   HStack,
   Image,
   Stack,
@@ -12,16 +13,16 @@ import PropTypes from 'prop-types'
 export const TestimonyCard = ({ comment, name, career, photo }) => {
   const theme = useTheme()
   const rightValue = useBreakpointValue({
-    base: '0px',
+    base: '-8px',
     sm: '20px',
     md: '30px',
     lg: '50px',
-    xl: '80px',
+    xl: '120px',
   })
   return (
     <Stack
       maxW={'100%'}
-      h={['312px', '312px', '312px', '320px']}
+      h={['320px', '312px', '312px', '340px']}
       borderWidth="1px"
       borderRadius="md"
       borderLeftColor={'magenta.600'}
@@ -29,23 +30,27 @@ export const TestimonyCard = ({ comment, name, career, photo }) => {
       borderLeftRadius={'xl'}
       color={'gray.800'}
       bg={'gray.0'}
-      p={'spacingM.base'}
+      p={['12px', 'spacingM.base']}
       px={['spacingM.base', 'spacingM.base', 'spacingM.base', 'spacingL.base']}
       justifyContent="space-between"
+      gap={0}
     >
-      <Icon
-        icon={'ri:double-quotes-l'}
-        style={{
-          color: theme.colors.magenta[600],
-          fontSize: '40px',
-        }}
-      />
+      <Box boxSize={['30px', '40px']}>
+        <Icon
+          icon={'ri:double-quotes-l'}
+          style={{
+            color: theme.colors.magenta[600],
+            width: '100%',
+            height: '100%',
+          }}
+        />
+      </Box>
+
       <Text
         fontSize={['midTxt1.base', 'midTxt1.base', 'midTxt1.xl', 'midTxt1.xl']}
         textAlign={'justify'}
         fontFamily={'klavikaLightItalic'}
-        // modifique los altos para que no se superpongan texto con avatar
-        h={{ base: '200px', md: '160px', lg: '200px' }}
+        h={{ base: '108px', md: '160px', lg: '180px' }}
       >
         {comment}
       </Text>
@@ -53,10 +58,10 @@ export const TestimonyCard = ({ comment, name, career, photo }) => {
         <Image
           src={photo}
           borderRadius="full"
-          boxSize={['48px', '48px', '48px', '72px']}
+          boxSize={['48px', '48px', '48px', '62px']}
         />
         <Stack>
-          <Stack position={'relative'} zIndex={1}>
+          <Stack position={'relative'} zIndex={1} gap={0}>
             <Text
               fontSize={[
                 'midTxt.base',
@@ -68,30 +73,36 @@ export const TestimonyCard = ({ comment, name, career, photo }) => {
             >
               {name}
             </Text>
-            <Text
-              fontSize={[
-                'midTxt1.base',
-                'midTxt1.base',
-                'midTxt1.base',
-                'midTxt1.xl',
-              ]}
-            >
-              {career}{' '}
-            </Text>
+
+            <Box minHeight="24px">
+              <Text
+                fontSize={[
+                  'midTxt1.base',
+                  'midTxt1.base',
+                  'midTxt1.base',
+                  'midTxt1.xl',
+                ]}
+              >
+                {career}{' '}
+              </Text>
+            </Box>
           </Stack>
 
-          <Icon
-            icon={'ri:double-quotes-r'}
-            style={{
-              color: 'rgba(158, 0, 70, 0.08)',
-              fontSize: '80px',
-              position: 'absolute',
-              zIndex: 0,
-              right: rightValue,
-              // agregue bottom para acomodar mas o menos las comillas
-              bottom: '-5px',
-            }}
-          />
+          <Box
+            boxSize={['60px', '80px']}
+            position={'absolute'}
+            zIndex={0}
+            right={rightValue}
+          >
+            <Icon
+              icon={'ri:double-quotes-r'}
+              style={{
+                color: 'rgba(158, 0, 70, 0.08)',
+                width: '100%',
+                height: '100%',
+              }}
+            />
+          </Box>
         </Stack>
       </HStack>
     </Stack>

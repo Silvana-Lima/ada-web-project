@@ -24,8 +24,6 @@ export const EducationMenu = ({ hideChevronIcon }) => {
         color={isOpen && 'magenta.400'}
         _hover={{
           color: 'magenta.400',
-          textDecoration: 'underline',
-          textUnderlineOffset: '10px',
         }}
       >
         Oferta educativa{' '}
