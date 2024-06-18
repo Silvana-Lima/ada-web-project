@@ -4,12 +4,11 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 export const Whatsapp = () => {
   return (
     <Flex
-      position={'sticky'}
+      position={'fixed'}
+      alignSelf="flex-end"
       zIndex={110}
-      bottom={[20, 50, 30, 30]}
-      justifyContent={'flex-end'}
-      pr={[3, 30, 30, 30]}
-      h={['46px', '46px', '64px', '64px']}
+      bottom={['70px', '70px', '70px', '80px']}
+      right={['15px', '15px', '50px', '80px']}
     >
       <Link
         href="https://web.whatsapp.com/send?phone=5491131033575&text=¡Hola! Me gustaría conocer más sobre los cursos en Ada ITW"
@@ -17,7 +16,12 @@ export const Whatsapp = () => {
         size={'sm'}
       >
         <Tooltip label="Tienes dudas? Aquí estamos para ayudarte">
-          <Icon icon="logos:whatsapp-icon" width="100%" />
+          <Icon
+            icon="logos:whatsapp-icon"
+            style={{
+              fontSize: `calc(48px + (16 * ((100vw - 320px) / 1600)))`,
+            }}
+          />
         </Tooltip>
       </Link>
     </Flex>

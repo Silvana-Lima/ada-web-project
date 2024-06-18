@@ -13,7 +13,6 @@ import { NetworkBuilder } from '../components/home/NetworkBuilder'
 import { NextBeginnings } from '../components/home/NextBeginnings'
 import { OurGoald } from '../components/home/OurGoald'
 import { Testimonials } from '../components/home/testimonials/Testimonials'
-//import { Whatsapp } from '../components/home/Whatsapp'
 import { WhyUs } from '../components/home/WhyUs'
 
 export const Home = () => {
@@ -50,7 +49,6 @@ export const Home = () => {
       <Awards />
       <NetworkBuilder />
       <CivicHouseShowcase />
-      {/* <Whatsapp /> */}
     </Container>
   )
 }
