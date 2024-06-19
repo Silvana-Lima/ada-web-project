@@ -71,6 +71,7 @@ export const beginningCards = [
     id: 1,
     title: 'Carrera',
     career: 'Desarrollo front-end',
+    color: '#cd0055',
     descriptionL:
       'Dominarás el lenguaje de programación JavaScript para dar vida a experiencias web y móviles sorprendentes. Desde la optimización de recursos hasta el diseño de interfaces de usuario, este campo te desafiará a crear soluciones innovadoras y cautivadoras. ',
     descriptionS:
@@ -82,6 +83,7 @@ export const beginningCards = [
     id: 2,
     title: 'Carrera',
     career: 'Desarrollo back-end',
+    color: '#ff7d00',
     descriptionL:
       ' Exploramos el corazón de las aplicaciones, donde los datos cobran vida y la seguridad es primordial. Descubre cómo optimizamos la funcionalidad y la eficiencia para crear experiencias digitales sólidas y confiables para los usuarios.',
     descriptionS:
@@ -93,6 +95,7 @@ export const beginningCards = [
     id: 3,
     title: 'Curso',
     career: ' Intensivo. Diseño UX/UI',
+    color: '#be44ff',
     descriptionL:
       ' Conviértete en diseñadora UX UI y aprende a investigar, organizar la arquitectura de la información y a diseñar interfaces.',
     descriptionS:
@@ -104,6 +107,7 @@ export const beginningCards = [
     id: 4,
     title: 'Curso',
     career: 'Programación en Python',
+    color: '#cd0055',
     descriptionL:
       ' En este curso dominarás los fundamentos de la programación y crearás tus primeros programas. Python es versátil y fácil de aprender, ideal para principiantes',
     descriptionS:

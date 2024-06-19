@@ -21,19 +21,17 @@ export const CoursesCard = ({
   descriptionS,
   date,
   duration,
+  color,
 }) => {
   const theme = useTheme()
 
   return (
     <Card
-      w={'100%'}
-      h={'100%'}
-      maxW={['224px', '300px', '350px', '399px']}
-      // maxH={['340px', '340px', '340px', '520px']}
+      w={['224px', '299px', '299px', '399px']}
+      h={['340px', '420px', '420px', '520px']}
       py={['spacingL.xl', 'spacingL.xl', 'spacingL.xl', 'spacingXl.base']}
       px={['spacingM.xl', 'spacingM.xl', 'spacingM.xl', 'spacingXl.base']}
-      // bg={'green.200'}
-      overflow="hidden" // Evita que el contenido se desborde
+      overflow="hidden"
       color={'gray.600'}
     >
       <Heading
@@ -60,8 +58,8 @@ export const CoursesCard = ({
             'largeTxt.base',
             'largeTxt.lg',
           ]}
-          fontFamily={'kMid'}
-          color={'magenta.400'}
+          color={color}
+          fontWeight={'semibold'}
         >
           {career}
         </Text>
@@ -101,7 +99,7 @@ export const CoursesCard = ({
           <HStack>
             <Icon
               icon="clarity:calendar-line"
-              color={'#cd0055'}
+              color={color}
               style={{
                 fontSize: `calc(${theme.fontSizes.h4.base} + 1vw)`,
               }}
@@ -116,7 +114,7 @@ export const CoursesCard = ({
           <HStack>
             <Icon
               icon="ph:clock"
-              color="#cd0055"
+              color={color}
               style={{
                 fontSize: `calc(${theme.fontSizes.h4.base} + 1vw)`,
               }}
@@ -131,7 +129,7 @@ export const CoursesCard = ({
           <HStack>
             <Icon
               icon="pepicons-print:dollar"
-              color="#cd0055"
+              color={color}
               style={{
                 fontSize: `calc(${theme.fontSizes.h4.base} + 1vw)`,
               }}
@@ -160,4 +158,5 @@ CoursesCard.propTypes = {
   descriptionS: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
 }

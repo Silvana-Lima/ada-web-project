@@ -16,7 +16,7 @@ export const CareersCardCarousel = () => {
   return (
     <>
       <Swiper
-        slidesPerView={1.5}
+        slidesPerView={1.4}
         spaceBetween={16}
         pagination={{
           clickable: true,
@@ -27,20 +27,24 @@ export const CareersCardCarousel = () => {
         // Responsive breakpoints
         breakpoints={{
           480: {
-            slidesPerView: 2,
+            slidesPerView: 1.4,
             spaceBetween: 16,
           },
+          600: {
+            slidesPerView: 1.8,
+            spaceBetween: 10,
+          },
           768: {
-            slidesPerView: 2.5,
+            slidesPerView: 2,
             spaceBetween: 10,
           },
           992: {
-            slidesPerView: 2.5,
+            slidesPerView: 2,
             spaceBetween: 16,
           },
           1280: {
-            slidesPerView: 3,
-            spaceBetween: 40,
+            slidesPerView: 2.8,
+            spaceBetween: 16,
           },
         }}
       >
@@ -53,6 +57,7 @@ export const CareersCardCarousel = () => {
             descriptionS,
             date,
             duration,
+            color,
           }) => (
             <SwiperSlide className=".swiper-slide-beggining" key={id}>
               <CoursesCard
@@ -62,6 +67,7 @@ export const CareersCardCarousel = () => {
                 descriptionS={descriptionS}
                 date={date}
                 duration={duration}
+                color={color}
               />
             </SwiperSlide>
           )
