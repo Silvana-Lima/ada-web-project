@@ -37,7 +37,7 @@ export const Header = () => {
         py={'16px'}
       >
         {/* Logo */}
-        <Box>
+        <Box as={NavLink} to="/">
           <Image
             src={logoAdaFuscia}
             alt="Logo ADA"
