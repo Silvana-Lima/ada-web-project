@@ -48,7 +48,7 @@ export const BannerDisplay = ({
         <Stack
           maxW={{ base: '100%', lg: '450px' }}
           fontWeight={'bold'}
-          order={{ base: 2, md: 1 }}
+          order={{ base: 2, lg: 1 }}
         >
           <Heading
             color={txtColor}
@@ -83,7 +83,7 @@ export const BannerDisplay = ({
             </Box>
           )}
           {buttonTxt && (
-            <Stack order={2}>
+            <Stack order={3}>
               <Button
                 maxW={{ base: '100%', lg: '450px' }}
                 variant={'button-secondary'}
@@ -104,7 +104,7 @@ export const BannerDisplay = ({
           />
         </Stack>
         {/* link */}
-        <Stack order={2}>
+        <Stack order={3}>
           {isMobile && (
             <Link
               color={'yellow.600'}
