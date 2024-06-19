@@ -16,6 +16,7 @@ import {
 import { useState } from 'react'
 import { IoClose } from 'react-icons/io5'
 import { RxHamburgerMenu } from 'react-icons/rx'
+import { Link as NavLink } from 'react-router-dom'
 
 import { CoursesMenuBox } from './CoursesMenuBox'
 
@@ -47,10 +48,12 @@ export const BurgerMenu = () => {
         justifyContent="flex-end"
       />
       <MenuList w={'100vw'} h={'100vh'} pt={'40px'} px={'24px'}>
-        <MenuItem {...menuItemStyles}>Sobre nosotros</MenuItem>
+        <NavLink to="/aboutUs">
+          <MenuItem {...menuItemStyles}>Sobre nosotros</MenuItem>
+        </NavLink>
 
         {/* desplegable para ofertas educativas */}
-        <Accordion allowToggle>
+        <Accordion allowToggle={false} defaultIndex={[0]}>
           <AccordionItem w={'max-content'}>
             <AccordionButton
               _expanded={{
@@ -59,13 +62,12 @@ export const BurgerMenu = () => {
                 borderBottom: '2px ',
                 borderColor: 'magenta.400',
                 padding: '12px 24px',
-                width: ['100%', '382px'],
+                width: ['312px', '382px'],
               }}
             >
               <Box textAlign="left">Ofertas educativas</Box>
             </AccordionButton>
             <AccordionPanel pb={4}>
-              {/* items del menu */}
               <CoursesMenuBox />
             </AccordionPanel>
           </AccordionItem>
