@@ -46,14 +46,9 @@ export const OurStory = () => {
         <Stack maxW={['252px', '630px']}>
           <Image src={image} alt="Imagen de Ma.Celeste y Ezequiel" />
         </Stack>
-        <Stack maxW={['296px', '1161px']}>
+        <Stack maxW={['296px', '1161px']} textAlign={['justify', 'center']}>
           <Text
-            fontSize={[
-              'largeTxt.base',
-              'largeTxt.base',
-              'largeTxt.lg',
-              'largeTxt.xl',
-            ]}
+            fontSize={['midTxt.base', 'midTxt.base', 'midTxt.lg', 'midTxt.xl']}
           >
             La historia nace de la experiencia vivida por María Celeste Medina y
             Ezequiel González, que estudiaron y trabajaron en la industria IT de
