@@ -3,7 +3,7 @@
 /* Estilo base (mobile-first) */
 .swiper-next-beginning {
   width: 100%;
-  max-height: 500px;
+  max-height: 600px;
   position: relative;
   padding-bottom: 50px; /* Espacio para la paginación */
 }
@@ -30,34 +30,32 @@
 
 .swiper-pagination-bullet {
   background-color: rgb(205, 0, 85);
+  width: 12px;
+  height: 12px;
 }
 
 @media (max-width: 480px) {
-  .swiper-next-beginning {
-    width: 100%;
-    max-height: 600px;
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
   }
 }
 
-@media (min-width: 768px) {
-  .swiper-next-beginning {
-    width: 100%;
-    max-height: 600px;
+@media (max-width: 992px) {
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
   }
 }
 
 @media (min-width: 992px) {
   .swiper-next-beginning {
-    width: 100%;
-    max-height: 670px;
-    padding-left: 20px;
+    padding-left: 150px;
   }
 }
 
 @media (min-width: 1280) {
   .swiper-next-beginning {
-    width: 100%;
-    max-height: 620px;
     padding-left: 180px;
   }
 }
