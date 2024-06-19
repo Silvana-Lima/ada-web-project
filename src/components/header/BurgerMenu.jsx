@@ -47,7 +47,13 @@ export const BurgerMenu = () => {
         display="flex"
         justifyContent="flex-end"
       />
-      <MenuList w={'100vw'} h={'100vh'} pt={'40px'} px={'24px'}>
+      <MenuList
+        w={'100vw'}
+        h={'100vh'}
+        pt={'40px'}
+        px={'24px'}
+        overflowX="hidden"
+      >
         <NavLink to="/aboutUs">
           <MenuItem {...menuItemStyles}>Sobre nosotros</MenuItem>
         </NavLink>
