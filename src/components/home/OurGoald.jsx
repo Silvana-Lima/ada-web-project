@@ -6,6 +6,7 @@ export const OurGoald = () => {
     <BannerDisplay
       bgColor={'yellow.100'}
       txtColor={'gray.800'}
+      ourGoald={true}
       txt1={'Nuestro'}
       txt2={'objetivo'}
       txt3={'es'}

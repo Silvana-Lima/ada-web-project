@@ -16,7 +16,6 @@ export const BannerDisplay = ({
   txt1,
   txt2,
   txt3,
-  txt4,
   description,
   buttonTxt,
   txtColor,
@@ -25,6 +24,8 @@ export const BannerDisplay = ({
   imgMobile,
   bgColor,
   linkTxt,
+  ourGoald,
+  aboutUs,
 }) => {
   const isMobile = useBreakpointValue({
     base: true,
@@ -52,48 +53,43 @@ export const BannerDisplay = ({
         spacing={{ base: '10px', md: '16px', lg: '16px' }}
         display={'flex'}
         flexDirection={{ base: 'column', md: 'row', lg: 'row' }}
-        background={'red'}
         maxW={['296px', '296px', '900px', '1154px']}
         maxH={['414px', '414px', '414px', '420px']}
         alignItems={'center'}
         justifyContent={'space-between'}
       >
         {/* textos */}
-        <Stack
-          maxW={['100%', '350px', '350px', '450px']}
-          h={['', '', '', '420px']}
-          fontWeight={'bold'}
-          order={{ base: 2, md: 1, lg: 1 }}
-          background={'green'}
-          justifyContent={'space-between'}
-        >
-          <Heading
-            color={txtColor}
-            fontSize={['h2.base', 'h2.base', 'h2.lg', 'h2.xl']}
+        {ourGoald && (
+          <Stack
+            maxW={['100%', '350px', '350px', '450px']}
+            h={['', '', '', '420px']}
+            fontWeight={'bold'}
+            order={{ base: 2, md: 1, lg: 1 }}
+            justifyContent={'space-between'}
           >
-            {txt1}{' '}
-            {txt2 && (
+            <Heading
+              color={txtColor}
+              fontSize={['h2.base', 'h2.base', 'h2.lg', 'h2.xl']}
+            >
+              {txt1}{' '}
               <Text
                 display={'inline'}
                 fontSize={['32px', '32px', '40px', '85px']}
               >
                 {txt2}{' '}
               </Text>
-            )}
-            {txt3 && txt3}{' '}
-            <Text
-              display={'inline'}
-              color={HLColorTxt}
-              bg="yellow.600"
-              fontSize={['h2.base', 'h2.base', 'h2.lg', 'h2.xl']}
-              fontWeight={'bold'}
-            >
-              {highlightxt}
-            </Text>{' '}
-            {txt4 && txt4}
-          </Heading>
+              {txt3}{' '}
+              <Text
+                display={'inline'}
+                color={HLColorTxt}
+                bg="yellow.600"
+                fontSize={['h2.base', 'h2.base', 'h2.lg', 'h2.xl']}
+                fontWeight={'bold'}
+              >
+                {highlightxt}
+              </Text>
+            </Heading>
 
-          {description && (
             <Box>
               <Text
                 fontSize={[
@@ -106,8 +102,7 @@ export const BannerDisplay = ({
                 {description}
               </Text>
             </Box>
-          )}
-          {buttonTxt && (
+
             <Stack order={3}>
               <Button
                 maxW={{ base: '100%', lg: '450px' }}
@@ -116,8 +111,35 @@ export const BannerDisplay = ({
                 {buttonTxt}
               </Button>
             </Stack>
-          )}
-        </Stack>
+          </Stack>
+        )}
+        {aboutUs && (
+          <Stack
+            maxW={['100%', '350px', '350px', '432px']}
+            h={['', '', '', '307px']}
+            fontWeight={'bold'}
+            order={{ base: 2, md: 1, lg: 1 }}
+            pt={[5, 0]}
+            //   justifyContent={'space-between'}
+          >
+            <Heading
+              color={txtColor}
+              fontSize={['h2.base', 'h2.base', 'h2.lg', 'h2.xl']}
+            >
+              {txt1}{' '}
+              <Text
+                display={'inline'}
+                color={HLColorTxt}
+                bg="yellow.600"
+                fontSize={['h2.base', 'h2.base', 'h2.lg', 'h1.xl']}
+                fontWeight={'bold'}
+              >
+                {highlightxt}
+              </Text>{' '}
+              {txt2}
+            </Heading>
+          </Stack>
+        )}
         {/* imagen */}
         <Stack order={{ base: 1, lg: 2 }}>
           <Image src={displayImg} maxW={['100%', '100%', '100%', '100%']} />
@@ -125,7 +147,7 @@ export const BannerDisplay = ({
         {/* link */}
 
         {isMobile && (
-          <Stack order={3}>
+          <Stack order={3} pt={5}>
             <Link
               color={'yellow.600'}
               textDecoration="underline"
@@ -148,11 +170,12 @@ BannerDisplay.propTypes = {
   HLColorTxt: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   bgColor: PropTypes.string.isRequired,
+  ourGoald: PropTypes.bool.isRequired,
+  aboutUs: PropTypes.bool.isRequired,
   // props no requeridas
   txt1: PropTypes.string,
   txt2: PropTypes.string,
   txt3: PropTypes.string,
-  txt4: PropTypes.string,
   description: PropTypes.string,
   buttonTxt: PropTypes.string,
   imgMobile: PropTypes.string,

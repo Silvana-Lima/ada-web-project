@@ -18,11 +18,12 @@ export const AboutUsSection = () => {
       {/* Banner about us */}
       <BannerDisplay
         bgColor={'magenta.400'}
+        aboutUs={true}
         txtColor={'gray.0'}
         txt1={'Creemos que la tecnología tiene un'}
         highlightxt={' alto poder transformador'}
-        HLColorTxt={'magenta.400'}
-        txt4={'y buscamos generar oportunidades para todas las mujeres'}
+        HLColorTxt={'#4a4a4a'}
+        txt2={'y buscamos generar oportunidades para todas las mujeres'}
         img={AboutUsImg}
         imgMobile={networkingImg}
         linkTxt={'Conoce nuestras capacitaciones'}
