@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Container,
   Heading,
@@ -13,8 +12,9 @@ import PropTypes from 'prop-types'
 
 export const BannerDisplay = ({
   highlightxt,
-  txt,
   txt1,
+  txt2,
+  txt3,
   description,
   buttonTxt,
   txtColor,
@@ -23,6 +23,8 @@ export const BannerDisplay = ({
   imgMobile,
   bgColor,
   linkTxt,
+  ourGoald,
+  aboutUs,
 }) => {
   const isMobile = useBreakpointValue({
     base: true,
@@ -34,55 +36,71 @@ export const BannerDisplay = ({
     md: img,
   })
   return (
-    <Container maxW={'1440px'}>
+    <Container
+      maxW={'100%'}
+      //h={['478px', '580px']}
+      bg={bgColor}
+      py={{ base: '32px', md: '32px', lg: '80px' }}
+      px={{ base: '32px', md: '32px', lg: '' }}
+      display={'flex'}
+      justifyContent={'center'}
+      alignItems={'center'}
+      centerContent
+    >
       {/* texto - descripcion */}
-      <Stack
-        bg={bgColor}
-        px={{ base: '32px', md: '32px', lg: '80px' }}
-        py={{ base: '32px', md: '32px', lg: '80px' }}
-        spacing={{ base: '16px', md: '16px', lg: '80px' }}
-        flexDirection={{ base: 'column', md: 'column', lg: 'row' }}
+      <Container
+        display={'flex'}
+        flexDirection={{ base: 'column', md: 'row', lg: 'row' }}
+        gap={{ base: '10px', md: '35px', lg: '20px' }}
+        maxW={['296px', '400px', '900px', '1154px']}
+        maxH={['', '', '414px', '420px']}
         alignItems={'center'}
+        justifyContent={'space-between'}
       >
         {/* textos */}
-        <Stack
-          maxW={{ base: '100%', lg: '450px' }}
-          fontWeight={'bold'}
-          order={{ base: 2, lg: 1 }}
-        >
-          <Heading
-            color={txtColor}
-            fontSize={['h2.base', 'h2.base', 'h2.lg', 'h2.xl']}
+        {ourGoald && (
+          <Stack
+            maxW={['100%', '350px', '350px', '450px']}
+            h={['', '', '', '420px']}
+            fontWeight={'bold'}
+            order={{ base: 2, md: 1, lg: 1 }}
+            justifyContent={'space-between'}
+            gap={['16px', '20px', '20px', '']}
           >
-            {txt}{' '}
             <Heading
-              as={'span'}
-              color={HLColorTxt}
-              bg="yellow.600"
-              fontSize={['h2.base', 'h2.base', 'h2.lg', 'h2.xl']}
-              fontWeight={'bold'}
-              maxW={'max-content'}
+              color={txtColor}
+              fontSize={['h2.base', 'h2.base', 'h2.base', 'h2.xl']}
             >
-              {highlightxt}
-            </Heading>{' '}
-            {txt1 && txt1}
-          </Heading>
-
-          {description && (
-            <Box>
+              {txt1}{' '}
               <Text
-                fontSize={[
-                  'largeTxt.base',
-                  'largeTxt.base',
-                  'largeTxt.lg',
-                  'largeTxt.xl',
-                ]}
+                display={'inline'}
+                fontSize={['32px', '32px', '32px', '79px']}
               >
-                {description}
+                {txt2}{' '}
               </Text>
-            </Box>
-          )}
-          {buttonTxt && (
+              {txt3}{' '}
+              <Text
+                display={'inline'}
+                color={HLColorTxt}
+                bg="yellow.600"
+                fontSize={['h2.base', 'h2.base', 'h2.base', 'h2.xl']}
+                fontWeight={'bold'}
+              >
+                {highlightxt}
+              </Text>
+            </Heading>
+
+            <Text
+              fontSize={[
+                'largeTxt.base',
+                'largeTxt.base',
+                'largeTxt.base',
+                'largeTxt.xl',
+              ]}
+            >
+              {description}
+            </Text>
+
             <Stack order={3}>
               <Button
                 maxW={{ base: '100%', lg: '450px' }}
@@ -91,21 +109,43 @@ export const BannerDisplay = ({
                 {buttonTxt}
               </Button>
             </Stack>
-          )}
-        </Stack>
+          </Stack>
+        )}
+        {aboutUs && (
+          <Stack
+            maxW={['100%', '350px', '350px', '432px']}
+            h={['', '', '', '307px']}
+            fontWeight={'bold'}
+            order={{ base: 2, md: 1, lg: 1 }}
+            pt={[5, 0]}
+            //   justifyContent={'space-between'}
+          >
+            <Heading
+              color={txtColor}
+              fontSize={['h2.base', 'h2.base', 'h2.lg', 'h2.xl']}
+            >
+              {txt1}{' '}
+              <Text
+                display={'inline'}
+                color={HLColorTxt}
+                bg="yellow.600"
+                fontSize={['h2.base', 'h2.base', 'h2.lg', 'h1.xl']}
+                fontWeight={'bold'}
+              >
+                {highlightxt}
+              </Text>{' '}
+              {txt2}
+            </Heading>
+          </Stack>
+        )}
         {/* imagen */}
         <Stack order={{ base: 1, lg: 2 }}>
-          <Image
-            src={displayImg}
-            maxW={['100%', '100%', '462px']}
-            // bgSize={'cover'}
-            // bgPosition={"cover"}
-            // bgRepeat={'no-repeat'}
-          />
+          <Image src={displayImg} maxW={['100%', '100%', '100%', '100%']} />
         </Stack>
         {/* link */}
-        <Stack order={3}>
-          {isMobile && (
+
+        {isMobile && aboutUs && (
+          <Stack order={3} pt={5}>
             <Link
               color={'yellow.600'}
               textDecoration="underline"
@@ -114,9 +154,9 @@ export const BannerDisplay = ({
             >
               {linkTxt}
             </Link>
-          )}
-        </Stack>
-      </Stack>
+          </Stack>
+        )}
+      </Container>
     </Container>
   )
 }
@@ -128,8 +168,12 @@ BannerDisplay.propTypes = {
   HLColorTxt: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   bgColor: PropTypes.string.isRequired,
+  ourGoald: PropTypes.bool.isRequired,
+  aboutUs: PropTypes.bool.isRequired,
   // props no requeridas
   txt1: PropTypes.string,
+  txt2: PropTypes.string,
+  txt3: PropTypes.string,
   description: PropTypes.string,
   buttonTxt: PropTypes.string,
   imgMobile: PropTypes.string,
