@@ -19,10 +19,10 @@ export const AboutUsSection = () => {
       <BannerDisplay
         bgColor={'magenta.400'}
         txtColor={'gray.0'}
-        txt={'Creemos que la tecnología tiene un'}
+        txt1={'Creemos que la tecnología tiene un'}
         highlightxt={' alto poder transformador'}
         HLColorTxt={'magenta.400'}
-        txt1={'y buscamos generar oportunidades para todas las mujeres'}
+        txt4={'y buscamos generar oportunidades para todas las mujeres'}
         img={AboutUsImg}
         imgMobile={networkingImg}
         linkTxt={'Conoce nuestras capacitaciones'}

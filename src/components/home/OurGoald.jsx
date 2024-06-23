@@ -6,7 +6,9 @@ export const OurGoald = () => {
     <BannerDisplay
       bgColor={'yellow.100'}
       txtColor={'gray.800'}
-      txt={'Nuestro objetivo es'}
+      txt1={'Nuestro'}
+      txt2={'objetivo'}
+      txt3={'es'}
       highlightxt={'reducir la brecha de género en tecnología'}
       HLColorTxt={'gray.800'}
       description={

@@ -13,8 +13,10 @@ import PropTypes from 'prop-types'
 
 export const BannerDisplay = ({
   highlightxt,
-  txt,
   txt1,
+  txt2,
+  txt3,
+  txt4,
   description,
   buttonTxt,
   txtColor,
@@ -34,38 +36,61 @@ export const BannerDisplay = ({
     md: img,
   })
   return (
-    <Container maxW={'1440px'}>
+    <Container
+      maxW={'100%'}
+      //h={['478px', '580px']}
+      bg={bgColor}
+      py={{ base: '32px', md: '32px', lg: '80px' }}
+      px={{ base: '32px', md: '32px', lg: '' }}
+      display={'flex'}
+      justifyContent={'center'}
+      alignItems={'center'}
+      centerContent
+    >
       {/* texto - descripcion */}
-      <Stack
-        bg={bgColor}
-        px={{ base: '32px', md: '32px', lg: '80px' }}
-        py={{ base: '32px', md: '32px', lg: '80px' }}
-        spacing={{ base: '16px', md: '16px', lg: '80px' }}
-        flexDirection={{ base: 'column', md: 'column', lg: 'row' }}
+      <Container
+        spacing={{ base: '10px', md: '16px', lg: '16px' }}
+        display={'flex'}
+        flexDirection={{ base: 'column', md: 'row', lg: 'row' }}
+        background={'red'}
+        maxW={['296px', '296px', '900px', '1154px']}
+        maxH={['414px', '414px', '414px', '420px']}
         alignItems={'center'}
+        justifyContent={'space-between'}
       >
         {/* textos */}
         <Stack
-          maxW={{ base: '100%', lg: '450px' }}
+          maxW={['100%', '350px', '350px', '450px']}
+          h={['', '', '', '420px']}
           fontWeight={'bold'}
-          order={{ base: 2, lg: 1 }}
+          order={{ base: 2, md: 1, lg: 1 }}
+          background={'green'}
+          justifyContent={'space-between'}
         >
           <Heading
             color={txtColor}
             fontSize={['h2.base', 'h2.base', 'h2.lg', 'h2.xl']}
           >
-            {txt}{' '}
-            <Heading
-              as={'span'}
+            {txt1}{' '}
+            {txt2 && (
+              <Text
+                display={'inline'}
+                fontSize={['32px', '32px', '40px', '85px']}
+              >
+                {txt2}{' '}
+              </Text>
+            )}
+            {txt3 && txt3}{' '}
+            <Text
+              display={'inline'}
               color={HLColorTxt}
               bg="yellow.600"
               fontSize={['h2.base', 'h2.base', 'h2.lg', 'h2.xl']}
               fontWeight={'bold'}
-              maxW={'max-content'}
             >
               {highlightxt}
-            </Heading>{' '}
-            {txt1 && txt1}
+            </Text>{' '}
+            {txt4 && txt4}
           </Heading>
 
           {description && (
@@ -95,17 +120,12 @@ export const BannerDisplay = ({
         </Stack>
         {/* imagen */}
         <Stack order={{ base: 1, lg: 2 }}>
-          <Image
-            src={displayImg}
-            maxW={['100%', '100%', '462px']}
-            // bgSize={'cover'}
-            // bgPosition={"cover"}
-            // bgRepeat={'no-repeat'}
-          />
+          <Image src={displayImg} maxW={['100%', '100%', '100%', '100%']} />
         </Stack>
         {/* link */}
-        <Stack order={3}>
-          {isMobile && (
+
+        {isMobile && (
+          <Stack order={3}>
             <Link
               color={'yellow.600'}
               textDecoration="underline"
@@ -114,9 +134,9 @@ export const BannerDisplay = ({
             >
               {linkTxt}
             </Link>
-          )}
-        </Stack>
-      </Stack>
+          </Stack>
+        )}
+      </Container>
     </Container>
   )
 }
@@ -130,6 +150,9 @@ BannerDisplay.propTypes = {
   bgColor: PropTypes.string.isRequired,
   // props no requeridas
   txt1: PropTypes.string,
+  txt2: PropTypes.string,
+  txt3: PropTypes.string,
+  txt4: PropTypes.string,
   description: PropTypes.string,
   buttonTxt: PropTypes.string,
   imgMobile: PropTypes.string,
