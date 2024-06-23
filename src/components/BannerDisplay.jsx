@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Container,
   Heading,
@@ -50,11 +49,11 @@ export const BannerDisplay = ({
     >
       {/* texto - descripcion */}
       <Container
-        spacing={{ base: '10px', md: '16px', lg: '16px' }}
         display={'flex'}
         flexDirection={{ base: 'column', md: 'row', lg: 'row' }}
-        maxW={['296px', '296px', '900px', '1154px']}
-        maxH={['414px', '414px', '414px', '420px']}
+        gap={{ base: '10px', md: '35px', lg: '20px' }}
+        maxW={['296px', '400px', '900px', '1154px']}
+        maxH={['', '', '414px', '420px']}
         alignItems={'center'}
         justifyContent={'space-between'}
       >
@@ -66,15 +65,16 @@ export const BannerDisplay = ({
             fontWeight={'bold'}
             order={{ base: 2, md: 1, lg: 1 }}
             justifyContent={'space-between'}
+            gap={['16px', '20px', '20px', '']}
           >
             <Heading
               color={txtColor}
-              fontSize={['h2.base', 'h2.base', 'h2.lg', 'h2.xl']}
+              fontSize={['h2.base', 'h2.base', 'h2.base', 'h2.xl']}
             >
               {txt1}{' '}
               <Text
                 display={'inline'}
-                fontSize={['32px', '32px', '40px', '85px']}
+                fontSize={['32px', '32px', '32px', '79px']}
               >
                 {txt2}{' '}
               </Text>
@@ -83,25 +83,23 @@ export const BannerDisplay = ({
                 display={'inline'}
                 color={HLColorTxt}
                 bg="yellow.600"
-                fontSize={['h2.base', 'h2.base', 'h2.lg', 'h2.xl']}
+                fontSize={['h2.base', 'h2.base', 'h2.base', 'h2.xl']}
                 fontWeight={'bold'}
               >
                 {highlightxt}
               </Text>
             </Heading>
 
-            <Box>
-              <Text
-                fontSize={[
-                  'largeTxt.base',
-                  'largeTxt.base',
-                  'largeTxt.lg',
-                  'largeTxt.xl',
-                ]}
-              >
-                {description}
-              </Text>
-            </Box>
+            <Text
+              fontSize={[
+                'largeTxt.base',
+                'largeTxt.base',
+                'largeTxt.base',
+                'largeTxt.xl',
+              ]}
+            >
+              {description}
+            </Text>
 
             <Stack order={3}>
               <Button
@@ -146,7 +144,7 @@ export const BannerDisplay = ({
         </Stack>
         {/* link */}
 
-        {isMobile && (
+        {isMobile && aboutUs && (
           <Stack order={3} pt={5}>
             <Link
               color={'yellow.600'}
