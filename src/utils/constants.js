@@ -33,7 +33,6 @@ const testimonials = [
     comment:
       // se adapta el texto original a la cantidad de caracteres necesarios sin modificar la idea original
       'Hace un año decidí dar un volantazo en mi vida y estudiar programación, un mundo desconocido para mí. Elegí Ada por las facilidades de pago, sin ellas no habría podido acceder a una carrera IT. Invertí en mi futuro, y cada clase me deja más contenta. Estoy ansiosa por trabajar de esto, aprendo cada día y mi mente está activa como nunca. He conocido gente maravillosa que me ayuda en cada duda, en la cursada nos apoyamos mutuamente.',
-    // falta foto - aun no tenemos acceso al drive para poder bajarla
     photo: '/testimonials/ailen-paez.png',
   },
   {
@@ -41,7 +40,6 @@ const testimonials = [
     career: 'Introducción a desarrollo front-end',
     comment:
       'Mi experiencia fue muy linda aprendí cosas que no tenía idea. Yo solo tenía algo de conocimiento del celular y nada de computación. Lo que más me gustó fué las compañeras y la profe siempre poniendo todo de ella para que aprendamos y nos saquemos el miedo.',
-    // falta foto - aun no tenemos acceso al drive para poder bajarla
     photo: '/testimonials/yanina-lorena-rios.png',
   },
   {
@@ -49,7 +47,6 @@ const testimonials = [
     career: 'Diseño UX/Ui',
     comment:
       'Me gusta mucho de ADA  el acompañamiento del profesor y las clases activas ayudan a que sea entretenido y te inspiran a continuar.  Pienso que es importante acercarse a los nuevos recursos tecnológicos para aplicarlo en diferentes áreas y facilitar nuestras tareas. El mayor desafío es pensar que no podés, pero al hacerlo entendés que si se puede, solo tenés que invertir tiempo.',
-    // falta foto - aun no tenemos acceso al drive para poder bajarla
     photo: '/testimonials/karina.png',
   },
   {
@@ -167,5 +164,44 @@ export const awards = [
     id: '10',
     logo: '/awards/forbes.svg',
     name: '30 Promesas de los Negocios',
+  },
+]
+
+export const teamWork = [
+  {
+    id: 1,
+    name: 'Javier de la Calle',
+    teamRole: 'Director institucional',
+    image: '/teamWork/javier-de-la-calle.png',
+  },
+  {
+    id: 2,
+    name: 'Veronica Heredia',
+    teamRole: 'Responsable de inserción laboral',
+    image: '/teamWork/vero-heredia.png',
+  },
+  {
+    id: 3,
+    name: 'Diana Osorio',
+    teamRole: 'Directora ejecutiva',
+    image: '/teamWork/diana-osorio.jpg',
+  },
+  {
+    id: 4,
+    name: 'Macarena Galardi',
+    teamRole: 'Ventas',
+    image: '/teamWork/macarena-galardi.jpg',
+  },
+  {
+    id: 5,
+    name: 'Deborah Soto',
+    teamRole: 'Bienestar de Alumnas',
+    image: '/teamWork/deborah-soto.png',
+  },
+  {
+    id: 6,
+    name: 'Matias Arno',
+    teamRole: 'Coordinador académico',
+    image: '/teamWork/matias-arno.jpg',
   },
 ]

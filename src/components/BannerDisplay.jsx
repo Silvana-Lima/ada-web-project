@@ -163,14 +163,13 @@ export const BannerDisplay = ({
 BannerDisplay.propTypes = {
   // props requeridas
   highlightxt: PropTypes.string.isRequired,
-  txt: PropTypes.string.isRequired,
   txtColor: PropTypes.string.isRequired,
   HLColorTxt: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   bgColor: PropTypes.string.isRequired,
-  ourGoald: PropTypes.bool.isRequired,
-  aboutUs: PropTypes.bool.isRequired,
+
   // props no requeridas
+  txt: PropTypes.string,
   txt1: PropTypes.string,
   txt2: PropTypes.string,
   txt3: PropTypes.string,
@@ -178,4 +177,6 @@ BannerDisplay.propTypes = {
   buttonTxt: PropTypes.string,
   imgMobile: PropTypes.string,
   linkTxt: PropTypes.string,
+  ourGoald: PropTypes.bool,
+  aboutUs: PropTypes.bool,
 }
