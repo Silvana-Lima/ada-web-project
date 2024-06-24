@@ -49,9 +49,14 @@ export const TeamWork = () => {
             spacingX={['12px', '12px', '50px', '90px']}
             spacingY={['12px', '12px', '25px', '40px']}
           >
-            {teamWork.map(({ id, name, teamRole, image }) => (
+            {teamWork.map(({ id, name, teamRole, image, socialLink }) => (
               <Box minW={['121px']} key={id}>
-                <TeamCard name={name} teamRole={teamRole} teamImg={image} />
+                <TeamCard
+                  name={name}
+                  teamRole={teamRole}
+                  teamImg={image}
+                  socialLink={socialLink}
+                />
               </Box>
             ))}
           </SimpleGrid>

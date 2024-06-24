@@ -2,7 +2,7 @@ import { Heading, Image, Link, Stack, Text } from '@chakra-ui/react'
 import PropTypes from 'prop-types'
 import { LiaLinkedin } from 'react-icons/lia'
 
-export const TeamCard = ({ name, teamRole, teamImg }) => {
+export const TeamCard = ({ name, teamRole, teamImg, socialLink }) => {
   return (
     <Stack
       maxW={['121px', '150px', '200px', '327px']}
@@ -30,7 +30,7 @@ export const TeamCard = ({ name, teamRole, teamImg }) => {
           <Text fontSize={['10px', '12px', '14px']}>{teamRole}</Text>
           {/* Linkedin */}
           <Link
-            href="https://chakra-ui.com"
+            href={socialLink}
             isExternal
             color={'purple.400'}
             fontSize={['15px', '30px', '40px', '50px']}
@@ -46,4 +46,5 @@ TeamCard.propTypes = {
   name: PropTypes.string.isRequired,
   teamRole: PropTypes.string.isRequired,
   teamImg: PropTypes.string.isRequired,
+  socialLink: PropTypes.string,
 }
