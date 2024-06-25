@@ -1,6 +1,6 @@
 import { Box, Container, Flex, Image, Text } from '@chakra-ui/react'
 
-import logoCivicHouse from '../../assets/logo-CivicHouse.png'
+import logoCivicHouse from '../assets/logo-CivicHouse.png'
 
 export const CivicHouseShowcase = () => {
   return (

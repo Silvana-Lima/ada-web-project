@@ -8,12 +8,14 @@ export const TeamCard = ({ name, teamRole, teamImg, socialLink }) => {
       maxW={['121px', '150px', '200px', '327px']}
       px={{ base: '10px', md: '10px', lg: '16px' }}
       py={{ base: '8px', md: '8px', lg: '16px' }}
+      bg={'gray.0'}
       h={'100%'}
+      borderRadius={'4px'}
     >
       {/* Imagen */}
       <Stack w={'100%'}>
         <Image
-          h={['100px', '120px', '170px', '190px']}
+          h={['78px', '100px', '170px', '190px']}
           src={teamImg}
           objectFit={'cover'}
           alt="Imagen de mienbro del equipo"
@@ -21,19 +23,27 @@ export const TeamCard = ({ name, teamRole, teamImg, socialLink }) => {
       </Stack>
       {/* Nombre - cargo */}
       <Stack h={'100%'}>
-        <Stack gap={'2px'} textAlign={'center'} alignItems={'Center'}>
+        <Stack
+          h={'100%'}
+          gap={'2px'}
+          textAlign={'center'}
+          alignItems={'Center'}
+          justifyContent={'space-between'}
+        >
           <Heading
             fontSize={['smTxt.base', 'smTxt.base', 'smTxt.lg', 'smTxt.xl']}
           >
             {name}
           </Heading>
-          <Text fontSize={['10px', '12px', '14px']}>{teamRole}</Text>
+          <Text lineHeight={'0.8'} fontSize={['10px', '12px', '14px']}>
+            {teamRole}
+          </Text>
           {/* Linkedin */}
           <Link
             href={socialLink}
             isExternal
             color={'purple.400'}
-            fontSize={['15px', '30px', '40px', '50px']}
+            fontSize={['20px', '35px', '40px', '50px']}
           >
             <LiaLinkedin />
           </Link>
