@@ -33,7 +33,8 @@ export const ImpactCard = ({ icon, number, description }) => {
         fontWeight={'bold'}
         color={'gray.800'}
       >
-        {number}
+        {/* modifico para que me mantenga el espacio aun sin data */}
+        {number ? number : <span>&nbsp;</span>}
       </Text>
       <Text
         fontSize={['midTxt1.base', 'midTxt1.base', 'midTxt1.xl', 'midTxt1.xl']}
