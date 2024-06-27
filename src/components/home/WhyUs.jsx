@@ -72,24 +72,28 @@ export const WhyUs = () => {
             description={
               'Fomentamos el desarrollo de habilidades en comunicación, liderazgo, trabajo en equipo, metodologías ágiles y más.'
             }
+            bgColor={'gray.0'}
           />
           <WhyUsCard
             title={'Inserción laboral'}
             description={
               'Conectamos a nuestras egresadas con oportunidades laborales a través de formación, alianzas empresariales y eventos de desarrollo profesional.'
             }
+            bgColor={'gray.0'}
           />
           <WhyUsCard
             title={'Aprendizaje práctico'}
             description={
               'Desafiamos la educación tradicional  para que realmente disfrutes aprender en nuestras sesiones 70 % prácticas.'
             }
+            bgColor={'gray.0'}
           />
           <WhyUsCard
             title={'Acompañamiento'}
             description={
               'Integramos un enfoque teórico (60%) con actividades prácticas (40%) para aplicar los conocimientos adquiridos eficazmente.'
             }
+            bgColor={'gray.0'}
           />
         </Grid>
       </Flex>

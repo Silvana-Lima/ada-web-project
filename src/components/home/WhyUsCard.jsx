@@ -2,7 +2,7 @@ import { Flex, Heading, HStack, Text } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
 
-export const WhyUsCard = ({ title, description }) => {
+export const WhyUsCard = ({ title, description, bgColor }) => {
   return (
     <HStack
       maxW={'406px'}
@@ -14,7 +14,7 @@ export const WhyUsCard = ({ title, description }) => {
       borderRadius="md"
       color={'gray.800'}
       _hover={{ boxShadow: 'lg' }}
-      bg={'gray.0'}
+      bg={bgColor}
       p={5}
     >
       <Icon
@@ -38,4 +38,5 @@ export const WhyUsCard = ({ title, description }) => {
 WhyUsCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  bgColor: PropTypes.string,
 }
