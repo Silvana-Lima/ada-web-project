@@ -1,5 +1,5 @@
 import {
-  Container,
+  Box,
   Heading,
   Highlight,
   ListItem,
@@ -12,46 +12,40 @@ import { ImpactCard } from '../home/ImpactCard'
 
 export const PaymentOptions = () => {
   return (
-    <Container maxW={'1440px'} py={{ base: '48px', md: '48px', lg: '80px' }}>
+    <Stack
+      maxW={'1440'}
+      py={{ base: '32px', md: '40px' }}
+      alignItems={'center'}
+      spacing={{ base: '16px', md: '40px' }}
+    >
       {/* Ayuda economica */}
       <Stack
-        px={{ base: '16px', md: '16px', lg: '40px' }}
-        py={'15px'}
-        spacing={['24px', '40px', '50px', '80px']}
-        justifyContent={'center'}
-        alignItems={'center'}
-        bg="gray.0"
+        maxW={['328px', '768px', '1160px']}
+        textAlign={'center'}
+        spacing={'8px'}
       >
-        <Stack
-          maxW={['328px', '768px', '1160px']}
-          textAlign={'center'}
-          spacing={'8px'}
+        <Heading
+          as="h1"
+          fontSize={['22px', 'h1.base', 'h1.lg', 'h1.xl']}
+          color={'gray.800'}
         >
-          <Heading
-            as="h1"
-            fontSize={['22px', 'h1.base', 'h1.lg', 'h1.xl']}
-            color={'gray.800'}
-          >
-            Ayuda económica
-          </Heading>
-          <Text
-            maxW={'290px'}
-            fontSize={[
-              'largeTxt.base',
-              'largeTxt.base',
-              'largeTxt.lg',
-              'largeTxt.xl',
-            ]}
-          >
-            En ADA ITW, nos comprometemos con la igualdad de oportunidades y el
-            empoderamiento femenino en la industria tecnológica.
-          </Text>
-        </Stack>
+          Ayuda económica
+        </Heading>
+        <Text
+          fontSize={[
+            'largeTxt.base',
+            'largeTxt.base',
+            'largeTxt.lg',
+            'largeTxt.xl',
+          ]}
+        >
+          En ADA ITW nos compormetemos con la igualdad de oportunidades y el
+          empoderamiento femenino en la industria tecnológica
+        </Text>
       </Stack>
       {/* Texto prestamo de honor */}
-      <Stack py={'16px'} alignItems={'center'} textAlign={'center'}>
+      <Box px={{ base: '40px', md: '70px' }} textAlign={'center'}>
         <Text
-          maxW={'256px'}
           fontSize={[
             'largeTxt.base',
             'largeTxt.base',
@@ -63,30 +57,23 @@ export const PaymentOptions = () => {
           Ofrecemos un Préstamo de Honor que permite abonar solo una parte de la
           carrera durante el curso.
         </Text>
-      </Stack>
+      </Box>
       {/* Cards */}
-      <Stack>
+      <Stack maxW={'100%'} alignItems={'center'}>
         <ImpactCard
           icon={'pepicons-print:face-smiling'}
-          number={'75%'}
-          description={'Nuestro préstamo de honor llega a cubrir un 75%'}
+          number={'+90%'}
+          description={'Satisfacción al terminar la capacitación'}
         />
         <ImpactCard
           icon={'pepicons-print:handshake'}
-          number={''}
-          description={
-            'El porcentaje diferido se calcula según el valor actual de la fromación al asegurar el trabajo'
-          }
+          number={'+100'}
+          description={'Empresas contratantes'}
         />
       </Stack>
-      <Stack
-        px={{ base: '16px', md: '16px', lg: '40px' }}
-        py={'16px'}
-        alignItems={'center'}
-        textAlign={'center'}
-      >
+      {/* Texto de aclaración sobre el pago diferido */}
+      <Stack maxW={['328px', '768px', '1160px']} textAlign={'center'}>
         <Text
-          maxW={'256px'}
           fontSize={[
             'largeTxt.base',
             'largeTxt.base',
@@ -100,12 +87,12 @@ export const PaymentOptions = () => {
       </Stack>
       <Stack
         px={{ base: '16px', md: '16px', lg: '40px' }}
-        py={'16px'}
+        // py={'16px'}
         alignItems={'center'}
         textAlign={'justify'}
+        lineHeight={'40px'}
       >
         <Text
-          maxW={'270px'}
           fontSize={[
             'largeTxt.base',
             'largeTxt.base',
@@ -118,17 +105,26 @@ export const PaymentOptions = () => {
           tecnología.
         </Text>
         <Text
-          maxW={'270px'}
           fontSize={[
             'largeTxt.base',
             'largeTxt.base',
             'largeTxt.lg',
             'largeTxt.xl',
           ]}
+          alignSelf={'start'}
         >
           Estas opción esta disponible para mujeres que:
         </Text>
-        <UnorderedList styleType="'-  '" fontWeight={'bold'} maxW={'270px'}>
+        <UnorderedList
+          fontSize={[
+            'largeTxt.base',
+            'largeTxt.base',
+            'largeTxt.lg',
+            'largeTxt.xl',
+          ]}
+          styleType="'-   '"
+          fontWeight={'bold'}
+        >
           <ListItem>Carecen de acceso a la educación superior</ListItem>
           <ListItem>Tienen empleos precarios</ListItem>
           <ListItem>
@@ -136,7 +132,6 @@ export const PaymentOptions = () => {
           </ListItem>
         </UnorderedList>
         <Text
-          maxW={'270px'}
           fontSize={[
             'largeTxt.base',
             'largeTxt.base',
@@ -151,6 +146,6 @@ export const PaymentOptions = () => {
           </Highlight>
         </Text>
       </Stack>
-    </Container>
+    </Stack>
   )
 }

@@ -6,6 +6,7 @@ import { PaymentOptions } from '../components/about-us/PaymentOptions'
 import { TeamWork } from '../components/about-us/TeamWork'
 import { WhyAda } from '../components/about-us/WhyAda'
 import { CivicHouseShowcase } from '../components/CivicHouseShowcase'
+import { SupportUs } from '../components/SupportUs'
 
 export const AboutUs = () => {
   return (
@@ -16,6 +17,7 @@ export const AboutUs = () => {
       </Show>
       <OurStory />
       <TeamWork />
+      <SupportUs />
       <PaymentOptions />
       <CivicHouseShowcase />
     </Container>
