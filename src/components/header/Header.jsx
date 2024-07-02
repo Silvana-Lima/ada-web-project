@@ -49,14 +49,14 @@ export const Header = () => {
         </Link>
 
         {/* menu hamburguesa */}
-        <Show below="lg">
+        <Show below="md">
           <Box>
             <BurgerMenu />
           </Box>
         </Show>
 
         {/* Menu de navegacion  */}
-        <Hide below="lg">
+        <Hide below="md">
           <Box>
             <Grid
               columns={6}

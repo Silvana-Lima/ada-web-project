@@ -17,8 +17,8 @@ export const AboutUs = () => {
       </Show>
       <OurStory />
       <TeamWork />
-      <SupportUs />
       <PaymentOptions />
+      <SupportUs />
       <CivicHouseShowcase />
     </Container>
   )

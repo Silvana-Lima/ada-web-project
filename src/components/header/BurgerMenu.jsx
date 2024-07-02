@@ -48,7 +48,7 @@ export const BurgerMenu = () => {
         justifyContent="flex-end"
       />
       <MenuList
-        w={'100vw'}
+        w={{ base: '100vw', md: '55vw' }}
         h={'100vh'}
         pt={'40px'}
         px={'24px'}
@@ -68,7 +68,7 @@ export const BurgerMenu = () => {
                 borderBottom: '2px ',
                 borderColor: 'magenta.400',
                 padding: '12px 24px',
-                width: ['312px', '382px'],
+                width: ['312px', '360px'],
               }}
             >
               <Box textAlign="left">Ofertas educativas</Box>
@@ -78,10 +78,10 @@ export const BurgerMenu = () => {
             </AccordionPanel>
           </AccordionItem>
         </Accordion>
-        <MenuItem>Blog</MenuItem>
-        <MenuItem pb={'40px'}>Contrata talento</MenuItem>
-        <Stack align={{ md: 'start' }}>
-          <Button size={'md'} w={['100%', '382px']}>
+        <MenuItem {...menuItemStyles}>Blog</MenuItem>
+        <MenuItem {...menuItemStyles}>Contrata talento</MenuItem>
+        <Stack pt={'40px'} align={{ md: 'start' }}>
+          <Button size={'md'} w={['100%', '360px']}>
             Inscríbete
           </Button>
         </Stack>
