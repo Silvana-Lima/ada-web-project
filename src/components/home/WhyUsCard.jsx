@@ -1,29 +1,32 @@
-import { Flex, Heading, HStack, Text } from '@chakra-ui/react'
+import { Box, Flex, Heading, HStack, Text } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
 
-export const WhyUsCard = ({ title, description, bgColor }) => {
+export const WhyUsCard = ({ title, description, bgColor, borderW, pX, pY }) => {
   return (
     <HStack
-      maxW={'406px'}
       justify={'center'}
       alignItems={'center'}
       gap={'spacingL.xl'}
       borderColor={'gray.400'}
-      borderWidth="1px"
+      borderWidth={borderW}
       borderRadius="md"
       color={'gray.800'}
       _hover={{ boxShadow: 'lg' }}
       bg={bgColor}
-      p={5}
+      px={pX}
+      py={pY}
     >
-      <Icon
-        icon={'iconoir:community'}
-        style={{
-          fontSize: '80px',
-        }}
-      />
-      <Flex maxW={'262px'} direction={'column'}>
+      <Box>
+        <Icon
+          icon={'iconoir:community'}
+          style={{
+            fontSize: '80px',
+          }}
+        />
+      </Box>
+
+      <Flex direction={'column'}>
         <Heading as={'h4'} fontSize={'largeTxt.xl'}>
           {title}
         </Heading>
@@ -39,4 +42,7 @@ WhyUsCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   bgColor: PropTypes.string,
+  borderW: PropTypes.string,
+  pY: PropTypes.string,
+  pX: PropTypes.string,
 }
