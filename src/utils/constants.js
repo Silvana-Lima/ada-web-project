@@ -76,7 +76,7 @@ export const beginningCards = [
     descriptionS:
       'Conviértete en desarrolladora front-end y crea sitios web utilizándo las últimas tecnologías del mercado.', // confirmar texto - se usaria para mobile
     date: 'Fecha estimada de inicio a confirmar',
-    duration: '9 meses : 3 clases por semana (9hs semanales).', // confirmar la duracion - porque no esta en el programa
+    duration: '9 meses : 3 clases por semana (9hs semanales).',
   },
   {
     id: 2,
@@ -96,9 +96,9 @@ export const beginningCards = [
     career: ' Intensivo. Diseño UX/UI',
     color: '#be44ff',
     descriptionL:
-      ' Conviértete en diseñadora UX UI y aprende a investigar, organizar la arquitectura de la información y a diseñar interfaces.',
+      ' Aprende los fundamentos de UX/UI y el proceso completo de desarrollo de productos digitales. Incluye ejemplos prácticos para reforzar conceptos teóricos. Al terminar, estarás lista para explorar el mundo de las interfaces digitales y la experiencia de usuarios.',
     descriptionS:
-      'Conviértete en diseñadora UX UI y aprende a investigar, organizar la arquitectura de la información y a diseñar interfaces.',
+      'Aprende fundamentos de UX/UI con ejemplos prácticos. Al finalizar, podrás explorar la experiencia de usuarios e interfaces digitales.',
     date: 'Fecha estimada de inicio a confirmar',
     duration: '3 meses : 2 clases semanales (6hs semanales).',
   },
@@ -111,6 +111,18 @@ export const beginningCards = [
       ' En este curso dominarás los fundamentos de la programación y crearás tus primeros programas. Python es versátil y fácil de aprender, ideal para principiantes',
     descriptionS:
       'En este curso introductorio aprenderás el lenguaje de programación Phyton.',
+    date: 'Fecha estimada de inicio a confirmar',
+    duration: '3 meses : 2 clases semanales (6hs semanales).',
+  },
+  {
+    id: 5,
+    title: 'Curso',
+    career: 'QA testing',
+    color: '#ff7d00',
+    descriptionL:
+      ' Este curso está diseñado para quienes quieran aprender los conocimientos clave sobre pruebas automáticas de desarrollo y su influencia en el proceso de codificación. Incluye ejemplos prácticos para entender los conceptos teóricos. Al finalizar, tendrás habilidades para reportar errores y agilizar el desarrollo de software con tests automáticos.',
+    descriptionS:
+      'Curso ideal para aprender pruebas automáticas y su impacto en el desarrollo de código.',
     date: 'Fecha estimada de inicio a confirmar',
     duration: '3 meses : 2 clases semanales (6hs semanales).',
   },
