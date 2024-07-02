@@ -24,6 +24,7 @@ export const ImpactCard = ({ icon, number, description }) => {
       <Icon
         icon={icon}
         style={{
+          // hay que revisar este calc() porque al usar el componente en ayuda economica - el tamaño del icono se rompe
           fontSize: `calc(${theme.fontSizes.h2.xl} + 2vw)`,
           color: '#ff7d00',
         }}

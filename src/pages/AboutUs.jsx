@@ -18,7 +18,7 @@ export const AboutUs = () => {
       </Show>
       <OurStory />
       <TeamWork />
-      <SupportUs />
+      {/* <SupportUs /> */}
       <Testimonials />
       <PaymentOptions />
       <SupportUs />

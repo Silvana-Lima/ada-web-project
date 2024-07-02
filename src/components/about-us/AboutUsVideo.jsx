@@ -11,28 +11,32 @@ export const AboutUsVideo = () => {
     setIsMuted(false)
   }
   return (
-    <Container bg="magenta.400" maxW={'1440px'}>
+    <Container maxW={'1440px'}>
       <Stack
-        px={'16px'}
-        pb={'40px'}
-        pt={'32px'}
-        spacing={'16px'}
+        px={{ base: '32px', md: '32px', lg: '140px' }}
+        py={{ base: '40px', md: '40px', lg: '80px' }}
+        spacing={['16px', '26px']}
+        justifyContent={'center'}
         alignItems={'center'}
-        bg="gray.0"
       >
-        <Box maxW={{ base: '100%', md: '100%' }}>
+        <Box
+          maxW={{ base: '100%', md: '100%' }}
+          textAlign={['justify', 'center']}
+        >
           <Heading
+            fontSize={['h1.base', 'h1.base', 'h1.lg', 'h1.xl']}
             color={'gray.800'}
-            fontSize={'h1.base'}
-            fontWeight={'medium'}
-            // letterSpacing="17px" no estaria reflejando lo mismo que el proto
           >
             Sobre Ada ITW
           </Heading>
           <Text
             color={'gray.600'}
-            fontSize={'largeTxt.base'}
-            textAlign={'justify'}
+            fontSize={[
+              'largeTxt.base',
+              'largeTxt.base',
+              'largeTxt.lg',
+              'largeTxt.xl',
+            ]}
           >
             Somos una organización sin fines de lucro que desde el año 2018
             capacita a mujeres en tecnología con el objetivo de reducir la
@@ -40,7 +44,16 @@ export const AboutUsVideo = () => {
             feminidades de América Latina y el mundo.
           </Text>
         </Box>
-        <Text color={'gray.800'} fontSize={'midTxt.base'} fontWeight={'bold'}>
+        <Text
+          color={'gray.800'}
+          fontSize={[
+            'largeTxt.base',
+            'largeTxt.base',
+            'largeTxt.lg',
+            'largeTxt.xl',
+          ]}
+          fontWeight={'bold'}
+        >
           Conoce más sobre nuestro trabajo de la mano de nuestra directora
           ejecutiva:
         </Text>
