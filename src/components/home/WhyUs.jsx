@@ -65,7 +65,8 @@ export const WhyUs = () => {
         <Grid
           templateColumns={'repeat(2, 1fr)'}
           templateRows={'repeat(2, 1fr)'}
-          gap={'spacingM.xl'}
+          gap={'40px'}
+          maxW={'850px'}
         >
           <WhyUsCard
             title={'Habilidades blandas'}
@@ -73,6 +74,9 @@ export const WhyUs = () => {
               'Fomentamos el desarrollo de habilidades en comunicación, liderazgo, trabajo en equipo, metodologías ágiles y más.'
             }
             bgColor={'gray.0'}
+            borderW={'1px'}
+            pY={'spacingL.base'}
+            pX={'spacingM.base'}
           />
           <WhyUsCard
             title={'Inserción laboral'}
@@ -80,6 +84,9 @@ export const WhyUs = () => {
               'Conectamos a nuestras egresadas con oportunidades laborales a través de formación, alianzas empresariales y eventos de desarrollo profesional.'
             }
             bgColor={'gray.0'}
+            borderW={'1px'}
+            pY={'spacingL.base'}
+            pX={'spacingM.base'}
           />
           <WhyUsCard
             title={'Aprendizaje práctico'}
@@ -87,6 +94,9 @@ export const WhyUs = () => {
               'Desafiamos la educación tradicional  para que realmente disfrutes aprender en nuestras sesiones 70 % prácticas.'
             }
             bgColor={'gray.0'}
+            borderW={'1px'}
+            pY={'spacingL.base'}
+            pX={'spacingM.base'}
           />
           <WhyUsCard
             title={'Acompañamiento'}
@@ -94,6 +104,9 @@ export const WhyUs = () => {
               'Integramos un enfoque teórico (60%) con actividades prácticas (40%) para aplicar los conocimientos adquiridos eficazmente.'
             }
             bgColor={'gray.0'}
+            borderW={'1px'}
+            pY={'spacingL.base'}
+            pX={'spacingM.base'}
           />
         </Grid>
       </Flex>

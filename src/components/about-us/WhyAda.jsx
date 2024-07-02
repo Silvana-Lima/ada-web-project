@@ -39,9 +39,7 @@ export const WhyAda = () => {
         <Grid
           templateColumns={'repeat(2, 1fr)'}
           templateRows={'repeat(2, 1fr)'}
-          gap={'spacingM.xl'}
-          py={'40px'}
-          bg={'pink'}
+          gap={'53px'}
         >
           <WhyUsCard
             title={'Aprendizaje práctico'}
@@ -49,6 +47,8 @@ export const WhyAda = () => {
               'Desafiamos la educación tradicional  para que realmente disfrutes aprender en nuestras sesiones 70 % prácticas.'
             }
             bgColor={'#F0F000'}
+            pY={'30px'}
+            pX={'30px'}
           />
           <WhyUsCard
             title={'Acompañamiento'}
@@ -56,6 +56,8 @@ export const WhyAda = () => {
               'Integramos un enfoque teórico (60%) con actividades prácticas (40%) para aplicar los conocimientos adquiridos eficazmente.'
             }
             bgColor={'#FCFCCC'}
+            pY={'30px'}
+            pX={'30px'}
           />
           <WhyUsCard
             title={'Habilidades blandas'}
@@ -63,6 +65,8 @@ export const WhyAda = () => {
               'Fomentamos el desarrollo de habilidades en comunicación, liderazgo, trabajo en equipo,metodologías ágiles y más.'
             }
             bgColor={'#EAC3FF'}
+            pY={'30px'}
+            pX={'30px'}
           />
           <WhyUsCard
             title={'Inserción laboral'}
@@ -70,6 +74,8 @@ export const WhyAda = () => {
               'Conectamos a nuestras egresadas con oportunidades laborales actuales a través de formación, alianzas empresariales y eventos de desarrollo profesional.'
             }
             bgColor={'#FFBF7D'}
+            pY={'30px'}
+            pX={'30px'}
           />
         </Grid>
       </Container>
