@@ -93,7 +93,7 @@ export const beginningCards = [
   {
     id: 3,
     title: 'Curso',
-    career: ' Intensivo. Diseño UX/UI',
+    career: ' Intensivo - Diseño UX/UI',
     color: '#be44ff',
     descriptionL:
       ' Aprende los fundamentos de UX/UI y el proceso completo de desarrollo de productos digitales. Incluye ejemplos prácticos para reforzar conceptos teóricos. Al terminar, estarás lista para explorar el mundo de las interfaces digitales y la experiencia de usuarios.',

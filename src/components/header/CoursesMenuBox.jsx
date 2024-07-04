@@ -1,64 +1,76 @@
-import { ChevronRightIcon } from '@chakra-ui/icons'
-import { Box, MenuItem, Text } from '@chakra-ui/react'
+import { ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons'
+import {
+  Accordion,
+  AccordionButton,
+  AccordionItem,
+  AccordionPanel,
+  Box,
+  MenuItem,
+} from '@chakra-ui/react'
+
+const menuItemHoverStyle = {
+  color: 'magenta.400',
+  bg: 'none',
+}
 
 export const CoursesMenuBox = () => {
   return (
-    <Box>
-      <Text fontWeight={'bold'} textAlign={'start'}>
-        Carreras
-      </Text>
-      <MenuItem
-        icon={<ChevronRightIcon color={'magenta.400'} />}
-        _hover={{
-          color: 'magenta.400',
-        }}
-      >
-        Desarrollo web front-end
-      </MenuItem>
-      <MenuItem
-        icon={<ChevronRightIcon color={'magenta.400'} />}
-        _hover={{
-          color: 'magenta.400',
-        }}
-      >
-        Desarrollo web back-end
-      </MenuItem>
-      
-      <Text fontWeight={'bold'} textAlign={'start'}>
-        Cursos
-      </Text>
-      <MenuItem
-        icon={<ChevronRightIcon color={'magenta.400'} />}
-        _hover={{
-          color: 'magenta.400',
-        }}
-      >
-        Diseño UX/UI
-      </MenuItem>
-      <MenuItem
-        icon={<ChevronRightIcon color={'magenta.400'} />}
-        _hover={{
-          color: 'magenta.400',
-        }}
-      >
-        Introducción al desarrollo web front-end
-      </MenuItem>
-      <MenuItem
-        icon={<ChevronRightIcon color={'magenta.400'} />}
-        _hover={{
-          color: 'magenta.400',
-        }}
-      >
-        Analista QA
-      </MenuItem>
-      <MenuItem
-        icon={<ChevronRightIcon color={'magenta.400'} />}
-        _hover={{
-          color: 'magenta.400',
-        }}
-      >
-        Programación en Pyton
-      </MenuItem>
-    </Box>
+    <Accordion allowMultiple>
+      {/* Carreras */}
+      <AccordionItem>
+        {({ isExpanded }) => (
+          <>
+            <h2>
+              <AccordionButton bg={isExpanded && 'purple.100'}>
+                <Box as="span" flex="1" textAlign="left">
+                  Carreras
+                </Box>
+                {!isExpanded ? (
+                  <ChevronRightIcon color={'magenta.400'} fontSize="20px" />
+                ) : (
+                  <ChevronDownIcon color={'magenta.400'} fontSize="20px" />
+                )}
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              <MenuItem _hover={menuItemHoverStyle}>
+                Desarrollo web front-end
+              </MenuItem>
+              <MenuItem _hover={menuItemHoverStyle}>
+                Desarrollo web back-end
+              </MenuItem>
+            </AccordionPanel>
+          </>
+        )}
+      </AccordionItem>
+      {/* Cursos */}
+      <AccordionItem>
+        {({ isExpanded }) => (
+          <>
+            <h2>
+              <AccordionButton bg={isExpanded && 'purple.100'}>
+                <Box as="span" flex="1" textAlign="left">
+                  Cursos
+                </Box>
+                {!isExpanded ? (
+                  <ChevronRightIcon color={'magenta.400'} fontSize="20px" />
+                ) : (
+                  <ChevronDownIcon color={'magenta.400'} fontSize="20px" />
+                )}
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              <MenuItem _hover={menuItemHoverStyle}>
+                Intensivo - Diseño UX/UI
+              </MenuItem>
+              <MenuItem _hover={menuItemHoverStyle}>
+                Programación en Python
+              </MenuItem>
+              <MenuItem _hover={menuItemHoverStyle}>QA testing</MenuItem>
+            </AccordionPanel>
+          </>
+        )}
+      </AccordionItem>
+    </Accordion>
   )
 }
