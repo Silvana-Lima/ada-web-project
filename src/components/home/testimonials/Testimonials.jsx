@@ -41,7 +41,7 @@ export const Testimonials = () => {
             hemos tenido en la vida de nuestras alumnas.
           </Text>
         </Container>
-        <Container maxW={'100%'} centerContent>
+        <Container maxW={['100%', '100%', '700px', '100%']} centerContent>
           <TestimonialsCarousel />
         </Container>
       </Container>

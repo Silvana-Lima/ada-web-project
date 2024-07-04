@@ -10,7 +10,7 @@ import { useTheme } from '@emotion/react'
 import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
 
-export const TestimonyCard = ({ comment, name, career, photo }) => {
+export const TestimonyCard = ({ comment, name, career, photo, h }) => {
   const theme = useTheme()
   const rightValue = useBreakpointValue({
     base: '-8px',
@@ -22,7 +22,7 @@ export const TestimonyCard = ({ comment, name, career, photo }) => {
   return (
     <Stack
       maxW={'100%'}
-      h={['320px', '312px', '312px', '340px']}
+      h={h}
       borderWidth="1px"
       borderRadius="md"
       borderLeftColor={'magenta.600'}
@@ -30,7 +30,7 @@ export const TestimonyCard = ({ comment, name, career, photo }) => {
       borderLeftRadius={'xl'}
       color={'gray.800'}
       bg={'gray.0'}
-      p={['12px', 'spacingM.base']}
+      p={['12px', '20px', '30px', 'spacingM.base']}
       px={['spacingM.base', 'spacingM.base', 'spacingM.base', 'spacingL.base']}
       justifyContent="space-between"
       gap={0}
@@ -74,18 +74,20 @@ export const TestimonyCard = ({ comment, name, career, photo }) => {
               {name}
             </Text>
 
-            <Box minHeight="24px">
-              <Text
-                fontSize={[
-                  'midTxt1.base',
-                  'midTxt1.base',
-                  'midTxt1.base',
-                  'midTxt1.xl',
-                ]}
-              >
-                {career}{' '}
-              </Text>
-            </Box>
+            {career && (
+              <Box minHeight="24px">
+                <Text
+                  fontSize={[
+                    'midTxt1.base',
+                    'midTxt1.base',
+                    'midTxt1.base',
+                    'midTxt1.xl',
+                  ]}
+                >
+                  {career}{' '}
+                </Text>
+              </Box>
+            )}
           </Stack>
 
           <Box
@@ -93,6 +95,7 @@ export const TestimonyCard = ({ comment, name, career, photo }) => {
             position={'absolute'}
             zIndex={0}
             right={rightValue}
+            top={0}
           >
             <Icon
               icon={'ri:double-quotes-r'}
@@ -114,4 +117,5 @@ TestimonyCard.propTypes = {
   name: PropTypes.string.isRequired,
   career: PropTypes.string.isRequired,
   photo: PropTypes.string.isRequired,
+  h: PropTypes.string.isRequired,
 }
