@@ -9,6 +9,7 @@ import {
   MenuItem,
   MenuList,
   Stack,
+  useDisclosure,
 } from '@chakra-ui/react'
 import { useState } from 'react'
 import { IoClose } from 'react-icons/io5'
@@ -25,72 +26,76 @@ const menuItemStyles = {
 }
 
 export const BurgerMenu = () => {
-  const [activeItem, setActiveItem] = useState(false)
-  const [isOpen, setIsOpen] = useState(false)
+  const { isOpen, onClose, onToggle } = useDisclosure()
+  const [activeSubMenu, setActiveSubMenu] = useState(false)
 
-  const handleMenuToggle = () => {
-    setIsOpen(!isOpen)
+  const handleSubMenu = () => {
+    setActiveSubMenu(!activeSubMenu)
+    if (!isOpen) {
+      onToggle()
+    }
   }
 
-  const handleActiveItem = () => {
-    setActiveItem(!activeItem)
+  const handleCloseMenu = () => {
+    setActiveSubMenu(false)
+    onClose()
   }
 
   return (
-    <Menu isOpen={isOpen} onClose={handleMenuToggle} onOpen={handleMenuToggle}>
-      <>
-        <MenuButton
-          as={IconButton}
-          aria-label="Options"
-          icon={<Icon as={isOpen ? IoClose : RxHamburgerMenu} boxSize="32px" />}
-          variant="unstyled"
-          border="none"
-          boxShadow="none"
-          color={'magenta.400'}
-          size="xl"
-          display="flex"
-          justifyContent="flex-end"
-        />
-        <MenuList
-          w={{ base: '100vw', md: '45vw' }}
-          h={'100vh'}
-          pt={'40px'}
-          px={'24px'}
-          overflowX="hidden"
-        >
-          <NavLink to="/aboutUs">
-            <MenuItem {...menuItemStyles}>Sobre nosotros</MenuItem>
-          </NavLink>
+    <Menu isOpen={isOpen}>
+      <MenuButton
+        as={IconButton}
+        aria-label="Options"
+        icon={<Icon as={isOpen ? IoClose : RxHamburgerMenu} boxSize="32px" />}
+        variant="unstyled"
+        border="none"
+        boxShadow="none"
+        color={'magenta.400'}
+        size="xl"
+        display="flex"
+        justifyContent="flex-end"
+        onClick={onToggle}
+      />
+      <MenuList
+        w={{ base: '100vw', md: '45vw' }}
+        h={'100vh'}
+        pt={'40px'}
+        px={'24px'}
+        overflowX="hidden"
+      >
+        <NavLink to="/aboutUs">
+          <MenuItem {...menuItemStyles} onClick={handleCloseMenu}>
+            Sobre nosotros
+          </MenuItem>
+        </NavLink>
 
-          {/* desplegable para ofertas educativas */}
-          <Flex direction="column">
-            <MenuItem
-              {...menuItemStyles}
-              justifyContent="space-between"
-              alignItems="center"
-              onClick={handleActiveItem}
-              bg={activeItem && 'purple.200'}
-            >
-              Ofertas educativas
-              {activeItem ? (
-                <ChevronDownIcon color={'magenta.400'} fontSize={'25px'} />
-              ) : (
-                <ChevronRightIcon color={'magenta.400'} fontSize={'25px'} />
-              )}
-            </MenuItem>
-            {/* Menu con carreras y cursos */}
-            {activeItem && <CoursesMenuBox />}
-          </Flex>
+        {/* desplegable para ofertas educativas */}
+        <Flex direction="column">
+          <MenuItem
+            justifyContent="space-between"
+            alignItems="center"
+            onClick={handleSubMenu}
+            bg={activeSubMenu && 'purple.200'}
+          >
+            Ofertas educativas
+            {activeSubMenu ? (
+              <ChevronDownIcon color={'magenta.400'} fontSize={'25px'} />
+            ) : (
+              <ChevronRightIcon color={'magenta.400'} fontSize={'25px'} />
+            )}
+          </MenuItem>
+          {/* Menu con carreras y cursos */}
+          {activeSubMenu && <CoursesMenuBox />}
+        </Flex>
 
-          <MenuItem {...menuItemStyles}>Blog</MenuItem>
-          <MenuItem {...menuItemStyles}>Contrata talento</MenuItem>
-          <Stack pt={'40px'} align={{ md: 'start' }}>
-            <Button size={'md'} w={'100%'}>
-              Inscríbete
-            </Button>
-          </Stack>
-        </MenuList>
-      </>
+        <MenuItem {...menuItemStyles}>Blog</MenuItem>
+        <MenuItem {...menuItemStyles}>Contrata talento</MenuItem>
+        <Stack pt={'40px'} align={{ md: 'start' }}>
+          <Button size={'md'} w={'100%'}>
+            Inscríbete
+          </Button>
+        </Stack>
+      </MenuList>
     </Menu>
   )
 }

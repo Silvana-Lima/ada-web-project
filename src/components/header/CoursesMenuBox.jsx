@@ -33,10 +33,16 @@ export const CoursesMenuBox = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              <MenuItem _hover={menuItemHoverStyle}>
+              <MenuItem
+                _hover={menuItemHoverStyle}
+                onClick={() => alert('Programa Desarrollo web front-end')}
+              >
                 Desarrollo web front-end
               </MenuItem>
-              <MenuItem _hover={menuItemHoverStyle}>
+              <MenuItem
+                _hover={menuItemHoverStyle}
+                onClick={() => alert('Programa Desarrollo web back-end')}
+              >
                 Desarrollo web back-end
               </MenuItem>
             </AccordionPanel>
@@ -60,13 +66,24 @@ export const CoursesMenuBox = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              <MenuItem _hover={menuItemHoverStyle}>
+              <MenuItem
+                _hover={menuItemHoverStyle}
+                onClick={() => alert('Programa Intensivo - Diseño UX/UI')}
+              >
                 Intensivo - Diseño UX/UI
               </MenuItem>
-              <MenuItem _hover={menuItemHoverStyle}>
+              <MenuItem
+                _hover={menuItemHoverStyle}
+                onClick={() => alert('Programa Programación en Python')}
+              >
                 Programación en Python
               </MenuItem>
-              <MenuItem _hover={menuItemHoverStyle}>QA testing</MenuItem>
+              <MenuItem
+                _hover={menuItemHoverStyle}
+                onClick={() => alert('Programa QA testing')}
+              >
+                QA testing
+              </MenuItem>
             </AccordionPanel>
           </>
         )}

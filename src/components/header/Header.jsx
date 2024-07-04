@@ -15,7 +15,6 @@ import logoAdaFuscia from '../../assets/logo-fucsia.png'
 import { BurgerMenu } from './BurgerMenu'
 import { EducationMenu } from './EducationMenu'
 import { InstagramCta } from './InstagramCta'
-import { BurgerMenuCopyDefaultFalse } from './BurgerMenuCopyDefaultFalse'
 
 export const Header = () => {
   return (
@@ -53,7 +52,6 @@ export const Header = () => {
         <Show below="md">
           <Box>
             <BurgerMenu />
-            {/* <BurgerMenuCopyDefaultFalse /> */}
           </Box>
         </Show>
 
