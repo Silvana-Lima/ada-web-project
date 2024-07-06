@@ -38,7 +38,6 @@ export const BannerDisplay = ({
   return (
     <Container
       maxW={'100%'}
-      //h={['478px', '580px']}
       bg={bgColor}
       py={{ base: '32px', md: '32px', lg: '80px' }}
       px={{ base: '32px', md: '32px', lg: '' }}
@@ -140,7 +139,7 @@ export const BannerDisplay = ({
         )}
         {/* imagen */}
         <Stack order={{ base: 1, lg: 2 }}>
-          <Image src={displayImg} maxW={['100%', '100%', '100%', '100%']} />
+          <Image src={displayImg} maxW={'100%'} />
         </Stack>
         {/* link */}
 
