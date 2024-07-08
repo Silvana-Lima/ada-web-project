@@ -117,5 +117,5 @@ TestimonyCard.propTypes = {
   name: PropTypes.string.isRequired,
   career: PropTypes.string.isRequired,
   photo: PropTypes.string.isRequired,
-  h: PropTypes.string.isRequired,
+  h: PropTypes.array.isRequired,
 }

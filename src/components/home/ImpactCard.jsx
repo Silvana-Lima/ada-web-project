@@ -3,12 +3,12 @@ import { useTheme } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
 
-export const ImpactCard = ({ icon, number, description }) => {
+export const ImpactCard = ({ icon, number, description, h, w, bg }) => {
   const theme = useTheme()
   return (
     <Container
-      maxW={['280px', '346px']}
-      maxH={['120px', '193px']}
+      maxW={w}
+      h={h}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'center'}
@@ -17,26 +17,26 @@ export const ImpactCard = ({ icon, number, description }) => {
       borderWidth="1px"
       borderRadius="md"
       color={'#4A4A4A'}
+      backgroundColor={bg}
       pt={[2, 2, 4, 5]}
       pb={[2, 2, 3, 3]}
-      _hover={{ boxShadow: 'lg' }}
     >
       <Icon
         icon={icon}
         style={{
-          // hay que revisar este calc() porque al usar el componente en ayuda economica - el tamaño del icono se rompe
           fontSize: `calc(${theme.fontSizes.h2.xl} + 2vw)`,
           color: '#ff7d00',
         }}
       />
-      <Text
-        fontSize={['h2.base', 'h2.base', 'h2.lg', 'h2.xl']}
-        fontWeight={'bold'}
-        color={'gray.800'}
-      >
-        {/* modifico para que me mantenga el espacio aun sin data */}
-        {number ? number : <span>&nbsp;</span>}
-      </Text>
+      {number && (
+        <Text
+          fontSize={['h2.base', 'h2.base', 'h2.lg', 'h2.xl']}
+          fontWeight={'bold'}
+          color={'gray.800'}
+        >
+          {number}
+        </Text>
+      )}
       <Text
         fontSize={['midTxt1.base', 'midTxt1.base', 'midTxt1.xl', 'midTxt1.xl']}
         align={'center'}
@@ -50,6 +50,9 @@ export const ImpactCard = ({ icon, number, description }) => {
 
 ImpactCard.propTypes = {
   icon: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
+  number: PropTypes.string,
   description: PropTypes.string.isRequired,
+  w: PropTypes.array.isRequired,
+  h: PropTypes.array.isRequired,
+  bg: PropTypes.string,
 }
