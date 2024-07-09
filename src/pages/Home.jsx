@@ -1,4 +1,4 @@
-import { Container, Show } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
 
 import allData from '@/all-the-data.svg'
 import imageCareers from '@/img-banner-carreras.svg'
@@ -40,9 +40,9 @@ export const Home = () => {
       />
 
       <NextBeginnings />
-      <Show above="lg">
-        <WhyUs />
-      </Show>
+
+      <WhyUs />
+
       <Testimonials />
       <OurGoald />
       <HiringCompanies />

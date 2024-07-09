@@ -1,8 +1,9 @@
-import { Box, Flex, Heading, HStack, Text } from '@chakra-ui/react'
+import { Box, Flex, Heading, HStack, Text, useTheme } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
 
 export const WhyUsCard = ({ title, description, bgColor, borderW, pX, pY }) => {
+  const theme = useTheme()
   return (
     <HStack
       justify={'center'}
@@ -17,20 +18,36 @@ export const WhyUsCard = ({ title, description, bgColor, borderW, pX, pY }) => {
       px={pX}
       py={pY}
     >
-      <Box>
+      <Box w={'80px'}>
         <Icon
           icon={'iconoir:community'}
           style={{
-            fontSize: '80px',
+            fontSize: `calc(${theme.fontSizes.h2.xl} + 2vw)`,
           }}
         />
       </Box>
 
       <Flex direction={'column'}>
-        <Heading as={'h4'} fontSize={'largeTxt.xl'}>
+        <Heading
+          as={'h4'}
+          fontSize={[
+            'largeTxt.lg',
+            'largeTxt.lg',
+            'largeTxt.lg',
+            'largeTxt.xl',
+          ]}
+        >
           {title}
         </Heading>
-        <Text fontSize={'midTxt1.xl'} textAlign={'justify'}>
+        <Text
+          fontSize={[
+            'smTxt.base',
+            'midTxt1.base',
+            'midTxt1.base',
+            'midTxt1.xl',
+          ]}
+          textAlign={'justify'}
+        >
           {description}
         </Text>
       </Flex>

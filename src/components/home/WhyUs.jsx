@@ -5,8 +5,8 @@ import {
   Heading,
   Highlight,
   Image,
+  Stack,
   Text,
-  VStack,
 } from '@chakra-ui/react'
 
 import vector from '@/vector-why-us.svg'
@@ -17,7 +17,8 @@ export const WhyUs = () => {
   return (
     <Container
       maxW={'100%'}
-      h={'805px'}
+      py={'40px'}
+      px={['spacingM.base', '40px', '40px', '40px']}
       bg={'gray.200'}
       display={'flex'}
       alignItems={'center'}
@@ -27,9 +28,9 @@ export const WhyUs = () => {
     >
       <Image
         src={vector}
-        maxW={'571px'}
+        maxW={['271px', '400px', '400px', '571px']}
         position="absolute"
-        left={'100px'}
+        left={['85px', '100px', '100px', '100px']}
         zIndex={-1}
       />
       <Flex
@@ -44,10 +45,16 @@ export const WhyUs = () => {
         zIndex={1}
         justifyContent={'center'}
       >
-        <VStack maxWidth={'342px'} gap={'spacingM.base'}>
+        <Stack
+          flexDirection={['row', 'row', 'row', 'column']}
+          alignItems={'center'}
+          maxWidth={['100%', '100%', '100%', '342px']}
+          gap={'spacingM.base'}
+        >
           <Heading
             as="h1"
-            fontSize={'h1.xl'}
+            maxW={['117px', '316px']}
+            fontSize={['h1.base', 'h1.lg', 'h1.lg', 'h1.xl']}
             color={'gray.800'}
             textAlign={'left'}
           >
@@ -56,16 +63,36 @@ export const WhyUs = () => {
               ADA ITW?
             </Highlight>{' '}
           </Heading>
-          <Text fontSize={'largeTxt.lg'} align={'start'} textAlign={'justify'}>
+          <Text
+            fontSize={[
+              'midTxt.base',
+              'largeTxt.base',
+              'largeTxt.base',
+              'largeTxt.lg',
+            ]}
+            align={'start'}
+            textAlign={['left', 'justify']}
+            maxW={['190px', '316px']}
+          >
             Nuestra misión es reducir la brecha de género en tecnología y esto
             lo hacemos a través del empoderamiento de las mujeres con cursos de
             programación.
           </Text>
-        </VStack>
+        </Stack>
         <Grid
-          templateColumns={'repeat(2, 1fr)'}
-          templateRows={'repeat(2, 1fr)'}
-          gap={'40px'}
+          templateColumns={[
+            'repeat(1, 1fr)',
+            'repeat(1, 1fr)',
+            'repeat(2, 1fr)',
+            'repeat(2, 1fr)',
+          ]}
+          templateRows={[
+            'repeat(4, 1fr)',
+            'repeat(4, 1fr)',
+            'repeat(2, 1fr)',
+            'repeat(2, 1fr)',
+          ]}
+          gap={['30px', '30px', '30px', '40px']}
           maxW={'850px'}
         >
           <WhyUsCard
