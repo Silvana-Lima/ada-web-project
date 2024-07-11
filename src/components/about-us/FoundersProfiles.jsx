@@ -1,7 +1,8 @@
 import { Box, Container, Heading, HStack, Stack, Text } from '@chakra-ui/react'
 
-import ezequielGonzalez from '../../../public/teamWork/ezequiel-gonzalez.png'
-import maCeleteMedina from '../../../public/teamWork/ma-celeste-medina.png'
+import ezequielGonzalez from '/teamWork/ezequiel-gonzalez.png'
+import maCeleteMedina from '/teamWork/ma-celeste-medina.png'
+
 import { TeamCard } from './TeamCard'
 
 export const FoundersProfiles = () => {
