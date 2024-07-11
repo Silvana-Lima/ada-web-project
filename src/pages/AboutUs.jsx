@@ -1,7 +1,7 @@
 import { Container, Show } from '@chakra-ui/react'
 
 import { AboutUsSection } from '../components/about-us/AboutUsSection'
-import { BlogComponent } from '../components/about-us/BlogComponent'
+// import { BlogComponent } from '../components/about-us/BlogComponent'
 import { OurStory } from '../components/about-us/OurStory'
 import { PaymentOptions } from '../components/about-us/PaymentOptions'
 import { SupportUs } from '../components/about-us/SupportUs'
@@ -20,7 +20,7 @@ export const AboutUs = () => {
       <OurStory />
       <TeamWork />
       <Testimonials />
-      <BlogComponent />
+      {/* <BlogComponent /> */}
       <PaymentOptions />
       <SupportUs />
       <CivicHouseShowcase />
