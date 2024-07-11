@@ -1,4 +1,4 @@
-import { Button, Container, Flex, Heading, Stack } from '@chakra-ui/react'
+import { Button, Container, Flex, Heading, Link, Stack } from '@chakra-ui/react'
 
 export const SupportUs = () => {
   return (
@@ -23,7 +23,13 @@ export const SupportUs = () => {
           >
             ¿Te gustaría apoyar nuesta causa?
           </Heading>
-          <Button size={['md', 'md', 'lg']} w={['70%', '50%', '382px']}>
+          <Button
+            as={Link}
+            href="https://donaronline.org/ada/sumate-a-nuestra-mision-para-que-mas-mujeres-tengan-acceso-a-los-trabajos-del-futuro"
+            isExternal
+            size={['md', 'md', 'lg']}
+            w={['70%', '50%', '382px']}
+          >
             Dona aquí
           </Button>
         </Stack>
