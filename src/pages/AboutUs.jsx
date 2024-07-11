@@ -1,8 +1,9 @@
 import { Container, Show } from '@chakra-ui/react'
 
 import { AboutUsSection } from '../components/about-us/AboutUsSection'
+import { FoundersProfiles } from '../components/about-us/FoundersProfiles'
 // import { BlogComponent } from '../components/about-us/BlogComponent'
-import { OurStory } from '../components/about-us/OurStory'
+// import { OurStory } from '../components/about-us/OurStory'
 import { PaymentOptions } from '../components/about-us/PaymentOptions'
 import { SupportUs } from '../components/about-us/SupportUs'
 import { TeamWork } from '../components/about-us/TeamWork'
@@ -17,7 +18,8 @@ export const AboutUs = () => {
       <Show above="lg">
         <WhyAda />
       </Show>
-      <OurStory />
+      {/* <OurStory /> */}
+      <FoundersProfiles />
       <TeamWork />
       <Testimonials />
       {/* <BlogComponent /> */}
