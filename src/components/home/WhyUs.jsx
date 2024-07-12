@@ -5,6 +5,7 @@ import {
   Heading,
   Highlight,
   Image,
+  Show,
   Stack,
   Text,
 } from '@chakra-ui/react'
@@ -26,17 +27,20 @@ export const WhyUs = () => {
       position="relative"
       zIndex={-3}
     >
-      <Image
-        src={vector}
-        maxW={['271px', '400px', '400px', '571px']}
-        position="absolute"
-        left={['85px', '100px', '100px', '100px']}
-        zIndex={-1}
-      />
+      <Show above="lg">
+        <Image
+          src={vector}
+          maxW={['271px', '400px', '400px', '571px']}
+          position="absolute"
+          left={['85px', '100px', '100px', '100px']}
+          zIndex={-1}
+        />
+      </Show>
+
       <Flex
         color={'gray.800'}
-        flexDirection={'row'}
-        wrap={'wrap'}
+        flexDirection={['column', 'column', 'column', 'row']}
+        // wrap={'wrap'}
         alignItems={'center'}
         gap={'spacingXl.lg'}
         px={'20px'}

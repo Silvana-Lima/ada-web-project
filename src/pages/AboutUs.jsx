@@ -1,4 +1,4 @@
-import { Container, Show } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
 
 import { AboutUsSection } from '../components/about-us/AboutUsSection'
 import { BlogComponent } from '../components/about-us/BlogComponent'
@@ -14,9 +14,9 @@ export const AboutUs = () => {
   return (
     <Container maxW={'1440px'}>
       <AboutUsSection />
-      <Show above="lg">
-        <WhyAda />
-      </Show>
+
+      <WhyAda />
+
       <OurStory />
       <TeamWork />
       <Testimonials />
