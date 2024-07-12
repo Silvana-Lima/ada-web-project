@@ -190,30 +190,30 @@ export const awards = [
 export const teamWork = [
   {
     id: 1,
+    name: 'Diana Osorio',
+    teamRole: 'Directora ejecutiva',
+    image: '/teamWork/diana-osorio.png',
+    socialLink: 'https://www.linkedin.com/in/diana-osorio-rojas-/',
+  },
+  {
+    id: 2,
     name: 'Javier de la Calle',
     teamRole: 'Director institucional',
     image: '/teamWork/javier-de-la-calle.png',
     socialLink: 'https://www.linkedin.com/in/javierleandrodelacalle/',
   },
   {
-    id: 2,
+    id: 3,
     name: 'Veronica Heredia',
     teamRole: 'Responsable de inserción laboral',
     image: '/teamWork/vero-heredia.png',
     socialLink: 'https://www.linkedin.com/in/veronica-heredia-valderrama/',
   },
   {
-    id: 3,
-    name: 'Diana Osorio',
-    teamRole: 'Directora ejecutiva',
-    image: '/teamWork/diana-osorio.jpg',
-    socialLink: 'https://www.linkedin.com/in/diana-osorio-rojas-/',
-  },
-  {
     id: 4,
     name: 'Macarena Galardi',
     teamRole: 'Ventas',
-    image: '/teamWork/macarena-galardi.jpg',
+    image: '/teamWork/macarena-galardi.png',
     socialLink: 'https://www.linkedin.com/in/macarena-galardi-4a5303213/',
   },
   {
@@ -222,12 +222,5 @@ export const teamWork = [
     teamRole: 'Bienestar de Alumnas',
     image: '/teamWork/deborah-soto.png',
     socialLink: 'https://www.linkedin.com/in/deborahcarolinasoto/',
-  },
-  {
-    id: 6,
-    name: 'Matias Arno',
-    teamRole: 'Coordinador académico',
-    image: '/teamWork/matias-arno.jpg',
-    socialLink: 'https://www.linkedin.com/in/matias-agustin-arno-9b8526a6/',
   },
 ]

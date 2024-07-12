@@ -5,20 +5,19 @@ import {
   SimpleGrid,
   Stack,
   Text,
-  useBreakpointValue,
 } from '@chakra-ui/react'
 
 import { teamWork } from '../../utils/constants'
 import { TeamCard } from './TeamCard'
 
 export const TeamWork = () => {
-  const isMobile = useBreakpointValue({
-    base: true,
-    md: false,
-  })
+  // const isMobile = useBreakpointValue({
+  //   base: true,
+  //   md: false,
+  // })
 
   return (
-    <Container maxW={'1440px'} bg={isMobile ? 'yellow.600' : 'gray.200'}>
+    <Container maxW={'1440px'} bg="gray.200">
       <Stack
         px={{ base: '16px', md: '16px', lg: '40px' }}
         py={{ base: '48px', md: '48px', lg: '80px' }}
