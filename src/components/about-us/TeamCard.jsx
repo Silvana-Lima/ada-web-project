@@ -9,7 +9,7 @@ export const TeamCard = ({ name, teamRole, teamImg, socialLink }) => {
       px={{ base: '10px', md: '10px', lg: '16px' }}
       py={{ base: '8px', md: '8px', lg: '16px' }}
       bg={'gray.0'}
-      h={'100%'}
+      minH={'170px'}
       borderRadius={'4px'}
     >
       {/* Imagen */}
@@ -22,14 +22,8 @@ export const TeamCard = ({ name, teamRole, teamImg, socialLink }) => {
         />
       </Stack>
       {/* Nombre - cargo */}
-      <Stack h={'100%'}>
-        <Stack
-          h={'100%'}
-          gap={'2px'}
-          textAlign={'center'}
-          alignItems={'Center'}
-          justifyContent={'space-between'}
-        >
+      <Stack flex={1}>
+        <Stack gap={'2px'} textAlign={'center'} alignItems={'Center'}>
           <Heading
             fontSize={['smTxt.base', 'smTxt.base', 'smTxt.lg', 'smTxt.xl']}
           >
@@ -39,6 +33,7 @@ export const TeamCard = ({ name, teamRole, teamImg, socialLink }) => {
             {teamRole}
           </Text>
           {/* Linkedin */}
+
           <Link
             href={socialLink}
             isExternal
