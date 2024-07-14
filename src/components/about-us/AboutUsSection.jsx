@@ -10,12 +10,6 @@ export const AboutUsSection = () => {
     <>
       {/* Video about us */}
       <AboutUsVideo />
-      {/* <Show below="md">
-        <Box>
-          <AboutUsVideo />
-        </Box>
-      </Show> */}
-
       {/* Banner about us */}
       <BannerDisplay
         bgColor={'magenta.400'}

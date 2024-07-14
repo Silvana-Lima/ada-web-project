@@ -34,7 +34,13 @@ export const FoundersProfiles = () => {
           Apasionados por empoderar a mujeres en TECH
         </Text>
       </Stack>
-      <HStack justifyContent={'center'} spacing={['36px', '90px']}>
+
+      <HStack
+        w={'100%'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        spacing={['36px', '90px']}
+      >
         <TeamCard
           name="Maria Celeste Medina"
           teamRole="Co-Founder"
@@ -43,14 +49,14 @@ export const FoundersProfiles = () => {
         />
         <Box>
           <TeamCard
-            name="Maria Celeste Medina"
+            name="Ezequiel Gonzalez"
             teamRole="Co-Founder"
             teamImg={ezequielGonzalez}
             socialLink="https://www.linkedin.com/in/ezequielgonzalez01/"
           />
         </Box>
       </HStack>
-      <Stack
+      {/* <Stack
         px={{ base: '32px', md: '32px', lg: '140px' }}
         py={'20px'}
         textAlign={['justify', 'justify', 'center']}
@@ -68,7 +74,7 @@ export const FoundersProfiles = () => {
           cuanto a proyectos que involucran el entrecruce de
           tecnología-educación y género. A través de su trabajo en Ada, ...
         </Text>
-      </Stack>
+      </Stack> */}
     </Container>
   )
 }
