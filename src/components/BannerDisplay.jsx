@@ -38,7 +38,6 @@ export const BannerDisplay = ({
   return (
     <Container
       maxW={'100%'}
-      //h={['478px', '580px']}
       bg={bgColor}
       py={{ base: '32px', md: '32px', lg: '80px' }}
       px={{ base: '32px', md: '32px', lg: '' }}
@@ -52,7 +51,7 @@ export const BannerDisplay = ({
         display={'flex'}
         flexDirection={{ base: 'column', md: 'row', lg: 'row' }}
         gap={{ base: '10px', md: '35px', lg: '20px' }}
-        maxW={['296px', '400px', '900px', '1154px']}
+        maxW={['296px', '400px', '900px', '1129px']}
         maxH={['', '', '414px', '420px']}
         alignItems={'center'}
         justifyContent={'space-between'}
@@ -140,7 +139,7 @@ export const BannerDisplay = ({
         )}
         {/* imagen */}
         <Stack order={{ base: 1, lg: 2 }}>
-          <Image src={displayImg} maxW={['100%', '100%', '100%', '100%']} />
+          <Image src={displayImg} maxW={'100%'} />
         </Stack>
         {/* link */}
 
@@ -163,14 +162,13 @@ export const BannerDisplay = ({
 BannerDisplay.propTypes = {
   // props requeridas
   highlightxt: PropTypes.string.isRequired,
-  txt: PropTypes.string.isRequired,
   txtColor: PropTypes.string.isRequired,
   HLColorTxt: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   bgColor: PropTypes.string.isRequired,
-  ourGoald: PropTypes.bool.isRequired,
-  aboutUs: PropTypes.bool.isRequired,
+
   // props no requeridas
+  txt: PropTypes.string,
   txt1: PropTypes.string,
   txt2: PropTypes.string,
   txt3: PropTypes.string,
@@ -178,4 +176,6 @@ BannerDisplay.propTypes = {
   buttonTxt: PropTypes.string,
   imgMobile: PropTypes.string,
   linkTxt: PropTypes.string,
+  ourGoald: PropTypes.bool,
+  aboutUs: PropTypes.bool,
 }

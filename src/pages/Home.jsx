@@ -1,11 +1,11 @@
-import { Container, Show } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
 
 import allData from '@/all-the-data.svg'
 import imageCareers from '@/img-banner-carreras.svg'
 
+import { CivicHouseShowcase } from '../components/CivicHouseShowcase'
 import { Awards } from '../components/home/Awards'
 import { Banner } from '../components/home/Banner'
-import { CivicHouseShowcase } from '../components/home/CivicHouseShowcase'
 import { Hero } from '../components/home/Hero'
 import { HiringCompanies } from '../components/home/HiringCompanies'
 import { Impact } from '../components/home/Impact'
@@ -40,9 +40,9 @@ export const Home = () => {
       />
 
       <NextBeginnings />
-      <Show above="lg">
-        <WhyUs />
-      </Show>
+
+      <WhyUs />
+
       <Testimonials />
       <OurGoald />
       <HiringCompanies />

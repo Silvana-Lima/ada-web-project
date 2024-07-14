@@ -1,33 +1,62 @@
-import { Flex, Heading, HStack, Text } from '@chakra-ui/react'
+import { Box, Flex, Heading, HStack, Text, useTheme } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
 
-export const WhyUsCard = ({ title, description }) => {
+export const WhyUsCard = ({
+  title,
+  description,
+  bgColor,
+  borderW,
+  maxW,
+  pX,
+  pY,
+}) => {
+  const theme = useTheme()
   return (
     <HStack
-      maxW={'406px'}
       justify={'center'}
       alignItems={'center'}
       gap={'spacingL.xl'}
       borderColor={'gray.400'}
-      borderWidth="1px"
+      borderWidth={borderW}
       borderRadius="md"
       color={'gray.800'}
-      _hover={{ boxShadow: 'lg' }}
-      bg={'gray.0'}
-      p={5}
+      bg={bgColor}
+      px={pX}
+      py={pY}
+      maxW={maxW}
+      minWidth={'317px'}
     >
-      <Icon
-        icon={'iconoir:community'}
-        style={{
-          fontSize: '80px',
-        }}
-      />
-      <Flex maxW={'262px'} direction={'column'}>
-        <Heading as={'h4'} fontSize={'largeTxt.xl'}>
+      <Box w={'80px'}>
+        <Icon
+          icon={'iconoir:community'}
+          style={{
+            fontSize: `calc(${theme.fontSizes.h2.xl} + 2vw)`,
+          }}
+        />
+      </Box>
+
+      <Flex direction={'column'}>
+        <Heading
+          as={'h4'}
+          fontSize={[
+            'largeTxt.lg',
+            'largeTxt.lg',
+            'largeTxt.lg',
+            'largeTxt.xl',
+          ]}
+        >
           {title}
         </Heading>
-        <Text fontSize={'midTxt1.xl'} textAlign={'justify'}>
+        <Text
+          fontSize={[
+            'smTxt.base',
+            'midTxt1.base',
+            'midTxt1.base',
+            'midTxt1.xl',
+          ]}
+          textAlign={'justify'}
+        >
           {description}
         </Text>
       </Flex>
@@ -38,4 +67,9 @@ export const WhyUsCard = ({ title, description }) => {
 WhyUsCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  bgColor: PropTypes.string,
+  borderW: PropTypes.string,
+  pY: PropTypes.string,
+  pX: PropTypes.string,
+  maxW: PropTypes.string,
 }

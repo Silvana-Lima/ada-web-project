@@ -8,6 +8,7 @@ import {
   VStack,
 } from '@chakra-ui/react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 export const Banner = ({ img, title, description, btnText, bgColor }) => {
   return (
@@ -48,7 +49,12 @@ export const Banner = ({ img, title, description, btnText, bgColor }) => {
             {description}
           </Text>
 
-          <Button size={'lg'} w={['100%', '382px']}>
+          <Button
+            as={Link}
+            to="/trainingSection"
+            size={'lg'}
+            w={['100%', '382px']}
+          >
             {btnText}
           </Button>
         </VStack>

@@ -26,7 +26,7 @@ export const EducationMenu = ({ hideChevronIcon }) => {
           color: 'magenta.400',
         }}
       >
-        Oferta educativa{' '}
+        Oferta educativa
         {!hideChevronIcon && (
           <Box as="span" pl="4px">
             {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}

@@ -55,21 +55,29 @@ export const Impact = () => {
           w={['', '', '708px', '708px']}
         >
           <ImpactCard
+            w={['280px', '346px']}
+            h={['120px', '193px']}
             icon={'pepicons-print:people'}
             number={'+2.100'}
             description={'Egresadas en nuestras capacitaciones'}
           />
           <ImpactCard
+            w={['280px', '346px']}
+            h={['120px', '193px']}
             icon={'pepicons-print:handshake'}
             number={'+100'}
             description={'Empresas contratantes'}
           />
           <ImpactCard
+            w={['280px', '346px']}
+            h={['120px', '193px']}
             icon={'pepicons-print:dollar'}
             number={'+700 USD'}
             description={'Salario promedio mensual de nuestras egresAdas'}
           />
           <ImpactCard
+            w={['280px', '346px']}
+            h={['120px', '193px']}
             icon={'pepicons-print:face-smiling'}
             number={'+90%'}
             description={'Satisfacción al terminar la capacitación'}

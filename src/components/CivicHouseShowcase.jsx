@@ -1,9 +1,11 @@
 import { Box, Container, Flex, Image, Text } from '@chakra-ui/react'
 
-import logoCivicHouse from '../../assets/logo-CivicHouse.png'
+import logoCivicHouse from '../assets/logo-CivicHouse.png'
 
 export const CivicHouseShowcase = () => {
   return (
+    // <Show above="md">
+    // <Box>
     <Container maxW={'1440px'} bg={'gray.0'} py={{ base: '20px', md: '48px' }}>
       <Flex
         gap={'12px'}
@@ -27,5 +29,7 @@ export const CivicHouseShowcase = () => {
         </Box>
       </Flex>
     </Container>
+    // </Box>
+    // </Show>
   )
 }
