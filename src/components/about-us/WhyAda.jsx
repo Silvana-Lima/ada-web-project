@@ -15,7 +15,7 @@ export const WhyAda = () => {
     <Container
       maxW={'100%'}
       bg={'gray.200'}
-      px={{ base: '32px', md: '32px', lg: '' }}
+      px={{ base: 'spacingM.base', md: '32px', lg: '' }}
       py={'40px'}
     >
       <Container
