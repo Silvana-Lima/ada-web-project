@@ -2,7 +2,15 @@ import { Box, Flex, Heading, HStack, Text, useTheme } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
 
-export const WhyUsCard = ({ title, description, bgColor, borderW, pX, pY }) => {
+export const WhyUsCard = ({
+  title,
+  description,
+  bgColor,
+  borderW,
+  maxW,
+  pX,
+  pY,
+}) => {
   const theme = useTheme()
   return (
     <HStack
@@ -13,10 +21,11 @@ export const WhyUsCard = ({ title, description, bgColor, borderW, pX, pY }) => {
       borderWidth={borderW}
       borderRadius="md"
       color={'gray.800'}
-      _hover={{ boxShadow: 'lg' }}
       bg={bgColor}
       px={pX}
       py={pY}
+      maxW={maxW}
+      minWidth={'317px'}
     >
       <Box w={'80px'}>
         <Icon
@@ -62,4 +71,5 @@ WhyUsCard.propTypes = {
   borderW: PropTypes.string,
   pY: PropTypes.string,
   pX: PropTypes.string,
+  maxW: PropTypes.string,
 }

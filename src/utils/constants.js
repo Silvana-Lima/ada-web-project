@@ -224,3 +224,62 @@ export const teamWork = [
     socialLink: 'https://www.linkedin.com/in/deborahcarolinasoto/',
   },
 ]
+
+export const whyUs = [
+  {
+    id: 1,
+    title: 'Habilidades blandas',
+    description:
+      'Fomentamos el desarrollo de habilidades en comunicación, liderazgo, trabajo en equipo, metodologías ágiles y más.',
+  },
+  {
+    id: 2,
+    title: 'Inserción laboral',
+    description:
+      'Conectamos a nuestras egresadas con oportunidades laborales a través de formación, alianzas empresariales y eventos de desarrollo profesional.',
+  },
+  {
+    id: 3,
+    title: 'Aprendizaje práctico',
+    description:
+      'Desafiamos la educación tradicional  para que realmente disfrutes aprender en nuestras sesiones 70 % prácticas.',
+  },
+  {
+    id: 4,
+    title: 'Acompañamiento',
+    description:
+      'Integramos un enfoque teórico (60%) con actividades prácticas (40%) para aplicar los conocimientos adquiridos eficazmente.',
+  },
+]
+
+export const whyAda = [
+  {
+    id: 1,
+    title: 'Aprendizaje práctico',
+    description:
+      'Desafiamos la educación tradicional  para que realmente disfrutes aprender en nuestras sesiones 70 % prácticas.',
+    bgColor: '#F0F000',
+  },
+  {
+    id: 2,
+    title: 'Acompañamiento',
+    description:
+      'Integramos un enfoque teórico (60%) con actividades prácticas (40%) para aplicar los conocimientos adquiridos eficazmente.',
+
+    bgColor: '#FCFCCC',
+  },
+  {
+    id: 3,
+    title: 'Habilidades blandas',
+    description:
+      'Fomentamos el desarrollo de habilidades en comunicación, liderazgo, trabajo en equipo, metodologías ágiles y más.',
+    bgColor: '#EAC3FF',
+  },
+  {
+    id: 4,
+    title: 'Inserción laboral',
+    description:
+      'Conectamos a nuestras egresadas con oportunidades laborales a través de formación, alianzas empresariales y eventos de desarrollo profesional.',
+    bgColor: '#FFBF7D',
+  },
+]

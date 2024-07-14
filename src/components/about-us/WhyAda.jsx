@@ -7,6 +7,7 @@ import {
   Text,
 } from '@chakra-ui/react'
 
+import { whyAda } from '../../utils/constants'
 import { WhyUsCard } from '../home/WhyUsCard'
 
 export const WhyAda = () => {
@@ -73,42 +74,16 @@ export const WhyAda = () => {
           gap={['30px', '30px', '30px', '40px']}
           w={['100%', '400px', '100%', '100%']}
         >
-          <WhyUsCard
-            title={'Aprendizaje práctico'}
-            description={
-              'Desafiamos la educación tradicional  para que realmente disfrutes aprender en nuestras sesiones 70 % prácticas.'
-            }
-            bgColor={'#F0F000'}
-            pY={'30px'}
-            pX={'30px'}
-          />
-          <WhyUsCard
-            title={'Acompañamiento'}
-            description={
-              'Integramos un enfoque teórico (60%) con actividades prácticas (40%) para aplicar los conocimientos adquiridos eficazmente.'
-            }
-            bgColor={'#FCFCCC'}
-            pY={'30px'}
-            pX={'30px'}
-          />
-          <WhyUsCard
-            title={'Habilidades blandas'}
-            description={
-              'Fomentamos el desarrollo de habilidades en comunicación, liderazgo, trabajo en equipo,metodologías ágiles y más.'
-            }
-            bgColor={'#EAC3FF'}
-            pY={'30px'}
-            pX={'30px'}
-          />
-          <WhyUsCard
-            title={'Inserción laboral'}
-            description={
-              'Conectamos a nuestras egresadas con oportunidades laborales actuales a través de formación, alianzas empresariales y eventos de desarrollo profesional.'
-            }
-            bgColor={'#FFBF7D'}
-            pY={'30px'}
-            pX={'30px'}
-          />
+          {whyAda.map(({ id, title, description, bgColor }) => (
+            <WhyUsCard
+              key={id}
+              title={title}
+              description={description}
+              bgColor={bgColor}
+              pY={'30px'}
+              pX={'30px'}
+            />
+          ))}
         </Grid>
       </Container>
     </Container>
