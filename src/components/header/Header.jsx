@@ -17,6 +17,9 @@ import { EducationMenu } from './EducationMenu'
 import { InstagramCta } from './InstagramCta'
 
 export const Header = () => {
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   return (
     <Container
       maxW={'1440'}
@@ -37,7 +40,7 @@ export const Header = () => {
         py={'16px'}
       >
         {/* Logo Ada */}
-        <Link as={NavLink} to="/">
+        <Link as={NavLink} to="/" onClick={handleScrollToTop}>
           <Image
             src={logoAdaFuscia}
             alt="Logo ADA"
@@ -49,14 +52,14 @@ export const Header = () => {
         </Link>
 
         {/* menu hamburguesa */}
-        <Show below="lg">
+        <Show below="md">
           <Box>
             <BurgerMenu />
           </Box>
         </Show>
 
         {/* Menu de navegacion  */}
-        <Hide below="lg">
+        <Hide below="md">
           <Box>
             <Grid
               columns={6}
@@ -72,6 +75,7 @@ export const Header = () => {
             >
               <Link
                 as={NavLink}
+                onClick={handleScrollToTop}
                 to="/aboutUs"
                 maxW={'max-content'}
                 px={'8px'}

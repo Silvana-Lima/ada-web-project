@@ -1,4 +1,4 @@
-import { Box, Show } from '@chakra-ui/react'
+// import { Box, Show } from '@chakra-ui/react'
 
 import AboutUsImg from '../../assets/image/bannerUsImg.png'
 import networkingImg from '../../assets/networkingImg.png'
@@ -9,12 +9,7 @@ export const AboutUsSection = () => {
   return (
     <>
       {/* Video about us */}
-      <Show below="md">
-        <Box>
-          <AboutUsVideo />
-        </Box>
-      </Show>
-
+      <AboutUsVideo />
       {/* Banner about us */}
       <BannerDisplay
         bgColor={'magenta.400'}

@@ -1,10 +1,7 @@
+import { ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import {
-  Accordion,
-  AccordionButton,
-  AccordionItem,
-  AccordionPanel,
-  Box,
   Button,
+  Flex,
   Icon,
   IconButton,
   Menu,
@@ -12,6 +9,7 @@ import {
   MenuItem,
   MenuList,
   Stack,
+  useDisclosure,
 } from '@chakra-ui/react'
 import { useState } from 'react'
 import { IoClose } from 'react-icons/io5'
@@ -28,13 +26,23 @@ const menuItemStyles = {
 }
 
 export const BurgerMenu = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const { isOpen, onClose, onToggle } = useDisclosure()
+  const [activeSubMenu, setActiveSubMenu] = useState(false)
 
-  const handleMenuToggle = () => {
-    setIsOpen(!isOpen)
+  const handleSubMenu = () => {
+    setActiveSubMenu(!activeSubMenu)
+    if (!isOpen) {
+      onToggle()
+    }
   }
+
+  const handleCloseMenu = () => {
+    setActiveSubMenu(false)
+    onClose()
+  }
+
   return (
-    <Menu isOpen={isOpen} onClose={handleMenuToggle} onOpen={handleMenuToggle}>
+    <Menu isOpen={isOpen}>
       <MenuButton
         as={IconButton}
         aria-label="Options"
@@ -46,42 +54,44 @@ export const BurgerMenu = () => {
         size="xl"
         display="flex"
         justifyContent="flex-end"
+        onClick={onToggle}
       />
       <MenuList
-        w={'100vw'}
+        w={{ base: '100vw', md: '45vw' }}
         h={'100vh'}
         pt={'40px'}
         px={'24px'}
         overflowX="hidden"
       >
         <NavLink to="/aboutUs">
-          <MenuItem {...menuItemStyles}>Sobre nosotros</MenuItem>
+          <MenuItem {...menuItemStyles} onClick={handleCloseMenu}>
+            Sobre nosotros
+          </MenuItem>
         </NavLink>
 
         {/* desplegable para ofertas educativas */}
-        <Accordion allowToggle={false} defaultIndex={[0]}>
-          <AccordionItem w={'max-content'}>
-            <AccordionButton
-              _expanded={{
-                bg: 'purple.200',
-                color: 'magenta.400',
-                borderBottom: '2px ',
-                borderColor: 'magenta.400',
-                padding: '12px 24px',
-                width: ['312px', '382px'],
-              }}
-            >
-              <Box textAlign="left">Ofertas educativas</Box>
-            </AccordionButton>
-            <AccordionPanel pb={4}>
-              <CoursesMenuBox />
-            </AccordionPanel>
-          </AccordionItem>
-        </Accordion>
-        <MenuItem>Blog</MenuItem>
-        <MenuItem pb={'40px'}>Contrata talento</MenuItem>
-        <Stack align={{ md: 'start' }}>
-          <Button size={'md'} w={['100%', '382px']}>
+        <Flex direction="column">
+          <MenuItem
+            justifyContent="space-between"
+            alignItems="center"
+            onClick={handleSubMenu}
+            bg={activeSubMenu && 'purple.200'}
+          >
+            Ofertas educativas
+            {activeSubMenu ? (
+              <ChevronDownIcon color={'magenta.400'} fontSize={'25px'} />
+            ) : (
+              <ChevronRightIcon color={'magenta.400'} fontSize={'25px'} />
+            )}
+          </MenuItem>
+          {/* Menu con carreras y cursos */}
+          {activeSubMenu && <CoursesMenuBox />}
+        </Flex>
+
+        <MenuItem {...menuItemStyles}>Blog</MenuItem>
+        <MenuItem {...menuItemStyles}>Contrata talento</MenuItem>
+        <Stack pt={'40px'} align={{ md: 'start' }}>
+          <Button size={'md'} w={'100%'}>
             Inscríbete
           </Button>
         </Stack>

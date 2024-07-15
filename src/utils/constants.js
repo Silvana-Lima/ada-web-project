@@ -1,27 +1,31 @@
 const testimonials = [
   {
     name: 'Florencia Navarro',
+    enterprise: false,
     career: 'Becada desarrollo front-end',
     comment:
       'Soy madre de 2 hijos y trabajé como cocinera, pero mi plan siempre fue estudiar. Obtuve la beca para desarrollo front-end en ADA, y descubrí que la programación podía ser mi forma de vida, quería dedicarme a la  programación. Me siento super feliz. Tuve la oportunidad de volver a empezar, de tener una profesión, y de volver a trabajar en algo que me permita estar con mis hijos. Mi objetivo es seguir creciendo en el mundo IT.',
     photo: '/testimonials/florencia-navarro.png',
   },
   {
-    name: 'Banco Interamericano de desarrollo',
-    career: '',
-    comment:
-      'Juntos, hemos llevado a cabo programas innovadores que fomentan el desarrollo de habilidades tecnológicas y el empoderamiento de las mujeres, lo que ha resultado en un aumento significativo de la representación femenina en roles tecnológicos clave. Esta colaboración es un ejemplo inspirador de cómo la inversión en la igualdad de género en el sector de la tecnología puede tener un impacto transformador en la sociedad y la economía.',
-    photo: '/testimonials/bid.png',
-  },
-  {
     name: 'Daniela Loponte',
+    enterprise: false,
     career: 'Mujer trans - Becada desarrollo back-end',
     comment:
       'La beca de Ada me abrió una puerta a la programación que fue totalmente nueva para mi. Me abrió muchas puertas en lo económico y laboral, que de otra forma hubiera sido muy difícil, ya que las personas trans tenemos ciertas dificultades a los accesos de los recursos tanto académicos como profesionales. Quiero decirles al equipo de Ada que el esfuerzo que hacen no pasa desapercibido y es muy importante.',
     photo: '/testimonials/daniela-loponte.png',
   },
   {
+    name: 'Banco Interamericano de desarrollo',
+    enterprise: true,
+    career: '',
+    comment:
+      'Juntos, hemos llevado a cabo programas innovadores que fomentan el desarrollo de habilidades tecnológicas y el empoderamiento de las mujeres, lo que ha resultado en un aumento significativo de la representación femenina en roles tecnológicos clave. Esta colaboración es un ejemplo inspirador de cómo la inversión en la igualdad de género en el sector de la tecnología puede tener un impacto transformador en la sociedad y la economía.',
+    photo: '/testimonials/bid.png',
+  },
+  {
     name: 'Accenture',
+    enterprise: true,
     career: '',
     comment:
       'Las talentosas mujeres que han pasado por las aulas de ADA ITW han demostrado un nivel excepcional de conocimiento y habilidades técnicas, así como un compromiso innegable con la excelencia en el campo de la tecnología. Estas profesionales no solo han enriquecido nuestra fuerza laboral con su experiencia y creatividad, sino que también han desempeñado un papel fundamental en la creación de un ambiente inclusivo y diverso en Accenture.',
@@ -29,31 +33,32 @@ const testimonials = [
   },
   {
     name: 'Ailén Páez',
+    enterprise: false,
     career: 'Alumna de la comision 15va. de back-end',
     comment:
       // se adapta el texto original a la cantidad de caracteres necesarios sin modificar la idea original
       'Hace un año decidí dar un volantazo en mi vida y estudiar programación, un mundo desconocido para mí. Elegí Ada por las facilidades de pago, sin ellas no habría podido acceder a una carrera IT. Invertí en mi futuro, y cada clase me deja más contenta. Estoy ansiosa por trabajar de esto, aprendo cada día y mi mente está activa como nunca. He conocido gente maravillosa que me ayuda en cada duda, en la cursada nos apoyamos mutuamente.',
-    // falta foto - aun no tenemos acceso al drive para poder bajarla
     photo: '/testimonials/ailen-paez.png',
   },
   {
     name: 'Yanina Lorena Rios',
+    enterprise: false,
     career: 'Introducción a desarrollo front-end',
     comment:
       'Mi experiencia fue muy linda aprendí cosas que no tenía idea. Yo solo tenía algo de conocimiento del celular y nada de computación. Lo que más me gustó fué las compañeras y la profe siempre poniendo todo de ella para que aprendamos y nos saquemos el miedo.',
-    // falta foto - aun no tenemos acceso al drive para poder bajarla
     photo: '/testimonials/yanina-lorena-rios.png',
   },
   {
     name: 'Karina',
+    enterprise: false,
     career: 'Diseño UX/Ui',
     comment:
       'Me gusta mucho de ADA  el acompañamiento del profesor y las clases activas ayudan a que sea entretenido y te inspiran a continuar.  Pienso que es importante acercarse a los nuevos recursos tecnológicos para aplicarlo en diferentes áreas y facilitar nuestras tareas. El mayor desafío es pensar que no podés, pero al hacerlo entendés que si se puede, solo tenés que invertir tiempo.',
-    // falta foto - aun no tenemos acceso al drive para poder bajarla
     photo: '/testimonials/karina.png',
   },
   {
     name: 'Aylen Montofarno',
+    enterprise: false,
     career: 'Introducción diseño UX/Ui',
     comment:
       'Me pareció interesante la propuesta enfocada a las mujeres. La programación solía ser más que nada un nicho para masculinidades. Antes de estudiar UXUI en ADA, estudie programación y análisis de datos. Mi consejo para quien puiera estudiar programación es que tenga paciencia y predisposición para practicar. También tener en cuenta la frustración que conlleva el codeo. Relajar, practicar, apoyarse en comunidades afines donde se pueda hacer Preguntas y buscar info relevante.',
@@ -77,29 +82,29 @@ export const beginningCards = [
     descriptionS:
       'Conviértete en desarrolladora front-end y crea sitios web utilizándo las últimas tecnologías del mercado.', // confirmar texto - se usaria para mobile
     date: 'Fecha estimada de inicio a confirmar',
-    duration: '9 meses : 3 clases por semana (9hs semanales).', // confirmar la duracion - porque no esta en el programa
-  },
-  {
-    id: 2,
-    title: 'Carrera',
-    career: 'Desarrollo back-end',
-    color: '#ff7d00',
-    descriptionL:
-      ' Exploramos el corazón de las aplicaciones, donde los datos cobran vida y la seguridad es primordial. Descubre cómo optimizamos la funcionalidad y la eficiencia para crear experiencias digitales sólidas y confiables para los usuarios.',
-    descriptionS:
-      'Conviértete en desarrolladora front-end y crea sitios web utilizándo las últimas tecnologías del mercado.', // confirmar texto - se usaria para mobile
-    date: 'Fecha estimada de inicio a confirmar',
     duration: '9 meses : 3 clases por semana (9hs semanales).',
   },
+  // {
+  //   id: 2,
+  //   title: 'Carrera',
+  //   career: 'Desarrollo back-end',
+  //   color: '#ff7d00',
+  //   descriptionL:
+  //     ' Exploramos el corazón de las aplicaciones, donde los datos cobran vida y la seguridad es primordial. Descubre cómo optimizamos la funcionalidad y la eficiencia para crear experiencias digitales sólidas y confiables para los usuarios.',
+  //   descriptionS:
+  //     'Conviértete en desarrolladora front-end y crea sitios web utilizándo las últimas tecnologías del mercado.', // confirmar texto - se usaria para mobile
+  //   date: 'Fecha estimada de inicio a confirmar',
+  //   duration: '9 meses : 3 clases por semana (9hs semanales).',
+  // },
   {
     id: 3,
     title: 'Curso',
-    career: ' Intensivo. Diseño UX/UI',
+    career: ' Intensivo - Diseño UX/UI',
     color: '#be44ff',
     descriptionL:
-      ' Conviértete en diseñadora UX UI y aprende a investigar, organizar la arquitectura de la información y a diseñar interfaces.',
+      ' Aprende los fundamentos de UX/UI y el proceso completo de desarrollo de productos digitales. Incluye ejemplos prácticos para reforzar conceptos teóricos. Al terminar, estarás lista para explorar el mundo de las interfaces digitales y la experiencia de usuarios.',
     descriptionS:
-      'Conviértete en diseñadora UX UI y aprende a investigar, organizar la arquitectura de la información y a diseñar interfaces.',
+      'Aprende fundamentos de UX/UI con ejemplos prácticos. Al finalizar, podrás explorar la experiencia de usuarios e interfaces digitales.',
     date: 'Fecha estimada de inicio a confirmar',
     duration: '3 meses : 2 clases semanales (6hs semanales).',
   },
@@ -112,6 +117,18 @@ export const beginningCards = [
       ' En este curso dominarás los fundamentos de la programación y crearás tus primeros programas. Python es versátil y fácil de aprender, ideal para principiantes',
     descriptionS:
       'En este curso introductorio aprenderás el lenguaje de programación Phyton.',
+    date: 'Fecha estimada de inicio a confirmar',
+    duration: '3 meses : 2 clases semanales (6hs semanales).',
+  },
+  {
+    id: 5,
+    title: 'Curso',
+    career: 'QA testing',
+    color: '#ff7d00',
+    descriptionL:
+      ' Este curso está diseñado para quienes quieran aprender los conocimientos clave sobre pruebas automáticas de desarrollo y su influencia en el proceso de codificación. Incluye ejemplos prácticos para entender los conceptos teóricos. Al finalizar, tendrás habilidades para reportar errores y agilizar el desarrollo de software con tests automáticos.',
+    descriptionS:
+      'Curso ideal para aprender pruebas automáticas y su impacto en el desarrollo de código.',
     date: 'Fecha estimada de inicio a confirmar',
     duration: '3 meses : 2 clases semanales (6hs semanales).',
   },
@@ -167,5 +184,102 @@ export const awards = [
     id: '10',
     logo: '/awards/forbes.svg',
     name: '30 Promesas de los Negocios',
+  },
+]
+
+export const teamWork = [
+  {
+    id: 1,
+    name: 'Diana Osorio',
+    teamRole: 'Directora ejecutiva',
+    image: '/teamWork/diana-osorio.png',
+    socialLink: 'https://www.linkedin.com/in/diana-osorio-rojas-/',
+  },
+  {
+    id: 2,
+    name: 'Javier de la Calle',
+    teamRole: 'Director institucional',
+    image: '/teamWork/javier-de-la-calle.png',
+    socialLink: 'https://www.linkedin.com/in/javierleandrodelacalle/',
+  },
+  {
+    id: 3,
+    name: 'Veronica Heredia',
+    teamRole: 'Responsable de inserción laboral',
+    image: '/teamWork/vero-heredia.png',
+    socialLink: 'https://www.linkedin.com/in/veronica-heredia-valderrama/',
+  },
+  {
+    id: 4,
+    name: 'Macarena Galardi',
+    teamRole: 'Ventas',
+    image: '/teamWork/macarena-galardi.png',
+    socialLink: 'https://www.linkedin.com/in/macarena-galardi-4a5303213/',
+  },
+  {
+    id: 5,
+    name: 'Deborah Soto',
+    teamRole: 'Bienestar de Alumnas',
+    image: '/teamWork/deborah-soto.png',
+    socialLink: 'https://www.linkedin.com/in/deborahcarolinasoto/',
+  },
+]
+
+export const whyUs = [
+  {
+    id: 1,
+    title: 'Habilidades blandas',
+    description:
+      'Fomentamos el desarrollo de habilidades en comunicación, liderazgo, trabajo en equipo, metodologías ágiles y más.',
+  },
+  {
+    id: 2,
+    title: 'Inserción laboral',
+    description:
+      'Conectamos a nuestras egresadas con oportunidades laborales a través de formación, alianzas empresariales y eventos de desarrollo profesional.',
+  },
+  {
+    id: 3,
+    title: 'Aprendizaje práctico',
+    description:
+      'Desafiamos la educación tradicional  para que realmente disfrutes aprender en nuestras sesiones 70 % prácticas.',
+  },
+  {
+    id: 4,
+    title: 'Acompañamiento',
+    description:
+      'Integramos un enfoque teórico (60%) con actividades prácticas (40%) para aplicar los conocimientos adquiridos eficazmente.',
+  },
+]
+
+export const whyAda = [
+  {
+    id: 1,
+    title: 'Aprendizaje práctico',
+    description:
+      'Desafiamos la educación tradicional  para que realmente disfrutes aprender en nuestras sesiones 70 % prácticas.',
+    bgColor: '#F0F000',
+  },
+  {
+    id: 2,
+    title: 'Acompañamiento',
+    description:
+      'Integramos un enfoque teórico (60%) con actividades prácticas (40%) para aplicar los conocimientos adquiridos eficazmente.',
+
+    bgColor: '#FCFCCC',
+  },
+  {
+    id: 3,
+    title: 'Habilidades blandas',
+    description:
+      'Fomentamos el desarrollo de habilidades en comunicación, liderazgo, trabajo en equipo, metodologías ágiles y más.',
+    bgColor: '#EAC3FF',
+  },
+  {
+    id: 4,
+    title: 'Inserción laboral',
+    description:
+      'Conectamos a nuestras egresadas con oportunidades laborales a través de formación, alianzas empresariales y eventos de desarrollo profesional.',
+    bgColor: '#FFBF7D',
   },
 ]

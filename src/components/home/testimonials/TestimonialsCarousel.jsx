@@ -40,16 +40,24 @@ export const TestimonialsCarousel = () => {
           },
         }}
       >
-        {studentTestimonials.map(({ name, career, comment, photo, id }) => (
-          <SwiperSlide key={id} className="testimonial-swiper-slide">
-            <TestimonyCard
-              comment={comment}
-              name={name}
-              career={career}
-              photo={photo}
-            />
-          </SwiperSlide>
-        ))}
+        {studentTestimonials.map(
+          ({ name, career, comment, photo, id, enterprise }) => {
+            if (!enterprise) {
+              return (
+                <SwiperSlide key={id} className="testimonial-swiper-slide">
+                  <TestimonyCard
+                    comment={comment}
+                    name={name}
+                    career={career}
+                    photo={photo}
+                    h={['345px', '312px', '312px', '340px']}
+                  />
+                </SwiperSlide>
+              )
+            }
+            return null
+          }
+        )}
         <Box className="swiper-pagination-testimonial"></Box>
       </Swiper>
     </>
