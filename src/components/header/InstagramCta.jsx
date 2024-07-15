@@ -2,6 +2,7 @@ import {
   CloseButton,
   Container,
   Flex,
+  Link,
   useBreakpointValue,
   useDisclosure,
 } from '@chakra-ui/react'
@@ -25,6 +26,8 @@ export const InstagramCta = () => {
           bg="#ff7d00"
         >
           <Flex
+            as={Link}
+            href="https://www.instagram.com/adaitw/"
             alignItems="center"
             gap={'spacingXs.xl'}
             fontFamily={'kMid'}
@@ -35,6 +38,7 @@ export const InstagramCta = () => {
               'midTxt1.lg',
               'midTxt1.lg',
             ]}
+            isExternal
           >
             <FaInstagram size={'24px'} />
             {text}
