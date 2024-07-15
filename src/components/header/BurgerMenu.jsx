@@ -39,6 +39,7 @@ export const BurgerMenu = () => {
   const handleCloseMenu = () => {
     setActiveSubMenu(false)
     onClose()
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
