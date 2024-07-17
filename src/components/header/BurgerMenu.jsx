@@ -89,7 +89,7 @@ export const BurgerMenu = () => {
           {activeSubMenu && <CoursesMenuBox />}
         </Flex>
 
-        <MenuItem {...menuItemStyles}>Blog</MenuItem>
+        {/* <MenuItem {...menuItemStyles}>Blog</MenuItem> */}
         <MenuItem {...menuItemStyles}>Contrata talento</MenuItem>
         <Stack pt={'40px'} align={{ md: 'start' }}>
           <Button size={'md'} w={'100%'}>

@@ -91,7 +91,7 @@ export const Header = () => {
               {/* Ofertas educativas */}
               <EducationMenu />
 
-              <Link
+              {/* <Link
                 maxW={'max-content'}
                 px={'8px'}
                 py={'10px'}
@@ -102,7 +102,7 @@ export const Header = () => {
                 }}
               >
                 Blog
-              </Link>
+              </Link> */}
               <Link
                 maxW={'max-content'}
                 px={'8px'}

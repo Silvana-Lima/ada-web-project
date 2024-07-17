@@ -132,6 +132,18 @@ export const beginningCards = [
     date: 'Fecha estimada de inicio a confirmar',
     duration: '3 meses : 2 clases semanales (6hs semanales).',
   },
+  {
+    id: 6,
+    title: 'Curso',
+    career: 'IA Generativa',
+    color: '#cd0055',
+    descriptionL:
+      'Curso intensivo de IA Generativa: Aprende a crear textos, imágenes y música con modelos avanzados de IA. Sin requisitos previos. Potencia tu creatividad tecnológica.',
+    descriptionS:
+      'Curso de IA Generativa: crea textos, imágenes y música con IA avanzada. Sin requisitos previos. Potencia tu creatividad.',
+    date: 'Fecha estimada de inicio a confirmar',
+    duration: '3 meses : 2 clases semanales (6hs semanales).',
+  },
 ]
 
 export const awards = [

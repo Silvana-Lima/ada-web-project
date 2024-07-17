@@ -47,7 +47,7 @@ export const InscriptionSteps = () => {
           fontSize={['h1.base', 'h1.base', 'h1.lg', 'h1.xl']}
           color={'gray.800'}
         >
-          Progreso de la inscripción
+          Proceso de la inscripción
         </Heading>
         <Stepper
           index={activeStep}
