@@ -6,18 +6,17 @@ export const TrainingBanner = () => {
   return (
     <Container maxW={'1440px'}>
       <Stack
+        minH={['340px', '500px']}
         position="relative"
-        w="100%"
-        minH={'364px'}
+        px={{ base: '32px', md: '32px', lg: '140px' }}
+        py={{ base: '40px', md: '40px', lg: '80px' }}
+        spacing={['16px', '26px']}
+        justifyContent={'center'}
+        alignItems={'center'}
         bgImage={`url(${bgImg})`}
         bgRepeat="no-repeat"
         bgSize="cover"
         bgPos="center"
-        px={{ base: '16px', md: '16px', lg: '40px' }}
-        py={{ base: '48px', md: '48px', lg: '80px' }}
-        spacing={['24px', '40px', '50px', '80px']}
-        justifyContent={'center'}
-        alignItems={'center'}
         _before={{
           content: '""',
           position: 'absolute',
@@ -30,7 +29,12 @@ export const TrainingBanner = () => {
           zIndex: 0,
         }}
       >
-        <Box zIndex={1} position="relative">
+        <Box
+          maxW={{ base: '100%', md: '100%' }}
+          textAlign={['justify', 'center']}
+          zIndex={1}
+          position="relative"
+        >
           <Heading
             fontSize={['h1.base', 'h1.base', 'h1.lg', 'h1.xl']}
             color={'gray.0'}
