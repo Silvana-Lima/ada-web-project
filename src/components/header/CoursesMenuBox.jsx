@@ -39,12 +39,12 @@ export const CoursesMenuBox = () => {
               >
                 Desarrollo web front-end
               </MenuItem>
-              <MenuItem
+              {/* <MenuItem
                 _hover={menuItemHoverStyle}
                 onClick={() => alert('Programa Desarrollo web back-end')}
               >
                 Desarrollo web back-end
-              </MenuItem>
+              </MenuItem> */}
             </AccordionPanel>
           </>
         )}

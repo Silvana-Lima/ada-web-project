@@ -11,7 +11,7 @@ export const Whatsapp = () => {
       right={['15px', '15px', '50px', '80px']}
     >
       <Link
-        href="https://web.whatsapp.com/send?phone=5491131033575&text=¡Hola! Me gustaría conocer más sobre los cursos en Ada ITW"
+        href="https://wa.me/5491131033575/?text=%C2%A1Hola%21%20Me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20cursos%20en%20Ada%20ITW"
         target="_blank"
         size={'sm'}
       >

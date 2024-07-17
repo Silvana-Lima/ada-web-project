@@ -20,6 +20,7 @@ export const ImpactCard = ({ icon, number, description, h, w, bg }) => {
       backgroundColor={bg}
       pt={[2, 2, 4, 5]}
       pb={[2, 2, 3, 3]}
+      px={3}
     >
       <Icon
         icon={icon}

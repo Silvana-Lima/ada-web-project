@@ -19,6 +19,7 @@ export const FoundersProfiles = () => {
           as="h1"
           fontSize={['h1.base', 'h1.base', 'h1.lg', 'h1.xl']}
           color={'gray.800'}
+          textAlign={'center'}
         >
           Conoce a los fundadores
         </Heading>
