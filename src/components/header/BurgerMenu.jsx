@@ -15,6 +15,7 @@ import { useState } from 'react'
 import { IoClose } from 'react-icons/io5'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { Link as NavLink } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 
 import { CoursesMenuBox } from './CoursesMenuBox'
 
@@ -42,6 +43,14 @@ export const BurgerMenu = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  const handleToNetworkBuilder = () => {
+    const yOffset = -100
+    const element = document.getElementById('network-builder')
+    if (element) {
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset
+      window.scrollTo({ top: y, behavior: 'smooth' })
+    }
+  }
   return (
     <Menu isOpen={isOpen}>
       <MenuButton
@@ -88,8 +97,14 @@ export const BurgerMenu = () => {
           {/* Menu con carreras y cursos */}
           {activeSubMenu && <CoursesMenuBox />}
         </Flex>
-
-        {/* <MenuItem {...menuItemStyles}>Blog</MenuItem> */}
+        <HashLink
+          to="/#network-builder"
+          smooth
+          scroll={handleToNetworkBuilder}
+          onClick={handleCloseMenu}
+        >
+          <MenuItem>Alianzas</MenuItem>
+        </HashLink>
         <MenuItem {...menuItemStyles}>Contrata talento</MenuItem>
         <Stack pt={'40px'} align={{ md: 'start' }}>
           <Button size={'md'} w={'100%'}>

@@ -10,6 +10,7 @@ import {
   Show,
 } from '@chakra-ui/react'
 import { NavLink } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 
 import logoAdaFuscia from '../../assets/logo-fucsia.png'
 import { BurgerMenu } from './BurgerMenu'
@@ -19,6 +20,12 @@ import { InstagramCta } from './InstagramCta'
 export const Header = () => {
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const handleToNetWorkBuilder = (el) => {
+    const yOffset = -100
+    const y = el.getBoundingClientRect().top + window.scrollY + yOffset
+    window.scrollTo({ top: y, behavior: 'smooth' })
   }
   return (
     <Container
@@ -91,7 +98,11 @@ export const Header = () => {
               {/* Ofertas educativas */}
               <EducationMenu />
 
-              {/* <Link
+              <Link
+                as={HashLink}
+                smooth
+                scroll={handleToNetWorkBuilder}
+                to="/#network-builder"
                 maxW={'max-content'}
                 px={'8px'}
                 py={'10px'}
@@ -101,8 +112,8 @@ export const Header = () => {
                   textUnderlineOffset: '10px',
                 }}
               >
-                Blog
-              </Link> */}
+                Alianzas
+              </Link>
               <Link
                 maxW={'max-content'}
                 px={'8px'}

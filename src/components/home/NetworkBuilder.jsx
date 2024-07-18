@@ -6,6 +6,7 @@ import vectorWavyLines from '../../assets/vector-wavyLines.svg'
 export const NetworkBuilder = () => {
   return (
     <Stack
+      id="network-builder"
       maxW={'1440px'}
       maxH={'600px'}
       p={0}
