@@ -3,7 +3,7 @@ import { extendTheme } from '@chakra-ui/react'
 
 const breakpoints = {
   sm: '30em', // 480px
-  md: '48em', // 768px 
+  md: '48em', // 768px
   lg: '62em', // 992px
   xl: '80em', // 1280px
 }
@@ -111,6 +111,14 @@ const theme = extendTheme({
           color: 'gray.0',
           fontFamily: 'heading',
           _hover: { bg: 'gray.600' },
+        },
+        outline: {
+          bg: 'white',
+          color: 'orange.400',
+          fontFamily: 'heading',
+          borderWidth: '2px',
+          borderColor: 'orange.400',
+          _hover: { color: 'white', bg: 'orange.400' },
         },
       },
       defaultProps: {
