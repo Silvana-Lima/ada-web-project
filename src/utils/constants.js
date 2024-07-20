@@ -295,3 +295,120 @@ export const whyAda = [
     bgColor: '#FFBF7D',
   },
 ]
+
+export const courses = [
+  {
+    id: '1',
+    type: 'Curso Intensivo',
+    name: 'Diseño UX/UI',
+    descriptionL: `
+      Al finalizar el curso, la estudiante contará con los conocimientos para poder adentrarse en el mundo de la experiencia de usuarios y las interfaces digitales.
+
+      - Reconocer los conceptos y las prácticas del diseño UX/UI. 
+
+      - Identificar y reconocer el desarrollo y la planificación de un producto digital. 
+
+      - Comprender que la creación de productos digitales interactivos adecuados para el comportamiento de las personas, deben ser abordados con métodos, prácticas y conocimientos imprescindibles en el diseño UX/UI. 
+
+      - A lo largo del curso, diseñarás y crearás un prototipo de app o sitio web mobile first en figma a partir de un MVP`,
+    descriptionS:
+      'Tras el curso, la estudiante dominará el diseño UX/UI, planificación de productos digitales y creación de prototipos mobile first en Figma desde un MVP, adquiriendo esenciales conocimientos para la interacción digital.',
+    image: '/ourCourses/girl-pc-1.svg',
+    skills: [
+      {
+        name: 'GIT',
+        icon: 'bi:git',
+      },
+      {
+        name: 'SASS',
+        icon: 'mdi:sass',
+      },
+      {
+        name: 'Responsive Design',
+        icon: 'mdi:responsive',
+      },
+      {
+        name: 'HTML5',
+        icon: 'ri:html5-fill',
+      },
+      {
+        name: 'JavaScript',
+        icon: 'cib:js',
+      },
+      {
+        name: 'CSS3',
+        icon: 'fa-brands:css3-alt',
+      },
+      {
+        name: 'React.js',
+        icon: 'mdi:react',
+      },
+    ],
+  },
+  {
+    id: '2',
+    type: 'Curso Intensivo',
+    name: 'Python',
+    descriptionL: `
+      En este nuevo curso de Python, aprenderás los fundamentos de la programación , desde cómo funciona el lenguaje hasta cómo crear tus primeros programas.
+
+Python es un lenguaje de programación de propósito general que se utiliza para construir casi cualquier cosa. Es fácil de aprender, lo que lo hace ideal para personas que recién están comenzando en la programación. Su sintaxis es clara y fácil de leer, lo que hace que el proceso de aprendizaje sea más rápido y eficiente.
+
+Aprender este lenguaje de programación es una excelente inversión en tu futuro profesional y personal. Te dará habilidades valiosas en programación y te permitirá posteriormente explorar campos emocionantes como la ciencia de datos, la inteligencia artificial y desarrollo web backend.`,
+    descriptionS:
+      'Descubre en el curso de Python los fundamentos de programación. Ideal para principiantes, Python es fácil de aprender, con sintaxis clara. Una inversión para habilidades en ciencia de datos, inteligencia artificial y desarrollo web backend.',
+    image: '/ourCourses/girl-pc-2.svg',
+    skills: [
+      {
+        name: 'GIT',
+        icon: 'bi:git',
+      },
+      {
+        name: 'SASS',
+        icon: 'mdi:sass',
+      },
+      {
+        name: 'Responsive Design',
+        icon: 'mdi:responsive',
+      },
+      {
+        name: 'HTML5',
+        icon: 'ri:html5-fill',
+      },
+      {
+        name: 'JavaScript',
+        icon: 'cib:js',
+      },
+      {
+        name: 'CSS3',
+        icon: 'fa-brands:css3-alt',
+      },
+      {
+        name: 'React.js',
+        icon: 'mdi:react',
+      },
+    ],
+    // skills: [
+    //   {
+    //     name: 'Python',
+    //     icon: 'teenyicons:python-outline',
+    //   },
+    //   {
+    //     name: 'GIT',
+    //     icon: 'bi:git',
+    //   },
+    //   {
+    //     name: 'Fundamentos de programación',
+    //     icon: 'ph:laptop',
+    //   },
+    //   {
+    //     name: 'Programación orientada a objetos',
+    //     icon: 'clarity:objects-line',
+    //   },
+    //   {
+    //     name: 'Ejercitación y desafíos de práctica',
+    //     icon: 'la:chalkboard-teacher',
+    //   },
+    // ],
+  },
+]
