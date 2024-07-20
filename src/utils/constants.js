@@ -411,4 +411,96 @@ Aprender este lenguaje de programación es una excelente inversión en tu futuro
     //   },
     // ],
   },
+  {
+    id: '3',
+    type: 'Curso Intensivo',
+    name: 'QA Testing',
+    descriptionL: `
+      Este curso está pensado especialmente para aquellas personas que deseen aprender los conocimientos claves para iniciarse en el mundo de las pruebas automáticas de desarrollo, además de comprender cómo éste influye en el proceso de desarrollo de código.
+
+      Se abordarán algunos ejemplos prácticos que servirán para interiorizar los conceptos teóricos. 
+
+      Al finalizar el curso, la estudiante contará con los conocimientos de los procesos que se llevan a cabo para poder reportar errores y agilizar el desarrollo de software mediante test automáticos.`,
+    descriptionS:
+      'Este curso es ideal para aprender sobre pruebas automáticas y su impacto en el desarrollo de código, con ejemplos prácticos. Al finalizar, el estudiante sabrá reportar errores y agilizar el desarrollo de software mediante tests automáticos.',
+    image: '/ourCourses/girl-pc-1.svg',
+    skills: [
+      {
+        name: 'GIT',
+        icon: 'bi:git',
+      },
+      {
+        name: 'SASS',
+        icon: 'mdi:sass',
+      },
+      {
+        name: 'Responsive Design',
+        icon: 'mdi:responsive',
+      },
+      {
+        name: 'HTML5',
+        icon: 'ri:html5-fill',
+      },
+      {
+        name: 'JavaScript',
+        icon: 'cib:js',
+      },
+      {
+        name: 'CSS3',
+        icon: 'fa-brands:css3-alt',
+      },
+      {
+        name: 'React.js',
+        icon: 'mdi:react',
+      },
+    ],
+  },
+  {
+    id: '4',
+    type: 'Curso Intensivo',
+    name: 'IA Generativa',
+    descriptionL: `
+      Aprende a crear textos, imágenes y música con modelos avanzados de IA. 
+      
+      Sin requisitos previos. 
+      
+      Potencia tu creatividad tecnológica.`,
+    descriptionS: `
+      Aprende a crear textos, imágenes y música con modelos avanzados de IA. 
+      
+      Sin requisitos previos. 
+      
+      Potencia tu creatividad tecnológica.`,
+    image: '/ourCourses/girl-pc-2.svg',
+    skills: [
+      {
+        name: 'GIT',
+        icon: 'bi:git',
+      },
+      {
+        name: 'SASS',
+        icon: 'mdi:sass',
+      },
+      {
+        name: 'Responsive Design',
+        icon: 'mdi:responsive',
+      },
+      {
+        name: 'HTML5',
+        icon: 'ri:html5-fill',
+      },
+      {
+        name: 'JavaScript',
+        icon: 'cib:js',
+      },
+      {
+        name: 'CSS3',
+        icon: 'fa-brands:css3-alt',
+      },
+      {
+        name: 'React.js',
+        icon: 'mdi:react',
+      },
+    ],
+  },
 ]
