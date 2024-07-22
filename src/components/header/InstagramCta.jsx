@@ -16,10 +16,10 @@ export const InstagramCta = () => {
     md: 'Síguenos en nuestro Instagram y no te pierdas de las últimas novedades',
   })
   return (
-    <Container maxW={'1440'}>
+    <Container maxW={'100%'} bg={'red'}>
       {isOpen && (
         <Flex
-          justifyContent={'center'}
+          justifyContent={'space-evenly'}
           px={'48px'}
           py={'spacingXs.xl'}
           position={'relative'}
