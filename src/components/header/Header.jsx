@@ -135,7 +135,14 @@ export const Header = () => {
                 >
                   Dona aquí
                 </Link>
-                <Button variant={'button-primary'}>Inscríbete ahora</Button>
+                <Button
+                  as={NavLink}
+                  onClick={handleScrollToTop}
+                  to="/inscription"
+                  variant={'button-primary'}
+                >
+                  Inscríbete ahora
+                </Button>
               </Grid>
             </Box>
           </Hide>
