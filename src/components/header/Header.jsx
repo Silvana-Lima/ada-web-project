@@ -122,6 +122,8 @@ export const Header = () => {
                 </Link>
                 <Link
                   maxW={'max-content'}
+                  href="https://donaronline.org/ada/sumate-a-nuestra-mision-para-que-mas-mujeres-tengan-acceso-a-los-trabajos-del-futuro"
+                  isExternal
                   px={'8px'}
                   py={'10px'}
                   color={'orange.400'}
@@ -131,7 +133,7 @@ export const Header = () => {
                     color: 'magenta.400',
                   }}
                 >
-                  Colaborar
+                  Dona aquí
                 </Link>
                 <Button variant={'button-primary'}>Inscríbete ahora</Button>
               </Grid>
