@@ -24,7 +24,7 @@ export const Home = () => {
         img={imageCareers}
         title={'¿Te gustaría convertirte en programadora web?'}
         description={
-          'Ofrecemos carreras en desarrollo front-end y back-end con una duración de 9 meses en donde podrás disfrutar de toda la experiencia Ada.'
+          'Ofrecemos carreras en desarrollo front-end y back-end en donde podrás disfrutar de toda la experiencia Ada.'
         }
         btnText={'Ir a carreras'}
         bgColor={'magenta.200'}
@@ -33,7 +33,7 @@ export const Home = () => {
         img={allData}
         title={'¿Buscas algo más corto? También ofrecemos cursos'}
         description={
-          ' Nuestros cursos tienen una duración de 4 meses o menos en donde podrás aprender Diseño UX/UI, QA Testing, Python e Introducción a la programación front-end'
+          ' Nuestros cursos son cortos e intensivos en donde podrás aprender Diseño UX/UI, QA Testing, Python e IA generativa.'
         }
         btnText={'Ir a cursos'}
         bgColor={'orange.200'}
