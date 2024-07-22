@@ -3,7 +3,7 @@ import { extendTheme } from '@chakra-ui/react'
 
 const breakpoints = {
   sm: '30em', // 480px
-  md: '48em', // 768px 
+  md: '48em', // 768px
   lg: '62em', // 992px
   xl: '80em', // 1280px
 }
@@ -43,6 +43,7 @@ const theme = extendTheme({
     gray: {
       0: '#FFFFFF',
       200: '#FBFBFB',
+      300: '#f9f4f8',
       400: '#bcbcbc',
       600: '#4a4a4a',
       800: '#222222',
@@ -68,6 +69,7 @@ const theme = extendTheme({
     global: {
       body: {
         color: 'gray.600',
+        bg: 'gray.300',
       },
     },
   },
