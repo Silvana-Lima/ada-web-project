@@ -6,6 +6,7 @@ import { Header } from './components/header/Header'
 import { Whatsapp } from './components/home/Whatsapp'
 import { AboutUs } from './pages/AboutUs'
 import { Home } from './pages/Home'
+import { InscriptionForm } from './pages/InscriptionForm'
 import { TrainingSection } from './pages/TrainingSection'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/trainingSection" element={<TrainingSection />} />
+          <Route path="/inscription" element={<InscriptionForm />} />
         </Routes>
       </Stack>
       <Footer />

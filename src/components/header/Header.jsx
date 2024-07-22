@@ -128,7 +128,15 @@ export const Header = () => {
               >
                 Colaborar
               </Link>
-              <Button variant={'button-primary'}>Inscríbete ahora</Button>
+              <Link>
+                <Button
+                  as={NavLink}
+                  to="/inscription"
+                  variant={'button-primary'}
+                >
+                  Inscríbete ahora
+                </Button>
+              </Link>
             </Grid>
           </Box>
         </Hide>

@@ -4,6 +4,7 @@ import {
   Flex,
   Icon,
   IconButton,
+  Link,
   Menu,
   MenuButton,
   MenuItem,
@@ -92,9 +93,11 @@ export const BurgerMenu = () => {
         {/* <MenuItem {...menuItemStyles}>Blog</MenuItem> */}
         <MenuItem {...menuItemStyles}>Contrata talento</MenuItem>
         <Stack pt={'40px'} align={{ md: 'start' }}>
-          <Button size={'md'} w={'100%'}>
-            Inscríbete
-          </Button>
+          <Link>
+            <Button as={NavLink} to="/inscription" size={'md'} w={'100%'}>
+              Inscríbete
+            </Button>
+          </Link>
         </Stack>
       </MenuList>
     </Menu>
