@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Link,
   MenuItem,
 } from '@chakra-ui/react'
 
@@ -34,8 +35,10 @@ export const CoursesMenuBox = () => {
             </h2>
             <AccordionPanel pb={4}>
               <MenuItem
+                as={Link}
+                href="https://adaitw.org/wp-content/uploads/2022/01/Ada-_-Desarrollo-Frontend.pdf"
+                isExternal
                 _hover={menuItemHoverStyle}
-                onClick={() => alert('Programa Desarrollo web front-end')}
               >
                 Desarrollo web front-end
               </MenuItem>
@@ -67,22 +70,32 @@ export const CoursesMenuBox = () => {
             </h2>
             <AccordionPanel pb={4}>
               <MenuItem
+                as={Link}
+                href="https://adaitw.org/wp-content/uploads/2023/03/Brochure-curso-ux_ui-NUEVO-numero.pdf"
+                isExternal
                 _hover={menuItemHoverStyle}
-                onClick={() => alert('Programa Intensivo - Diseño UX/UI')}
               >
                 Intensivo - Diseño UX/UI
               </MenuItem>
               <MenuItem
+                as={Link}
+                href="https://adaitw.org/wp-content/uploads/2023/04/Brochure_phyton.pdf"
+                isExternal
                 _hover={menuItemHoverStyle}
-                onClick={() => alert('Programa Programación en Python')}
               >
                 Programación en Python
               </MenuItem>
               <MenuItem
                 _hover={menuItemHoverStyle}
-                onClick={() => alert('Programa QA testing')}
+                onClick={() => alert('Programa QA Testing')}
               >
                 QA testing
+              </MenuItem>
+              <MenuItem
+                _hover={menuItemHoverStyle}
+                onClick={() => alert('Programa IA Generativa')}
+              >
+                IA Generativa
               </MenuItem>
             </AccordionPanel>
           </>

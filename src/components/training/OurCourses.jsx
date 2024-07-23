@@ -6,6 +6,13 @@ import { courses } from '../../utils/constants'
 import { Course } from './Course'
 
 export const OurCourses = () => {
+  const showProgram = (programUrl) => {
+    if (programUrl) {
+      window.open(programUrl, '_blank')
+    } else {
+      alert('Falta el programa')
+    }
+  }
   return (
     <Container maxW={'100%'} px={'spacingM.xl'} py={['spacingXl.base', '80px']}>
       <Container
@@ -29,6 +36,7 @@ export const OurCourses = () => {
             {...course}
             orderImg={index % 2 === 0 ? 1 : 0} // Alterna entre 1 y 0 para el Image
             orderText={index % 2 === 0 ? 0 : 1}
+            showProgram={() => showProgram(course.programUrl)}
           />
         ))}
       </VStack>

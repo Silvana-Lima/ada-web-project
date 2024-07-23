@@ -8,13 +8,14 @@ import {
   Hide,
   HStack,
   Image,
+  Link,
   Show,
   Text,
   VStack,
 } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import { Link as RouterLink } from 'react-router-dom'
 
 import symbol1 from '@/ourCourses/symbol-1.svg'
 
@@ -27,6 +28,7 @@ export const Course = ({
   skills,
   orderImg,
   orderText,
+  showProgram,
 }) => {
   return (
     <Container maxW={['100%', '100%', '1235px', '1135px']}>
@@ -111,11 +113,16 @@ export const Course = ({
         </Grid>
       </VStack>
       <ButtonGroup>
-        <Button variant={'outline'} minW="154px">
+        <Button
+          as={Link}
+          variant={'outline'}
+          minW="154px"
+          onClick={showProgram}
+        >
           Ver Programa
         </Button>
         <Button
-          as={Link}
+          as={RouterLink}
           to="/inscription"
           bg={'orange.400'}
           minW="154px"
@@ -143,4 +150,5 @@ Course.propTypes = {
   skills: PropTypes.array.isRequired,
   orderImg: PropTypes.number.isRequired,
   orderText: PropTypes.number.isRequired,
+  showProgram: PropTypes.string.isRequired,
 }

@@ -10,8 +10,8 @@ import {
   MenuItem,
   MenuList,
   Stack,
-  useDisclosure,
 } from '@chakra-ui/react'
+import PropTypes from 'prop-types'
 import { useState } from 'react'
 import { IoClose } from 'react-icons/io5'
 import { RxHamburgerMenu } from 'react-icons/rx'
@@ -27,8 +27,8 @@ const menuItemStyles = {
   _active: { bg: 'none' },
 }
 
-export const BurgerMenu = () => {
-  const { isOpen, onClose, onToggle } = useDisclosure()
+// se pasan props para hacer el manejo del cierre desde el header - para poder manejar el cierre del menu dsd el logo
+export const BurgerMenu = ({ isOpen, onClose, onToggle }) => {
   const [activeSubMenu, setActiveSubMenu] = useState(false)
 
   const handleSubMenu = () => {
@@ -117,4 +117,9 @@ export const BurgerMenu = () => {
       </MenuList>
     </Menu>
   )
+}
+BurgerMenu.propTypes = {
+  isOpen: PropTypes.string.isRequired,
+  onClose: PropTypes.string.isRequired,
+  onToggle: PropTypes.string.isRequired,
 }

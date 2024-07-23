@@ -84,18 +84,6 @@ export const beginningCards = [
     date: 'Fecha estimada de inicio a confirmar',
     duration: '9 meses : 3 clases por semana (9hs semanales).',
   },
-  // {
-  //   id: 2,
-  //   title: 'Carrera',
-  //   career: 'Desarrollo back-end',
-  //   color: '#ff7d00',
-  //   descriptionL:
-  //     ' Exploramos el corazón de las aplicaciones, donde los datos cobran vida y la seguridad es primordial. Descubre cómo optimizamos la funcionalidad y la eficiencia para crear experiencias digitales sólidas y confiables para los usuarios.',
-  //   descriptionS:
-  //     'Conviértete en desarrolladora front-end y crea sitios web utilizándo las últimas tecnologías del mercado.', // confirmar texto - se usaria para mobile
-  //   date: 'Fecha estimada de inicio a confirmar',
-  //   duration: '9 meses : 3 clases por semana (9hs semanales).',
-  // },
   {
     id: 3,
     title: 'Curso',
@@ -314,6 +302,8 @@ export const courses = [
     descriptionS:
       'Tras el curso, la estudiante dominará el diseño UX/UI, planificación de productos digitales y creación de prototipos mobile first en Figma desde un MVP, adquiriendo esenciales conocimientos para la interacción digital.',
     image: '/ourCourses/girl-pc-1.svg',
+    programUrl:
+      'https://adaitw.org/wp-content/uploads/2023/03/Brochure-curso-ux_ui-NUEVO-numero.pdf',
     skills: [
       {
         name: 'GIT',
@@ -358,6 +348,8 @@ Aprender este lenguaje de programación es una excelente inversión en tu futuro
     descriptionS:
       'Descubre en el curso de Python los fundamentos de programación. Ideal para principiantes, Python es fácil de aprender, con sintaxis clara. Una inversión para habilidades en ciencia de datos, inteligencia artificial y desarrollo web backend.',
     image: '/ourCourses/girl-pc-2.svg',
+    programUrl:
+      'https://adaitw.org/wp-content/uploads/2023/04/Brochure_phyton.pdf',
     skills: [
       {
         name: 'GIT',
@@ -424,6 +416,7 @@ Aprender este lenguaje de programación es una excelente inversión en tu futuro
     descriptionS:
       'Este curso es ideal para aprender sobre pruebas automáticas y su impacto en el desarrollo de código, con ejemplos prácticos. Al finalizar, el estudiante sabrá reportar errores y agilizar el desarrollo de software mediante tests automáticos.',
     image: '/ourCourses/girl-pc-1.svg',
+
     skills: [
       {
         name: 'GIT',
@@ -472,6 +465,7 @@ Aprender este lenguaje de programación es una excelente inversión en tu futuro
       
       Potencia tu creatividad tecnológica.`,
     image: '/ourCourses/girl-pc-2.svg',
+
     skills: [
       {
         name: 'GIT',

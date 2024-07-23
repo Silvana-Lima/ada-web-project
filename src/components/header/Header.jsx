@@ -8,6 +8,7 @@ import {
   Image,
   Link,
   Show,
+  useDisclosure,
 } from '@chakra-ui/react'
 import { NavLink } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
@@ -18,6 +19,16 @@ import { EducationMenu } from './EducationMenu'
 import { InstagramCta } from './InstagramCta'
 
 export const Header = () => {
+  const { isOpen, onOpen, onClose, onToggle } = useDisclosure()
+
+  // En version mobile - el logo redirige a home y el onclick cierra del burgerMenu
+  const handleCloseBurgerMenu = () => {
+    if (isOpen) {
+      onClose()
+    }
+  }
+
+  // funcion para que en el scroll del hashLink se posicione on top
   const handleToNetWorkBuilder = (el) => {
     const yOffset = -100
     const y = el.getBoundingClientRect().top + window.scrollY + yOffset
@@ -37,7 +48,7 @@ export const Header = () => {
           py={'16px'}
         >
           {/* Logo Ada */}
-          <Link as={NavLink} to="/">
+          <Link as={NavLink} to="/" onClick={handleCloseBurgerMenu}>
             <Image
               src={logoAdaFuscia}
               alt="Logo ADA"
@@ -51,7 +62,12 @@ export const Header = () => {
           {/* menu hamburguesa */}
           <Show below="md">
             <Box>
-              <BurgerMenu />
+              <BurgerMenu
+                isOpen={isOpen}
+                onOpen={onOpen}
+                onClose={onClose}
+                onToggle={onToggle}
+              />
             </Box>
           </Show>
 
