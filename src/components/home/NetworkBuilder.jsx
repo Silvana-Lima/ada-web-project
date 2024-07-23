@@ -1,17 +1,28 @@
-import { Box, Heading, Image, Link, Mark, Stack, Text } from '@chakra-ui/react'
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Heading,
+  Image,
+  Mark,
+  Stack,
+  Text,
+} from '@chakra-ui/react'
 
 import networkingImg from '../../assets/networkingImg.png'
 import vectorWavyLines from '../../assets/vector-wavyLines.svg'
+import { studentTestimonials } from '../../utils/constants'
+import { TestimonyCard } from './testimonials/TestimonyCard'
 
 export const NetworkBuilder = () => {
   return (
     <Stack
       id="network-builder"
       maxW={'1440px'}
-      maxH={'600px'}
       p={0}
       px={{ base: '20px', md: '48px' }}
-      py={{ base: '16px', md: '80px' }}
+      py={{ base: '30px', md: '80px' }}
       alignItems={'center'}
       bgGradient="radial(magenta.400 0%, magenta.800 100%)"
       spacing={{ base: '16px', md: '24px' }}
@@ -54,7 +65,50 @@ export const NetworkBuilder = () => {
           fortaleciendo la misión de ONG&apos;s y gobiernos.
         </Text>
       </Box>
-      <Link
+      {/* TESTIMONIOS DE EMPRESAS */}
+      <Container
+        maxW={'1164px'}
+        py={['30px', '30px', '30px', '50px']}
+        centerContent
+      >
+        <Grid
+          templateColumns={[
+            'repeat(1, 1fr)',
+            'repeat(1, 1fr)',
+            'repeat(1, 1fr)',
+            'repeat(2, 1fr)',
+          ]}
+          templateRows={[
+            'repeat(2, 1fr)',
+            'repeat(2, 1fr)',
+            'repeat(2, 1fr)',
+            'repeat(1, 1fr)',
+          ]}
+          gap={'20px'}
+        >
+          {studentTestimonials.map(
+            ({ name, career, comment, photo, id, enterprise }) => {
+              if (enterprise) {
+                return (
+                  <TestimonyCard
+                    key={id}
+                    comment={comment}
+                    name={name}
+                    career={career}
+                    photo={photo}
+                    borderColor={'#d4a4fa'}
+                    bg={'rgba(255, 255, 255, 0.1)'}
+                    color={'gray.0'}
+                    h={['345px', '260px', '300px', '400px']}
+                  />
+                )
+              }
+              return null
+            }
+          )}
+        </Grid>
+      </Container>
+      {/* <Link
         maxW={'max-content'}
         px={'8px'}
         py={'10px'}
@@ -62,7 +116,18 @@ export const NetworkBuilder = () => {
         textDecoration="underline"
       >
         Contacta con nosotros
-      </Link>
+      </Link> */}
+      <Button
+        bg={'orange.400'}
+        _hover={{
+          color: 'orange.400',
+          bg: 'white',
+          borderWidth: '2px',
+          borderColor: 'orange.400',
+        }}
+      >
+        Contacta con nosotros
+      </Button>
     </Stack>
   )
 }

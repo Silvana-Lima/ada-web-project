@@ -102,16 +102,15 @@ export const WhyUs = () => {
           // maxW={'850px'}
           w={['100%', '400px', '100%', '70%']}
         >
-          {whyUs.map(({ id, title, description }) => (
+          {whyUs.map(({ id, title, description, bgColor }) => (
             <WhyUsCard
               key={id}
               title={title}
               description={description}
-              bgColor={'gray.0'}
-              borderW={'1px'}
+              bgColor={bgColor}
               maxW={'406px'}
               pY={'spacingL.base'}
-              pX={'spacingM.base'}
+              pX={'spacingL.base'}
             />
           ))}
         </Grid>

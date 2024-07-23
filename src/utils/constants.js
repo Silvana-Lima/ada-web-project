@@ -231,24 +231,28 @@ export const whyUs = [
     title: 'Habilidades blandas',
     description:
       'Fomentamos el desarrollo de habilidades en comunicación, liderazgo, trabajo en equipo, metodologías ágiles y más.',
+    bgColor: '#F0F000',
   },
   {
     id: 2,
     title: 'Inserción laboral',
     description:
       'Conectamos a nuestras egresadas con oportunidades laborales a través de formación, alianzas empresariales y eventos de desarrollo profesional.',
+    bgColor: '#FCFCCC',
   },
   {
     id: 3,
     title: 'Aprendizaje práctico',
     description:
       'Desafiamos la educación tradicional  para que realmente disfrutes aprender en nuestras sesiones 70 % prácticas.',
+    bgColor: '#EAC3FF',
   },
   {
     id: 4,
     title: 'Acompañamiento',
     description:
       'Integramos un enfoque teórico (60%) con actividades prácticas (40%) para aplicar los conocimientos adquiridos eficazmente.',
+    bgColor: '#FFBF7D',
   },
 ]
 

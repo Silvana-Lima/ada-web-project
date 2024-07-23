@@ -27,7 +27,7 @@ export const WhyAda = () => {
       >
         <HStack
           py={['20px', '20px', '40px', '40px']}
-          justifyContent={'space-between'}
+          justifyContent={'space-evenly'}
           gap={'40px'}
         >
           <Heading
@@ -35,7 +35,7 @@ export const WhyAda = () => {
             maxW={['117px', '316px']}
             fontSize={['h1.base', 'h1.lg', 'h1.lg', 'h1.xl']}
             color={'gray.800'}
-            textAlign={'left'}
+            textAlign={['left', 'left', 'left', 'right']}
           >
             ¿Por qué en{' '}
             <Highlight query="ada itw?" styles={{ color: 'magenta.400' }}>

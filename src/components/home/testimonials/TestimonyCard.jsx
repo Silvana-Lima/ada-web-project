@@ -10,7 +10,16 @@ import { useTheme } from '@emotion/react'
 import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
 
-export const TestimonyCard = ({ comment, name, career, photo, h }) => {
+export const TestimonyCard = ({
+  comment,
+  name,
+  career,
+  photo,
+  h,
+  borderColor,
+  bg,
+  color,
+}) => {
   const theme = useTheme()
   const rightValue = useBreakpointValue({
     base: '-8px',
@@ -23,17 +32,16 @@ export const TestimonyCard = ({ comment, name, career, photo, h }) => {
     <Stack
       maxW={'100%'}
       h={h}
-      borderWidth="1px"
       borderRadius="md"
-      borderLeftColor={'magenta.600'}
+      borderLeftColor={borderColor}
       borderLeftWidth={'8px'}
       borderLeftRadius={'xl'}
-      color={'gray.800'}
-      bg={'gray.0'}
+      bg={bg}
       p={['12px', '20px', '30px', 'spacingM.base']}
       px={['spacingM.base', 'spacingM.base', 'spacingM.base', 'spacingL.base']}
       justifyContent="space-between"
       gap={0}
+      color={color}
     >
       <Box boxSize={['30px', '40px']}>
         <Icon
@@ -118,4 +126,13 @@ TestimonyCard.propTypes = {
   career: PropTypes.string.isRequired,
   photo: PropTypes.string.isRequired,
   h: PropTypes.array.isRequired,
+  borderColor: PropTypes.string,
+  bg: PropTypes.string,
+  color: PropTypes.string,
+}
+
+TestimonyCard.defaultProps = {
+  borderColor: 'magenta.600',
+  bg: 'gray.0',
+  color: 'gray.800',
 }
