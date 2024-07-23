@@ -8,6 +8,7 @@ import { AboutUs } from './pages/AboutUs'
 import { Home } from './pages/Home'
 import { InscriptionForm } from './pages/InscriptionForm'
 import { Training } from './pages/Training'
+import ScrollToTop from './utils/scrollToTop'
 
 function App() {
   return (
@@ -19,12 +20,14 @@ function App() {
         bg={'secondary.50'}
         position="relative"
       >
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/aboutUs" element={<AboutUs />} />
-          <Route path="/training" element={<Training />} />
-          <Route path="/inscription" element={<InscriptionForm />} />
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/aboutUs" element={<AboutUs />} />
+            <Route path="/training" element={<Training />} />
+            <Route path="/inscription" element={<InscriptionForm />} />
+          </Routes>
+        </ScrollToTop>
       </Stack>
       <Footer />
       <Whatsapp />

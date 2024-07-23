@@ -18,10 +18,6 @@ import { EducationMenu } from './EducationMenu'
 import { InstagramCta } from './InstagramCta'
 
 export const Header = () => {
-  const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
   const handleToNetWorkBuilder = (el) => {
     const yOffset = -100
     const y = el.getBoundingClientRect().top + window.scrollY + yOffset
@@ -41,7 +37,7 @@ export const Header = () => {
           py={'16px'}
         >
           {/* Logo Ada */}
-          <Link as={NavLink} to="/" onClick={handleScrollToTop}>
+          <Link as={NavLink} to="/">
             <Image
               src={logoAdaFuscia}
               alt="Logo ADA"
@@ -76,7 +72,6 @@ export const Header = () => {
               >
                 <Link
                   as={NavLink}
-                  onClick={handleScrollToTop}
                   to="/aboutUs"
                   maxW={'max-content'}
                   px={'8px'}
@@ -137,7 +132,6 @@ export const Header = () => {
                 </Link>
                 <Button
                   as={NavLink}
-                  onClick={handleScrollToTop}
                   to="/inscription"
                   variant={'button-primary'}
                 >
