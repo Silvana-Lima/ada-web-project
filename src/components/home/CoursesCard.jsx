@@ -14,6 +14,7 @@ import {
 import { useTheme } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 //import customTheme from '../../themes/theme'
 
 export const CoursesCard = ({
@@ -146,6 +147,8 @@ export const CoursesCard = ({
 
       <CardFooter p={0}>
         <Button
+          as={Link}
+          to="/inscription"
           variant="button-secondary"
           size={'md'}
           w={'100%'}

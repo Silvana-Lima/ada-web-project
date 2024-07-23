@@ -14,6 +14,7 @@ import {
 } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 import symbol1 from '@/ourCourses/symbol-1.svg'
 
@@ -114,6 +115,8 @@ export const Course = ({
           Ver Programa
         </Button>
         <Button
+          as={Link}
+          to="/inscription"
           bg={'orange.400'}
           minW="154px"
           _hover={{

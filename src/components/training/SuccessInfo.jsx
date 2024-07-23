@@ -19,12 +19,12 @@ export const SuccessInfo = () => {
         <Image src={successIlustration} alt="woman ilustration " />
       </Box>
       <Heading fontSize={['40px', '40px', '50px', '60px']} color={'yellow.600'}>
-        +250 egresAdas
+        +940 egresAdas
       </Heading>
       {/* TEXTO - DESCRIPCION */}
       <Box maxW={'857px'} maxH={'100px'} color={'gray.0'}>
         <Text textAlign={'center'} fontSize={['18px', '18px', '25px', '35px']}>
-          ¿Sabías que más del 90% de nuestras egresAdas ya{' '}
+          ¿Sabías que más del 40% de nuestras egresAdas ya{' '}
           <Mark bg="yellow.600" color="purple.600" fontWeight="bold">
             consiguieron trabajo en tecnología?
           </Mark>

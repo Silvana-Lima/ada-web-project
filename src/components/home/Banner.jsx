@@ -49,12 +49,7 @@ export const Banner = ({ img, title, description, btnText, bgColor }) => {
             {description}
           </Text>
 
-          <Button
-            as={Link}
-            to="/trainingSection"
-            size={'lg'}
-            w={['100%', '382px']}
-          >
+          <Button as={Link} to="/training" size={'lg'} w={['100%', '382px']}>
             {btnText}
           </Button>
         </VStack>

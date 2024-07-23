@@ -19,8 +19,9 @@ export const AboutUs = () => {
       <WhyAda />
 
       {/* <OurStory /> */}
-      <FoundersProfiles />
+
       <TeamWork />
+      <FoundersProfiles />
       <Testimonials />
       {/* <BlogComponent /> */}
       <PaymentOptions />

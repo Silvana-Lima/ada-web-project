@@ -1,4 +1,5 @@
 import { Box, Button, Container, Heading, Text, VStack } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 import bgVideo from '@/mujer-programacion.mp4'
 
@@ -65,7 +66,7 @@ export const Hero = () => {
           feminidades para que lideren la revolución tecnológica y den forma a
           un mañana inclusivo.
         </Text>
-        <Button variant={'button-primary'} size={'lg'}>
+        <Button as={Link} to="/training" variant={'button-primary'} size={'lg'}>
           Conoce nuestras capacitaciones
         </Button>
       </VStack>
