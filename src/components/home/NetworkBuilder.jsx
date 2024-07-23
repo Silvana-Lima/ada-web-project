@@ -109,27 +109,15 @@ export const NetworkBuilder = () => {
           )}
         </Grid>
       </Container>
-      {/* <Link
-        maxW={'max-content'}
-        fontSize={['midTxt.base', 'midTxt.base', 'midTxt.lg', 'midTxt.xl']}
-        px={'8px'}
-        py={'10px'}
-        color={'yellow.600'}
-        textDecoration="underline"
-        zIndex={3}
-      >
-        Contacta con nosotros
-      </Link> */}
       <Button
-        bg={'orange.400'}
+        bg={'yellow.600'}
+        color={'magenta.600'}
         as={Link}
         href="mailto:javier@adaitw.com.ar?subject=Información sobre alianzas&body=Hola Javier,%0A%0AMe gustaría contar con más información al respecto de las alianzas.%0A%0AGracias!"
         isExternal
+        zIndex={3}
         _hover={{
-          color: 'orange.400',
-          bg: 'white',
-          borderWidth: '2px',
-          borderColor: 'orange.400',
+          color: 'magenta.800',
         }}
       >
         Contacta con nosotros
