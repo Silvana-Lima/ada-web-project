@@ -31,6 +31,8 @@ export const SuccessInfo = () => {
         </Text>
       </Box>
       <Link
+        href="https://docs.google.com/presentation/d/19-Z3Wp_VGbGi2I1ogxEUlA0JBusHbnuka-C2IxChtTY/edit#slide=id.g2a62be3f90f_0_0"
+        isExternal
         maxW={'max-content'}
         px={'8px'}
         py={'10px'}
