@@ -55,11 +55,15 @@ export const NetworkBuilder = () => {
         </Text>
       </Box>
       <Link
+        href="mailto:javier@adaitw.com.ar?subject=Información sobre alianzas&body=Hola Javier,%0A%0AMe gustaría contar con más información al respecto de las alianzas.%0A%0AGracias!"
+        isExternal
         maxW={'max-content'}
+        fontSize={['midTxt.base', 'midTxt.base', 'midTxt.lg', 'midTxt.xl']}
         px={'8px'}
         py={'10px'}
         color={'yellow.600'}
         textDecoration="underline"
+        zIndex={3}
       >
         Contacta con nosotros
       </Link>
