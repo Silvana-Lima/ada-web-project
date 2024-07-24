@@ -13,6 +13,7 @@ export const PaymentOptions = () => {
     <Container maxW={'100%'} px={[0, 5, 5, 0]}>
       {/* Ayuda economica */}
       <Container
+        id="payment-options"
         py={{ base: '20px', md: '40px', lg: '80px' }}
         maxW={['328px', '768px', '920px']}
         textAlign={'center'}

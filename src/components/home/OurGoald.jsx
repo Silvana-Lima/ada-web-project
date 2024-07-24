@@ -1,3 +1,5 @@
+import { HashLink } from 'react-router-hash-link'
+
 import ourGoalImg from '../../assets/ourGoalImg.png'
 import { BannerDisplay } from '../BannerDisplay'
 
@@ -18,6 +20,12 @@ export const OurGoald = () => {
       buttonTxt={'Información sobre ayudas económicas'}
       img={ourGoalImg}
       imgMobile={ourGoalImg}
+      useHashLink={true}
+      linkProps={{
+        to: 'aboutUs/#payment-options',
+        as: HashLink,
+        smooth: true,
+      }}
     />
   )
 }

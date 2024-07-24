@@ -25,6 +25,8 @@ export const BannerDisplay = ({
   linkTxt,
   ourGoald,
   aboutUs,
+  useHashLink,
+  linkProps,
 }) => {
   const isMobile = useBreakpointValue({
     base: true,
@@ -101,12 +103,33 @@ export const BannerDisplay = ({
             </Text>
 
             <Stack order={3}>
-              <Button
-                maxW={{ base: '100%', lg: '450px' }}
-                variant={'button-secondary'}
-              >
-                {buttonTxt}
-              </Button>
+              {/* agrego un hashlink para la redireccion del boton en el banner de nuestro objetivo */}
+              {useHashLink ? (
+                <Link
+                  {...linkProps}
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  bg="gray.800"
+                  color="gray.0"
+                  fontFamily="heading"
+                  fontSize={{ base: '14px', md: '16px' }}
+                  maxW={{ base: '100%', lg: '450px' }}
+                  h={['24px', '38px']}
+                  borderRadius={5}
+                  _hover={{ bg: 'gray.600' }}
+                  textAlign={'center'}
+                >
+                  {buttonTxt}
+                </Link>
+              ) : (
+                <Button
+                  maxW={{ base: '100%', lg: '450px' }}
+                  variant={'button-secondary'}
+                >
+                  {buttonTxt}
+                </Button>
+              )}
             </Stack>
           </Stack>
         )}
@@ -178,4 +201,6 @@ BannerDisplay.propTypes = {
   linkTxt: PropTypes.string,
   ourGoald: PropTypes.bool,
   aboutUs: PropTypes.bool,
+  useHashLink: PropTypes.bool,
+  linkProps: PropTypes.object,
 }
