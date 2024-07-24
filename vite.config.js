@@ -10,7 +10,4 @@ export default defineConfig({
       '#': '/src/utils',
     },
   },
-  build: {
-    outDir: 'dist',
-  },
 })
