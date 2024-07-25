@@ -8,6 +8,7 @@ import {
   Link,
   MenuItem,
 } from '@chakra-ui/react'
+import { Link as RouterLink } from 'react-router-dom'
 
 const menuItemHoverStyle = {
   color: 'magenta.400',
@@ -92,8 +93,10 @@ export const CoursesMenuBox = () => {
                 QA testing
               </MenuItem>
               <MenuItem
+                as={RouterLink}
+                to="/ia"
                 _hover={menuItemHoverStyle}
-                onClick={() => alert('Programa IA Generativa')}
+                // onClick={() => alert('Programa IA Generativa')}
               >
                 IA Generativa
               </MenuItem>

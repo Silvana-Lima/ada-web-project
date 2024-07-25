@@ -9,6 +9,7 @@ import { Home } from './pages/Home'
 import { InscriptionForm } from './pages/InscriptionForm'
 import { Training } from './pages/Training'
 import ScrollToTop from './utils/scrollToTop'
+import { IACourse } from './pages/IACourse'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/aboutUs" element={<AboutUs />} />
             <Route path="/training" element={<Training />} />
             <Route path="/inscription" element={<InscriptionForm />} />
+            <Route path="/ia" element={<IACourse />} />
           </Routes>
         </ScrollToTop>
       </Stack>
