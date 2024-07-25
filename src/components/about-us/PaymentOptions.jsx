@@ -11,7 +11,7 @@ import { ImpactCard } from '../home/ImpactCard'
 export const PaymentOptions = () => {
   return (
     <Container maxW={'100%'} px={[0, 5, 5, 0]}>
-      {/* Ayuda economica */}
+      {/* Opciones de financiamiento - pago diferido */}
       <Container
         id="payment-options"
         py={{ base: '20px', md: '40px', lg: '80px' }}
@@ -25,7 +25,7 @@ export const PaymentOptions = () => {
           color={'gray.800'}
           mb={['18px', '32px']}
         >
-          Ayuda económica
+          Opciones de financiamiento
         </Heading>
         <Text
           fontSize={[
@@ -63,9 +63,9 @@ export const PaymentOptions = () => {
           w={['320px', '346px']}
           h={['177px', '193px']}
           icon={'pepicons-print:face-smiling'}
-          number={'75%'}
+          number={'50%'}
           description={
-            'Nuestro préstamo de honor llega a cubrir hasta un 75 %.'
+            'Nuestro préstamo de honor llega a cubrir hasta un 50 %.'
           }
           bg={'gray.200'}
         />
@@ -121,9 +121,9 @@ export const PaymentOptions = () => {
           Por ejemplo,
           <Text fontFamily={'klavikaBold'} display={'inline'}>
             {' '}
-            si optas por nuestro pago diferido del 75%, pagas sólo el 25%
-            durante el curso y el resto después de conseguir empleo en
-            tecnología.
+            si optas por nuestro plan de pago diferido, solo pagas el 50% de la
+            carrera mientras estudias y el resto lo abonas al obtener tu primer
+            trabajo en el area de tecnología.
           </Text>
         </Text>
         <Text
