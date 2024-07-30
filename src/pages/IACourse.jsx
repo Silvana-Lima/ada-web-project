@@ -18,6 +18,7 @@ import {
   Text,
   UnorderedList,
 } from '@chakra-ui/react'
+import { Icon } from '@iconify/react'
 
 import flyer from '../assets/ourCourses/flyerIA.png'
 import imgTemario from '../assets/ourCourses/imgIATemario.jpg'
@@ -25,21 +26,19 @@ import imgTemario from '../assets/ourCourses/imgIATemario.jpg'
 export const IACourse = () => {
   return (
     <Container
-      maxW={['100%', '100%', '1235px', '1440px']}
+      maxW={['100%', '100%', '1235px', '1235px']}
       px={'20px'}
       py={'40px'}
     >
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-        <Box h={'100%'}>
-          <Image
-            h={'100%'}
-            w={'100%'}
-            src={flyer}
-            objectFit={'cover'}
-            alt="flyer"
-          />
+        <Box maxW={'503px'}>
+          <Image w={'100%'} src={flyer} objectFit={'cover'} alt="flyer" />
         </Box>
-        <Box h={'100%'} p={5}>
+        <Box
+          h={'100%'}
+          p={5}
+          fontSize={['midTxt1.base', 'midTxt1.lg', 'midTxt1.xl']}
+        >
           <Heading fontSize="xl" color="orange.800">
             IA Generativa Aplicada
           </Heading>
@@ -65,18 +64,32 @@ export const IACourse = () => {
               Presentar proyecto completo desarrollado con IA Generativa
             </ListItem>
           </UnorderedList>
-          <HStack spacing="24px" py={10}>
-            <Box w="250px" h="40px" bg="yellow.200">
-              ICONOS
+          <Stack flexDirection={['column', 'row']} spacing="24px" py={10}>
+            <Box w="250px">
+              <HStack>
+                <Icon icon="mdi:clock-outline" width="27" height="22" />
+                <Text>3 meses</Text>
+              </HStack>
+              <HStack>
+                <Icon icon="ci:calendar" width="27" height="22" />
+                <Text>2 clases por semana</Text>
+              </HStack>
             </Box>
-            <Box w="250px" h="40px" bg="yellow.200">
-              ICONOS
+            <Box w="250px">
+              <HStack>
+                <Icon icon="fa-regular:hourglass" width="27" height="22" />
+                <Text>3 horas por clase</Text>
+              </HStack>
+              <HStack>
+                <Icon icon="pepicons-pop:camera" width="27" height="22" />
+                <Text>Clases online</Text>
+              </HStack>
             </Box>
-          </HStack>
+          </Stack>
         </Box>
       </SimpleGrid>
       <HStack justifyContent={'center'} pt={'100px'}>
-        <Card maxW="lg">
+        <Card maxW="lg" boxShadow={'xl'}>
           <CardBody>
             <Image
               src={imgTemario}
