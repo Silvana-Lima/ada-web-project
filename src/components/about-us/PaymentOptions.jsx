@@ -118,12 +118,11 @@ export const PaymentOptions = () => {
             'largeTxt.xl',
           ]}
         >
-          Por ejemplo,
           <Text fontFamily={'klavikaBold'} display={'inline'}>
             {' '}
-            si optas por nuestro plan de pago diferido, solo pagas el 50% de la
-            carrera mientras estudias y el resto lo abonas al obtener tu primer
-            trabajo en el area de tecnología.
+            Por ejemplo, si optas por nuestro pago diferido, sólo pagas el 50%
+            de la carrera mientras estudias y el resto después de obtener un
+            trabajo en el área de la tecnología.
           </Text>
         </Text>
         <Text

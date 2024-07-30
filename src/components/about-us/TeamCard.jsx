@@ -15,7 +15,7 @@ export const TeamCard = ({ name, teamRole, teamImg, socialLink }) => {
       {/* Imagen */}
       <Stack w={'100%'}>
         <Image
-          h={['78px', '100px', '170px', '190px']}
+          h={['90px', '100px', '170px', '250px']}
           src={teamImg}
           objectFit={'cover'}
           alt="Imagen de mienbro del equipo"

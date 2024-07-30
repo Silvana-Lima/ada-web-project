@@ -15,13 +15,18 @@ export const SupportUs = () => {
         fontSize={'14px'}
         fontWeight={'medium'}
       >
-        <Stack w={['250px', '250px', '680px']} align={'center'} gap={'8px'}>
+        <Stack
+          maxW={['250px', '780px', '980px']}
+          align={'center'}
+          gap={['10px', '10px', '15px']}
+        >
           <Heading
             as="h2"
             fontSize={['h3.base', 'h3.base', 'h3.lg', 'h2.xl']}
             color={'gray.0'}
+            textAlign={'center'}
           >
-            ¿Te gustaría apoyar nuesta causa?
+            Tu contribución nos permite otorgar más becas y cambiar vidas
           </Heading>
           <Button
             as={Link}
