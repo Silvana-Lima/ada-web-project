@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react'
 
 import { whyAda } from '../../utils/constants'
-import { WhyUsCard } from '../home/WhyUsCard'
+import { WhyUsCard } from '../home/whyUs/WhyUsCard'
 
 export const WhyAda = () => {
   return (

@@ -12,7 +12,7 @@ import {
 
 import vector from '@/vector-why-us.svg'
 
-import { whyUs } from '../../utils/constants'
+import { whyUs } from '../../../utils/constants'
 import { WhyUsCard } from './WhyUsCard'
 
 export const WhyUs = () => {

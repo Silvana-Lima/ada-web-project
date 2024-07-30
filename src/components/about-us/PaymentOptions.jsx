@@ -6,7 +6,7 @@ import {
   UnorderedList,
 } from '@chakra-ui/react'
 
-import { ImpactCard } from '../home/ImpactCard'
+import { ImpactCard } from '../home/impact/ImpactCard'
 
 export const PaymentOptions = () => {
   return (
