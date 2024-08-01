@@ -6,10 +6,11 @@ import { Header } from './components/header/Header'
 import { Whatsapp } from './components/home/Whatsapp'
 import { AboutUs } from './pages/AboutUs'
 import { Home } from './pages/Home'
+import { IACourse } from './pages/IACourse'
 import { InscriptionForm } from './pages/InscriptionForm'
 import { Training } from './pages/Training'
+import { UxUiCourse } from './pages/UxUiCourse'
 import ScrollToTop from './utils/scrollToTop'
-import { IACourse } from './pages/IACourse'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/training" element={<Training />} />
             <Route path="/inscription" element={<InscriptionForm />} />
             <Route path="/ia" element={<IACourse />} />
+            <Route path="/ux-ui" element={<UxUiCourse />} />
           </Routes>
         </ScrollToTop>
       </Stack>

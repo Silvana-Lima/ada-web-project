@@ -70,12 +70,7 @@ export const CoursesMenuBox = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              <MenuItem
-                as={Link}
-                href="https://adaitw.org/wp-content/uploads/2023/03/Brochure-curso-ux_ui-NUEVO-numero.pdf"
-                isExternal
-                _hover={menuItemHoverStyle}
-              >
+              <MenuItem as={RouterLink} to="/ux-ui" _hover={menuItemHoverStyle}>
                 Intensivo - Diseño UX/UI
               </MenuItem>
               <MenuItem
