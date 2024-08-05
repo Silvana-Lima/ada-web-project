@@ -27,7 +27,7 @@ const menuItemStyles = {
   _active: { bg: 'none' },
 }
 
-// se pasan props para hacer el manejo del cierre desde el header - para poder manejar el cierre del menu dsd el logo
+// se pasan props para el manejo del cierre del menu en el onClick del logo - en el componente header
 export const BurgerMenu = ({ isOpen, onClose, onToggle }) => {
   const [activeSubMenu, setActiveSubMenu] = useState(false)
 
@@ -44,6 +44,7 @@ export const BurgerMenu = ({ isOpen, onClose, onToggle }) => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  // funcion para redireccionar a una seccion dentro de una page usando HashLink de router
   const handleToNetworkBuilder = () => {
     const yOffset = -100
     const element = document.getElementById('network-builder')
@@ -96,7 +97,7 @@ export const BurgerMenu = ({ isOpen, onClose, onToggle }) => {
             )}
           </MenuItem>
           {/* Menu con carreras y cursos */}
-          {activeSubMenu && <CoursesMenuBox />}
+          {activeSubMenu && <CoursesMenuBox onClose={onClose} />}
         </Flex>
         <HashLink
           to="/#network-builder"

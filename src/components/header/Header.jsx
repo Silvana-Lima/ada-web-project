@@ -28,7 +28,7 @@ export const Header = () => {
     }
   }
 
-  // funcion para que en el scroll del hashLink se posicione on top
+  // funcion para que el scroll del hashLink se posicione on top
   const handleToNetWorkBuilder = (el) => {
     const yOffset = -100
     const y = el.getBoundingClientRect().top + window.scrollY + yOffset
@@ -39,7 +39,6 @@ export const Header = () => {
       <InstagramCta />
       <Container maxW="1440px" p={0}>
         {/* Instagram - llamada a la acción */}
-
         <Flex
           justifyContent={'space-between'}
           alignItems="center"

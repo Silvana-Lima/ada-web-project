@@ -8,6 +8,7 @@ import {
   Link,
   MenuItem,
 } from '@chakra-ui/react'
+import PropTypes from 'prop-types'
 import { Link as RouterLink } from 'react-router-dom'
 
 const menuItemHoverStyle = {
@@ -15,7 +16,10 @@ const menuItemHoverStyle = {
   bg: 'none',
 }
 
-export const CoursesMenuBox = () => {
+export const CoursesMenuBox = ({ onClose }) => {
+  const handleCloseBurgerMenu = () => {
+    onClose()
+  }
   return (
     <Accordion allowMultiple>
       {/* Carreras */}
@@ -39,16 +43,11 @@ export const CoursesMenuBox = () => {
                 as={Link}
                 href="https://adaitw.org/wp-content/uploads/2022/01/Ada-_-Desarrollo-Frontend.pdf"
                 isExternal
+                onClick={handleCloseBurgerMenu}
                 _hover={menuItemHoverStyle}
               >
                 Desarrollo web front-end
               </MenuItem>
-              {/* <MenuItem
-                _hover={menuItemHoverStyle}
-                onClick={() => alert('Programa Desarrollo web back-end')}
-              >
-                Desarrollo web back-end
-              </MenuItem> */}
             </AccordionPanel>
           </>
         )}
@@ -70,15 +69,18 @@ export const CoursesMenuBox = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              <MenuItem as={RouterLink} to="/ux-ui" _hover={menuItemHoverStyle}>
+              <MenuItem
+                as={RouterLink}
+                to="/ux-ui"
+                onClick={handleCloseBurgerMenu}
+                _hover={menuItemHoverStyle}
+              >
                 Intensivo - Diseño UX/UI
               </MenuItem>
               <MenuItem
                 as={RouterLink}
                 to="/python"
-                // as={Link}
-                // href="https://adaitw.org/wp-content/uploads/2023/04/Brochure_phyton.pdf"
-                // isExternal
+                onClick={handleCloseBurgerMenu}
                 _hover={menuItemHoverStyle}
               >
                 Programación en Python
@@ -86,16 +88,16 @@ export const CoursesMenuBox = () => {
               <MenuItem
                 as={RouterLink}
                 to="/qa"
+                onClick={handleCloseBurgerMenu}
                 _hover={menuItemHoverStyle}
-                // onClick={() => alert('Programa QA Testing')}
               >
                 QA testing
               </MenuItem>
               <MenuItem
                 as={RouterLink}
                 to="/ia"
+                onClick={handleCloseBurgerMenu}
                 _hover={menuItemHoverStyle}
-                // onClick={() => alert('Programa IA Generativa')}
               >
                 IA Generativa
               </MenuItem>
@@ -105,4 +107,7 @@ export const CoursesMenuBox = () => {
       </AccordionItem>
     </Accordion>
   )
+}
+CoursesMenuBox.propTypes = {
+  onClose: PropTypes.string.isRequired,
 }
