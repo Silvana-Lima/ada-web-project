@@ -74,16 +74,20 @@ export const CoursesMenuBox = () => {
                 Intensivo - Diseño UX/UI
               </MenuItem>
               <MenuItem
-                as={Link}
-                href="https://adaitw.org/wp-content/uploads/2023/04/Brochure_phyton.pdf"
-                isExternal
+                as={RouterLink}
+                to="/python"
+                // as={Link}
+                // href="https://adaitw.org/wp-content/uploads/2023/04/Brochure_phyton.pdf"
+                // isExternal
                 _hover={menuItemHoverStyle}
               >
                 Programación en Python
               </MenuItem>
               <MenuItem
+                as={RouterLink}
+                to="/qa"
                 _hover={menuItemHoverStyle}
-                onClick={() => alert('Programa QA Testing')}
+                // onClick={() => alert('Programa QA Testing')}
               >
                 QA testing
               </MenuItem>
