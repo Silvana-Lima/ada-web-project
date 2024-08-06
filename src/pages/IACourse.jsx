@@ -1,14 +1,44 @@
+import { ListItem, Text, UnorderedList } from '@chakra-ui/react'
+
 import flyer from '../assets/ourCourses/flyerIA.png'
 import { TrainingPage } from '../components/TrainingPage'
+
+const description = (
+  <>
+    <Text>
+      Inicia tu camino en la IA comprendiendo sus objetivos y diferenciando
+      entre mitos y realidades tecnológicas. Explora su evolución, desde los
+      primeros pasos hasta los avances más recientes. Conoce los diversos tipos
+      de IA y sus aplicaciones prácticas.
+    </Text>
+
+    <Text>
+      Desmitifica la IA y descubre sus verdaderas capacidades y limitaciones.
+    </Text>
+
+    <Text my={'20px'}>
+      Al finalizar el curso, las estudiantes estarán preparadas para:
+    </Text>
+    <UnorderedList styleType="'-'">
+      <ListItem>
+        Utilizar herramientas de IA Generativa en entornos profesionales
+      </ListItem>
+      <ListItem>
+        Integrar soluciones de IA en diversos procesos laborales
+      </ListItem>
+      <ListItem>
+        Presentar proyecto completo desarrollado con IA Generativa
+      </ListItem>
+    </UnorderedList>
+  </>
+)
 
 export const IACourse = () => {
   return (
     <TrainingPage
       flyer={flyer}
       title="IA Generativa Aplicada"
-      description={
-        'Inicia tu camino en la IA comprendiendo sus objetivos y diferenciando entre mitos y realidades tecnológicas. Explora su evolución, desde los primeros pasos hasta los avances más recientes. Conoce los diversos tipos de IA y sus aplicaciones prácticas.Desmitifica la IA y descubre sus verdaderas capacidades y limitaciones. Al finalizar el curso, las estudiantes estarán preparadas para: - Utilizar herramientas de IA Generativa en entornos profesionales - Integrar soluciones de IA en diversos procesos laborales Presentar proyecto completo desarrollado con IA Generativa'
-      }
+      description={description}
       months="3 meses"
       week="2 clases por semana"
       hours="3 horas por clase"

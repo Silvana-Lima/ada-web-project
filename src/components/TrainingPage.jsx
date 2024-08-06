@@ -35,8 +35,8 @@ export const TrainingPage = ({
   return (
     <Container
       maxW={['100%', '100%', '1235px', '1235px']}
-      px={'20px'}
-      py={'40px'}
+      px={'spacingL.xl'}
+      py={'spacingXl.xl'}
     >
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Box maxW={'503px'}>
@@ -47,26 +47,12 @@ export const TrainingPage = ({
           p={5}
           fontSize={['midTxt1.base', 'midTxt1.lg', 'midTxt1.xl']}
         >
-          <Heading fontSize="xl" color="orange.800">
+          <Heading fontSize="xl" color="orange.800" textTransform="uppercase">
             {title}
           </Heading>
-          <Text mt={4} textAlign="justify">
+          <Text mt={'spacingM.xl'} textAlign="justify">
             {description}
           </Text>
-          {/* <Text mt={4} textAlign="justify">
-            Al finalizar el curso, las estudiantes estarán preparadas para:
-          </Text>
-          <UnorderedList mt={4}>
-            <ListItem>
-              Utilizar herramientas de IA Generativa en entornos profesionales
-            </ListItem>
-            <ListItem>
-              Integrar soluciones de IA en diversos procesos laborales
-            </ListItem>
-            <ListItem>
-              Presentar proyecto completo desarrollado con IA Generativa
-            </ListItem>
-          </UnorderedList> */}
           <Stack flexDirection={['column', 'row']} spacing="24px" py={10}>
             <Box w="250px">
               <HStack>
