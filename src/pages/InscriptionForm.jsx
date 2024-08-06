@@ -496,6 +496,28 @@ export const InscriptionForm = () => {
                     </Select>
                   </FormControl>
 
+                  {selectedPaymentMethod === 'Diferido 25%' && (
+                    <Text as="h4" fontSize="sm">
+                      Si optas por nuestro plan de pago diferido, solo pagas el
+                      75% de la carrera mientras estudias y el resto lo abonas
+                      después de obtener un trabajo en tecnología.
+                      {/* Con el pago diferido del 25%, abonarías el 75% del costo
+                      durante el curso, en cuotas sin interés. El 25% restante
+                      se paga al obtener un trabajo en IT. */}
+                    </Text>
+                  )}
+
+                  {selectedPaymentMethod === 'Diferido 50%' && (
+                    <Text as="h4" fontSize="sm">
+                      Si optas por nuestro plan de pago diferido, solo pagas el
+                      50% de la carrera mientras estudias y el resto lo abonas
+                      después de obtener un trabajo en tecnología.
+                      {/* Con el pago diferido del 50%, abonarías el 50% del costo
+                      durante el curso, en cuotas sin interés. El 50% restante
+                      se paga al obtener un trabajo en IT. */}
+                    </Text>
+                  )}
+
                   <FormControl>
                     <FormLabel>Cuotas</FormLabel>
                     <Select>
