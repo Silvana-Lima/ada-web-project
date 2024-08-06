@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Checkbox,
   Container,
   FormControl,
   FormLabel,
@@ -366,6 +365,47 @@ export const InscriptionForm = () => {
                     </Select>
                   </FormControl>
 
+                  <Heading
+                    as={'h5'}
+                    fontSize={['h5.base', 'h5.base', 'h5.base', 'h5.xl']}
+                  >
+                    ¿Cuál es tu intención al entrar a estudiar a Ada ITW?
+                  </Heading>
+
+                  <FormControl>
+                    <Select placeholder="Selecciona">
+                      <option value="">
+                        Cambiar de profesión y entrar en el sector tecnológico
+                      </option>
+                      <option value="">
+                        Obtener un empleo en el área de tecnología
+                      </option>
+                      <option value="">
+                        Mejorar mis habilidades actuales en tecnología
+                      </option>
+                      <option value="">
+                        Ampliar mis conocimientos para emprender o innovar en el
+                        área tecnológica
+                      </option>
+                    </Select>
+                  </FormControl>
+
+                  <FormLabel>
+                    ¿Tienes conocimientos básicos en el uso de herramientas de
+                    ofimática y manejo básico de una computadora (navegar por
+                    Internet, enviar correos electrónicos, crear documentos)?
+                  </FormLabel>
+
+                  <FormControl>
+                    <Select placeholder="Selecciona">
+                      <option value="">Sí, tengo conocimientos básicos</option>
+                      <option value="">
+                        No, no tengo conocimientos básicos
+                      </option>
+                      <option value="">Estoy aprendiendo</option>
+                    </Select>
+                  </FormControl>
+
                   <HStack justifyContent="space-around" mt={4}>
                     <Button variant="link" onClick={handleBack}>
                       Ir atrás
@@ -455,6 +495,28 @@ export const InscriptionForm = () => {
                       )}
                     </Select>
                   </FormControl>
+
+                  {selectedPaymentMethod === 'Diferido 25%' && (
+                    <Text as="h4" fontSize="sm">
+                      Si optas por nuestro plan de pago diferido, solo pagas el
+                      75% de la carrera mientras estudias y el resto lo abonas
+                      después de obtener un trabajo en tecnología.
+                      {/* Con el pago diferido del 25%, abonarías el 75% del costo
+                      durante el curso, en cuotas sin interés. El 25% restante
+                      se paga al obtener un trabajo en IT. */}
+                    </Text>
+                  )}
+
+                  {selectedPaymentMethod === 'Diferido 50%' && (
+                    <Text as="h4" fontSize="sm">
+                      Si optas por nuestro plan de pago diferido, solo pagas el
+                      50% de la carrera mientras estudias y el resto lo abonas
+                      después de obtener un trabajo en tecnología.
+                      {/* Con el pago diferido del 50%, abonarías el 50% del costo
+                      durante el curso, en cuotas sin interés. El 50% restante
+                      se paga al obtener un trabajo en IT. */}
+                    </Text>
+                  )}
 
                   <FormControl>
                     <FormLabel>Cuotas</FormLabel>
@@ -551,25 +613,55 @@ export const InscriptionForm = () => {
                       <FormControl>
                         <FormLabel>¿Quién está a cargo de tu hogar?</FormLabel>
                         <RadioGroup>
-                          <Stack direction="column">
-                            <Radio value="Padre">Padre</Radio>
-                            <Radio value="Madre">Madre</Radio>
+                          <Stack direction="column" mb={4}>
                             <Radio value="Yo">Yo</Radio>
-                            <Radio value="Otro">
-                              <Input placeholder="Otro" />
+                            <Radio value="Padres">Padres</Radio>
+                            <Radio value="Pareja">Pareja/concubino</Radio>
+                            <Radio value="Otro">Otros familiares</Radio>
+                          </Stack>
+                        </RadioGroup>
+                      </FormControl>
+
+                      <FormControl>
+                        <FormLabel>¿Cuál es tu situación laboral?</FormLabel>
+                        <RadioGroup>
+                          <Stack spacing={2} mb={4}>
+                            <Radio value="full_time_white">
+                              Trabajo en blanco a tiempo completo
+                            </Radio>
+                            <Radio value="part_time_white">
+                              Trabajo en blanco a medio tiempo
+                            </Radio>
+                            <Radio value="freelance">Trabajo freelance</Radio>
+                            <Radio value="hourly_work">Trabajo por horas</Radio>
+                            <Radio value="full_time_black">
+                              Trabajo en negro a tiempo completo
+                            </Radio>
+                            <Radio value="part_time_black">
+                              Trabajo en negro a medio tiempo
+                            </Radio>
+                            <Radio value="unemployed">
+                              Actualmente no tengo trabajo
+                            </Radio>
+                            <Radio value="multiple_jobs">
+                              Tengo más de un trabajo
                             </Radio>
                           </Stack>
                         </RadioGroup>
                       </FormControl>
 
                       <FormControl>
-                        <FormLabel>¿Quién está a cargo de tu hogar?</FormLabel>
-                        <Stack spacing={2}>
-                          <Checkbox>Checkbox</Checkbox>
-                          <Checkbox>Checkbox</Checkbox>
-                          <Checkbox>Checkbox</Checkbox>
-                          <Checkbox>Checkbox</Checkbox>
-                        </Stack>
+                        <FormLabel>
+                          ¿Qué te motiva a pedir un porcentaje del pago
+                          diferido?*
+                        </FormLabel>
+                        <Text mb={2} as="h4" fontSize="sm">
+                          Te pedimos completar esta pregunta con el mayor
+                          detalle posible para conocer a profundidad tu
+                          situación actual. Mientras más información nos
+                          brindes, mejor.
+                        </Text>
+                        <Textarea placeholder="Escribe tus motivos aquí..." />
                       </FormControl>
                     </>
                   )}
