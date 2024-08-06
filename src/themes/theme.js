@@ -3,7 +3,7 @@ import { extendTheme } from '@chakra-ui/react'
 
 const breakpoints = {
   sm: '30em', // 480px
-  md: '48em', // 768px 
+  md: '48em', // 768px
   lg: '62em', // 992px
   xl: '80em', // 1280px
 }
@@ -117,6 +117,14 @@ const theme = extendTheme({
         size: 'md',
         variant: 'button-primary',
         fontFamily: 'heading',
+      },
+    },
+    Radio: {
+      baseStyle: {
+        control: {
+          borderColor: 'gray.400', // color de borde cuando no está seleccionado
+          borderWidth: '1px',
+        },
       },
     },
   },
