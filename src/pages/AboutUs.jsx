@@ -22,9 +22,9 @@ export const AboutUs = () => {
 
       <TeamWork />
       <FoundersProfiles />
+      <PaymentOptions />
       <Testimonials />
       {/* <BlogComponent /> */}
-      <PaymentOptions />
       <SupportUs />
       <CivicHouseShowcase />
     </Container>
