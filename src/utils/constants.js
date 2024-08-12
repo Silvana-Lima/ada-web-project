@@ -353,7 +353,7 @@ Aprender este lenguaje de programación es una excelente inversión en tu futuro
       'Descubre en el curso de Python los fundamentos de programación. Ideal para principiantes, Python es fácil de aprender, con sintaxis clara. Una inversión para habilidades en ciencia de datos, inteligencia artificial y desarrollo web backend.',
     image: '/ourCourses/girl-pc-2.svg',
     programUrl:
-      'https://adaitw.org/wp-content/uploads/2023/04/Brochure_phyton.pdf',
+      'https://drive.google.com/file/d/198NFGs7O3RfrNvBTVo0gN0HUN_7yikf-/view',
     skills: [
       {
         name: 'GIT',
@@ -420,6 +420,8 @@ Aprender este lenguaje de programación es una excelente inversión en tu futuro
     descriptionS:
       'Este curso es ideal para aprender sobre pruebas automáticas y su impacto en el desarrollo de código, con ejemplos prácticos. Al finalizar, el estudiante sabrá reportar errores y agilizar el desarrollo de software mediante tests automáticos.',
     image: '/ourCourses/girl-pc-1.svg',
+    programUrl:
+      'https://drive.google.com/file/d/1Zg8IIJ6WZOvak24OEav1ev25MwFb9Jvq/view',
 
     skills: [
       {
@@ -469,6 +471,8 @@ Aprender este lenguaje de programación es una excelente inversión en tu futuro
       
       Potencia tu creatividad tecnológica.`,
     image: '/ourCourses/girl-pc-2.svg',
+    programUrl:
+      'https://drive.google.com/file/d/1Ac2utMIEXtADagbJ4fe4YRMORA39K3tQ/view',
 
     skills: [
       {
