@@ -1,5 +1,13 @@
 const testimonials = [
   {
+    name: 'Angelly Sepulveda Garcia',
+    enterprise: false,
+    career: 'Becada desarrollo front-end',
+    comment:
+      'Mi nombre es Angelly, soy venezolana y hace 6 años llegué a Buenos Aires, donde comencé como repartidora de Rappi. Con el apoyo de Workertech y Ada, reforcé mis conocimientos en frontend y obtuve una beca para continuar formándome. Ahora trabajo en tecnología de forma híbrida, lo que me permite equilibrar mi vida personal y laboral. A las mujeres les digo: con constancia y confianza en nosotras mismas, podemos alcanzar nuestras metas.',
+    photo: '/testimonials/angie-sepulveda.jpg',
+  },
+  {
     name: 'Florencia Navarro',
     enterprise: false,
     career: 'Becada desarrollo front-end',
@@ -55,14 +63,6 @@ const testimonials = [
     comment:
       'Me gusta mucho de ADA  el acompañamiento del profesor y las clases activas ayudan a que sea entretenido y te inspiran a continuar.  Pienso que es importante acercarse a los nuevos recursos tecnológicos para aplicarlo en diferentes áreas y facilitar nuestras tareas. El mayor desafío es pensar que no podés, pero al hacerlo entendés que si se puede, solo tenés que invertir tiempo.',
     photo: '/testimonials/karina.png',
-  },
-  {
-    name: 'Aylen Montofarno',
-    enterprise: false,
-    career: 'Introducción diseño UX/Ui',
-    comment:
-      'Me pareció interesante la propuesta enfocada a las mujeres. La programación solía ser más que nada un nicho para masculinidades. Antes de estudiar UXUI en ADA, estudie programación y análisis de datos. Mi consejo para quien puiera estudiar programación es que tenga paciencia y predisposición para practicar. También tener en cuenta la frustración que conlleva el codeo. Relajar, practicar, apoyarse en comunidades afines donde se pueda hacer Preguntas y buscar info relevante.',
-    photo: '/testimonials/icon-person.svg',
   },
 ]
 
