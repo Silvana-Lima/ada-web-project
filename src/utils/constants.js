@@ -4,7 +4,7 @@ const testimonials = [
     enterprise: false,
     career: 'Becada desarrollo front-end',
     comment:
-      'Mi nombre es Angelly, soy venezolana y hace 6 años llegué a Buenos Aires, donde comencé como repartidora de Rappi. Con el apoyo de Workertech y Ada, reforcé mis conocimientos en frontend y obtuve una beca para continuar formándome. Ahora trabajo en tecnología de forma híbrida, lo que me permite equilibrar mi vida personal y laboral. A las mujeres les digo: con constancia y confianza en nosotras mismas, podemos alcanzar nuestras metas.',
+      'Soy Angelly, venezolana y hace 6 años llegué a Buenos Aires, donde comencé como repartidora de Rappi. Con el apoyo de Workertech y Ada, reforcé mis conocimientos en frontend y obtuve una beca para continuar formándome. Ahora trabajo en tecnología de forma híbrida, lo que me permite equilibrar mi vida personal y laboral. A las mujeres les digo: con constancia y confianza en nosotras mismas, podemos alcanzar nuestras metas.',
     photo: '/testimonials/angie-sepulveda.jpg',
   },
   {
