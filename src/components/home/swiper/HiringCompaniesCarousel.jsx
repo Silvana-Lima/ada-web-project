@@ -11,12 +11,14 @@ import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 // logos
-import accenture from '../../../assets/hiringCompanies/accenture.svg'
-import aerolab from '../../../assets/hiringCompanies/aerolab.svg'
-import gire from '../../../assets/hiringCompanies/gire.svg'
-import globant from '../../../assets/hiringCompanies/globant.svg'
-import ibm from '../../../assets/hiringCompanies/ibm.svg'
-import meli from '../../../assets/hiringCompanies/meli.svg'
+import accenture from '../../../../public/hiringCompanies/accenture.svg'
+import aerolab from '../../../../public/hiringCompanies/aerolab.svg'
+import gire from '../../../../public/hiringCompanies/gire.svg'
+import globant from '../../../../public/hiringCompanies/globant.svg'
+import ibm from '../../../../public/hiringCompanies/ibm.svg'
+import meli from '../../../../public/hiringCompanies/meli.svg'
+// import neoris from '../../../../public/hiringCompanies/neoris.png'
+// import { employerLogos } from '../../../utils/constants'
 
 export const HiringCompaniesCarousel = () => {
   return (
@@ -45,6 +47,13 @@ export const HiringCompaniesCarousel = () => {
           },
         }}
       >
+        {/* {employerLogos.map(({ id, logo }) => (
+          <SwiperSlide key={id}>
+            <Box boxSize={{ base: '80px', md: '220px' }} maxH="100%">
+              <Image src={logo} w={'100%'} h={'100%'} objectFit={'contain'} />
+            </Box>
+          </SwiperSlide>
+        ))} */}
         <SwiperSlide>
           <Image src={meli} boxSize={{ base: '80px', md: '220px' }} />
         </SwiperSlide>

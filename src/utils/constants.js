@@ -506,3 +506,62 @@ Aprender este lenguaje de programación es una excelente inversión en tu futuro
     ],
   },
 ]
+
+export const employerLogos = [
+  {
+    id: '1',
+    logo: '/hiringCompanies/accenture.svg',
+  },
+  {
+    id: '2',
+    logo: '/hiringCompanies/aerolab.svg',
+  },
+  {
+    id: '3',
+    logo: '/hiringCompanies/gire.svg',
+  },
+  {
+    id: '4',
+    logo: '/hiringCompanies/ibm.svg',
+  },
+  {
+    id: '5',
+    logo: '/hiringCompanies/globant.svg',
+  },
+  {
+    id: '6',
+    logo: '/hiringCompanies/meli.svg',
+  },
+  {
+    id: '7',
+    logo: '/hiringCompanies/accenture.svg',
+  },
+  {
+    id: '8',
+    logo: '/hiringCompanies/aerolab.svg',
+  },
+  {
+    id: '9',
+    logo: '/hiringCompanies/gire.svg',
+  },
+  {
+    id: '10',
+    logo: '/hiringCompanies/ibm.svg',
+  },
+  {
+    id: '11',
+    logo: '/hiringCompanies/globant.svg',
+  },
+  {
+    id: '12',
+    logo: '/hiringCompanies/meli.svg',
+  },
+  {
+    id: '13',
+    logo: '/hiringCompanies/neoris.png',
+  },
+  {
+    id: '14',
+    logo: '/hiringCompanies/viseven-logo.png',
+  },
+]
