@@ -2,6 +2,8 @@ import {
   Button,
   ButtonGroup,
   Container,
+  Grid,
+  GridItem,
   Heading,
   Hide,
   HStack,
@@ -11,7 +13,7 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react'
-// import { Icon } from '@iconify/react'
+import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
 import { Link as RouterLink } from 'react-router-dom'
 
@@ -23,7 +25,7 @@ export const Course = ({
   descriptionL,
   descriptionS,
   image,
-  // skills,
+  skills,
   orderImg,
   orderText,
   showProgram,
@@ -71,31 +73,6 @@ export const Course = ({
               {descriptionL}{' '}
             </Text>
           </Hide>
-          {/* Buttons */}
-          <ButtonGroup mt={5}>
-            <Button
-              as={Link}
-              variant={'outline'}
-              minW="154px"
-              onClick={showProgram}
-            >
-              Ver Programa
-            </Button>
-            <Button
-              as={RouterLink}
-              to="/inscription"
-              bg={'orange.400'}
-              minW="154px"
-              _hover={{
-                color: 'orange.400',
-                bg: 'white',
-                borderWidth: '2px',
-                borderColor: 'orange.400',
-              }}
-            >
-              Quiero pre-inscribirme
-            </Button>
-          </ButtonGroup>
         </VStack>
         <Image
           objectFit="cover"
@@ -105,7 +82,7 @@ export const Course = ({
           order={orderImg}
         />
       </HStack>
-      {/* <VStack py={'32px'} gap={'20px'} alignItems={'flex-start'}>
+      <VStack py={'32px'} gap={'20px'} alignItems={'flex-start'}>
         <Text
           fontSize={['midTxt1.base', '18px']}
           color={'gray.600'}
@@ -134,7 +111,31 @@ export const Course = ({
             </GridItem>
           ))}
         </Grid>
-      </VStack> */}
+      </VStack>
+      <ButtonGroup>
+        <Button
+          as={Link}
+          variant={'outline'}
+          minW="154px"
+          onClick={showProgram}
+        >
+          Ver Programa
+        </Button>
+        <Button
+          as={RouterLink}
+          to="/inscription"
+          bg={'orange.400'}
+          minW="154px"
+          _hover={{
+            color: 'orange.400',
+            bg: 'white',
+            borderWidth: '2px',
+            borderColor: 'orange.400',
+          }}
+        >
+          Quiero pre-inscribirme
+        </Button>
+      </ButtonGroup>
     </Container>
   )
 }
@@ -146,7 +147,7 @@ Course.propTypes = {
   descriptionL: PropTypes.string.isRequired,
   descriptionS: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  // skills: PropTypes.array.isRequired,
+  skills: PropTypes.array.isRequired,
   orderImg: PropTypes.number.isRequired,
   orderText: PropTypes.number.isRequired,
   showProgram: PropTypes.string.isRequired,
