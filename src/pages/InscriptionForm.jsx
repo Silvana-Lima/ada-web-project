@@ -145,15 +145,15 @@ export const InscriptionForm = () => {
                   ¡Reserva tu lugar!
                 </Text>
                 <FormControl>
-                  <Input placeholder="Nombre completo" />
+                  <Input placeholder="Nombre completo" borderColor="gray.400" />
                 </FormControl>
 
                 <FormControl>
-                  <Input type="email" placeholder="Correo electrónico" />
+                  <Input type="email" placeholder="Correo electrónico" borderColor="gray.400" />
                 </FormControl>
 
                 <FormControl>
-                  <Input type="date" />
+                  <Input type="date" borderColor="gray.400" />
                 </FormControl>
 
                 <HStack>
@@ -162,7 +162,7 @@ export const InscriptionForm = () => {
                   </FormControl>
 
                   <FormControl>
-                    <Input type="tel" placeholder="Número de teléfono" />
+                    <Input type="tel" placeholder="Número de teléfono" borderColor="gray.400" />
                   </FormControl>
                 </HStack>
                 <Button onClick={handleNext} mt={4}>
