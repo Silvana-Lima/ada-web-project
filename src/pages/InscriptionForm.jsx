@@ -158,7 +158,7 @@ export const InscriptionForm = () => {
 
                 <HStack>
                   <FormControl>
-                    <Select placeholder="Código de país"></Select>
+                    <Select placeholder="Código de país" borderColor="gray.400"></Select>
                   </FormControl>
 
                   <FormControl>
@@ -336,6 +336,7 @@ export const InscriptionForm = () => {
                       onChange={handleCareerChange}
                       value={selectedCareer}
                       isDisabled={selectedCourse !== ''}
+                      borderColor="gray.400"
                     >
                       <option value="front">
                         Carrera en Desarrollo web front-end
@@ -354,6 +355,7 @@ export const InscriptionForm = () => {
                       onChange={handleCourseChange}
                       value={selectedCourse}
                       isDisabled={selectedCareer !== ''}
+                      borderColor="gray.400"
                     >
                       <option value="ux-ui">
                         Programa Intensivo - Diseño UX/UI
@@ -373,7 +375,7 @@ export const InscriptionForm = () => {
                   </Heading>
 
                   <FormControl>
-                    <Select placeholder="Selecciona">
+                    <Select placeholder="Selecciona" borderColor="gray.400">
                       <option value="">
                         Cambiar de profesión y entrar en el sector tecnológico
                       </option>
@@ -397,7 +399,7 @@ export const InscriptionForm = () => {
                   </FormLabel>
 
                   <FormControl>
-                    <Select placeholder="Selecciona">
+                    <Select placeholder="Selecciona" borderColor="gray.400">
                       <option value="">Sí, tengo conocimientos básicos</option>
                       <option value="">
                         No, no tengo conocimientos básicos
@@ -484,7 +486,7 @@ export const InscriptionForm = () => {
 
                   <FormControl>
                     <FormLabel>Selecciona método de pago</FormLabel>
-                    <Select onChange={handlePaymentMethodChange}>
+                    <Select onChange={handlePaymentMethodChange} borderColor="gray.400">
                       <option value="Selecciona">Selecciona</option>
                       <option value="Pago Tradicional">Pago Tradicional</option>
                       {!selectedCourse && (
@@ -520,7 +522,7 @@ export const InscriptionForm = () => {
 
                   <FormControl>
                     <FormLabel>Cuotas</FormLabel>
-                    <Select>
+                    <Select borderColor="gray.400">
                       {paymentOptions.map((option) => (
                         <option key={option} value={option}>
                           {option}
