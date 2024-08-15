@@ -663,7 +663,7 @@ export const InscriptionForm = () => {
                           situación actual. Mientras más información nos
                           brindes, mejor.
                         </Text>
-                        <Textarea placeholder="Escribe tus motivos aquí..." />
+                        <Textarea placeholder="Escribe tus motivos aquí..." borderColor="gray.400" />
                       </FormControl>
                     </>
                   )}
