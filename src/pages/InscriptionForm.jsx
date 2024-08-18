@@ -16,6 +16,7 @@ import {
   Stack,
   Text,
   Textarea,
+  useToast,
 } from '@chakra-ui/react'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -27,8 +28,11 @@ import formSended from '../assets/form-sended.png'
 import pay from '../assets/pay.png'
 import womanPay from '../assets/woman-pay.png'
 import womanWorking from '../assets/woman-working.png'
+import { validationRules } from '../utils/validation'
 
 export const InscriptionForm = () => {
+  const toast = useToast()
+
   const [step, setStep] = useState(1)
   const [hasDisability, setHasDisability] = useState('')
   const [selectedCareer, setSelectedCareer] = useState('')
@@ -36,7 +40,11 @@ export const InscriptionForm = () => {
   const [paymentOptions, setPaymentOptions] = useState([])
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('')
 
-  const { handleSubmit } = useForm()
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm()
 
   const handleNext = () => {
     setStep(step + 1)
@@ -64,8 +72,42 @@ export const InscriptionForm = () => {
     setPaymentOptions([])
   }
 
-  const handleFormSubmit = () => {
-    setStep(5)
+  const onSubmit = async (data) => {
+    try {
+      const response = await fetch('https://eofhn0cntvu6zbj.m.pipedream.net', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+console.log(data)
+      if (!response.ok) {
+        throw new Error('Error en la solicitud: ' + response.statusText)
+      }
+
+      setStep(5)
+
+      toast({
+        title: 'Formulario enviado con éxito',
+        status: 'success',
+        duration: 3000,
+        isClosable: true,
+      })
+
+      const result = await response.json()
+      console.log(result)
+    } catch (error) {
+      const errorMessage = error.message
+      console.log(errorMessage)
+      toast({
+        title: 'Error',
+        description: errorMessage,
+        status: 'error',
+        duration: 4000,
+        isClosable: true,
+      })
+    }
   }
 
   const handlePaymentMethodChange = (e) => {
@@ -107,7 +149,7 @@ export const InscriptionForm = () => {
     <Container maxW={'1440px'}>
       <Box
         as="form"
-        onSubmit={handleSubmit(handleFormSubmit)}
+        onSubmit={handleSubmit(onSubmit)}
         px={{ base: 4, md: 14 }}
         py={8}
         bg={{ base: 'gray.0', md: step > 1 ? `url(${bgForm})` : 'gray.0' }}
@@ -144,25 +186,85 @@ export const InscriptionForm = () => {
                 <Text as="h4" fontSize="xl" fontWeight={'bold'}>
                   ¡Reserva tu lugar!
                 </Text>
-                <FormControl>
-                  <Input placeholder="Nombre completo" borderColor="gray.400" />
+                <FormControl isInvalid={errors.firstName}>
+                  <FormLabel>Nombre</FormLabel>
+                  <Input
+                    placeholder="Nombre"
+                    borderColor="gray.400"
+                    {...register('firstName', validationRules.firstName)}
+                  />
+                  {errors.firstName && (
+                    <Text color="red.500">{errors.firstName.message}</Text>
+                  )}
+                </FormControl>
+                <FormControl isInvalid={errors.lastName}>
+                  <FormLabel>Apellido</FormLabel>
+                  <Input
+                    placeholder="Apellido"
+                    borderColor="gray.400"
+                    {...register('lastName', validationRules.lastName)}
+                  />
+                  {errors.lastName && (
+                    <Text color="red.500">{errors.lastName.message}</Text>
+                  )}
                 </FormControl>
 
-                <FormControl>
-                  <Input type="email" placeholder="Correo electrónico" borderColor="gray.400" />
+                <FormControl isInvalid={errors.email}>
+                  <FormLabel>Correo electrónico</FormLabel>
+                  <Input
+                    type="email"
+                    placeholder="Correo electrónico"
+                    borderColor="gray.400"
+                    {...register('email', validationRules.email)}
+                  />
+                  {errors.email && (
+                    <Text color="red.500">{errors.email.message}</Text>
+                  )}
                 </FormControl>
 
-                <FormControl>
-                  <Input type="date" borderColor="gray.400" />
+                <FormControl isInvalid={errors.date}>
+                  <FormLabel>Fecha de nacimiento</FormLabel>
+                  <Input
+                    type="date"
+                    borderColor="gray.400"
+                    {...register(
+                      'date',
+                      validationRules.date
+                    )}
+                  />
+                  {errors.date && (
+                    <Text color="red.500">
+                      {errors.date.message}
+                    </Text>
+                  )}
                 </FormControl>
 
                 <HStack>
-                  <FormControl>
-                    <Select placeholder="Código de país" borderColor="gray.400"></Select>
+                  <FormControl isInvalid={errors.codigoPais}>
+                    <FormLabel>Código de país</FormLabel>
+                    <Select
+                      placeholder="Código de país"
+                      borderColor="gray.400"
+                      {...register('countryCode', validationRules.countryCode)}
+                    >
+                      {/* Agregar opciones de códigos de país aquí */}
+                    </Select>
+                    {errors.countryCode && (
+                      <Text color="red.500">{errors.countryCode.message}</Text>
+                    )}
                   </FormControl>
 
-                  <FormControl>
-                    <Input type="tel" placeholder="Número de teléfono" borderColor="gray.400" />
+                  <FormControl isInvalid={errors.phoneNumber}>
+                    <FormLabel>Número de teléfono</FormLabel>
+                    <Input
+                      type="tel"
+                      placeholder="Número de teléfono"
+                      borderColor="gray.400"
+                      {...register('phoneNumber', validationRules.phoneNumber)}
+                    />
+                    {errors.phoneNumber && (
+                      <Text color="red.500">{errors.phoneNumber.message}</Text>
+                    )}
                   </FormControl>
                 </HStack>
                 <Button onClick={handleNext} mt={4}>
@@ -210,68 +312,28 @@ export const InscriptionForm = () => {
                 mb={4}
                 display={{ base: 'none', md: 'flex' }}
               >
-                <HStack>
-                  <Box
-                    bg={step === 1 ? 'magenta.400' : 'gray.300'}
-                    color="gray.0"
-                    borderRadius="50%"
-                    w={8}
-                    h={8}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                  >
-                    1
-                  </Box>
-                  <Text
-                    fontWeight={step >= 1 ? 'bold' : 'normal'}
-                    color={step >= 1 ? 'gray.800' : 'gray.400'}
-                    opacity={step > 1 ? 0.5 : 1}
-                  >
-                    Datos personales
-                  </Text>
-                </HStack>
-                <HStack>
-                  <Box
-                    bg={step === 2 ? 'magenta.400' : 'gray.300'}
-                    color="gray.0"
-                    borderRadius="50%"
-                    w={8}
-                    h={8}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                  >
-                    2
-                  </Box>
-                  <Text
-                    fontWeight={step >= 2 ? 'bold' : 'normal'}
-                    color={step >= 2 ? 'gray.800' : 'gray.400'}
-                    opacity={step > 2 ? 0.5 : 1}
-                  >
-                    Capacitación
-                  </Text>
-                </HStack>
-                <HStack>
-                  <Box
-                    bg={step >= 3 ? 'magenta.400' : 'gray.300'}
-                    color="gray.0"
-                    borderRadius="50%"
-                    w={8}
-                    h={8}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                  >
-                    3
-                  </Box>
-                  <Text
-                    fontWeight={step >= 3 ? 'bold' : 'normal'}
-                    color={step >= 3 ? 'gray.800' : 'gray.400'}
-                  >
-                    Tipo de pago
-                  </Text>
-                </HStack>
+                {['Datos Personales', 'Información Académica', 'Opciones de Pago', 'Confirmación'].map((stepLabel, index) => (
+                  <HStack key={index}>
+                    <Box
+                      bg={step === index + 1 ? 'magenta.400' : 'gray.300'}
+                      color="gray.0"
+                      borderRadius="50%"
+                      w={8}
+                      h={8}
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="center"
+                    >
+                      {index + 1}
+                    </Box>
+                    <Text
+                      fontWeight={step >= index + 1 ? 'bold' : 'normal'}
+                      color={step >= index + 1 ? 'magenta.400' : 'gray.500'}
+                    >
+                      {stepLabel}
+                    </Text>
+                  </HStack>
+                ))}
               </HStack>
 
               {step === 2 && (
@@ -337,6 +399,7 @@ export const InscriptionForm = () => {
                       value={selectedCareer}
                       isDisabled={selectedCourse !== ''}
                       borderColor="gray.400"
+                      {...register('career', validationRules.career)}
                     >
                       <option value="front">
                         Carrera en Desarrollo web front-end
@@ -695,6 +758,12 @@ export const InscriptionForm = () => {
                     Volver al inicio
                   </Button>
                 </Stack>
+              )}
+
+              {step > 1 && step < 5 && (
+                <Button variant="link" onClick={handleBack} mt={4}>
+                  Volver
+                </Button>
               )}
             </Stack>
           </Box>
