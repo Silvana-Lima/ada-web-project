@@ -565,3 +565,128 @@ export const employerLogos = [
     logo: '/hiringCompanies/viseven-logo.png',
   },
 ]
+
+export const faqs = [
+  {
+    question: '¿Es Ada ITW una empresa?',
+    answer:
+      'No, somos una organización sin fines de lucro, empoderamos a mujeres y feminidades de habla hispana a través de la educación en tecnología y la inserción laboral. Lo hacemos mediante dos estrategias: ofrecemos programas pagos para generar ingresos que sustentan becas y préstamos, y también nos aliamos con gobiernos, organismos internacionales y otras organizaciones para crear cursos a la medida e impactar a más mujeres y feminidades en la región latinoamericana.',
+  },
+  {
+    question: '¿Porque nuestros cursos son pagos?',
+    answer:
+      'Somos una organización sin fines de lucro que empodera a las mujeres y feminidades a través de la tecnología. Para alcanzar este objetivo, ofrecemos cursos intensivos y carreras de programación que requieren un pago. Somos conscientes de que muchas mujeres enfrentan barreras económicas que les impiden acceder a oportunidades de formación de calidad. Es por ello que, al ofrecer cursos y programas pagos, generamos ingresos que nos permiten otorgar becas y préstamos de honor a aquellas mujeres que más lo necesitan. Agradecemos a las mujeres con la capacidad económica para invertir en su educación, ya que su contribución nos permite financiar y respaldar nuestras iniciativas de becas y préstamos. No solo están invirtiendo en su propio futuro, sino que también están extendiendo una mano solidaria a otras mujeres, creando un ciclo virtuoso de empoderamiento y crecimiento.',
+  },
+  {
+    question: '¿Cómo puedo acceder a una beca?',
+    answer:
+      'Para acceder a una beca en ADA, no se permite la postulación individual. Es necesario hacerlo a través de entidades colaborativas como organizaciones sociales, empresas de impacto, o cualquier otra organización de la sociedad civil de toda la región latinoamericana. Estas entidades tienen un conocimiento profundo y un vínculo cercano con mujeres en situaciones vulnerables, lo que permite una asignación más efectiva de los recursos. La convocatoria está abierta de manera permanente, y se seleccionará a las postulantes según la cohorte en la que participen. Cada ONG puede postular a un máximo de 5 candidatas, asegurando así un acompañamiento más personalizado y efectivo. Ver el manual de postulación .',
+  },
+  {
+    question: '¿El Pago Diferido es una Beca?',
+    answer:
+      'No, el Pago Diferido no es una beca. Es una modalidad diseñada para facilitar tu acceso a la educación. Te ofrecemos la oportunidad de pagar parte del costo al inicio de la capacitación y el resto una vez que hayas conseguido empleo en el sector tecnológico. Lo llamamos Préstamo de Honor.',
+  },
+  {
+    question: '¿Las carreras son lo mismo que los cursos?',
+    answer:
+      'No, son dos propuestas educativas diferentes. Los cursos son cortos e intensivos, diseñados para darte una visión clara sobre qué es la programación y la tecnología, cómo utilizarla, y adquirir herramientas básicas para ejecutar proyectos sencillos. Incluyen clases en vivo y grabadas, acompañamiento en inserción laboral, y prácticas profesionales. Las carreras en programación son más extensas y profundas, donde aprenderás diversas tecnologías y aplicaciones, adquiriendo el conocimiento necesario para desenvolverte en el mundo profesional como Desarrolladora junior. Incluyen clases, workshops, job placement y prácticas profesionales.',
+  },
+  {
+    question: '¿Hay algún requisito de ingreso?',
+    answer:
+      'Identificarse como mujer, tener el secundario completo, ser mayor de 16 años en Argentina y mayor de 18 años en el resto de los países, y aprobar nuestro proceso de inscripción.',
+  },
+  {
+    question: '¿Cómo es el proceso de inscripción?',
+    answer:
+      'Completar el formulario de inscripción, firmar el acuerdo de inscripción y abonar la primera cuota, que es la reserva de vacante.',
+  },
+  {
+    question: '¿Puedo ingresar a un curso o carrera en cualquier fecha?',
+    answer:
+      'No, nuestros cursos y carreras tienen fechas de inicio preestablecidas y estimativas según un calendario académico. Adaptamos nuestras ofertas formativas según las demandas de la industria empleadora, asegurando que los programas estén siempre actualizados y alineados con las necesidades de los empleadores y las últimas tendencias.',
+  },
+  {
+    question: '¿Hay que pagar inscripción?',
+    answer:
+      'Sí, una vez completes tu proceso de admisión, se realiza el primer pago de la cuota inicial como reserva de cupo. Si te das de baja cerca del inicio del curso, esa cuota no se devuelve.',
+  },
+  {
+    question: '¿Necesito conocimientos previos de programación?',
+    answer:
+      'No, no necesitas conocimientos previos. En nuestros programas, comenzarás desde lo más básico y cada semana iremos profundizando en los conceptos de programación.',
+  },
+  {
+    question: '¿Cómo se aprueba?',
+    answer:
+      'Para aprobar las carreras o los cursos, debes cumplir con los siguientes requisitos: asistir regularmente a las clases, entregar todos los trabajos prácticos, presentar y aprobar el trabajo final, y hacer la formación en inserción laboral.',
+  },
+  {
+    question: '¿Quién imparte las clases?',
+    answer:
+      'Las clases son impartidas por un equipo de docentes profesionales de la industria IT, comprometidos en compartir su conocimiento y experiencia contigo.',
+  },
+  {
+    question: '¿Tengo que practicar fuera de clases?',
+    answer:
+      'Sí, la práctica diaria es esencial. Recomendamos practicar entre 2 y 3 horas diarias para reforzar lo aprendido en clase. Cuanto más practiques, mejor será tu desempeño.',
+  },
+  {
+    question: '¿Qué características tiene que tener mi PC para cursar?',
+    answer:
+      'Requisitos mínimos recomendados: RAM de 8 GB (4 GB puede ser insuficiente para desarrollo moderno y multitarea eficiente), espacio en disco de 256 GB SSD (128 GB puede llenarse rápido, y un SSD mejora significativamente el rendimiento), sistema operativo Windows 10 actualizado, macOS, o una distribución moderna de Linux, y un procesador Intel i3 o equivalente.',
+  },
+  {
+    question: '¿Qué programas tengo que instalar para el curso?',
+    answer:
+      'Los programas a instalar varían según la carrera o curso que elijas. A medida que avance el curso, te informaremos con antelación sobre qué programas descargar, las configuraciones necesarias y te proporcionaremos los enlaces más seguros para tu PC.',
+  },
+  {
+    question:
+      'Si hay días que no puedo ver la clase en vivo, ¿Puedo verla más tarde?',
+    answer:
+      'Sí, todas las clases quedan grabadas para que puedas verlas en cualquier momento.',
+  },
+  {
+    question:
+      'No puedo ver el curso en el horario establecido, ¿puedo verlo siempre grabado?',
+    answer:
+      'Sí, puedes seguir el curso con las clases grabadas si no puedes asistir en vivo, especialmente por diferencias horarias. Sin embargo, ten en cuenta que los trabajos prácticos son grupales, por lo que deberás coordinar con tus compañeras para cumplir con los plazos y objetivos. Recomendamos no atrasarse más de 3 clases.',
+  },
+  {
+    question: '¿Entregan certificado de egreso?',
+    answer:
+      'Sí, al finalizar el curso y cumplir con los requisitos de egreso, te otorgaremos un certificado de culminación.',
+  },
+  {
+    question: '¿Aseguran trabajo una vez culminado el programa?',
+    answer:
+      'No podemos garantizar empleo, ya que depende de la disposición y el esfuerzo personal de cada egresada. Sin embargo, te brindamos asesoramiento integral en la creación de tu CV y perfil de LinkedIn, te preparamos para entrevistas laborales y estamos en constante contacto con empresas para identificar oportunidades que se ajusten a tu perfil.',
+  },
+  {
+    question: '¿Para cuál programa aplica la Inserción Laboral?',
+    answer:
+      'El acompañamiento en inserción laboral está disponible para las estudiantes y egresadas de las carreras y los cursos intensivos.',
+  },
+  {
+    question: '¿Puedo buscar empleo por mi cuenta?',
+    answer:
+      'Sí, puedes buscar empleo por tu cuenta. De hecho, como parte de nuestra asesoría, te orientamos sobre cómo realizar una búsqueda laboral efectiva que se ajuste a tu perfil profesional.',
+  },
+  {
+    question: '¿Tienen cupos acordados con empresas?',
+    answer:
+      'Establecemos relaciones con empresas de la industria y con profesionales de recursos humanos para mantenernos al tanto de sus necesidades de talento. Sin embargo, no tenemos cupos asegurados con ninguna empresa en particular.',
+  },
+  {
+    question: '¿Las postulaciones con las empresas las hace Ada ITW?',
+    answer:
+      'El equipo de Ada ITW se encarga de enviarte ofertas laborales, pero eres tú quien debe postularse directamente a las empresas de tu interés y seguir los procesos de selección que cada compañía tenga establecidos.',
+  },
+  {
+    question: '¿Tienen programa de pasantías?',
+    answer:
+      'Sí, ofrecemos prácticas profesionales con impacto social, donde podrás desarrollar un proyecto real para una ONG, obteniendo así tu primera experiencia laboral en un contexto de alto valor social. Estas prácticas son opcionales y se realizan en colaboración con otras egresadas.',
+  },
+]

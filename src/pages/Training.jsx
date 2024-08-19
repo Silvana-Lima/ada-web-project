@@ -1,6 +1,7 @@
 import { Container } from '@chakra-ui/react'
 
 import { Testimonials } from '../components/about-us/Testimonials'
+import { Faqs } from '../components/training/Faqs'
 // import { InscriptionSteps } from '../components/training/InscriptionSteps'
 import { OurCourses } from '../components/training/OurCourses'
 import { SuccessInfo } from '../components/training/SuccessInfo'
@@ -14,6 +15,7 @@ export const Training = () => {
       {/* <InscriptionSteps /> */}
       <Testimonials />
       <SuccessInfo />
+      <Faqs />
     </Container>
   )
 }

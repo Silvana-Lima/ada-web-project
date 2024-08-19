@@ -11,13 +11,13 @@ import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 // logos
-import accenture from '../../../../public/hiringCompanies/accenture.svg'
-import aerolab from '../../../../public/hiringCompanies/aerolab.svg'
-import gire from '../../../../public/hiringCompanies/gire.svg'
-import globant from '../../../../public/hiringCompanies/globant.svg'
-import ibm from '../../../../public/hiringCompanies/ibm.svg'
-import meli from '../../../../public/hiringCompanies/meli.svg'
-// import neoris from '../../../../public/hiringCompanies/neoris.png'
+import accenture from '/hiringCompanies/accenture.svg'
+import aerolab from '/hiringCompanies/aerolab.svg'
+import gire from '/hiringCompanies/gire.svg'
+import globant from '/hiringCompanies/globant.svg'
+import ibm from '/hiringCompanies/ibm.svg'
+import meli from '/hiringCompanies/meli.svg'
+// import neoris from '/hiringCompanies/neoris.png'
 // import { employerLogos } from '../../../utils/constants'
 
 export const HiringCompaniesCarousel = () => {
