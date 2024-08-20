@@ -13,12 +13,12 @@ import {
   Input,
   Link,
   SimpleGrid,
+  SlideFade,
   Stack,
   Text,
 } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
-import { useEffect, useState } from 'react'
 
 import imgTemario from '../assets/ourCourses/imgIATemario.jpg'
 
@@ -31,41 +31,34 @@ export const TrainingPage = ({
   hours,
   syllabus,
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false)
-
-  useEffect(() => {
-    // Simular una carga de página después de un pequeño retraso
-    setTimeout(() => setIsLoaded(true), 50)
-  }, [])
   return (
     <Container
-      maxW={['100%', '100%', '1235px', '1235px']}
+      maxW={['100%', '100%', '100%', '1235px']}
       px={'spacingL.xl'}
       py={'spacingXl.xl'}
+      display={'flex'}
+      flexDirection={'column'}
+      alignItems={'center'}
     >
-      <SimpleGrid
-        columns={{ base: 1, md: 2 }}
-        spacing={10}
-        position={'relative'}
-      >
-        <Box position={'relative'}>
-          <Box
-            maxW={'503px'}
-            position={isLoaded ? 'relative' : 'absolute'}
-            right={isLoaded ? '0' : '-100%'}
-            opacity={isLoaded ? 1 : 0}
-            transition="right 1.5s ease-in-out, opacity 3s ease-in-out"
-          >
-            <Image w={'100%'} src={flyer} objectFit={'cover'} alt="flyer" />
+      <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={10}>
+        <SlideFade
+          in={true}
+          offsetX="400px"
+          transition={{ enter: { duration: 2 } }}
+          animateOpacity
+        >
+          <Box display={'flex'} alignItems={'center'} justifyContent={'center'}>
+            <Box maxW={'503px'}>
+              <Image w={'100%'} src={flyer} objectFit={'cover'} alt="flyer" />
+            </Box>
           </Box>
-        </Box>
+        </SlideFade>
 
         <Box
           h={'100%'}
           p={5}
           fontSize={['midTxt1.base', 'midTxt1.lg', 'midTxt1.xl']}
-          maxW={'503px'}
-          position={'relative'}
+          maxW={['503px', '503px', '803px', '503px']}
         >
           <Heading
             fontSize="h4.xl"
