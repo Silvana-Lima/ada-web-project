@@ -1,18 +1,36 @@
+import { Text } from '@chakra-ui/react'
+
 import flyer from '../assets/ourCourses/flyerPython.jpeg'
 import { TrainingPage } from '../components/TrainingPage'
+
+const description = (
+  <>
+    <Text mb={'20px'}>
+      Aprender este lenguaje de programación es una excelente inversión en tu
+      futuro profesional y personal. Te dará habilidades valiosas en
+      programación y te permitirá posteriormente explorar campos emocionantes
+      como la ciencia de datos, la inteligencia artificial y desarrollo web
+      backend.
+    </Text>
+    <Text>
+      Al finalizar el curso, la estudiante estará completamente familiarizada
+      con todos los medios principales proporcionados por Python. Esto le
+      permitirá especializarse en cualquier área o tecnología que utilice Python
+      como lenguaje principal.
+    </Text>
+  </>
+)
 
 export const PythonCourse = () => {
   return (
     <TrainingPage
       flyer={flyer}
       title="Programación en Python"
-      description={
-        'En este curso aprenderás conceptos de programación como ejecución condicional, bucles, tipos de datos complejos, la sintaxis del lenguaje de programación Python, semántica y el entorno de tiempo de ejecución, así como con técnicas generales de codificación y programación orientada a objetos. Python es un lenguaje muy versátil y puede ser usado en muchos campos diferentes. Permite programar desde videojuegos hasta sitios web.'
-      }
+      description={description}
       months="3 meses "
       week="2 clases por semana"
       hours="2:30 horas por clase"
-      syllabus="https://drive.google.com/drive/folders/16NM8quQduVX7xwZbKkMt4P9uF2M6Urqv"
+      syllabus="https://drive.google.com/file/d/198NFGs7O3RfrNvBTVo0gN0HUN_7yikf-/view"
     />
   )
 }

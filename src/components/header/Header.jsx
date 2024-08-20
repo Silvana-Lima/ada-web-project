@@ -59,7 +59,7 @@ export const Header = () => {
           </Link>
 
           {/* menu hamburguesa */}
-          <Show below="md">
+          <Show below="lg">
             <Box>
               <BurgerMenu
                 isOpen={isOpen}
@@ -71,7 +71,7 @@ export const Header = () => {
           </Show>
 
           {/* Menu de navegacion  */}
-          <Hide below="md">
+          <Hide below="lg">
             <Box>
               <Grid
                 columns={6}
