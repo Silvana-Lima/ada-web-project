@@ -310,32 +310,36 @@ export const courses = [
       'https://adaitw.org/wp-content/uploads/2023/03/Brochure-curso-ux_ui-NUEVO-numero.pdf',
     skills: [
       {
-        name: 'GIT',
-        icon: 'bi:git',
+        name: 'Design',
+        icon: 'fa:paint-brush',
       },
       {
-        name: 'SASS',
-        icon: 'mdi:sass',
+        name: 'Research',
+        icon: 'fa:search',
       },
       {
-        name: 'Responsive Design',
-        icon: 'mdi:responsive',
+        name: 'Benchmark',
+        icon: 'fa:line-chart',
       },
       {
-        name: 'HTML5',
-        icon: 'ri:html5-fill',
+        name: 'Usability test',
+        icon: 'fa-solid:user-check',
       },
       {
-        name: 'JavaScript',
-        icon: 'cib:js',
+        name: 'User flow',
+        icon: 'fa-solid:user-ninja',
       },
       {
-        name: 'CSS3',
-        icon: 'fa-brands:css3-alt',
+        name: 'UI Kit',
+        icon: 'fa-brands:uikit',
       },
       {
-        name: 'React.js',
-        icon: 'mdi:react',
+        name: 'Figma',
+        icon: 'ion:logo-figma',
+      },
+      {
+        name: 'Wireframes',
+        icon: 'fa:object-group',
       },
     ],
   },
@@ -356,56 +360,26 @@ Aprender este lenguaje de programación es una excelente inversión en tu futuro
       'https://drive.google.com/file/d/198NFGs7O3RfrNvBTVo0gN0HUN_7yikf-/view',
     skills: [
       {
-        name: 'GIT',
+        name: 'Python',
+        icon: 'teenyicons:python-outline',
+      },
+      {
+        name: 'GIT/GitHub',
         icon: 'bi:git',
       },
       {
-        name: 'SASS',
-        icon: 'mdi:sass',
+        name: 'Fundamentos de programación',
+        icon: 'ph:laptop',
       },
       {
-        name: 'Responsive Design',
-        icon: 'mdi:responsive',
+        name: 'Programación orientada a objetos',
+        icon: 'clarity:objects-line',
       },
       {
-        name: 'HTML5',
-        icon: 'ri:html5-fill',
-      },
-      {
-        name: 'JavaScript',
-        icon: 'cib:js',
-      },
-      {
-        name: 'CSS3',
-        icon: 'fa-brands:css3-alt',
-      },
-      {
-        name: 'React.js',
-        icon: 'mdi:react',
+        name: 'Ejercitación y desafíos de práctica',
+        icon: 'la:chalkboard-teacher',
       },
     ],
-    // skills: [
-    //   {
-    //     name: 'Python',
-    //     icon: 'teenyicons:python-outline',
-    //   },
-    //   {
-    //     name: 'GIT',
-    //     icon: 'bi:git',
-    //   },
-    //   {
-    //     name: 'Fundamentos de programación',
-    //     icon: 'ph:laptop',
-    //   },
-    //   {
-    //     name: 'Programación orientada a objetos',
-    //     icon: 'clarity:objects-line',
-    //   },
-    //   {
-    //     name: 'Ejercitación y desafíos de práctica',
-    //     icon: 'la:chalkboard-teacher',
-    //   },
-    // ],
   },
   {
     id: '3',
@@ -425,32 +399,32 @@ Aprender este lenguaje de programación es una excelente inversión en tu futuro
 
     skills: [
       {
-        name: 'GIT',
+        name: 'Jira',
+        icon: 'mdi:jira',
+      },
+      {
+        name: 'Casos de prueba',
+        icon: 'lucide:check-circle',
+      },
+      {
+        name: 'Metodologías ágiles',
+        icon: 'fluent:task-list-rtl-24-filled',
+      },
+      {
+        name: 'Marco Scrum',
+        icon: 'bi:calendar-week',
+      },
+      {
+        name: 'Redacción de documentos',
+        icon: 'jam:write-f',
+      },
+      {
+        name: 'Creación, edición y eliminación de documentos',
+        icon: 'ci:folder-edit',
+      },
+      {
+        name: 'GIT/gitHub',
         icon: 'bi:git',
-      },
-      {
-        name: 'SASS',
-        icon: 'mdi:sass',
-      },
-      {
-        name: 'Responsive Design',
-        icon: 'mdi:responsive',
-      },
-      {
-        name: 'HTML5',
-        icon: 'ri:html5-fill',
-      },
-      {
-        name: 'JavaScript',
-        icon: 'cib:js',
-      },
-      {
-        name: 'CSS3',
-        icon: 'fa-brands:css3-alt',
-      },
-      {
-        name: 'React.js',
-        icon: 'mdi:react',
       },
     ],
   },
@@ -476,32 +450,24 @@ Aprender este lenguaje de programación es una excelente inversión en tu futuro
 
     skills: [
       {
-        name: 'GIT',
-        icon: 'bi:git',
+        name: 'Tipos de ramas de IA',
+        icon: 'mdi:brain',
       },
       {
-        name: 'SASS',
-        icon: 'mdi:sass',
+        name: 'IA generativa',
+        icon: 'mdi:lightbulb-on',
       },
       {
-        name: 'Responsive Design',
-        icon: 'mdi:responsive',
+        name: 'Técnicas de Prompt Engineering',
+        icon: 'mdi:format-text',
       },
       {
-        name: 'HTML5',
-        icon: 'ri:html5-fill',
+        name: 'Generación de textos y multimedia',
+        icon: 'mdi:palette',
       },
       {
-        name: 'JavaScript',
-        icon: 'cib:js',
-      },
-      {
-        name: 'CSS3',
-        icon: 'fa-brands:css3-alt',
-      },
-      {
-        name: 'React.js',
-        icon: 'mdi:react',
+        name: 'IA para la empleabilidad',
+        icon: 'mdi:briefcase',
       },
     ],
   },
