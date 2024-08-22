@@ -419,12 +419,12 @@ Aprender este lenguaje de programación es una excelente inversión en tu futuro
         icon: 'jam:write-f',
       },
       {
-        name: 'Creación, edición y eliminación de documentos',
-        icon: 'ci:folder-edit',
-      },
-      {
         name: 'GIT/gitHub',
         icon: 'bi:git',
+      },
+      {
+        name: 'Creación, edición y eliminación de documentos',
+        icon: 'ci:folder-edit',
       },
     ],
   },

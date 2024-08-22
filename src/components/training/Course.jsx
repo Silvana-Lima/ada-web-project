@@ -92,13 +92,17 @@ export const Course = ({
           carrera:
         </Text>
         <Grid
-          templateColumns={['repeat(3, 1fr)']}
-          templateRows="repeat(3, auto)"
-          gap={4}
+          templateColumns={[
+            'repeat(2, 1fr)',
+            'repeat(2, 1fr)',
+            'repeat(2, 1fr)',
+            'repeat(3, 1fr)',
+          ]}
+          gap={[3, 4, 4, 4]}
           fontSize={['14px', '16px']}
         >
           {skills.map(({ name, icon }) => (
-            <GridItem key={name} colSpan={1} rowSpan={name.length > 10 ? 3 : 1}>
+            <GridItem key={name}>
               <HStack>
                 <Icon
                   icon={icon}
@@ -106,7 +110,7 @@ export const Course = ({
                   height="20"
                   style={{ color: '#bcbcbc' }}
                 />
-                <Text>{name}</Text>
+                <Text flex="1">{name}</Text>
               </HStack>
             </GridItem>
           ))}
