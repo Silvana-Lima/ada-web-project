@@ -11,7 +11,7 @@ export const TrainingBanner = () => {
         px={{ base: '32px', md: '32px', lg: '140px' }}
         py={{ base: '40px', md: '40px', lg: '80px' }}
         spacing={['16px', '26px']}
-        justifyContent={'center'}
+        justifyContent={['start', 'center']}
         alignItems={'center'}
         bgImage={`url(${bgImg})`}
         bgRepeat="no-repeat"
@@ -31,7 +31,7 @@ export const TrainingBanner = () => {
       >
         <Box
           maxW={{ base: '100%', md: '100%' }}
-          textAlign={['justify', 'center']}
+          textAlign={['left', 'center']}
           zIndex={1}
           position="relative"
         >

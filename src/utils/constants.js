@@ -114,7 +114,7 @@ export const beginningCards = [
     career: 'QA testing',
     color: '#ff7d00',
     descriptionL:
-      ' Este curso está diseñado para quienes quieran aprender los conocimientos clave sobre pruebas automáticas de desarrollo y su influencia en el proceso de codificación. Incluye ejemplos prácticos para entender los conceptos teóricos. Al finalizar, tendrás habilidades para reportar errores y agilizar el desarrollo de software con tests automáticos.',
+      ' Este curso está diseñado para quienes quieran aprender los conocimientos clave sobre pruebas automáticas de desarrollo y su influencia en el proceso de codificación. Al finalizar, tendrás habilidades para reportar errores y agilizar el desarrollo de software con tests automáticos.',
     descriptionS:
       'Curso ideal para aprender pruebas automáticas y su impacto en el desarrollo de código.',
     date: 'Fecha estimada de inicio a confirmar',
