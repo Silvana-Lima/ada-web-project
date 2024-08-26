@@ -149,7 +149,7 @@ export const CoursesCard = ({
         <Button
           as={Link}
           to="/inscription"
-          variant="button-secondary"
+          variant="buttonSecondary"
           size={'md'}
           w={'100%'}
           h={['24px', '38px']}

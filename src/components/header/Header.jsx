@@ -148,7 +148,7 @@ export const Header = () => {
                 <Button
                   as={NavLink}
                   to="/inscription"
-                  variant={'button-primary'}
+                  variant={'buttonPrimary'}
                 >
                   Inscríbete ahora
                 </Button>

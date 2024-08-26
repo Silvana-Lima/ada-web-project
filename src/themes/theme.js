@@ -102,13 +102,13 @@ const theme = extendTheme({
         },
       },
       variants: {
-        'button-primary': {
+        buttonPrimary: {
           bg: 'magenta.400',
           color: 'gray.0',
           fontFamily: 'heading',
           _hover: { bg: 'magenta.600' },
         },
-        'button-secondary': {
+        buttonSecondary: {
           bg: 'gray.800',
           color: 'gray.0',
           fontFamily: 'heading',
@@ -125,7 +125,7 @@ const theme = extendTheme({
       },
       defaultProps: {
         size: 'md',
-        variant: 'button-primary',
+        variant: 'buttonPrimary',
         fontFamily: 'heading',
       },
     },

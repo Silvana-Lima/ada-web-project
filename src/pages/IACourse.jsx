@@ -1,4 +1,4 @@
-import { ListItem, Text, UnorderedList } from '@chakra-ui/react'
+import { Box, ListItem, Text, UnorderedList } from '@chakra-ui/react'
 
 import flyer from '../assets/ourCourses/flyerIA.png'
 import { TrainingPage } from '../components/TrainingPage'
@@ -16,20 +16,22 @@ const description = (
       Desmitifica la IA y descubre sus verdaderas capacidades y limitaciones.
     </Text>
 
-    <Text my={'20px'}>
-      Al finalizar el curso, las estudiantes estarán preparadas para:
-    </Text>
-    <UnorderedList styleType="'-'">
-      <ListItem>
-        Utilizar herramientas de IA Generativa en entornos profesionales
-      </ListItem>
-      <ListItem>
-        Integrar soluciones de IA en diversos procesos laborales
-      </ListItem>
-      <ListItem>
-        Presentar proyecto completo desarrollado con IA Generativa
-      </ListItem>
-    </UnorderedList>
+    <Box my={'20px'}>
+      <Text>
+        Al finalizar el curso, las estudiantes estarán preparadas para:
+      </Text>
+      <UnorderedList styleType="'-'">
+        <ListItem>
+          Utilizar herramientas de IA Generativa en entornos profesionales
+        </ListItem>
+        <ListItem>
+          Integrar soluciones de IA en diversos procesos laborales
+        </ListItem>
+        <ListItem>
+          Presentar proyecto completo desarrollado con IA Generativa
+        </ListItem>
+      </UnorderedList>
+    </Box>
   </>
 )
 

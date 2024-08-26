@@ -154,5 +154,5 @@ Course.propTypes = {
   skills: PropTypes.array.isRequired,
   orderImg: PropTypes.number.isRequired,
   orderText: PropTypes.number.isRequired,
-  showProgram: PropTypes.string.isRequired,
+  showProgram: PropTypes.func.isRequired,
 }

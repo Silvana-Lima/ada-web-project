@@ -4,7 +4,6 @@ import {
   Flex,
   Icon,
   IconButton,
-  Link,
   Menu,
   MenuButton,
   MenuItem,
@@ -109,18 +108,16 @@ export const BurgerMenu = ({ isOpen, onClose, onToggle }) => {
         </HashLink>
         <MenuItem {...menuItemStyles}>Contrata talento</MenuItem>
         <Stack pt={'40px'} align={{ md: 'start' }}>
-          <Link>
-            <Button as={NavLink} to="/inscription" size={'md'} w={'100%'}>
-              Inscríbete
-            </Button>
-          </Link>
+          <Button as={NavLink} to="/inscription" size={'md'} w={'100%'}>
+            Inscríbete
+          </Button>
         </Stack>
       </MenuList>
     </Menu>
   )
 }
 BurgerMenu.propTypes = {
-  isOpen: PropTypes.string.isRequired,
-  onClose: PropTypes.string.isRequired,
-  onToggle: PropTypes.string.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  onToggle: PropTypes.func.isRequired,
 }
