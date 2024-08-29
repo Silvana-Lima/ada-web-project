@@ -1,23 +1,23 @@
-import { Text } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
 import flyer from '../assets/ourCourses/flyerPython.jpeg'
 import { TrainingPage } from '../components/TrainingPage'
 
 const description = (
   <>
-    <Text mb={'20px'}>
+    <Box mb={'20px'}>
       Aprender este lenguaje de programación es una excelente inversión en tu
       futuro profesional y personal. Te dará habilidades valiosas en
       programación y te permitirá posteriormente explorar campos emocionantes
       como la ciencia de datos, la inteligencia artificial y desarrollo web
       backend.
-    </Text>
-    <Text>
+    </Box>
+    <Box>
       Al finalizar el curso, la estudiante estará completamente familiarizada
       con todos los medios principales proporcionados por Python. Esto le
       permitirá especializarse en cualquier área o tecnología que utilice Python
       como lenguaje principal.
-    </Text>
+    </Box>
   </>
 )
 

@@ -67,9 +67,9 @@ export const TrainingPage = ({
           >
             {title}
           </Heading>
-          <Text mt={'spacingM.xl'} textAlign="justify">
+          <Box mt={'spacingM.xl'} textAlign="justify">
             {description}
-          </Text>
+          </Box>
           <Stack flexDirection={['column', 'row']} spacing="24px" py={10}>
             <Box w="250px">
               <HStack>
@@ -136,7 +136,7 @@ export const TrainingPage = ({
 
 TrainingPage.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.node.isRequired,
   flyer: PropTypes.string.isRequired,
   months: PropTypes.string.isRequired,
   week: PropTypes.string.isRequired,

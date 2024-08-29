@@ -16,9 +16,9 @@ export const TestimonyCard = ({
   career,
   photo,
   h,
-  borderColor,
-  bg,
-  color,
+  borderColor = 'magenta.600',
+  bg = 'gray.0',
+  color = 'gray.800',
 }) => {
   const theme = useTheme()
   const rightValue = useBreakpointValue({
@@ -131,8 +131,10 @@ TestimonyCard.propTypes = {
   color: PropTypes.string,
 }
 
-TestimonyCard.defaultProps = {
-  borderColor: 'magenta.600',
-  bg: 'gray.0',
-  color: 'gray.800',
-}
+// Modifique esto por el warning que nos daba en consola - Warning: TestimonyCard: Support for defaultProps will be removed from function components in a future major release. Use JavaScript default parameters instead.
+// Sugerencia ChatGPT -  React te está avisando que en el futuro, este método ya no será soportado. En su lugar, debes utilizar la sintaxis de parámetros por defecto que es propia de JavaScript.
+// TestimonyCard.defaultProps = {
+//   borderColor: 'magenta.600',
+//   bg: 'gray.0',
+//   color: 'gray.800',
+// }

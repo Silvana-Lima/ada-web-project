@@ -109,5 +109,5 @@ export const CoursesMenuBox = ({ onClose }) => {
   )
 }
 CoursesMenuBox.propTypes = {
-  onClose: PropTypes.string.isRequired,
+  onClose: PropTypes.func,
 }

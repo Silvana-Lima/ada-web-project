@@ -1,22 +1,22 @@
-import { Text } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
 import flyer from '../assets/ourCourses/flyerUxUi.png'
 import { TrainingPage } from '../components/TrainingPage'
 
 const description = (
   <>
-    <Text mb={'20px'}>
+    <Box mb={'20px'}>
       Este curso está pensado especialmente para aquellas personas que deseen
       aprender los fundamentos básicos de UX y UI, comprender el proceso y las
       distintas etapas para el desarrollo de un producto digital. Se abordarán
       algunos ejemplos prácticos que servirán para interiorizar los conceptos
       teóricos.
-    </Text>
-    <Text>
+    </Box>
+    <Box>
       Al finalizar el curso, la estudiante contará con los conocimientos para
       poder adentrarse en el mundo de la experiencia de usuarios y las
       interfaces digitales.
-    </Text>
+    </Box>
   </>
 )
 

@@ -66,7 +66,7 @@ export const Hero = () => {
           feminidades para que lideren la revolución tecnológica y den forma a
           un mañana inclusivo.
         </Text>
-        <Button as={Link} to="/training" variant={'button-primary'} size={'lg'}>
+        <Button as={Link} to="/training" variant={'buttonPrimary'} size={'lg'}>
           Conoce nuestras capacitaciones
         </Button>
       </VStack>

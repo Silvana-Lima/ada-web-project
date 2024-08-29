@@ -211,10 +211,10 @@ export const teamWork = [
   },
   {
     id: 4,
-    name: 'Macarena Galardi',
+    name: 'Sol Tortora',
     teamRole: 'Ventas',
-    image: '/teamWork/macarena-galardi.png',
-    socialLink: 'https://www.linkedin.com/in/macarena-galardi-4a5303213/',
+    image: '/teamWork/sol-tortora.png',
+    socialLink: 'https://www.linkedin.com/in/soltortora/',
   },
   {
     id: 5,
