@@ -125,7 +125,7 @@ export const BannerDisplay = ({
               ) : (
                 <Button
                   maxW={{ base: '100%', lg: '450px' }}
-                  variant={'button-secondary'}
+                  variant={'buttonSecondary'}
                 >
                   {buttonTxt}
                 </Button>

@@ -45,7 +45,7 @@ export const HiringCompanies = () => {
       </Stack>
       <HiringCompaniesCarousel />
       <Button
-        variant="button-secondary"
+        variant="buttonSecondary"
         size={'md'}
         w={['100%', '166px', '200px']}
         mt={'16px'}
