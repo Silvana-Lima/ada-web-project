@@ -108,7 +108,13 @@ export const BurgerMenu = ({ isOpen, onClose, onToggle }) => {
         </HashLink>
         <MenuItem {...menuItemStyles}>Contrata talento</MenuItem>
         <Stack pt={'40px'} align={{ md: 'start' }}>
-          <Button as={NavLink} to="/inscription" size={'md'} w={'100%'}>
+          <Button
+            as={NavLink}
+            to="/inscription"
+            size={'md'}
+            w={'100%'}
+            onClick={handleCloseMenu}
+          >
             Inscríbete
           </Button>
         </Stack>
