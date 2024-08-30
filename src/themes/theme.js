@@ -129,6 +129,14 @@ const theme = extendTheme({
         fontFamily: 'heading',
       },
     },
+    Radio: {
+      baseStyle: {
+        control: {
+          borderColor: 'gray.400', // color de borde cuando no está seleccionado
+          borderWidth: '1px',
+        },
+      },
+    },
   },
   // Tamaños de espaciado
   space: {

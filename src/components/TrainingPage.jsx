@@ -44,7 +44,7 @@ export const TrainingPage = ({
         <SlideFade
           in={true}
           offsetX="400px"
-          transition={{ enter: { duration: 2 } }}
+          transition={{ enter: { duration: 1.5 } }}
           animateOpacity
         >
           <Box display={'flex'} alignItems={'center'} justifyContent={'center'}>
