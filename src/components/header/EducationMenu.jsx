@@ -34,7 +34,7 @@ export const EducationMenu = ({ hideChevronIcon }) => {
         )}
       </MenuButton>
       <Portal>
-        <MenuList p={'24px'}>
+        <MenuList p={'24px'} zIndex={10}>
           {/* items del menu */}
           <Box>
             <CoursesMenuBox />

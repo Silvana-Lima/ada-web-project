@@ -13,7 +13,7 @@ import { Icon as IconifyIcon } from '@iconify/react'
 export const PaymentOptions = () => {
   const theme = useTheme()
   return (
-    <Container maxW={'100%'} px={'20px'} py={'60px'}>
+    <Container maxW={'100%'} px={'20px'} py={'60px'} id="payment-options">
       <Container
         maxW={'100%'}
         px={'10px'}
@@ -50,7 +50,6 @@ export const PaymentOptions = () => {
         </Box>
 
         <Container
-          id="payment-options"
           py={{ base: '20px', md: '40px', lg: '80px' }}
           maxW={['328px', '768px', '920px']}
           textAlign={'start'}

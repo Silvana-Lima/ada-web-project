@@ -104,8 +104,8 @@ export const BannerDisplay = ({
 
             <Stack order={3}>
               {/* agrego un hashlink para la redireccion del boton en el banner de nuestro objetivo */}
-              {useHashLink ? (
-                <Link
+              {useHashLink && (
+                <Button
                   {...linkProps}
                   display="flex"
                   alignItems="center"
@@ -115,17 +115,9 @@ export const BannerDisplay = ({
                   fontFamily="heading"
                   fontSize={{ base: '14px', md: '16px' }}
                   maxW={{ base: '100%', lg: '450px' }}
-                  h={['24px', '38px']}
                   borderRadius={5}
                   _hover={{ bg: 'gray.600' }}
                   textAlign={'center'}
-                >
-                  {buttonTxt}
-                </Link>
-              ) : (
-                <Button
-                  maxW={{ base: '100%', lg: '450px' }}
-                  variant={'buttonSecondary'}
                 >
                   {buttonTxt}
                 </Button>

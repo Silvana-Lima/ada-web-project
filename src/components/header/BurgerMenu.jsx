@@ -4,6 +4,7 @@ import {
   Flex,
   Icon,
   IconButton,
+  Link,
   Menu,
   MenuButton,
   MenuItem,
@@ -106,7 +107,14 @@ export const BurgerMenu = ({ isOpen, onClose, onToggle }) => {
         >
           <MenuItem>Alianzas</MenuItem>
         </HashLink>
-        <MenuItem {...menuItemStyles}>Contrata talento</MenuItem>
+        <MenuItem
+          {...menuItemStyles}
+          as={Link}
+          href="https://ada.fonselp.com/talents"
+          isExternal
+        >
+          Contrata talento
+        </MenuItem>
         <Stack pt={'40px'} align={{ md: 'start' }}>
           <Button
             as={NavLink}

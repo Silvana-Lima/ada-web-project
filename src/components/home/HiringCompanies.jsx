@@ -1,4 +1,4 @@
-import { Box, Button, Heading, Stack, Text } from '@chakra-ui/react'
+import { Box, Button, Heading, Link, Stack, Text } from '@chakra-ui/react'
 
 import { HiringCompaniesCarousel } from './swiper/HiringCompaniesCarousel'
 
@@ -45,6 +45,9 @@ export const HiringCompanies = () => {
       </Stack>
       <HiringCompaniesCarousel />
       <Button
+        as={Link}
+        href="https://ada.fonselp.com/talents"
+        isExternal
         variant="buttonSecondary"
         size={'md'}
         w={['100%', '166px', '200px']}

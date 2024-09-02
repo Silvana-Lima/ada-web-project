@@ -120,6 +120,8 @@ export const Header = () => {
                 </Link>
                 <Link
                   maxW={'max-content'}
+                  href="https://ada.fonselp.com/talents"
+                  isExternal
                   px={'8px'}
                   py={'10px'}
                   _hover={{
