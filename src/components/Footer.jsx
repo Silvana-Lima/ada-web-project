@@ -7,6 +7,7 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react'
+import { Link as ChakraLink } from '@chakra-ui/react'
 import {
   LiaFacebook,
   LiaInstagram,
@@ -26,7 +27,7 @@ export const Footer = () => {
         <Grid
           templateColumns={['1fr', '1fr', 'repeat(2, 1fr)']}
           w={['100%', '100%', '1440px']}
-          alignItems={'center'}
+          // alignItems={'center'}
           gap={[8, 8, 0]}
           color={'#FFFFFF'}
           bgColor={'#222222'}
@@ -54,6 +55,72 @@ export const Footer = () => {
                 ]}
               >
                 Empoderamos mujeres a través de la tecnología.
+              </Text>
+
+              <Text
+                fontSize={[
+                  'midTxt.base',
+                  'midTxt.base',
+                  'midTxt.base',
+                  'largeTxt.base',
+                ]}
+              >
+                <hr style={{ marginBottom: '10px' }} />
+                Queremos agradecer y hacer mención a las personas que hicieron
+                posible este sitio web. <br /> Diseño, investigación y
+                experiencia de usuario:{' '}
+                <ChakraLink href="https://chakra-ui.com" isExternal>
+                  Karina Monetti
+                </ChakraLink>{' '}
+                y{' '}
+                <ChakraLink
+                  href="https://www.linkedin.com/in/fanimejia/"
+                  isExternal
+                >
+                  Fani Mejía
+                </ChakraLink>
+                <br /> Desarrollo web e implementación:{' '}
+                <ChakraLink
+                  href="https://www.linkedin.com/in/poli-ferreyra/"
+                  isExternal
+                >
+                  Poli Ferreyra
+                </ChakraLink>{' '}
+                y{' '}
+                <ChakraLink
+                  href="https://www.linkedin.com/in/silvana-lima/"
+                  isExternal
+                >
+                  Silvana Lima
+                </ChakraLink>{' '}
+                <br />
+                Gestion de proyecto:{' '}
+                <ChakraLink
+                  href="https://www.linkedin.com/in/poli-ferreyra/"
+                  isExternal
+                >
+                  Poli Ferreyra
+                </ChakraLink>{' '}
+                y{' '}
+                <ChakraLink href="https://chakra-ui.com" isExternal>
+                  Bernardita Bauque
+                </ChakraLink>
+                <br />
+                Colaboración especial en desarrollo:{' '}
+                <ChakraLink
+                  href="https://www.linkedin.com/in/cintia-p%C3%A1ez-b80a84244/"
+                  isExternal
+                >
+                  Cintia Páez
+                </ChakraLink>
+                ,{' '}
+                <ChakraLink
+                  href="https://www.linkedin.com/in/nancy-clarisa-rojas/"
+                  isExternal
+                >
+                  Nancy Rojas
+                </ChakraLink>{' '}
+                y <ChakraLink>Angelly Sepúlveda Garcia</ChakraLink>
               </Text>
             </VStack>
           </GridItem>
