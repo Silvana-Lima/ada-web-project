@@ -1,26 +1,21 @@
 import {
   Box,
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
   Container,
-  FormControl,
-  FormLabel,
   Heading,
   HStack,
   Image,
-  Input,
   Link,
   SimpleGrid,
   SlideFade,
   Stack,
   Text,
+  VStack,
 } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
 
 import imgTemario from '../assets/ourCourses/imgIATemario.jpg'
+import { CourseInscriptionForm } from './training/CourseInscriptionForm'
 
 export const TrainingPage = ({
   flyer,
@@ -40,7 +35,8 @@ export const TrainingPage = ({
       flexDirection={'column'}
       alignItems={'center'}
     >
-      <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={10}>
+      {/* Descripcion y flyer */}
+      <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={10} mb={10}>
         <SlideFade
           in={true}
           offsetX="400px"
@@ -94,42 +90,30 @@ export const TrainingPage = ({
           </Stack>
         </Box>
       </SimpleGrid>
-      <HStack justifyContent={'center'} pt={'100px'}>
-        <Card maxW="lg" boxShadow={'xl'}>
-          <CardBody>
-            <Image src={imgTemario} alt="women studying" borderRadius="lg" />
-          </CardBody>
 
-          <CardFooter display={'flex'} justifyContent={'center'}>
-            <Button
-              as={Link}
-              href={syllabus}
-              variant={'gost'}
-              color="orange.800"
-              isExternal
-            >
-              Temario
-            </Button>
-          </CardFooter>
-        </Card>
-      </HStack>
+      {/* Formulario y Temario */}
+      <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={10}>
+        <VStack>
+          <Heading
+            as={Link}
+            href={syllabus}
+            variant={'gost'}
+            color="orange.800"
+            isExternal
+            fontSize={'h4.xl'}
+          >
+            TEMARIO
+          </Heading>
 
-      {/* Aca iria el componente de formulario de las chicas */}
-      <Stack pt={'100px'} px={'100px'}>
-        <Text color={'red'} fontWeight={'bold'}>
-          Aca va el form de las chicas - este es provisorio
-        </Text>
-        <FormControl isRequired>
-          <FormLabel>Nombre y Apellido</FormLabel>
-          <Input placeholder="Nombre y Apellido" />
-          <FormLabel>Email</FormLabel>
-          <Input placeholder="Email" />
-          <FormLabel>Telefono</FormLabel>
-          <Input placeholder="Telefono" />
-          <FormLabel>Nacionalidad</FormLabel>
-          <Input placeholder="Nacionalidad" />
-        </FormControl>
-      </Stack>
+          <Image src={imgTemario} alt="women studying" borderRadius="lg" />
+        </VStack>
+        <VStack>
+          <Heading color="orange.800" fontSize={'h4.xl'}>
+            INCRIBITE
+          </Heading>
+          <CourseInscriptionForm />
+        </VStack>
+      </SimpleGrid>
     </Container>
   )
 }

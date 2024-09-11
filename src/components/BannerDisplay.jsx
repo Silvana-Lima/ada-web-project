@@ -9,6 +9,7 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react'
 import PropTypes from 'prop-types'
+import { Link as RouterLink } from 'react-router-dom'
 
 export const BannerDisplay = ({
   highlightxt,
@@ -161,10 +162,12 @@ export const BannerDisplay = ({
         {isMobile && aboutUs && (
           <Stack order={3} pt={5}>
             <Link
+              as={RouterLink}
               color={'yellow.600'}
               textDecoration="underline"
               textUnderlineOffset="10px"
               fontWeight={'medium'}
+              to={'/training'}
             >
               {linkTxt}
             </Link>
