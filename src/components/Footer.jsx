@@ -1,9 +1,12 @@
 import {
   Box,
+  Divider,
   Grid,
   GridItem,
+  Hide,
   HStack,
   Image,
+  Show,
   Text,
   VStack,
 } from '@chakra-ui/react'
@@ -26,15 +29,15 @@ export const Footer = () => {
       <HStack justifyContent={'center'}>
         <Grid
           templateColumns={['1fr', '1fr', 'repeat(2, 1fr)']}
+          templateRows={['repeat(3, 1fr)', 'repeat(3, 1fr)', 'repeat(2, 1fr)']}
           w={['100%', '100%', '1440px']}
-          // alignItems={'center'}
           gap={[8, 8, 0]}
           color={'#FFFFFF'}
           bgColor={'#222222'}
-          py={'32px'}
-          px={'48px'}
+          py={['24px', '32px']}
+          px={['16px', '48px']}
         >
-          <GridItem colSpan={1}>
+          <GridItem colSpan={1} alignSelf={'end'} pb={[0, 0, 3, 3]}>
             <VStack alignItems={['center', 'center', 'flex-start']}>
               <Link to={'/'}>
                 <Image
@@ -56,76 +59,16 @@ export const Footer = () => {
               >
                 Empoderamos mujeres a través de la tecnología.
               </Text>
-
-              <Text
-                fontSize={[
-                  'midTxt.base',
-                  'midTxt.base',
-                  'midTxt.base',
-                  'largeTxt.base',
-                ]}
-              >
-                <hr style={{ marginBottom: '10px' }} />
-                Queremos agradecer y hacer mención a las personas que hicieron
-                posible este sitio web. <br /> Diseño, investigación y
-                experiencia de usuario:{' '}
-                <ChakraLink href="https://chakra-ui.com" isExternal>
-                  Karina Monetti
-                </ChakraLink>{' '}
-                y{' '}
-                <ChakraLink
-                  href="https://www.linkedin.com/in/fanimejia/"
-                  isExternal
-                >
-                  Fani Mejía
-                </ChakraLink>
-                <br /> Desarrollo web e implementación:{' '}
-                <ChakraLink
-                  href="https://www.linkedin.com/in/poli-ferreyra/"
-                  isExternal
-                >
-                  Poli Ferreyra
-                </ChakraLink>{' '}
-                y{' '}
-                <ChakraLink
-                  href="https://www.linkedin.com/in/silvana-lima/"
-                  isExternal
-                >
-                  Silvana Lima
-                </ChakraLink>{' '}
-                <br />
-                Gestion de proyecto:{' '}
-                <ChakraLink
-                  href="https://www.linkedin.com/in/poli-ferreyra/"
-                  isExternal
-                >
-                  Poli Ferreyra
-                </ChakraLink>{' '}
-                y{' '}
-                <ChakraLink href="https://chakra-ui.com" isExternal>
-                  Bernardita Bauque
-                </ChakraLink>
-                <br />
-                Colaboración especial en desarrollo:{' '}
-                <ChakraLink
-                  href="https://www.linkedin.com/in/cintia-p%C3%A1ez-b80a84244/"
-                  isExternal
-                >
-                  Cintia Páez
-                </ChakraLink>
-                ,{' '}
-                <ChakraLink
-                  href="https://www.linkedin.com/in/nancy-clarisa-rojas/"
-                  isExternal
-                >
-                  Nancy Rojas
-                </ChakraLink>{' '}
-                y <ChakraLink>Angelly Sepúlveda Garcia</ChakraLink>
-              </Text>
             </VStack>
           </GridItem>
-          <GridItem colSpan={1} justifySelf={['center', 'center', 'end']}>
-            <VStack alignItems={'center'}>
+
+          <GridItem
+            colSpan={1}
+            rowSpan={2}
+            justifySelf={['center', 'center', 'end']}
+            alignSelf={['end', 'center', 'center']}
+          >
+            <VStack>
               <Image src={imageFooter} alt="Logo Ada" h={'185px'} />
               <HStack>
                 <IconLink
@@ -149,7 +92,7 @@ export const Footer = () => {
                   isExternal
                 />
               </HStack>
-              <HStack>
+              <Hide below="md">
                 <Text
                   textAlign={'center'}
                   fontSize={[
@@ -162,8 +105,100 @@ export const Footer = () => {
                   {' '}
                   © 2024 Ada ITW, todos los derechos reservados.
                 </Text>
-              </HStack>
+              </Hide>
             </VStack>
+          </GridItem>
+          <GridItem>
+            {' '}
+            <Divider mb={3} />
+            <Text
+              fontSize={[
+                'midTxt.base',
+                'midTxt.base',
+                'midTxt.base',
+                'largeTxt.base',
+              ]}
+            >
+              Queremos agradecer y hacer mención a las personas que hicieron
+              posible este sitio web. <br />
+              Diseño, investigación y experiencia de usuario:{' '}
+              <ChakraLink
+                href="https://www.linkedin.com/in/karinamonetti"
+                isExternal
+              >
+                Karina Monetti
+              </ChakraLink>{' '}
+              y{' '}
+              <ChakraLink
+                href="https://www.linkedin.com/in/fanimejia/"
+                isExternal
+              >
+                Fani Mejía
+              </ChakraLink>
+              <br /> Desarrollo web e implementación:{' '}
+              <ChakraLink
+                href="https://www.linkedin.com/in/poli-ferreyra/"
+                isExternal
+              >
+                Poli Ferreyra
+              </ChakraLink>{' '}
+              y{' '}
+              <ChakraLink
+                href="https://www.linkedin.com/in/silvana-lima/"
+                isExternal
+              >
+                Silvana Lima
+              </ChakraLink>{' '}
+              <br />
+              Gestion de proyecto:{' '}
+              <ChakraLink
+                href="https://www.linkedin.com/in/poli-ferreyra/"
+                isExternal
+              >
+                Poli Ferreyra
+              </ChakraLink>{' '}
+              y{' '}
+              <ChakraLink
+                href="https://www.linkedin.com/in/bernardita-bauque/"
+                isExternal
+              >
+                Bernardita Bauque
+              </ChakraLink>
+              <br />
+              Colaboración en desarrollo:{' '}
+              <ChakraLink
+                href="https://www.linkedin.com/in/cintia-p%C3%A1ez-b80a84244/"
+                isExternal
+              >
+                Cintia Páez
+              </ChakraLink>
+              ,{' '}
+              <ChakraLink
+                href="https://www.linkedin.com/in/nancy-clarisa-rojas/"
+                isExternal
+              >
+                Nancy Rojas,
+              </ChakraLink>{' '}
+              <ChakraLink>Angelly Sepúlveda Garcia </ChakraLink>
+              <br />
+              Colaboración en diseño: <ChakraLink>Macarena Tomietto</ChakraLink>
+            </Text>
+            <Show below="md">
+              {' '}
+              <Divider my={3} />
+              <Text
+                textAlign={'center'}
+                fontSize={[
+                  'midTxt.base',
+                  'midTxt1.base',
+                  'midTxt1.lg',
+                  'midTxt1.xl',
+                ]}
+              >
+                {' '}
+                © 2024 Ada ITW, todos los derechos reservados.
+              </Text>
+            </Show>
           </GridItem>
         </Grid>
       </HStack>
