@@ -29,6 +29,7 @@ import pay from '../assets/pay.png'
 import womanPay from '../assets/woman-pay.png'
 import womanWorking from '../assets/woman-working.png'
 import { validationRules } from '../utils/validation'
+import { countries } from '../utils/countries'
 
 export const InscriptionForm = () => {
   const toast = useToast()
@@ -81,7 +82,6 @@ export const InscriptionForm = () => {
         },
         body: JSON.stringify(data),
       })
-console.log(data)
       if (!response.ok) {
         throw new Error('Error en la solicitud: ' + response.statusText)
       }
@@ -227,15 +227,10 @@ console.log(data)
                   <Input
                     type="date"
                     borderColor="gray.400"
-                    {...register(
-                      'date',
-                      validationRules.date
-                    )}
+                    {...register('date', validationRules.date)}
                   />
                   {errors.date && (
-                    <Text color="red.500">
-                      {errors.date.message}
-                    </Text>
+                    <Text color="red.500">{errors.date.message}</Text>
                   )}
                 </FormControl>
 
@@ -247,7 +242,11 @@ console.log(data)
                       borderColor="gray.400"
                       {...register('countryCode', validationRules.countryCode)}
                     >
-                      {/* Agregar opciones de códigos de país aquí */}
+                      {countries.map((code) => (
+                        <option key={code} value={code}>
+                          {code}
+                        </option>
+                      ))}
                     </Select>
                     {errors.countryCode && (
                       <Text color="red.500">{errors.countryCode.message}</Text>
@@ -312,7 +311,12 @@ console.log(data)
                 mb={4}
                 display={{ base: 'none', md: 'flex' }}
               >
-                {['Datos Personales', 'Información Académica', 'Opciones de Pago', 'Confirmación'].map((stepLabel, index) => (
+                {[
+                  'Datos Personales',
+                  'Información Académica',
+                  'Opciones de Pago',
+                  'Confirmación',
+                ].map((stepLabel, index) => (
                   <HStack key={index}>
                     <Box
                       bg={step === index + 1 ? 'magenta.400' : 'gray.300'}
@@ -549,7 +553,10 @@ console.log(data)
 
                   <FormControl>
                     <FormLabel>Selecciona método de pago</FormLabel>
-                    <Select onChange={handlePaymentMethodChange} borderColor="gray.400">
+                    <Select
+                      onChange={handlePaymentMethodChange}
+                      borderColor="gray.400"
+                    >
                       <option value="Selecciona">Selecciona</option>
                       <option value="Pago Tradicional">Pago Tradicional</option>
                       {!selectedCourse && (
@@ -726,7 +733,10 @@ console.log(data)
                           situación actual. Mientras más información nos
                           brindes, mejor.
                         </Text>
-                        <Textarea placeholder="Escribe tus motivos aquí..." borderColor="gray.400" />
+                        <Textarea
+                          placeholder="Escribe tus motivos aquí..."
+                          borderColor="gray.400"
+                        />
                       </FormControl>
                     </>
                   )}

@@ -1,26 +1,22 @@
 export const validationRules = {
-  name: {
+firstName: {
     required: true,
     minLength: 2,
-    maxLength: 50,
-    pattern: /^[a-zA-Z\s]+$/,
+    maxLength: 30,
     errorMessage: {
       required: 'First name is required.',
       minLength: 'First name must be at least 2 characters long.',
-      maxLength: 'First name cannot be longer than 50 characters.',
-      pattern: 'First name can only contain letters and spaces.',
+      maxLength: 'First name cannot be longer than 30 characters.',
     },
   },
   lastName: {
     required: true,
     minLength: 2,
-    maxLength: 50,
-    pattern: /^[a-zA-Z\s]+$/,
+    maxLength: 30,
     errorMessage: {
       required: 'Last name is required.',
       minLength: 'Last name must be at least 2 characters long.',
-      maxLength: 'Last name cannot be longer than 50 characters.',
-      pattern: 'Last name can only contain letters and spaces.',
+      maxLength: 'Last name cannot be longer than 30 characters.',
     },
   },
   email: {
@@ -33,10 +29,8 @@ export const validationRules = {
   },
   countryCode: {
     required: true,
-    pattern: /^\+\d{1,4}$/,
     errorMessage: {
       required: 'Country code is required.',
-      pattern: 'Country code must start with a "+" followed by 1 to 4 digits.',
     },
   },
   phoneNumber: {
