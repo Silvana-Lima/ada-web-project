@@ -3,6 +3,7 @@ import {
   Button,
   Container,
   FormControl,
+  FormErrorMessage,
   FormLabel,
   Grid,
   GridItem,
@@ -19,7 +20,7 @@ import {
   useToast,
 } from '@chakra-ui/react'
 import { useState } from 'react'
-import { useForm } from 'react-hook-form'
+import { Controller, useForm } from 'react-hook-form'
 import { MdArrowForwardIos } from 'react-icons/md'
 
 import bgForm from '../assets/bg-form.png'
@@ -36,8 +37,8 @@ export const InscriptionForm = () => {
 
   const [step, setStep] = useState(1)
   const [hasDisability, setHasDisability] = useState('')
-  const [selectedCareer, setSelectedCareer] = useState('')
-  const [selectedCourse, setSelectedCourse] = useState('')
+  // const [selectedCareer, setSelectedCareer] = useState('')
+  // const [selectedCourse, setSelectedCourse] = useState('')
   const [paymentOptions, setPaymentOptions] = useState([])
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('')
 
@@ -45,10 +46,22 @@ export const InscriptionForm = () => {
     handleSubmit,
     register,
     formState: { errors },
+    trigger,
+    control,
+    watch,
+    clearErrors,
   } = useForm()
 
-  const handleNext = () => {
-    setStep(step + 1)
+  const selectedCareer = watch('career')
+  const selectedCourse = watch('course')
+
+  const handleNext = async () => {
+    const result = await trigger()
+    if (result) {
+      if (!errors.selection) {
+        setStep(step + 1)
+      }
+    }
   }
 
   const handleBack = () => {
@@ -59,19 +72,19 @@ export const InscriptionForm = () => {
     setHasDisability(value)
   }
 
-  const handleCareerChange = (e) => {
-    setSelectedCareer(e.target.value)
-    setSelectedCourse('')
-    setSelectedPaymentMethod('')
-    setPaymentOptions([])
-  }
+  // const handleCareerChange = (e) => {
+  //   setSelectedCareer(e.target.value)
+  //   setSelectedCourse('')
+  //   setSelectedPaymentMethod('')
+  //   setPaymentOptions([])
+  // }
 
-  const handleCourseChange = (e) => {
-    setSelectedCourse(e.target.value)
-    setSelectedCareer('')
-    setSelectedPaymentMethod('')
-    setPaymentOptions([])
-  }
+  // const handleCourseChange = (e) => {
+  //   setSelectedCourse(e.target.value)
+  //   setSelectedCareer('')
+  //   setSelectedPaymentMethod('')
+  //   setPaymentOptions([])
+  // }
 
   const onSubmit = async (data) => {
     try {
@@ -95,8 +108,8 @@ export const InscriptionForm = () => {
         isClosable: true,
       })
 
-      const result = await response.json()
-      console.log(result)
+      // const result = await response.json()
+      // console.log(result)
     } catch (error) {
       const errorMessage = error.message
       console.log(errorMessage)
@@ -178,69 +191,70 @@ export const InscriptionForm = () => {
                 mb={['spacingL.xl', 'spacingL.xl', 'spacingL.xl', '']}
                 mt={2}
               >
-                Completa el siguiente formulario y reserva tu lugar. En Ada nos
-                ocupamos de que las mujeres se capaciten y encuentren su lugar
-                en el mundo IT.
+                Completa el siguiente formulario para tu pre-inscripción. En Ada
+                nos ocupamos de que las mujeres se capaciten y encuentren su
+                lugar en el mundo IT.
               </Text>
               <Stack spacing={4}>
                 <Text as="h4" fontSize="xl" fontWeight={'bold'}>
                   ¡Reserva tu lugar!
                 </Text>
                 <FormControl isInvalid={errors.firstName}>
-                  <FormLabel>Nombre</FormLabel>
+                  <FormLabel htmlFor="firstName">Nombre</FormLabel>
                   <Input
+                    id="firstName"
                     placeholder="Nombre"
                     borderColor="gray.400"
                     {...register('firstName', validationRules.firstName)}
                   />
-                  {errors.firstName && (
-                    <Text color="red.500">{errors.firstName.message}</Text>
-                  )}
+                  <FormErrorMessage>
+                    {errors.firstName?.message}
+                  </FormErrorMessage>
                 </FormControl>
                 <FormControl isInvalid={errors.lastName}>
-                  <FormLabel>Apellido</FormLabel>
+                  <FormLabel htmlFor="lastName">Apellido</FormLabel>
                   <Input
+                    id="lastName"
                     placeholder="Apellido"
                     borderColor="gray.400"
                     {...register('lastName', validationRules.lastName)}
                   />
-                  {errors.lastName && (
-                    <Text color="red.500">{errors.lastName.message}</Text>
-                  )}
+                  <FormErrorMessage>
+                    {errors.lastName?.message}
+                  </FormErrorMessage>
                 </FormControl>
 
                 <FormControl isInvalid={errors.email}>
-                  <FormLabel>Correo electrónico</FormLabel>
+                  <FormLabel htmlFor="email">Correo electrónico</FormLabel>
                   <Input
+                    id="email"
                     type="email"
                     placeholder="Correo electrónico"
                     borderColor="gray.400"
                     {...register('email', validationRules.email)}
                   />
-                  {errors.email && (
-                    <Text color="red.500">{errors.email.message}</Text>
-                  )}
+                  <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
                 </FormControl>
 
                 <FormControl isInvalid={errors.date}>
-                  <FormLabel>Fecha de nacimiento</FormLabel>
+                  <FormLabel htmlFor="date">Fecha de nacimiento</FormLabel>
                   <Input
+                    id="date"
                     type="date"
                     borderColor="gray.400"
                     {...register('date', validationRules.date)}
                   />
-                  {errors.date && (
-                    <Text color="red.500">{errors.date.message}</Text>
-                  )}
+                  <FormErrorMessage>{errors.date?.message}</FormErrorMessage>
                 </FormControl>
 
                 <HStack>
-                  <FormControl isInvalid={errors.codigoPais}>
-                    <FormLabel>Código de país</FormLabel>
+                  <FormControl isInvalid={errors.countryCode}>
+                    <FormLabel htmlFor="countryCode">Código de país</FormLabel>
                     <Select
+                      id="countryCode"
                       placeholder="Código de país"
                       borderColor="gray.400"
-                      {...register('countryCode', validationRules.countryCode)}
+                      // {...register('countryCode', validationRules.countryCode)}
                     >
                       {countries.map((code) => (
                         <option key={code} value={code}>
@@ -248,22 +262,25 @@ export const InscriptionForm = () => {
                         </option>
                       ))}
                     </Select>
-                    {errors.countryCode && (
-                      <Text color="red.500">{errors.countryCode.message}</Text>
-                    )}
+                    <FormErrorMessage>
+                      {errors.countryCode?.message}
+                    </FormErrorMessage>
                   </FormControl>
 
                   <FormControl isInvalid={errors.phoneNumber}>
-                    <FormLabel>Número de teléfono</FormLabel>
+                    <FormLabel htmlFor="phoneNumber">
+                      Número de teléfono
+                    </FormLabel>
                     <Input
+                      id="phoneNumber"
                       type="tel"
                       placeholder="Número de teléfono"
                       borderColor="gray.400"
                       {...register('phoneNumber', validationRules.phoneNumber)}
                     />
-                    {errors.phoneNumber && (
-                      <Text color="red.500">{errors.phoneNumber.message}</Text>
-                    )}
+                    <FormErrorMessage>
+                      {errors.phoneNumber?.message}
+                    </FormErrorMessage>
                   </FormControl>
                 </HStack>
                 <Button onClick={handleNext} mt={4}>
@@ -365,17 +382,43 @@ export const InscriptionForm = () => {
                     </RadioGroup>
                   </FormControl>
 
-                  <FormControl>
-                    <FormLabel>
+                  <FormControl isInvalid={errors.condition}>
+                    <FormLabel htmlFor="condition">
                       En ADA nos interesa poder acompañarte de la mejor manera,
                       ¿Es usted una persona con discapacidad?
                     </FormLabel>
-                    <RadioGroup onChange={handleDisabilityChange}>
+                    <Controller
+                      name="condition"
+                      control={control}
+                      rules={validationRules.condition}
+                      render={({ field }) => (
+                        <RadioGroup
+                          {...field}
+                          onChange={(value) => {
+                            field.onChange(value)
+                            setHasDisability(value)
+                            if (value) {
+                              clearErrors('condition')
+                            }
+                          }}
+                          value={field.value}
+                        >
+                          <Stack direction="column" align="flex-start">
+                            <Radio value="Sí">Sí</Radio>
+                            <Radio value="No">No</Radio>
+                          </Stack>
+                        </RadioGroup>
+                      )}
+                    />
+                    {/* <RadioGroup onChange={handleDisabilityChange}>
                       <Stack direction="column" align="flex-start">
                         <Radio value="Sí">Sí</Radio>
                         <Radio value="No">No</Radio>
                       </Stack>
-                    </RadioGroup>
+                    </RadioGroup> */}
+                    <FormErrorMessage>
+                      {errors.condition?.message}
+                    </FormErrorMessage>
                   </FormControl>
 
                   {hasDisability === 'Sí' && (
@@ -394,16 +437,18 @@ export const InscriptionForm = () => {
                     ¿Qué te interesa aprender?
                   </Heading>
 
-                  <FormControl>
+                  <FormControl isInvalid={!!errors.selection}>
                     <FormLabel>Carrera:</FormLabel>
 
                     <Select
+                      id="career"
                       placeholder="Lista de Carreras"
-                      onChange={handleCareerChange}
-                      value={selectedCareer}
-                      isDisabled={selectedCourse !== ''}
-                      borderColor="gray.400"
-                      {...register('career', validationRules.career)}
+                      // onChange={handleCareerChange}
+                      // value={selectedCareer}
+                      // isDisabled={selectedCourse !== ''}
+                      // borderColor="gray.400"
+                      {...register('career')}
+                      // {...register('career', validationRules.career)}
                     >
                       <option value="front">
                         Carrera en Desarrollo web front-end
@@ -412,17 +457,26 @@ export const InscriptionForm = () => {
                         Carrera en Desarrollo web back-end
                       </option> */}
                     </Select>
+                    {/* <FormErrorMessage>
+                      {errors.career?.message}
+                    </FormErrorMessage> */}
+                    <FormErrorMessage>
+                      {errors.selection?.message}
+                    </FormErrorMessage>
                   </FormControl>
 
-                  <FormControl>
-                    <FormLabel>Curso:</FormLabel>
+                  <FormControl isInvalid={!!errors.selection}>
+                    <FormLabel htmlFor="course">Curso:</FormLabel>
 
                     <Select
+                      id="course"
                       placeholder="Lista de Cursos"
-                      onChange={handleCourseChange}
-                      value={selectedCourse}
-                      isDisabled={selectedCareer !== ''}
-                      borderColor="gray.400"
+                      // onChange={handleCourseChange}
+                      // value={selectedCourse}
+                      // isDisabled={selectedCareer !== ''}
+                      // borderColor="gray.400"
+                      {...register('course')}
+                      // {...register('course', validationRules.course)}
                     >
                       <option value="ux-ui">
                         Programa Intensivo - Diseño UX/UI
@@ -432,6 +486,12 @@ export const InscriptionForm = () => {
                         Programa IA Inteligencia Artificial
                       </option>
                     </Select>
+                    {/* <FormErrorMessage>
+                      {errors.course?.message}
+                    </FormErrorMessage> */}
+                    <FormErrorMessage>
+                      {errors.selection?.message}
+                    </FormErrorMessage>
                   </FormControl>
 
                   <Heading
@@ -571,7 +631,7 @@ export const InscriptionForm = () => {
                   {selectedPaymentMethod === 'Diferido 25%' && (
                     <Text as="h4" fontSize="sm">
                       Si optas por nuestro plan de pago diferido, solo pagas el
-                      75% de la carrera mientras estudias y el resto lo abonas
+                      25% de la carrera mientras estudias y el resto lo abonas
                       después de obtener un trabajo en tecnología.
                       {/* Con el pago diferido del 25%, abonarías el 75% del costo
                       durante el curso, en cuotas sin interés. El 25% restante
