@@ -165,23 +165,29 @@ export const Footer = () => {
                 Bernardita Bauque
               </ChakraLink>
               <br />
-              Colaboración en desarrollo:{' '}
+              Desarrollo tecnológico:{' '}
               <ChakraLink
                 href="https://www.linkedin.com/in/cintia-p%C3%A1ez-b80a84244/"
                 isExternal
               >
-                Cintia Páez
+                Cintia Páez{' '}
               </ChakraLink>
-              ,{' '}
+              y{' '}
               <ChakraLink
                 href="https://www.linkedin.com/in/nancy-clarisa-rojas/"
                 isExternal
               >
-                Nancy Rojas,
+                Nancy Rojas
               </ChakraLink>{' '}
-              <ChakraLink>Angelly Sepúlveda Garcia </ChakraLink>
+              {/* <ChakraLink>Angelly Sepúlveda Garcia </ChakraLink> */}
               <br />
-              Colaboración en diseño: <ChakraLink>Macarena Tomietto</ChakraLink>
+              Colaboración en diseño UI:{' '}
+              <ChakraLink
+                href="https://www.linkedin.com/in/alejandratomietto/"
+                isExternal
+              >
+                Macarena Tomietto
+              </ChakraLink>
             </Text>
             <Show below="md">
               {' '}
