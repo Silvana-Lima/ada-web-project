@@ -17,36 +17,37 @@ export const CourseInscriptionForm = ({ subjectCourse }) => {
   } = useForm()
 
   const onSubmit = async (data) => {
-    const subject = `${subjectCourse} ${data.name}`
+    alert('Alerta provisoria - Envio de formulario')
+    // const subject = `${subjectCourse} ${data.name}`
 
-    const formData = new URLSearchParams({
-      ...data,
-      subject,
-      orgid: '00D3i000000ui1H',
-      retURL: 'https://adaitw.org/',
-    })
+    // const formData = new URLSearchParams({
+    //   ...data,
+    //   subject,
+    //   orgid: '00D3i000000ui1H',
+    //   retURL: 'https://adaitw.org/',
+    // })
 
-    try {
-      const response = await fetch(
-        'https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00D3i000000ui1H',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: formData,
-        }
-      )
+    // try {
+    //   const response = await fetch(
+    //     'https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00D3i000000ui1H',
+    //     {
+    //       method: 'POST',
+    //       headers: {
+    //         'Content-Type': 'application/x-www-form-urlencoded',
+    //       },
+    //       body: formData,
+    //     }
+    //   )
 
-      if (response.ok) {
-        // Redirigir si el envío fue exitoso
-        window.location.href = 'https://adaitw.org/'
-      } else {
-        console.error('Error en el envío del formulario')
-      }
-    } catch (error) {
-      console.error('Error en la solicitud:', error)
-    }
+    //   if (response.ok) {
+    //     // Redirigir si el envío fue exitoso
+    //     window.location.href = 'https://adaitw.org/'
+    //   } else {
+    //     console.error('Error en el envío del formulario')
+    //   }
+    // } catch (error) {
+    //   console.error('Error en la solicitud:', error)
+    // }
   }
 
   return (
