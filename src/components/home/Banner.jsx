@@ -10,7 +10,14 @@ import {
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-export const Banner = ({ img, title, description, btnText, bgColor }) => {
+export const Banner = ({
+  img,
+  title,
+  description,
+  addButton,
+  btnText,
+  bgColor,
+}) => {
   return (
     <Stack bg={bgColor} justifyContent={'center'}>
       <Container
@@ -49,9 +56,11 @@ export const Banner = ({ img, title, description, btnText, bgColor }) => {
             {description}
           </Text>
 
-          <Button as={Link} to="/training" size={'lg'} w={['100%', '382px']}>
-            {btnText}
-          </Button>
+          {addButton && (
+            <Button as={Link} to="/training" size={'lg'} w={['100%', '382px']}>
+              {btnText}
+            </Button>
+          )}
         </VStack>
       </Container>
     </Stack>
@@ -62,6 +71,7 @@ Banner.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  btnText: PropTypes.string.isRequired,
+  btnText: PropTypes.string,
   bgColor: PropTypes.string.isRequired,
+  addButton: PropTypes.bool.isRequired,
 }

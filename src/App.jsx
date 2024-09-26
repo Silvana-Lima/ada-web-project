@@ -5,6 +5,8 @@ import { Footer } from './components/Footer'
 import { Header } from './components/header/Header'
 import { Whatsapp } from './components/home/Whatsapp'
 import { AboutUs } from './pages/AboutUs'
+import { Backend } from './pages/Backend'
+import { Frontend } from './pages/Frontend'
 import { Home } from './pages/Home'
 import { IACourse } from './pages/IACourse'
 import { InscriptionForm } from './pages/InscriptionForm'
@@ -34,6 +36,8 @@ function App() {
             <Route path="/ux-ui" element={<UxUiCourse />} />
             <Route path="/qa" element={<QACourse />} />
             <Route path="/python" element={<PythonCourse />} />
+            <Route path="/front-end" element={<Frontend />} />
+            <Route path="/back-end" element={<Backend />} />
           </Routes>
         </ScrollToTop>
       </Stack>

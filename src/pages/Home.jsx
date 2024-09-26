@@ -26,6 +26,7 @@ export const Home = () => {
         description={
           'Ofrecemos carreras en desarrollo front-end y back-end en donde podrás disfrutar de toda la experiencia Ada.'
         }
+        addButton={true}
         btnText={'Ir a carreras'}
         bgColor={'magenta.200'}
       />
@@ -35,6 +36,7 @@ export const Home = () => {
         description={
           ' Nuestros cursos son cortos e intensivos en donde podrás aprender Diseño UX/UI, QA Testing, Python e IA generativa.'
         }
+        addButton={true}
         btnText={'Ir a cursos'}
         bgColor={'orange.200'}
       />
