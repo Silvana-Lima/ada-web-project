@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 export const WhyUsCard = ({
   title,
   description,
-  bgColor,
+  bgColor = 'gray.0',
   borderW,
   maxW,
   pX,

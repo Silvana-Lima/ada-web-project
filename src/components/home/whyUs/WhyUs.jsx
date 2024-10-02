@@ -9,13 +9,20 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react'
+import PropTypes from 'prop-types'
 
 import vector from '@/vector-why-us.svg'
 
-import { whyUs } from '../../../utils/constants'
 import { WhyUsCard } from './WhyUsCard'
 
-export const WhyUs = () => {
+export const WhyUs = ({
+  dataCard,
+  titleBlack1,
+  titleColor1,
+  titleBlack2,
+  titleColor2,
+  description,
+}) => {
   return (
     <Container
       maxW={'100%'}
@@ -64,10 +71,22 @@ export const WhyUs = () => {
             color={'gray.800'}
             textAlign={'left'}
           >
-            ¿Por qué estudiar en{' '}
-            <Highlight query="ada itw?" styles={{ color: 'magenta.400' }}>
-              ADA ITW?
-            </Highlight>{' '}
+            {titleBlack1}{' '}
+            <Highlight query={titleColor1} styles={{ color: 'magenta.400' }}>
+              {titleColor1}
+            </Highlight>
+            {titleBlack2 && (
+              <>
+                {' '}
+                {titleBlack2}{' '}
+                <Highlight
+                  query={titleColor2}
+                  styles={{ color: 'magenta.400' }}
+                >
+                  {titleColor2}
+                </Highlight>
+              </>
+            )}
           </Heading>
           <Text
             fontSize={[
@@ -80,9 +99,7 @@ export const WhyUs = () => {
             textAlign={['left', 'justify']}
             maxW={['190px', '316px']}
           >
-            Nuestra misión es reducir la brecha de género en tecnología y esto
-            lo hacemos a través del empoderamiento de las mujeres con cursos de
-            programación.
+            {description}
           </Text>
         </Stack>
         <Grid
@@ -99,10 +116,9 @@ export const WhyUs = () => {
             'repeat(2, 1fr)',
           ]}
           gap={['30px', '30px', '30px', '30px']}
-          // maxW={'850px'}
           w={['100%', '400px', '100%', '70%']}
         >
-          {whyUs.map(({ id, title, description, bgColor }) => (
+          {dataCard.map(({ id, title, description, bgColor }) => (
             <WhyUsCard
               key={id}
               title={title}
@@ -117,4 +133,13 @@ export const WhyUs = () => {
       </Flex>
     </Container>
   )
+}
+
+WhyUs.propTypes = {
+  dataCard: PropTypes.array.isRequired,
+  titleBlack1: PropTypes.string.isRequired,
+  titleColor1: PropTypes.string.isRequired,
+  titleBlack2: PropTypes.string,
+  titleColor2: PropTypes.string,
+  description: PropTypes.string.isRequired,
 }
