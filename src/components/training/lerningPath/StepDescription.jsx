@@ -9,6 +9,7 @@ const StepDescription = ({ details, id }) => {
     <VStack maxW={'750px'} align="start" spacing={4} color={'black'}>
       <Stack
         bg={'#fefafb'}
+        minW={'260px'}
         px={{ base: 'spacingM.base', md: 'spacingL.base' }}
         py={{ base: 'spacingM.base', md: 'spacingL.base' }}
         borderRadius={8}
@@ -54,12 +55,7 @@ const StepDescription = ({ details, id }) => {
       </Stack>
 
       {/* box con iconos */}
-      <HStack
-        justifyContent="space-between"
-        w="full"
-        borderRadius="md"
-        textAlign={'center'}
-      >
+      <HStack borderRadius="md" textAlign={'center'} minW={'260px'}>
         <Stack
           w={'100%'}
           h={'150px'}
@@ -75,7 +71,7 @@ const StepDescription = ({ details, id }) => {
               color={theme.colors.magenta[400]}
               icon="gala:clock"
               style={{
-                fontSize: `calc(${theme.fontSizes.h2.xl} + 2vw)`,
+                fontSize: `calc(${theme.fontSizes.largeTxt.xl} + 2vw)`,
               }}
             />
 
@@ -101,7 +97,7 @@ const StepDescription = ({ details, id }) => {
               color={theme.colors.magenta[400]}
               icon="ph:certificate-light"
               style={{
-                fontSize: `calc(${theme.fontSizes.h2.xl} + 2vw)`,
+                fontSize: `calc(${theme.fontSizes.h4.xl} + 2vw)`,
               }}
             />
 
@@ -128,7 +124,7 @@ const StepDescription = ({ details, id }) => {
                 color={theme.colors.magenta[400]}
                 icon="fluent:laptop-briefcase-24-regular"
                 style={{
-                  fontSize: `calc(${theme.fontSizes.h2.xl} + 2vw)`,
+                  fontSize: `calc(${theme.fontSizes.h4.xl} + 2vw)`,
                 }}
               />
             ) : (
@@ -136,7 +132,7 @@ const StepDescription = ({ details, id }) => {
                 color={theme.colors.magenta[400]}
                 icon="ion:calendar-outline"
                 style={{
-                  fontSize: `calc(${theme.fontSizes.h2.xl} + 2vw)`,
+                  fontSize: `calc(${theme.fontSizes.largeTxt.xl} + 2vw)`,
                 }}
               />
             )}

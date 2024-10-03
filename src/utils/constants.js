@@ -697,7 +697,7 @@ export const steps = [
       introDescription:
         'Curso introductorio para que descubras los fundamentos de la programación,  introduciéndote al mundo de JavaScript. Una vez que completes el curso, te ayudaremos con un test vocacional y en caso de elegir continuar con la carrera de Front End, tu próximos pasos en la programación, serán los siguientes.',
 
-      schedule: 'Lunes, miércoles y viernes 19:00 a 22:00h hs',
+      schedule: 'Lunes, miércoles y viernes 19:00 a 22:00hs',
       certification: 'Certificado al terminar el curso',
       info: 'Trabajo integrador para tu portfolio',
     },
@@ -709,7 +709,7 @@ export const steps = [
       introTitle: 'Dominio del maquetado: HTML + CSS',
       introDescription:
         'Este módulo  está diseñado para proporcionar un dominio completo en el maquetado web utilizando HTML y CSS. A lo largo de las sesiones, los participantes aprenderán a construir estructuras web sólidas y estilizadas, desde la creación de elementos básicos hasta el diseño de interfaces complejas.',
-      schedule: 'Lunes, miércoles y viernes 19:00 a 22:00h hs',
+      schedule: 'Lunes, miércoles y viernes 19:00 a 22:00hs',
       certification: 'Certificado al terminar el curso',
       info: 'Duración: 2 meses',
     },
@@ -721,7 +721,7 @@ export const steps = [
       introTitle: 'Trabajando con APIs REST y Programación Asíncrona.',
       introDescription:
         'Este módulo avanzado está diseñado para profundizar en las habilidades necesarias para el desarrollo Front End moderno, centrándose en la integración y gestión de APIs REST y la programación asíncrona.',
-      schedule: 'Lunes, miércoles y viernes 19:00 a 22:00h hs',
+      schedule: 'Lunes, miércoles y viernes 19:00 a 22:00hs',
       certification: 'Certificado al terminar el curso',
       info: 'Duración: 2 meses',
     },
@@ -733,7 +733,7 @@ export const steps = [
       introTitle: 'Dominio de componentes, estado, hooks y estilos.',
       introDescription:
         'Este módulo avanzado está diseñado para desarrollar una comprensión profunda y práctica de React, centrado en el dominio de componentes, manejo del estado, uso de hooks y aplicación de estilos.',
-      schedule: 'Lunes, miércoles y viernes 19:00 a 22:00h hs',
+      schedule: 'Lunes, miércoles y viernes 19:00 a 22:00hs',
       certification: 'Certificado al terminar el curso',
       info: 'Duración: 2 meses',
     },
