@@ -109,7 +109,7 @@ export const TrainingPage = ({
         </VStack>
         <VStack>
           <Heading color="orange.800" fontSize={'h4.xl'}>
-            INCRIBITE
+            INSCRIBITE
           </Heading>
           <CourseInscriptionForm />
         </VStack>

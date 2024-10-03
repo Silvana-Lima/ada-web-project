@@ -3,6 +3,7 @@ import { Container } from '@chakra-ui/react'
 import imageFrontend from '@/img-banner-frontend.svg'
 
 import { Banner } from '../components/home/Banner'
+import { LearningPath } from '../components/training/lerningPath/LearningPath'
 
 export const Frontend = () => {
   return (
@@ -16,6 +17,7 @@ export const Frontend = () => {
         addButton={false}
         bgColor={'purple.200'}
       />
+      <LearningPath />
     </Container>
   )
 }

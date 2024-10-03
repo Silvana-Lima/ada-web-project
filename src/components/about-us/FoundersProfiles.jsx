@@ -57,25 +57,6 @@ export const FoundersProfiles = () => {
           />
         </Box>
       </HStack>
-      {/* <Stack
-        px={{ base: '32px', md: '32px', lg: '140px' }}
-        py={'20px'}
-        textAlign={['justify', 'justify', 'center']}
-        alignItems={'center'}
-      >
-        <Text
-          fontSize={['midTxt.base', 'midTxt.base', 'midTxt.lg', 'midTxt.xl']}
-        >
-          La historia nace de la experiencia vivida por María Celeste Medina y
-          Ezequiel González, que estudiaron y trabajaron en la industria IT de
-          Argentina. González, por un lado, se desempeñó por 10 años como
-          desarrollador y arquitecto de Software en empresas como UNICEF,
-          Epidata y Hexacta. Por su parte, su co-fundadora, se desarrolló como
-          programadora de Business Intelligence y es referente regional en
-          cuanto a proyectos que involucran el entrecruce de
-          tecnología-educación y género. A través de su trabajo en Ada, ...
-        </Text>
-      </Stack> */}
     </Container>
   )
 }
