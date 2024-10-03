@@ -4,9 +4,11 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Button,
   Container,
   Divider,
   Heading,
+  Link,
   Stack,
   Step,
   StepIndicator,
@@ -116,7 +118,7 @@ export const LearningPath = () => {
                         <Divider
                           orientation="vertical"
                           borderColor="transparent"
-                          height="150px"
+                          height="100px"
                         />
                       )}
                     </>
@@ -133,6 +135,21 @@ export const LearningPath = () => {
             </Step>
           ))}
         </Stepper>
+        <Button
+          // TODO ver de cambiar el href por el nuevo brochure - hay que alojar los nuevos pdf's en el mismo lugar que tienen este🤔
+          as={Link}
+          href="https://adaitw.org/wp-content/uploads/2022/01/Ada-_-Desarrollo-Frontend.pdf"
+          isExternal
+          w={'max-content'}
+          variant={'buttonPrimary'}
+          textDecoration={'none'}
+          size={'lg'}
+          alignSelf={'center'}
+          _hover={{ textDecoration: 'none' }}
+          _visited={{ textDecoration: 'none' }}
+        >
+          Descargá el contenido completo
+        </Button>
       </Stack>
     </Container>
   )
