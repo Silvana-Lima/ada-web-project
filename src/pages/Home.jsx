@@ -14,6 +14,7 @@ import { NextBeginnings } from '../components/home/NextBeginnings'
 import { OurGoald } from '../components/home/OurGoald'
 import { Testimonials } from '../components/home/testimonials/Testimonials'
 import { WhyUs } from '../components/home/whyUs/WhyUs'
+import { whyUs } from '../utils/constants'
 
 export const Home = () => {
   return (
@@ -43,7 +44,14 @@ export const Home = () => {
 
       <NextBeginnings />
 
-      <WhyUs />
+      <WhyUs
+        dataCard={whyUs}
+        titleBlack1={'¿Por qué estudiar en'}
+        titleColor1={'ADA ITW?'}
+        description={
+          'Nuestra misión es reducir la brecha de género en tecnología y esto lo hacemos a través del empoderamiento de las mujeres con cursos de  programación.'
+        }
+      />
 
       <Testimonials />
       <OurGoald />
