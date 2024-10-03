@@ -699,7 +699,7 @@ export const steps = [
 
       schedule: 'Lunes, miércoles y viernes 19:00 a 22:00h hs',
       certification: 'Certificado al terminar el curso',
-      info: 'Trabajo integrador para sumar a tu portfolio',
+      info: 'Trabajo integrador para tu portfolio',
     },
   },
   {

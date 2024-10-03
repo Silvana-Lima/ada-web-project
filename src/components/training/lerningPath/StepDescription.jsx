@@ -9,8 +9,8 @@ const StepDescription = ({ details, id }) => {
     <VStack maxW={'750px'} align="start" spacing={4} color={'black'}>
       <Stack
         bg={'#fefafb'}
-        px={'spacingL.base'}
-        py={'spacingL.base'}
+        px={{ base: 'spacingM.base', md: 'spacingL.base' }}
+        py={{ base: 'spacingM.base', md: 'spacingL.base' }}
         borderRadius={8}
         border={'solid 1px '}
         borderColor={'gray.400'}
@@ -61,11 +61,11 @@ const StepDescription = ({ details, id }) => {
         textAlign={'center'}
       >
         <Stack
-          w={'235px'}
+          w={'100%'}
           h={'150px'}
           bg={'#fefafb'}
-          px={'spacingL.base'}
-          py={'spacingL.base'}
+          px={{ base: 'spacingM.base', md: 'spacingL.base' }}
+          py={{ base: 'spacingM.base', md: 'spacingL.base' }}
           borderRadius={8}
           border={'solid 1px '}
           borderColor={'gray.400'}
@@ -79,15 +79,19 @@ const StepDescription = ({ details, id }) => {
               }}
             />
 
-            <Text fontSize="xs">{details.schedule}</Text>
+            <Text
+              fontSize={['10px', 'midTxt1.base', 'midTxt1.base', 'midTxt1.lg']}
+            >
+              {details.schedule}
+            </Text>
           </VStack>
         </Stack>
         <Stack
-          w={'235px'}
+          w={'100%'}
           h={'150px'}
           bg={'#fefafb'}
-          px={'spacingL.base'}
-          py={'spacingL.base'}
+          px={{ base: 'spacingM.base', md: 'spacingL.base' }}
+          py={{ base: 'spacingM.base', md: 'spacingL.base' }}
           borderRadius={8}
           border={'solid 1px '}
           borderColor={'gray.400'}
@@ -101,15 +105,19 @@ const StepDescription = ({ details, id }) => {
               }}
             />
 
-            <Text fontSize="xs">{details.certification}</Text>
+            <Text
+              fontSize={['10px', 'midTxt1.base', 'midTxt1.base', 'midTxt1.lg']}
+            >
+              {details.certification}
+            </Text>
           </VStack>
         </Stack>
         <Stack
-          w={'235px'}
+          w={'100%'}
           h={'150px'}
           bg={'#fefafb'}
-          px={'spacingL.base'}
-          py={'spacingL.base'}
+          px={{ base: 'spacingM.base', md: 'spacingL.base' }}
+          py={{ base: 'spacingM.base', md: 'spacingL.base' }}
           borderRadius={8}
           border={'solid 1px '}
           borderColor={'gray.400'}
@@ -133,7 +141,11 @@ const StepDescription = ({ details, id }) => {
               />
             )}
 
-            <Text fontSize="xs">{details.info}</Text>
+            <Text
+              fontSize={['10px', 'midTxt1.base', 'midTxt1.base', 'midTxt1.lg']}
+            >
+              {details.info}
+            </Text>
           </VStack>
         </Stack>
       </HStack>
