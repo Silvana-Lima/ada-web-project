@@ -19,15 +19,28 @@ import {
   Text,
   useSteps,
 } from '@chakra-ui/react'
+import PropTypes from 'prop-types'
 
 import { steps } from '../../../utils/constants'
 import StepDescription from './StepDescription'
 
-export const LearningPath = () => {
+export const LearningPath = ({ type }) => {
   const { activeStep } = useSteps({
     index: 0,
     count: steps.length,
   })
+
+  // Filtra  tipo
+  const filterSteps = steps.filter(
+    (step) => step.type === type || step.id === 1
+  )
+
+  // Brochure según el tipo
+  // TODO ver de cambiar el href por el nuevo brochure - hay que alojar los nuevos pdf's en el mismo lugar que tienen este🤔
+  const brochureLink =
+    type === 'frontend'
+      ? 'https://adaitw.org/wp-content/uploads/2022/01/Ada-_-Desarrollo-Frontend.pdf'
+      : 'https://adaitw.org/wp-content/uploads/2023/02/Brochure_backend.pdf'
 
   return (
     <Container maxW={'1440px'} bg="gray.200">
@@ -75,8 +88,8 @@ export const LearningPath = () => {
           size="lg"
           // si le agrego height al stepper (para darle espaciado sin desplegar) se superpone el accordion en otros componentes - solucion actual agregar un divider
         >
-          {steps.map((step, index) => (
-            <Step key={index}>
+          {filterSteps.map((step) => (
+            <Step key={step.id}>
               <StepIndicator
                 bg="#FBEDF3"
                 border={'solid 1px'}
@@ -87,7 +100,6 @@ export const LearningPath = () => {
               </StepIndicator>
 
               {/* Accordion */}
-
               <Accordion allowToggle>
                 <AccordionItem>
                   {({ isExpanded }) => (
@@ -136,9 +148,8 @@ export const LearningPath = () => {
           ))}
         </Stepper>
         <Button
-          // TODO ver de cambiar el href por el nuevo brochure - hay que alojar los nuevos pdf's en el mismo lugar que tienen este🤔
           as={Link}
-          href="https://adaitw.org/wp-content/uploads/2022/01/Ada-_-Desarrollo-Frontend.pdf"
+          href={brochureLink}
           isExternal
           w={'max-content'}
           variant={'buttonPrimary'}
@@ -153,4 +164,10 @@ export const LearningPath = () => {
       </Stack>
     </Container>
   )
+}
+
+export default LearningPath
+LearningPath.propTypes = {
+  type: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 }

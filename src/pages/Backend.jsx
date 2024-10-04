@@ -4,6 +4,7 @@ import imageBackend from '@/img-banner-backend.svg'
 
 import { Banner } from '../components/home/Banner'
 import { WhyUs } from '../components/home/whyUs/WhyUs'
+import { LearningPath } from '../components/training/lerningPath/LearningPath'
 import { careersWithAda } from '../utils/constants'
 
 export const Backend = () => {
@@ -28,6 +29,7 @@ export const Backend = () => {
         addButton={false}
         bgColor={'magenta.200'}
       />
+      <LearningPath type="backend" />
     </Container>
   )
 }

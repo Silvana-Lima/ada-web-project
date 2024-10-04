@@ -3,8 +3,8 @@ import { Container, Text } from '@chakra-ui/react'
 import imageFrontend from '@/img-banner-frontend.svg'
 
 import { Banner } from '../components/home/Banner'
-import { LearningPath } from '../components/training/lerningPath/LearningPath'
 import { WhyUs } from '../components/home/whyUs/WhyUs'
+import { LearningPath } from '../components/training/lerningPath/LearningPath'
 import { careersWithAda } from '../utils/constants'
 
 export const Frontend = () => {
@@ -31,7 +31,7 @@ export const Frontend = () => {
         addButton={false}
         bgColor={'purple.200'}
       />
-      <LearningPath />
+      <LearningPath type="frontend" />
     </Container>
   )
 }

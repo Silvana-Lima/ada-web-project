@@ -696,7 +696,6 @@ export const steps = [
       introTitle: 'Introducción a la Programación',
       introDescription:
         'Curso introductorio para que descubras los fundamentos de la programación,  introduciéndote al mundo de JavaScript. Una vez que completes el curso, te ayudaremos con un test vocacional y en caso de elegir continuar con la carrera de Front End, tu próximos pasos en la programación, serán los siguientes.',
-
       schedule: 'Lunes, miércoles y viernes 19:00 a 22:00hs',
       certification: 'Certificado al terminar el curso',
       info: 'Trabajo integrador para tu portfolio',
@@ -705,6 +704,7 @@ export const steps = [
   {
     id: 2,
     title: 'Introducción a Front-End',
+    type: 'frontend',
     details: {
       introTitle: 'Dominio del maquetado: HTML + CSS',
       introDescription:
@@ -717,8 +717,9 @@ export const steps = [
   {
     id: 3,
     title: 'Desarrollo Front-End',
+    type: 'frontend',
     details: {
-      introTitle: 'Trabajando con APIs REST y Programación Asíncrona.',
+      introTitle: 'Trabajando con APIs REST y Programación Asíncrona',
       introDescription:
         'Este módulo avanzado está diseñado para profundizar en las habilidades necesarias para el desarrollo Front End moderno, centrándose en la integración y gestión de APIs REST y la programación asíncrona.',
       schedule: 'Lunes, miércoles y viernes 19:00 a 22:00hs',
@@ -729,6 +730,47 @@ export const steps = [
   {
     id: 4,
     title: 'Front-End avanzado con React',
+    type: 'frontend',
+    details: {
+      introTitle: 'Dominio de componentes, estado, hooks y estilos',
+      introDescription:
+        'Este módulo avanzado está diseñado para desarrollar una comprensión profunda y práctica de React, centrado en el dominio de componentes, manejo del estado, uso de hooks y aplicación de estilos.',
+      schedule: 'Lunes, miércoles y viernes 19:00 a 22:00hs',
+      certification: 'Certificado al terminar el curso',
+      info: 'Duración: 2 meses',
+    },
+  },
+  {
+    id: 5,
+    title: 'Introduccion a Back End',
+    type: 'backend',
+    details: {
+      introTitle: 'Fundamentos de NodeJs',
+      introDescription:
+        'El objetivo es ofrecer una comprensión fundamental de cómo funciona el backend y cómo Node.js facilita el desarrollo de aplicaciones del lado del servidor. Además, se      introducirán conceptos básicos sobre el manejo de solicitudes y respuestas HTTP.',
+      schedule: 'Dos veces por semana',
+      certification: 'Certificado al terminar el curso',
+      info: 'Duración: 2 meses',
+    },
+  },
+  {
+    id: 6,
+    title: 'Desarrollo Back End',
+    type: 'backend',
+    details: {
+      introTitle:
+        'TypeScript, Programación Orientada a Objetos, ExpressJS, API REST y CRUD',
+      introDescription:
+        'Este módulo avanzado está diseñado para desarrollar una comprensión profunda y práctica de React, centrado en el dominio de componentes, manejo del estado, uso de hooks y aplicación de estilos.',
+      schedule: 'Lunes, miércoles y viernes 19:00 a 22:00hs',
+      certification: 'Certificado al terminar el curso',
+      info: 'Duración: 2 meses',
+    },
+  },
+  {
+    id: 7,
+    title: 'Front-End avanzado con React',
+    type: 'backend',
     details: {
       introTitle: 'Dominio de componentes, estado, hooks y estilos.',
       introDescription:
