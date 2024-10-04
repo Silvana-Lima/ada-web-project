@@ -183,6 +183,20 @@ export const Footer = () => {
               <br />
               Colaboración en diseño UI:{' '}
               <ChakraLink
+                href="https://www.linkedin.com/in/dalia-majnemer-959473229/"
+                isExternal
+              >
+                Dalia Majnemer
+              </ChakraLink>{' '}
+              ,{' '}
+              <ChakraLink
+                href="https://www.linkedin.com/in/delavega-mi-be/"
+                isExternal
+              >
+                Michelle Berenice De la Vega
+              </ChakraLink>{' '}
+              y{' '}
+              <ChakraLink
                 href="https://www.linkedin.com/in/alejandratomietto/"
                 isExternal
               >
