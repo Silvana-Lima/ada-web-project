@@ -2,6 +2,7 @@ import { Container } from '@chakra-ui/react'
 
 import allData from '@/all-the-data.svg'
 import imageCareers from '@/img-banner-carreras.svg'
+import vector from '@/vector-why-us.svg'
 
 import { CivicHouseShowcase } from '../components/CivicHouseShowcase'
 import { Awards } from '../components/home/Awards'
@@ -51,6 +52,7 @@ export const Home = () => {
         description={
           'Nuestra misión es reducir la brecha de género en tecnología y esto lo hacemos a través del empoderamiento de las mujeres con cursos de  programación.'
         }
+        vector={vector}
       />
 
       <Testimonials />

@@ -1,6 +1,7 @@
-import { Container, Text } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
 
 import imageBackend from '@/img-banner-backend.svg'
+import vector from '@/vector-why-us-back.svg'
 
 import { Banner } from '../components/home/Banner'
 import { WhyUs } from '../components/home/whyUs/WhyUs'
@@ -19,10 +20,11 @@ export const Backend = () => {
         description={
           'Entendemos los desafíos a los que las mujeres y femineidades nos enfrentamos día a día, por eso queremos acompañarte en tu proceso de aprendizaje y también al finalizar la carrera.'
         }
+        vector={vector}
       />
       <Banner
         img={imageBackend}
-        title={<Text whiteSpace="nowrap">¿Qué es el desarrollo Back-End?</Text>}
+        title={'¿Qué es el desarrollo Back-End?'}
         description={
           'El desarrollo Back-End hace referencia a la capa de nuestra aplicación que se encarga de procesar y manipular toda la data proveniente de la base de datos y de implementar las medidas de ciberseguridad necesarias, de la manera más eficiente posible, en función de los requerimientos del usuario final.'
         }

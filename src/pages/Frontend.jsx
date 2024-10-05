@@ -1,6 +1,7 @@
-import { Container, Text } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
 
 import imageFrontend from '@/img-banner-frontend.svg'
+import vector from '@/vector-why-us-front.svg'
 
 import { Banner } from '../components/home/Banner'
 import { WhyUs } from '../components/home/whyUs/WhyUs'
@@ -19,17 +20,17 @@ export const Frontend = () => {
         description={
           'Entendemos los desafíos a los que las mujeres y femineidades nos enfrentamos día a día, por eso queremos acompañarte en tu proceso de aprendizaje y también al finalizar la carrera.'
         }
+        vector={vector}
       />
       <Banner
         img={imageFrontend}
-        title={
-          <Text whiteSpace="nowrap">¿Qué es el desarrollo Front-End?</Text>
-        }
+        title={' ¿Qué es el desarrollo Front-End?'}
         description={
           'El desarrollo front end consiste en optimizar recursos y diseñar cómo se presenta la información con la que interactúa el usuario en un sitio web o aplicación.'
         }
         addButton={false}
         bgColor={'purple.200'}
+        vector={vector}
       />
       <LearningPath type="frontend" />
     </Container>
