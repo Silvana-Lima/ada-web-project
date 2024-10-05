@@ -2,6 +2,7 @@ import { Container } from '@chakra-ui/react'
 
 import allData from '@/all-the-data.svg'
 import imageCareers from '@/img-banner-carreras.svg'
+import bgVideo from '@/mujer-programacion.mp4'
 import vector from '@/vector-why-us.svg'
 
 import { CivicHouseShowcase } from '../components/CivicHouseShowcase'
@@ -20,7 +21,16 @@ import { whyUs } from '../utils/constants'
 export const Home = () => {
   return (
     <Container maxW={'1440px'}>
-      <Hero />
+      <Hero
+        title="Empoderamos mujeres a través de la tecnología"
+        description="Brindamos capacitaciones en tecnología y potenciamos a mujeres y
+          feminidades para que lideren la revolución tecnológica y den forma a
+          un mañana inclusivo."
+        btnText="Conoce nuestras capacitaciones"
+        route={'/training'}
+        bgVideo={bgVideo}
+        formatVideo="video"
+      />
       <Impact />
       <Banner
         img={imageCareers}
