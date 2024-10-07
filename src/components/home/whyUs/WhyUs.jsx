@@ -11,8 +11,6 @@ import {
 } from '@chakra-ui/react'
 import PropTypes from 'prop-types'
 
-import vector from '@/vector-why-us.svg'
-
 import { WhyUsCard } from './WhyUsCard'
 
 export const WhyUs = ({
@@ -22,6 +20,7 @@ export const WhyUs = ({
   titleBlack2,
   titleColor2,
   description,
+  vector,
 }) => {
   return (
     <Container
@@ -118,17 +117,22 @@ export const WhyUs = ({
           gap={['30px', '30px', '30px', '30px']}
           w={['100%', '400px', '100%', '70%']}
         >
-          {dataCard.map(({ id, title, description, bgColor }) => (
-            <WhyUsCard
-              key={id}
-              title={title}
-              description={description}
-              bgColor={bgColor}
-              maxW={'406px'}
-              pY={'spacingL.base'}
-              pX={'spacingL.base'}
-            />
-          ))}
+          {dataCard.map(
+            ({ id, title, description, bgColor, icon, iconColor, borderW }) => (
+              <WhyUsCard
+                key={id}
+                title={title}
+                description={description}
+                icon={icon}
+                iconColor={iconColor}
+                bgColor={bgColor}
+                borderW={borderW}
+                maxW={'406px'}
+                pY={'spacingL.base'}
+                pX={'spacingL.base'}
+              />
+            )
+          )}
         </Grid>
       </Flex>
     </Container>
@@ -142,4 +146,5 @@ WhyUs.propTypes = {
   titleBlack2: PropTypes.string,
   titleColor2: PropTypes.string,
   description: PropTypes.string.isRequired,
+  vector: PropTypes.string,
 }

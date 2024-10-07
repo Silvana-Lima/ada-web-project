@@ -294,28 +294,36 @@ export const careersWithAda = [
     title: 'Adaptabilidad',
     description:
       'Una carrera que se adapta a tus necesidades y tiempos: Podrás hacer los módulos a tu ritmo.',
-    borderW: '2px',
+    icon: 'simple-icons:recoil',
+    iconColor: '#cd0055',
+    borderW: '1px',
   },
   {
     id: 2,
     title: 'Certificación',
     description:
       'Te otorgaremos un certificado al final de cada módulo, así podrás compartir lo que aprendiste.',
-    borderW: '2px',
+    icon: 'ph:certificate-light',
+    iconColor: '#cd0055',
+    borderW: '1px',
   },
   {
     id: 3,
     title: 'Clases en vivo y grabadas',
     description:
       'Nuestras clases quedan grabadas para posibilitarte cursar de forma asincrónica, en caso de ser necesario.',
-    borderW: '2px',
+    iconColor: '#cd0055',
+    icon: 'mdi:record-rec',
+    borderW: '1px',
   },
   {
     id: 4,
     title: 'Prácticas en vivo y proyectos',
     description:
       'Al ir completando los módulos vas a poder volcar tus conocimientos en un trabajo final que será ideal para sumar a tu porfolio.',
-    borderW: '2px',
+    icon: 'fluent:laptop-briefcase-32-regular',
+    iconColor: '#cd0055',
+    borderW: '1px',
   },
 ]
 

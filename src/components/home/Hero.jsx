@@ -1,9 +1,15 @@
 import { Box, Button, Container, Heading, Text, VStack } from '@chakra-ui/react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-import bgVideo from '@/mujer-programacion.mp4'
-
-export const Hero = () => {
+export const Hero = ({
+  title,
+  description,
+  route,
+  btnText,
+  bgVideo,
+  formatVideo,
+}) => {
   return (
     <Container
       position="relative"
@@ -16,7 +22,7 @@ export const Hero = () => {
       mb={'spacingXl.base'}
     >
       <Box
-        as="video"
+        as={formatVideo}
         autoPlay
         loop
         muted
@@ -52,7 +58,7 @@ export const Hero = () => {
         zIndex={1}
       >
         <Heading as="h1" fontSize={['h1.base', 'h1.base', 'h1.lg', 'h1.xl']}>
-          Empoderamos mujeres a través de la tecnología{' '}
+          {title}{' '}
         </Heading>
         <Text
           fontSize={[
@@ -62,14 +68,21 @@ export const Hero = () => {
             'largeTxt.xl',
           ]}
         >
-          Brindamos capacitaciones en tecnología y potenciamos a mujeres y
-          feminidades para que lideren la revolución tecnológica y den forma a
-          un mañana inclusivo.
+          {description}
         </Text>
-        <Button as={Link} to="/training" variant={'buttonPrimary'} size={'lg'}>
-          Conoce nuestras capacitaciones
+        <Button as={Link} to={route} variant={'buttonPrimary'} size={'lg'}>
+          {btnText}
         </Button>
       </VStack>
     </Container>
   )
+}
+
+Hero.propTypes = {
+  title: PropTypes.node.isRequired,
+  description: PropTypes.string.isRequired,
+  route: PropTypes.string.isRequired,
+  btnText: PropTypes.string.isRequired,
+  bgVideo: PropTypes.string.isRequired,
+  formatVideo: PropTypes.string.isRequired,
 }

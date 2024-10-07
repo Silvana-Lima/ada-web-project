@@ -5,6 +5,8 @@ import PropTypes from 'prop-types'
 export const WhyUsCard = ({
   title,
   description,
+  icon = 'iconoir:community',
+  iconColor,
   bgColor = 'gray.0',
   borderW,
   maxW,
@@ -29,9 +31,10 @@ export const WhyUsCard = ({
     >
       <Box w={'80px'}>
         <Icon
-          icon={'iconoir:community'}
+          icon={icon}
           style={{
             fontSize: `calc(${theme.fontSizes.h2.xl} + 2vw)`,
+            color: `${iconColor}`,
           }}
         />
       </Box>
@@ -67,6 +70,8 @@ export const WhyUsCard = ({
 WhyUsCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  icon: PropTypes.string,
+  iconColor: PropTypes.string,
   bgColor: PropTypes.string,
   borderW: PropTypes.string,
   pY: PropTypes.string,
