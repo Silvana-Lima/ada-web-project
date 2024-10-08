@@ -24,9 +24,10 @@ export const Backend = () => {
           feminidades para que lideren la revolución tecnológica y den forma a
           un mañana inclusivo."
         btnText="Conoce tu ruta de aprendizaje"
-        route="/#learning-path"
+        route="/back-end#learning-path"
         bgVideo={bgVideo}
         formatVideo="img"
+        isHashLink
       />
       <WhyUs
         dataCard={careersWithAda}

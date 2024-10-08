@@ -123,6 +123,7 @@ export const Footer = () => {
               posible este sitio web. <br />
               Diseño, investigación y experiencia de usuario:{' '}
               <ChakraLink
+                textDecoration="underline"
                 href="https://www.linkedin.com/in/karinamonetti"
                 isExternal
               >
@@ -130,6 +131,7 @@ export const Footer = () => {
               </ChakraLink>{' '}
               y{' '}
               <ChakraLink
+                textDecoration="underline"
                 href="https://www.linkedin.com/in/fanimejia/"
                 isExternal
               >
@@ -137,6 +139,7 @@ export const Footer = () => {
               </ChakraLink>
               <br /> Desarrollo web e implementación:{' '}
               <ChakraLink
+                textDecoration="underline"
                 href="https://www.linkedin.com/in/poli-ferreyra/"
                 isExternal
               >
@@ -144,6 +147,7 @@ export const Footer = () => {
               </ChakraLink>{' '}
               y{' '}
               <ChakraLink
+                textDecoration="underline"
                 href="https://www.linkedin.com/in/silvana-lima/"
                 isExternal
               >
@@ -152,6 +156,7 @@ export const Footer = () => {
               <br />
               Gestion de proyecto:{' '}
               <ChakraLink
+                textDecoration="underline"
                 href="https://www.linkedin.com/in/poli-ferreyra/"
                 isExternal
               >
@@ -159,6 +164,7 @@ export const Footer = () => {
               </ChakraLink>{' '}
               y{' '}
               <ChakraLink
+                textDecoration="underline"
                 href="https://www.linkedin.com/in/bernardita-bauque/"
                 isExternal
               >
@@ -167,6 +173,7 @@ export const Footer = () => {
               <br />
               Desarrollo tecnológico:{' '}
               <ChakraLink
+                textDecoration="underline"
                 href="https://www.linkedin.com/in/cintia-p%C3%A1ez-b80a84244/"
                 isExternal
               >
@@ -174,6 +181,7 @@ export const Footer = () => {
               </ChakraLink>
               y{' '}
               <ChakraLink
+                textDecoration="underline"
                 href="https://www.linkedin.com/in/nancy-clarisa-rojas/"
                 isExternal
               >
@@ -183,6 +191,7 @@ export const Footer = () => {
               <br />
               Colaboración en diseño UI:{' '}
               <ChakraLink
+                textDecoration="underline"
                 href="https://www.linkedin.com/in/dalia-majnemer-959473229/"
                 isExternal
               >
@@ -190,6 +199,7 @@ export const Footer = () => {
               </ChakraLink>{' '}
               ,{' '}
               <ChakraLink
+                textDecoration="underline"
                 href="https://www.linkedin.com/in/delavega-mi-be/"
                 isExternal
               >
@@ -197,6 +207,7 @@ export const Footer = () => {
               </ChakraLink>{' '}
               y{' '}
               <ChakraLink
+                textDecoration="underline"
                 href="https://www.linkedin.com/in/alejandratomietto/"
                 isExternal
               >

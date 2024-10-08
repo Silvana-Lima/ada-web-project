@@ -1,6 +1,9 @@
 import { Box, Button, Container, Heading, Text, VStack } from '@chakra-ui/react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
+
+import { handleHashLink } from '../../utils/functions'
 
 export const Hero = ({
   title,
@@ -9,6 +12,7 @@ export const Hero = ({
   btnText,
   bgVideo,
   formatVideo,
+  isHashLink,
 }) => {
   return (
     <Container
@@ -70,7 +74,14 @@ export const Hero = ({
         >
           {description}
         </Text>
-        <Button as={Link} to={route} variant={'buttonPrimary'} size={'lg'}>
+        <Button
+          as={isHashLink ? HashLink : Link}
+          smooth={isHashLink ? true : undefined}
+          scroll={isHashLink ? handleHashLink : undefined}
+          to={route}
+          variant={'buttonPrimary'}
+          size={'lg'}
+        >
           {btnText}
         </Button>
       </VStack>
@@ -85,4 +96,5 @@ Hero.propTypes = {
   btnText: PropTypes.string.isRequired,
   bgVideo: PropTypes.string.isRequired,
   formatVideo: PropTypes.string.isRequired,
+  isHashLink: PropTypes.bool.isRequired,
 }

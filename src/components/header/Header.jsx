@@ -14,6 +14,7 @@ import { NavLink } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
 
 import logoAdaFuscia from '../../assets/logo-fucsia.png'
+import { handleHashLink } from '../../utils/functions'
 import { BurgerMenu } from './BurgerMenu'
 import { EducationMenu } from './EducationMenu'
 import { InstagramCta } from './InstagramCta'
@@ -28,12 +29,6 @@ export const Header = () => {
     }
   }
 
-  // funcion para que el scroll del hashLink se posicione on top
-  const handleToNetWorkBuilder = (el) => {
-    const yOffset = -100
-    const y = el.getBoundingClientRect().top + window.scrollY + yOffset
-    window.scrollTo({ top: y, behavior: 'smooth' })
-  }
   return (
     <Box w="100%" position="sticky" top={0} bg="gray.0" zIndex={100}>
       <InstagramCta />
@@ -105,7 +100,7 @@ export const Header = () => {
                 <Link
                   as={HashLink}
                   smooth
-                  scroll={handleToNetWorkBuilder}
+                  scroll={handleHashLink}
                   to="/#network-builder"
                   maxW={'max-content'}
                   px={'8px'}

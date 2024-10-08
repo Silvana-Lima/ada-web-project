@@ -43,7 +43,7 @@ export const LearningPath = ({ type }) => {
       : 'https://adaitw.org/wp-content/uploads/2023/02/Brochure_backend.pdf'
 
   return (
-    <Container maxW={'1440px'} bg="gray.200">
+    <Container id="learning-path" maxW={'1440px'} bg="gray.200">
       {/* Título y descripción */}
       <Stack
         px={{ base: '32px', md: '32px', lg: '140px' }}
@@ -169,5 +169,5 @@ export const LearningPath = ({ type }) => {
 export default LearningPath
 LearningPath.propTypes = {
   type: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number,
 }
