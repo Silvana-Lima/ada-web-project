@@ -29,7 +29,7 @@ const PersonalData = ({ handleNextStep }) => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({ defaultValues: formData }) // Pre-cargar datos si ya existen
+  } = useForm({ defaultValues: formData })
 
   const onSubmit = (data) => {
     updateFormData(data)
