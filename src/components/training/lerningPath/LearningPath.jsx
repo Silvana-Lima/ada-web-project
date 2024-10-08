@@ -88,7 +88,7 @@ export const LearningPath = ({ type }) => {
           size="lg"
           // si le agrego height al stepper (para darle espaciado sin desplegar) se superpone el accordion en otros componentes - solucion actual agregar un divider
         >
-          {filterSteps.map((step) => (
+          {filterSteps.map((step, index) => (
             <Step key={step.id}>
               <StepIndicator
                 bg="#FBEDF3"
@@ -100,7 +100,7 @@ export const LearningPath = ({ type }) => {
               </StepIndicator>
 
               {/* Accordion */}
-              <Accordion allowToggle>
+              <Accordion defaultIndex={index === 0 ? [0] : []} allowToggle>
                 <AccordionItem>
                   {({ isExpanded }) => (
                     <>
