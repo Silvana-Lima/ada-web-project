@@ -5,14 +5,15 @@ import { Footer } from './components/Footer'
 import { Header } from './components/header/Header'
 import { Whatsapp } from './components/home/Whatsapp'
 import { AboutUs } from './pages/AboutUs'
-import { Home } from './pages/Home'
+// import { Home } from './pages/Home'
 import { IACourse } from './pages/IACourse'
 import { PythonCourse } from './pages/PythonCourse'
 import { QACourse } from './pages/QACourse'
 import { Training } from './pages/Training'
 import { UxUiCourse } from './pages/UxUiCourse'
 import ScrollToTop from './utils/scrollToTop'
-import FormSteps from './pages/Forms/FormSteps'
+// import FormSteps from './pages/Forms/FormSteps'
+import FormX from './pages/form/FormX'
 
 function App() {
   return (
@@ -26,10 +27,10 @@ function App() {
       >
         <ScrollToTop>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<FormX />} />
             <Route path="/aboutUs" element={<AboutUs />} />
             <Route path="/training" element={<Training />} />
-            <Route path="/inscription" element={<FormSteps />} />
+            {/* <Route path="/inscription" element={<FormSteps />} /> */}
             <Route path="/ia" element={<IACourse />} />
             <Route path="/ux-ui" element={<UxUiCourse />} />
             <Route path="/qa" element={<QACourse />} />

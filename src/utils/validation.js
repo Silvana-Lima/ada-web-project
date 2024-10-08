@@ -29,14 +29,14 @@ export const validationRules = {
       message: 'El apellido solo puede contener letras y espacios.',
     },
   },
-  email: {
+  Email: {
     required: 'El correo electrónico es obligatorio.',
     pattern: {
       value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
       message: 'El formato del correo electrónico es inválido.',
     },
   },
-  countryCode: {
+  country: {
     required: 'El código de país es obligatorio.',
     pattern: {
       value: /^\+\d{1,4}$/,
@@ -44,7 +44,7 @@ export const validationRules = {
         'El código de país debe comenzar con un "+" seguido de 1 a 4 dígitos.',
     },
   },
-  phoneNumber: {
+  Phone: {
     required: 'El número de teléfono es obligatorio.',
     pattern: {
       value: /^\d{7,15}$/,
