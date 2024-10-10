@@ -7,7 +7,7 @@ import vector from '@/vector-why-us-back.svg'
 import { Banner } from '../components/home/Banner'
 import { Hero } from '../components/home/Hero'
 import { WhyUs } from '../components/home/whyUs/WhyUs'
-import { SignUp } from '../components/Register'
+import { SignUp } from '../components/SingUp'
 import { LearningPath } from '../components/training/lerningPath/LearningPath'
 import { careersWithAda, singUpBackend } from '../utils/constants'
 
