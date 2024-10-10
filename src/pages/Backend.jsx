@@ -7,8 +7,9 @@ import vector from '@/vector-why-us-back.svg'
 import { Banner } from '../components/home/Banner'
 import { Hero } from '../components/home/Hero'
 import { WhyUs } from '../components/home/whyUs/WhyUs'
+import { SignUp } from '../components/Register'
 import { LearningPath } from '../components/training/lerningPath/LearningPath'
-import { careersWithAda } from '../utils/constants'
+import { careersWithAda, singUpBackend } from '../utils/constants'
 
 export const Backend = () => {
   return (
@@ -50,6 +51,7 @@ export const Backend = () => {
         bgColor={'magenta.200'}
       />
       <LearningPath type="backend" />
+      <SignUp career={singUpBackend} />
     </Container>
   )
 }

@@ -7,8 +7,9 @@ import vector from '@/vector-why-us-front.svg'
 import { Banner } from '../components/home/Banner'
 import { Hero } from '../components/home/Hero'
 import { WhyUs } from '../components/home/whyUs/WhyUs'
+import { SignUp } from '../components/Register'
 import { LearningPath } from '../components/training/lerningPath/LearningPath'
-import { careersWithAda } from '../utils/constants'
+import { careersWithAda, singUpFrontend } from '../utils/constants'
 
 export const Frontend = () => {
   return (
@@ -51,6 +52,7 @@ export const Frontend = () => {
         vector={vector}
       />
       <LearningPath type="frontend" />
+      <SignUp career={singUpFrontend} />
     </Container>
   )
 }

@@ -789,3 +789,25 @@ export const steps = [
     },
   },
 ]
+
+export const singUpFrontend = {
+  modules: [
+    'Introducción a JavaScript',
+    'Introducción a Front End',
+    'Desarrollo Front End',
+    'Front End avanzado',
+  ],
+  classSchedule: 'Lunes, miércoles y viernes De 19:00hs a 21:00hs GMT+',
+  duration: '6 meses',
+}
+
+export const singUpBackend = {
+  modules: [
+    'Introducción a JavaScript',
+    'Introducción a Back End',
+    'Desarrollo Back End',
+    'Back End avanzado',
+  ],
+  classSchedule: 'Lunes, miércoles y viernes De 19:00hs a 21:00hs GMT+',
+  duration: '6 meses',
+}
