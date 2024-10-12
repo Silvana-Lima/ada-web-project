@@ -55,7 +55,7 @@ export const SignUp = ({ career: { modules, classSchedule, duration } }) => {
         borderColor={'magenta.400'}
         gap={['20px', '30px']}
         py={'10px'}
-        px={['10px', '30px']}
+        px={'30px'}
         borderRadius={'10px'}
       >
         <Heading
@@ -76,14 +76,17 @@ export const SignUp = ({ career: { modules, classSchedule, duration } }) => {
           tecnología.
         </Text>
         <SimpleGrid columns={[1, 1, 2, 2]} spacing={[5, 10]} maxW={'614px'}>
-          <Flex gap={['15px', '20px']}>
-            <Icon
-              icon="cil:book"
-              style={{
-                fontSize: `calc(${theme.fontSizes.h2.base} + 2vw)`,
-                color: '#cd0055',
-              }}
-            />
+          <Flex gap={['1px', '15px']}>
+            <Box w={'50px'}>
+              <Icon
+                icon="cil:book"
+                style={{
+                  fontSize: `calc(${theme.fontSizes.h2.base} + 2vw)`,
+                  color: '#cd0055',
+                }}
+              />
+            </Box>
+
             <Box>
               <Text
                 color={'gray.800'}
@@ -111,14 +114,17 @@ export const SignUp = ({ career: { modules, classSchedule, duration } }) => {
               </UnorderedList>
             </Box>
           </Flex>
-          <Flex gap={['15px', '20px']}>
-            <Icon
-              icon="gala:clock"
-              style={{
-                fontSize: `calc(${theme.fontSizes.h2.base} + 3vw)`,
-                color: '#cd0055',
-              }}
-            />
+          <Flex gap={['10px', '15px']}>
+            <Box w={'50px'}>
+              <Icon
+                icon="gala:clock"
+                style={{
+                  fontSize: `calc(${theme.fontSizes.h2.base} + 2vw)`,
+                  color: '#cd0055',
+                }}
+              />
+            </Box>
+
             <Box>
               <Text
                 color={'gray.800'}
@@ -144,14 +150,17 @@ export const SignUp = ({ career: { modules, classSchedule, duration } }) => {
               </Text>
             </Box>
           </Flex>
-          <Flex gap={['15px', '20px']}>
-            <Icon
-              icon="ph:certificate-light"
-              style={{
-                fontSize: `calc(${theme.fontSizes.h2.base} + 3vw)`,
-                color: '#cd0055',
-              }}
-            />
+          <Flex gap={['10px', '20px']}>
+            <Box w={'50px'}>
+              <Icon
+                icon="ph:certificate-light"
+                style={{
+                  fontSize: `calc(${theme.fontSizes.h2.base} + 3vw)`,
+                  color: '#cd0055',
+                }}
+              />
+            </Box>
+
             <Box>
               <Text
                 fontSize={[
@@ -172,14 +181,17 @@ export const SignUp = ({ career: { modules, classSchedule, duration } }) => {
               </Text>
             </Box>
           </Flex>
-          <Flex gap={['15px', '20px']}>
-            <Icon
-              icon="ion:calendar-outline"
-              style={{
-                fontSize: `calc(${theme.fontSizes.h2.base} + 2vw)`,
-                color: '#cd0055',
-              }}
-            />
+          <Flex gap={['0px', '15px']}>
+            <Box w={'50px'}>
+              <Icon
+                icon="ion:calendar-outline"
+                style={{
+                  fontSize: `calc(${theme.fontSizes.h2.base} + 2vw)`,
+                  color: '#cd0055',
+                }}
+              />
+            </Box>
+
             <Box>
               <Text
                 color={'gray.800'}
@@ -210,6 +222,7 @@ export const SignUp = ({ career: { modules, classSchedule, duration } }) => {
           as={NavLink}
           to="/inscription"
           variant={'buttonPrimary'}
+          px={'32px'}
           mb={'10px'}
         >
           Inscribirme
