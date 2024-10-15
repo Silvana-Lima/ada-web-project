@@ -58,7 +58,7 @@ export const Careers = () => {
       </Box>
       {/* seccion javascript */}
       <Stack
-        bg={'gray.600'}
+        bg={'magenta.600'}
         maxW={'100%'}
         px={{ base: '32px', md: '32px', lg: '140px' }}
         py={{ base: '40px', md: '40px', lg: '80px' }}
@@ -81,8 +81,6 @@ export const Careers = () => {
                 styles={{
                   color: 'yellow.600',
                   fontWeight: 'bold',
-                  fontSize: '30px',
-                  // textShadow: '5px 3px 0px rgba(240,240,0,0.7)',
                 }}
               >
                 Introducción a la programación con javascript
@@ -130,8 +128,9 @@ export const Careers = () => {
               maxW={'max-content'}
               borderRadius="full"
               variant="solid"
-              bg="gray.800"
-              color={'gray.0'}
+              bg="yellow.600"
+              fontWeight={'bold'}
+              color={'magenta.600'}
             >
               Duración: 2 meses
             </Tag>
@@ -140,8 +139,9 @@ export const Careers = () => {
               maxW={'max-content'}
               borderRadius="full"
               variant="solid"
-              bg="gray.800"
-              color={'gray.0'}
+              bg="yellow.600"
+              fontWeight={'bold'}
+              color={'magenta.600'}
             >
               Certificado
             </Tag>
@@ -150,8 +150,9 @@ export const Careers = () => {
               maxW={'max-content'}
               borderRadius="full"
               variant="solid"
-              bg="gray.800"
-              color={'gray.0'}
+              bg="yellow.600"
+              fontWeight={'bold'}
+              color={'magenta.600'}
             >
               Dos veces por semana
             </Tag>
@@ -200,7 +201,7 @@ export const Careers = () => {
       <SimpleGrid columns={{ base: 1, lg: 2 }}>
         {/* frontend */}
         <Stack
-          bg="yellow.100"
+          bg="gray.200"
           maxW={'100%'}
           py={{ base: '32px', md: '32px', lg: '80px' }}
           px={{ base: '32px', md: '32px', lg: '' }}
@@ -213,7 +214,7 @@ export const Careers = () => {
             fontSize={['h1.base', 'h1.base', 'h1.lg', 'h1.xl']}
             color={'gray.800'}
             maxW={'280px'}
-            textShadow={'1px 4px 0px rgba(240,240,0,0.7)'}
+            textShadow={'4px 4px 2px rgba(205,0,85,0.6)'}
           >
             Carrera <br /> Frontend
           </Heading>
@@ -233,7 +234,7 @@ export const Careers = () => {
               query="Frontend"
               styles={{
                 color: 'magenta.400',
-                textShadow: '1px 4px 0px rgba(240,240,0,0.7)',
+                fontWeight: 'bold',
               }}
             >
               El desarrollo Frontend maneja el lenguaje de programación
@@ -246,11 +247,13 @@ export const Careers = () => {
           <Button
             as={Link}
             mt={10}
-            href={''}
+            // TODO el link del brochure no funciona - y no hay pdf aprobados con los programas - sacamos el boton? me pasas otro Bernie - me pasas otro enlace de brochure?
+            // href={''}
             isExternal
             w={'max-content'}
-            bg="gray.800"
-            color="gray.0"
+            variant={'buttonPrimary'}
+            // bg="gray.800"
+            // color="yellow.600"
             textDecoration={'none'}
             size={'lg'}
             _hover={{ textDecoration: 'none' }}
@@ -275,7 +278,7 @@ export const Careers = () => {
             fontSize={['h1.base', 'h1.base', 'h1.lg', 'h1.xl']}
             color={'gray.800'}
             maxW={'280px'}
-            textShadow={'1px 4px 0px rgba(240,240,0,0.7)'}
+            textShadow={'4px 4px 2px rgba(205,0,85,0.6)'}
           >
             Carrera <br /> Backend
           </Heading>
@@ -295,7 +298,7 @@ export const Careers = () => {
               query="Backend"
               styles={{
                 color: 'magenta.400',
-                textShadow: '1px 4px 0px rgba(240,240,0,0.7)',
+                fontWeight: 'bold',
               }}
             >
               Backend hace referencia a la capa de nuestra aplicación que se
@@ -309,11 +312,13 @@ export const Careers = () => {
           <Button
             as={Link}
             mt={10}
-            href={''}
+            // TODO el link del brochure no funciona - y no hay pdf aprobados con los programas - sacamos el boton? me pasas otro Bernie - me pasas otro enlace de brochure?
+            // href={''}
             isExternal
             w={'max-content'}
-            bg="gray.800"
-            color="gray.0"
+            variant={'buttonPrimary'}
+            // bg="gray.800"
+            // color="yellow.600"
             textDecoration={'none'}
             size={'lg'}
             _hover={{ textDecoration: 'none' }}

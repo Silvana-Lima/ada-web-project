@@ -19,7 +19,7 @@ export const NextBeginnings = () => {
       >
         <Box
           maxW={'838px'}
-          maxH={{ base: '40px', md: '196px' }} // base: 24px h mas los 16 de padding
+          maxH={{ base: '40px', md: '196px' }} 
           textAlign={'center'}
         >
           <Heading

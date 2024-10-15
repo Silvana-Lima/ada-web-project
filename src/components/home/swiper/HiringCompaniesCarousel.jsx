@@ -17,8 +17,6 @@ import gire from '/hiringCompanies/gire.svg'
 import globant from '/hiringCompanies/globant.svg'
 import ibm from '/hiringCompanies/ibm.svg'
 import meli from '/hiringCompanies/meli.svg'
-// import neoris from '/hiringCompanies/neoris.png'
-// import { employerLogos } from '../../../utils/constants'
 
 export const HiringCompaniesCarousel = () => {
   return (

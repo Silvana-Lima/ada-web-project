@@ -45,7 +45,7 @@ export const Frontend = () => {
         img={imageFrontend}
         title={' ¿Qué es el desarrollo Front-End?'}
         description={
-          'El desarrollo front end consiste en optimizar recursos y diseñar cómo se presenta la información con la que interactúa el usuario en un sitio web o aplicación.'
+          'El desarrollo front end consiste en optimizar recursos y diseñar cómo se presenta la información con la que interactúa el usuario en un sitio web o aplicación.'
         }
         addButton={false}
         bgColor={'purple.200'}

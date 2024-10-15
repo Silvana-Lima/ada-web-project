@@ -15,16 +15,11 @@ export const AboutUs = () => {
   return (
     <Container maxW={'1440px'}>
       <AboutUsSection />
-
       <WhyAda />
-
-      {/* <OurStory /> */}
-
       <TeamWork />
       <FoundersProfiles />
       <PaymentOptions />
       <Testimonials />
-      {/* <BlogComponent /> */}
       <SupportUs />
       <CivicHouseShowcase />
     </Container>

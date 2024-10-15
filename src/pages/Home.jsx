@@ -41,6 +41,7 @@ export const Home = () => {
         }
         addButton={true}
         btnText={'Ir a carreras'}
+        btnLink={'/careers'}
         bgColor={'magenta.200'}
       />
       <Banner
@@ -51,6 +52,7 @@ export const Home = () => {
         }
         addButton={true}
         btnText={'Ir a cursos'}
+        btnLink={'/training'}
         bgColor={'orange.200'}
       />
 

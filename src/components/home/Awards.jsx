@@ -17,7 +17,6 @@ import { awards } from '../../utils/constants'
 export const Awards = () => {
   return (
     <Stack
-      // este bg seria mejor no ponerlo y que quede el fondo gray.0 como el resto de la pagina
       bg={'gray.0'}
       py={['64px', '64px', '64px', '120px']}
       px={['40px', '40px', '40px', '80px']}

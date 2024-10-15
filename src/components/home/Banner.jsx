@@ -17,6 +17,7 @@ export const Banner = ({
   addButton,
   btnText,
   bgColor,
+  btnLink,
 }) => {
   return (
     <Stack bg={bgColor} justifyContent={'center'}>
@@ -55,9 +56,8 @@ export const Banner = ({
           >
             {description}
           </Text>
-          {/* TODO ver de agregar condicional - carrera o curso - cambiar el path */}
           {addButton && (
-            <Button as={Link} to="/careers" size={'lg'} w={['100%', '382px']}>
+            <Button as={Link} to={btnLink} size={'lg'} w={['100%', '382px']}>
               {btnText}
             </Button>
           )}
@@ -74,4 +74,5 @@ Banner.propTypes = {
   btnText: PropTypes.string,
   bgColor: PropTypes.string.isRequired,
   addButton: PropTypes.bool.isRequired,
+  btnLink: PropTypes.string,
 }

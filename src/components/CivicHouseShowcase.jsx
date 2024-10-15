@@ -4,8 +4,6 @@ import logoCivicHouse from '../assets/logo-CivicHouse.png'
 
 export const CivicHouseShowcase = () => {
   return (
-    // <Show above="md">
-    // <Box>
     <Container maxW={'1440px'} py={{ base: '20px', md: '48px' }}>
       <Flex
         gap={'12px'}
@@ -30,7 +28,5 @@ export const CivicHouseShowcase = () => {
         </Box>
       </Flex>
     </Container>
-    // </Box>
-    // </Show>
   )
 }

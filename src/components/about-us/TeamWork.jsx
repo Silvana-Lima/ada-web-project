@@ -11,11 +11,6 @@ import { teamWork } from '../../utils/constants'
 import { TeamCard } from './TeamCard'
 
 export const TeamWork = () => {
-  // const isMobile = useBreakpointValue({
-  //   base: true,
-  //   md: false,
-  // })
-
   return (
     <Container maxW={'1440px'} bg="gray.200">
       <Stack

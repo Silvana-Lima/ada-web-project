@@ -38,6 +38,7 @@ const StepDescription = ({ details, id }) => {
         >
           {details.introDescription}
         </Text>
+        {/* TODO modificar texto - actualmente muestra el mismo en todos los steps  */}
         <Link
           href="mailto:sol@adaitw.com.ar?subject=Tengo conocimientos en Javascript&body=Hola Sol,%0A%0AYa tengo conocimientos en Javascript y me gustaría saber cómo inscribirme en una carrera. ¿Cuáles serían mis próximos pasos?.%0A%0AGracias!"
           isExternal

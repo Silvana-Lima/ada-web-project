@@ -14,11 +14,7 @@ export const HiringCompanies = () => {
       spacing={{ base: '16px', md: '40px' }}
     >
       <Stack maxW={'1386px'} alignItems="center" align="start">
-        <Box
-          maxW={'838px'}
-          // h={{ base: '24px', md: '196px' }}
-          textAlign={'center'}
-        >
+        <Box maxW={'838px'} textAlign={'center'}>
           <Heading
             pb={{ base: '16px', md: '24px' }}
             fontSize={['h1.base', 'h1.base', 'h1.lg', 'h1.xl']}

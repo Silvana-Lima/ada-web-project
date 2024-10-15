@@ -24,8 +24,7 @@ export const OurGoald = () => {
       linkProps={{
         to: 'aboutUs/#payment-options',
         as: HashLink,
-
-        // smooth: true,
+        smooth: true,
       }}
     />
   )

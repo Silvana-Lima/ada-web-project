@@ -39,9 +39,6 @@ export const CoursesMenuBox = ({ onClose }) => {
             </h2>
             <AccordionPanel pb={4}>
               <MenuItem
-                // as={Link}
-                // href="https://adaitw.org/wp-content/uploads/2022/01/Ada-_-Desarrollo-Frontend.pdf"
-                // isExternal
                 as={RouterLink}
                 to="/front-end"
                 onClick={handleCloseBurgerMenu}

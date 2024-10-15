@@ -43,7 +43,7 @@ export const Testimonials = () => {
             hemos tenido en la vida de nuestras alumnas.
           </Text>
         </Container>
-        {/* </Show> */}
+
         <Container maxW={'1164px'} centerContent>
           <Grid
             templateColumns={[
@@ -60,25 +60,6 @@ export const Testimonials = () => {
             ]}
             gap={'40px'}
           >
-            {/* <Hide below="lg">
-              {studentTestimonials.map(
-                ({ name, career, comment, photo, id, enterprise }) => {
-                  if (enterprise) {
-                    return (
-                      <TestimonyCard
-                        key={id}
-                        comment={comment}
-                        name={name}
-                        career={career}
-                        photo={photo}
-                        h={['345px', '260px', '300px', '400px']}
-                      />
-                    )
-                  }
-                  return null
-                }
-              )}
-            </Hide> */}
             {/* <Show below="lg"> */}
             {studentTestimonials
               .slice(0, 6)
@@ -98,7 +79,6 @@ export const Testimonials = () => {
                 }
                 return null
               })}
-            {/* </Show> */}
           </Grid>
         </Container>
       </Container>

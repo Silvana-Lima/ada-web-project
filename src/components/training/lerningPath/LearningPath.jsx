@@ -36,11 +36,13 @@ export const LearningPath = ({ type }) => {
   )
 
   // Brochure según el tipo
-  // TODO ver de cambiar el href por el nuevo brochure - hay que alojar los nuevos pdf's en el mismo lugar que tienen este🤔
-  const brochureLink =
-    type === 'frontend'
-      ? 'https://adaitw.org/wp-content/uploads/2022/01/Ada-_-Desarrollo-Frontend.pdf'
-      : 'https://adaitw.org/wp-content/uploads/2023/02/Brochure_backend.pdf'
+
+  // TODO los path no son los actuales - modificar cuando esten diseñados y activos
+
+  // const brochureLink =
+  //   type === 'frontend'
+  //     ? 'https://adaitw.org/wp-content/uploads/2022/01/Ada-_-Desarrollo-Frontend.pdf'
+  //     : 'https://adaitw.org/wp-content/uploads/2023/02/Brochure_backend.pdf'
 
   return (
     <Container id="learning-path" maxW={'1440px'} bg="gray.200">
@@ -149,7 +151,8 @@ export const LearningPath = ({ type }) => {
         </Stepper>
         <Button
           as={Link}
-          href={brochureLink}
+          // TODO no hay programas aprobados - se comenta hasta que esten diseñados y activos
+          // href={brochureLink}
           isExternal
           w={'max-content'}
           variant={'buttonPrimary'}

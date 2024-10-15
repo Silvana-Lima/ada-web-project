@@ -1,5 +1,4 @@
 import { extendTheme } from '@chakra-ui/react'
-//import type { StyleFunctionProps } from '@chakra-ui/styled-system'
 
 const breakpoints = {
   sm: '30em', // 480px

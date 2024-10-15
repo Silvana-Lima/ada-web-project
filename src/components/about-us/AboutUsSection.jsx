@@ -1,5 +1,3 @@
-// import { Box, Show } from '@chakra-ui/react'
-
 import AboutUsImg from '../../assets/image/bannerUsImg.png'
 import networkingImg from '../../assets/networkingImg.png'
 import { BannerDisplay } from '../BannerDisplay'

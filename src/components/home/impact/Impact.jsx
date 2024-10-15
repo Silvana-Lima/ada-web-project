@@ -5,7 +5,6 @@ import { ImpactCard } from './ImpactCard'
 export const Impact = () => {
   return (
     <Container maxW={['360px', '1235px']}>
-      {/* 1155px + 80px padding */}
       <Flex
         maxW={'100%'}
         color={'gray.800'}

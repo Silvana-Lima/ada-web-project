@@ -15,7 +15,6 @@ import { useTheme } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-//import customTheme from '../../themes/theme'
 
 export const CoursesCard = ({
   title,

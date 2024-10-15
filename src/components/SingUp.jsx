@@ -218,9 +218,10 @@ export const SignUp = ({ career: { modules, classSchedule, duration } }) => {
             </Box>
           </Flex>
         </SimpleGrid>
+        {/* TODO este boton deberia abrir un modal con el formulario que se usa en las page de los cursos */}
         <Button
           as={NavLink}
-          to="/inscription"
+          // to="/inscription"
           variant={'buttonPrimary'}
           px={'32px'}
           mb={'10px'}

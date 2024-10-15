@@ -187,7 +187,6 @@ export const Footer = () => {
               >
                 Nancy Rojas
               </ChakraLink>{' '}
-              {/* <ChakraLink>Angelly Sepúlveda Garcia </ChakraLink> */}
               <br />
               Colaboración en diseño UI:{' '}
               <ChakraLink
