@@ -248,8 +248,9 @@ export const Careers = () => {
             as={Link}
             mt={10}
             // TODO el link del brochure no funciona - y no hay pdf aprobados con los programas - sacamos el boton? me pasas otro Bernie - me pasas otro enlace de brochure?
-            // href={''}
-            isExternal
+            // Mientras tanto redirige a la page de la carrera
+            href={'/front-end'}
+            // isExternal
             w={'max-content'}
             variant={'buttonPrimary'}
             // bg="gray.800"
@@ -313,8 +314,9 @@ export const Careers = () => {
             as={Link}
             mt={10}
             // TODO el link del brochure no funciona - y no hay pdf aprobados con los programas - sacamos el boton? me pasas otro Bernie - me pasas otro enlace de brochure?
-            // href={''}
-            isExternal
+            // Mientras tanto redirige a la page de la carrera
+            href={'/back-end'}
+            //isExternal
             w={'max-content'}
             variant={'buttonPrimary'}
             // bg="gray.800"
