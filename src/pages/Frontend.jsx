@@ -7,8 +7,9 @@ import vector from '@/vector-why-us-front.svg'
 import { Banner } from '../components/home/Banner'
 import { Hero } from '../components/home/Hero'
 import { WhyUs } from '../components/home/whyUs/WhyUs'
+import { SignUp } from '../components/SingUp'
 import { LearningPath } from '../components/training/lerningPath/LearningPath'
-import { careersWithAda } from '../utils/constants'
+import { careersWithAda, singUpFrontend } from '../utils/constants'
 
 export const Frontend = () => {
   return (
@@ -24,9 +25,10 @@ export const Frontend = () => {
           feminidades para que lideren la revolución tecnológica y den forma a
           un mañana inclusivo."
         btnText="Conoce tu ruta de aprendizaje"
-        route="/#learning-path"
+        route="/front-end#learning-path"
         bgVideo={bgVideo}
         formatVideo="img"
+        isHashLink
       />
       <WhyUs
         dataCard={careersWithAda}
@@ -50,6 +52,7 @@ export const Frontend = () => {
         vector={vector}
       />
       <LearningPath type="frontend" />
+      <SignUp career={singUpFrontend} />
     </Container>
   )
 }

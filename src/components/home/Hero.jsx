@@ -1,14 +1,18 @@
-import { Box, Container, Heading, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Container, Heading, Text, VStack } from '@chakra-ui/react'
 import PropTypes from 'prop-types'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
+
+import { handleHashLink } from '../../utils/functions'
 
 export const Hero = ({
   title,
   description,
-  // route,
-  // btnText,
+  route,
+  btnText,
   bgVideo,
   formatVideo,
+  isHashLink,
 }) => {
   return (
     <Container
@@ -70,11 +74,16 @@ export const Hero = ({
         >
           {description}
         </Text>
-        {/* TODO desarrollo de una nueva pagina que contenga carreras y cursos - a la cual se acceda c/este boton - la logica esta funcionando*/}
-
-        {/* <Button as={Link} to={route} variant={'buttonPrimary'} size={'lg'}>
+        <Button
+          as={isHashLink ? HashLink : Link}
+          smooth={isHashLink ? true : undefined}
+          scroll={isHashLink ? handleHashLink : undefined}
+          to={route}
+          variant={'buttonPrimary'}
+          size={'lg'}
+        >
           {btnText}
-        </Button> */}
+        </Button>
       </VStack>
     </Container>
   )
@@ -87,4 +96,5 @@ Hero.propTypes = {
   btnText: PropTypes.string.isRequired,
   bgVideo: PropTypes.string.isRequired,
   formatVideo: PropTypes.string.isRequired,
+  isHashLink: PropTypes.bool.isRequired,
 }

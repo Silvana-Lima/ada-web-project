@@ -39,8 +39,7 @@ const StepDescription = ({ details, id }) => {
           {details.introDescription}
         </Text>
         <Link
-          // TODO falta colocar mail a quien se redirige
-          href=""
+          href="mailto:sol@adaitw.com.ar?subject=Tengo conocimientos en Javascript&body=Hola Sol,%0A%0AYa tengo conocimientos en Javascript y me gustaría saber cómo inscribirme en una carrera. ¿Cuáles serían mis próximos pasos?.%0A%0AGracias!"
           isExternal
           fontSize={['midTxt.base', 'midTxt.base', 'midTxt.lg', 'midTxt.xl']}
           maxW={'max-content'}

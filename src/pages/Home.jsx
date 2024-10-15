@@ -2,7 +2,7 @@ import { Container } from '@chakra-ui/react'
 
 import allData from '@/all-the-data.svg'
 import imageCareers from '@/img-banner-carreras.svg'
-import bgVideo from '@/mujer-programacion.mp4'
+import bgVideo from '@/mujer-programacion.gif'
 import vector from '@/vector-why-us.svg'
 
 import { CivicHouseShowcase } from '../components/CivicHouseShowcase'
@@ -29,7 +29,8 @@ export const Home = () => {
         btnText="Conoce nuestras capacitaciones"
         route={'/training'}
         bgVideo={bgVideo}
-        formatVideo="video"
+        formatVideo="img"
+        isHashLink={false}
       />
       <Impact />
       <Banner
