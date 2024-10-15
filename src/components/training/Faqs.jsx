@@ -107,6 +107,7 @@ export const Faqs = () => {
                     <AccordionIcon color={'magenta.400'} fontSize="20px" />
                   </AccordionButton>
                 </h2>
+                {/* TODO si los textos son extensos en algunos input no se ve el texto completo - solucionar */}
                 <AccordionPanel pb={4}>{faq.answer}</AccordionPanel>
               </AccordionItem>
             ))}

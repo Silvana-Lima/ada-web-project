@@ -55,9 +55,9 @@ export const Banner = ({
           >
             {description}
           </Text>
-
+          {/* TODO ver de agregar condicional - carrera o curso - cambiar el path */}
           {addButton && (
-            <Button as={Link} to="/training" size={'lg'} w={['100%', '382px']}>
+            <Button as={Link} to="/careers" size={'lg'} w={['100%', '382px']}>
               {btnText}
             </Button>
           )}

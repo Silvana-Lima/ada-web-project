@@ -1,12 +1,12 @@
-import { Box, Button, Container, Heading, Text, VStack } from '@chakra-ui/react'
+import { Box, Container, Heading, Text, VStack } from '@chakra-ui/react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 export const Hero = ({
   title,
   description,
-  route,
-  btnText,
+  // route,
+  // btnText,
   bgVideo,
   formatVideo,
 }) => {
@@ -70,9 +70,11 @@ export const Hero = ({
         >
           {description}
         </Text>
-        <Button as={Link} to={route} variant={'buttonPrimary'} size={'lg'}>
+        {/* TODO desarrollo de una nueva pagina que contenga carreras y cursos - a la cual se acceda c/este boton - la logica esta funcionando*/}
+
+        {/* <Button as={Link} to={route} variant={'buttonPrimary'} size={'lg'}>
           {btnText}
-        </Button>
+        </Button> */}
       </VStack>
     </Container>
   )

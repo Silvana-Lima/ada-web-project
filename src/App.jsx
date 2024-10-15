@@ -15,6 +15,7 @@ import { QACourse } from './pages/QACourse'
 import { Training } from './pages/Training'
 import { UxUiCourse } from './pages/UxUiCourse'
 import ScrollToTop from './utils/scrollToTop'
+import { Careers } from './pages/Careers'
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path="/python" element={<PythonCourse />} />
             <Route path="/front-end" element={<Frontend />} />
             <Route path="/back-end" element={<Backend />} />
+            <Route path="/careers" element={<Careers />} />
           </Routes>
         </ScrollToTop>
       </Stack>
