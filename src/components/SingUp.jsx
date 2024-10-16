@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Container,
   Flex,
   Heading,
@@ -13,9 +12,10 @@ import {
 } from '@chakra-ui/react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import PropTypes from 'prop-types'
-import { NavLink } from 'react-router-dom'
 
+// import { NavLink } from 'react-router-dom'
 import theme from '../themes/theme'
+import { ModalFormInscription } from './training/ModalFormInscription'
 
 export const SignUp = ({ career: { modules, classSchedule, duration } }) => {
   return (
@@ -218,8 +218,8 @@ export const SignUp = ({ career: { modules, classSchedule, duration } }) => {
             </Box>
           </Flex>
         </SimpleGrid>
-        {/* TODO este boton deberia abrir un modal con el formulario que se usa en las page de los cursos */}
-        <Button
+        <ModalFormInscription />
+        {/* <Button
           as={NavLink}
           // to="/inscription"
           variant={'buttonPrimary'}
@@ -227,7 +227,7 @@ export const SignUp = ({ career: { modules, classSchedule, duration } }) => {
           mb={'10px'}
         >
           Inscribirme
-        </Button>
+        </Button> */}
       </VStack>
     </Container>
   )
