@@ -114,6 +114,16 @@ export const Faqs = () => {
                   overflow="auto"
                   h={'100px'}
                   color="gray.700"
+                  // scrollbar
+                  css={{
+                    '&::-webkit-scrollbar': {
+                      width: '4px',
+                    },
+                    '&::-webkit-scrollbar-thumb': {
+                      background: '#cd0055',
+                      borderRadius: '4px',
+                    },
+                  }}
                 />
               </AccordionPanel>
             </AccordionItem>
