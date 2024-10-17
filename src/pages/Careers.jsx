@@ -215,6 +215,8 @@ export const Careers = () => {
             color={'gray.800'}
             maxW={'280px'}
             textShadow={'4px 4px 2px rgba(205,0,85,0.6)'}
+            wordBreak={'break-word'}
+            overflowWrap={'anywhere'}
           >
             Carrera <br /> Frontend
           </Heading>
@@ -228,6 +230,7 @@ export const Careers = () => {
             ]}
             color={'gray.800'}
             maxW={'360px'}
+            textAlign={'justify'}
             flexGrow={1}
           >
             <Highlight
@@ -247,14 +250,9 @@ export const Careers = () => {
           <Button
             as={Link}
             mt={10}
-            // TODO el link del brochure no funciona - y no hay pdf aprobados con los programas - sacamos el boton? me pasas otro Bernie - me pasas otro enlace de brochure?
-            // Mientras tanto redirige a la page de la carrera
             href={'/front-end'}
-            // isExternal
             w={'max-content'}
             variant={'buttonPrimary'}
-            // bg="gray.800"
-            // color="yellow.600"
             textDecoration={'none'}
             size={'lg'}
             _hover={{ textDecoration: 'none' }}
@@ -280,6 +278,8 @@ export const Careers = () => {
             color={'gray.800'}
             maxW={'280px'}
             textShadow={'4px 4px 2px rgba(205,0,85,0.6)'}
+            wordBreak={'break-word'}
+            overflowWrap={'anywhere'}
           >
             Carrera <br /> Backend
           </Heading>
@@ -293,6 +293,7 @@ export const Careers = () => {
             ]}
             color={'gray.800'}
             maxW={'360px'}
+            textAlign={'justify'}
             flexGrow={1}
           >
             <Highlight
@@ -313,14 +314,9 @@ export const Careers = () => {
           <Button
             as={Link}
             mt={10}
-            // TODO el link del brochure no funciona - y no hay pdf aprobados con los programas - sacamos el boton? me pasas otro Bernie - me pasas otro enlace de brochure?
-            // Mientras tanto redirige a la page de la carrera
             href={'/back-end'}
-            //isExternal
             w={'max-content'}
             variant={'buttonPrimary'}
-            // bg="gray.800"
-            // color="yellow.600"
             textDecoration={'none'}
             size={'lg'}
             _hover={{ textDecoration: 'none' }}

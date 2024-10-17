@@ -7,7 +7,6 @@ import {
   AccordionPanel,
   Box,
   Button,
-  Collapse,
   Heading,
   IconButton,
   Input,
@@ -15,6 +14,7 @@ import {
   InputLeftElement,
   InputRightElement,
   Stack,
+  Textarea,
 } from '@chakra-ui/react'
 import { useState } from 'react'
 
@@ -86,35 +86,42 @@ export const Faqs = () => {
             </InputRightElement>
           )}
         </InputGroup>
-        {/* Collapse con FAQS */}
-        <Collapse startingHeight={300} in={showFaqs > 4}>
-          <Accordion allowMultiple>
-            {filteredFaqs.slice(0, showFaqs).map((faq, index) => (
-              <AccordionItem
-                key={index}
-                boxShadow="md"
-                mb={2}
-                rounded="md"
-                p={'10px'}
+
+        {/* Accordion con FAQS */}
+        <Accordion allowMultiple>
+          {filteredFaqs.slice(0, showFaqs).map((faq, index) => (
+            <AccordionItem
+              key={index}
+              boxShadow="md"
+              mb={4}
+              rounded="md"
+              p={'10px'}
+            >
+              <AccordionButton
+                _expanded={{ bg: 'purple.100', fontWeight: 'bold' }}
               >
-                <h2>
-                  <AccordionButton
-                    _expanded={{ bg: 'purple.100', fontWeight: 'bold' }}
-                  >
-                    <Box as="span" flex="1" textAlign="left">
-                      {faq.question}
-                    </Box>
-                    <AccordionIcon color={'magenta.400'} fontSize="20px" />
-                  </AccordionButton>
-                </h2>
-                {/* TODO si los textos son extensos en algunos input no se ve el texto completo - solucionar */}
-                <AccordionPanel pb={4}>{faq.answer}</AccordionPanel>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </Collapse>
+                <Box as="span" flex="1" textAlign="left">
+                  {faq.question}
+                </Box>
+                <AccordionIcon color={'magenta.400'} fontSize="20px" />
+              </AccordionButton>
+              <AccordionPanel pb={4}>
+                <Textarea
+                  value={faq.answer}
+                  isReadOnly
+                  variant="unstyled"
+                  resize="none"
+                  overflow="auto"
+                  h={'100px'}
+                  color="gray.700"
+                />
+              </AccordionPanel>
+            </AccordionItem>
+          ))}
+        </Accordion>
+
         {filteredFaqs.length > 4 && (
-          <Button onClick={handleToggle}>
+          <Button onClick={handleToggle} pt={4}>
             Mostrar {showFaqs >= filteredFaqs.length ? 'Menos' : 'Más'}
           </Button>
         )}

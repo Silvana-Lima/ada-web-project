@@ -88,7 +88,6 @@ export const LearningPath = ({ type }) => {
           color={'magenta.400'}
           orientation="vertical"
           size="lg"
-          // si le agrego height al stepper (para darle espaciado sin desplegar) se superpone el accordion en otros componentes - solucion actual agregar un divider
         >
           {filterSteps.map((step, index) => (
             <Step key={step.id}>
@@ -122,12 +121,15 @@ export const LearningPath = ({ type }) => {
                         <StepDescription
                           color={'black'}
                           details={step.details}
+                          textLink={
+                            step.id === 1
+                              ? '¿Ya tenes conocimiento en Javascript? Comunícate con nosotros acá.'
+                              : ''
+                          }
                           id={step.id}
                         />
                       </AccordionPanel>
 
-                      {/* le agrego este divider transparente para poder agregar el espacio si el accordion no esta desplegado */}
-                      {/* TODO habria que ver si existe otra manera de hacerlo */}
                       {!isExpanded && (
                         <Divider
                           orientation="vertical"

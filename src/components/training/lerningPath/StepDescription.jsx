@@ -2,7 +2,7 @@ import { HStack, Link, Stack, Text, useTheme, VStack } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
 
-const StepDescription = ({ details, id }) => {
+const StepDescription = ({ details, id, textLink }) => {
   const theme = useTheme()
 
   return (
@@ -38,7 +38,6 @@ const StepDescription = ({ details, id }) => {
         >
           {details.introDescription}
         </Text>
-        {/* TODO modificar texto - actualmente muestra el mismo en todos los steps  */}
         <Link
           href="mailto:sol@adaitw.com.ar?subject=Tengo conocimientos en Javascript&body=Hola Sol,%0A%0AYa tengo conocimientos en Javascript y me gustaría saber cómo inscribirme en una carrera. ¿Cuáles serían mis próximos pasos?.%0A%0AGracias!"
           isExternal
@@ -50,7 +49,7 @@ const StepDescription = ({ details, id }) => {
           textDecoration="underline"
           alignSelf={'flex-end'}
         >
-          ¿Ya tenes conocimientos en Javascript? Comunicate acá
+          {textLink}
         </Link>
       </Stack>
 
@@ -152,5 +151,6 @@ const StepDescription = ({ details, id }) => {
 export default StepDescription
 StepDescription.propTypes = {
   details: PropTypes.string.isRequired,
+  textLink: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
 }
