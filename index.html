@@ -1,16 +1,69 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/src/assets/short-icon-ada.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ada ITW</title>
-</head>
+    <!-- TODO revisar etiquetas meta y el script de la estructura de datos - temporalmente se agrega la url de instagram - hay que modificar por la url del sitio web -->
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+    <!-- Meta Tags Básicas -->
+    <title>Ada ITW</title>
+    <meta
+      name="description"
+      content="ADA ITW es una organización dedicada a empoderar mujeres a traves de la tecnología."
+    />
+    <meta name="author" content="ADA ITW" />
+    <meta
+      name="keywords"
+      content="ONG, ADA ITW, IT, mujeres, empoderar, frontend, desarrollo web, backend, AI, QA"
+    />
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="ADA ITW" />
+    <meta
+      property="og:description"
+      content="ADA ITW es una organización dedicada a empoderar mujeres a traves de la tecnologia."
+    />
+    <meta property="og:image" content="/src/assets/imagen-social.png" />
+    <meta property="og:url" content="https://www.instagram.com/adaitw/" />
+    <meta property="og:type" content="website" />
+
+    <!-- geo tags-->
+    <meta name="geo.region" content="AR-B" />
+    <meta name="geo.placename" content="Buenos Aires" />
+    <meta name="geo.position" content="-34.607568;-58.437089" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ADA ITW" />
+    <meta
+      name="twitter:description"
+      content="ADA ITW es una organización dedicada a empoderar mujeres a traves de la tecnologia."
+    />
+    <meta name="twitter:image" content="/src/assets/imagen-twitter.png" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.instagram.com/adaitw/" />
+
+    <!-- Estructura de Datos -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ADA ITW",
+        "url": "https://www.instagram.com/adaitw/",
+        "logo": "https://www.tusitio.com/src/assets/logo.png",
+        "description": "ADA ITW es una organización dedicada a empoderar mujeres a traves de la tecnologia.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+5491131033575"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
