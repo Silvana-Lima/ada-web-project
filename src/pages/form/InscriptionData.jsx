@@ -13,7 +13,7 @@ import {
   Text,
 } from '@chakra-ui/react'
 import womanWorking from '../../assets/woman-working.png'
-import { MdArrowForwardIos } from 'react-icons/md'
+import { MdArrowForward, MdArrowForwardIos } from 'react-icons/md'
 import { useMultiStepFormContext } from '../../context/MultiStepFormContext'
 
 const InscriptionData = ({
@@ -55,7 +55,6 @@ const InscriptionData = ({
       <Box display={{ base: 'none', md: 'flex' }} justifyContent="center">
         <Image src={womanWorking} alt="Persona trabajando" objectFit="cover" />
       </Box>
-      
 
       <Heading as={'h5'} fontSize={['h5.base', 'h5.base', 'h5.base', 'h5.xl']}>
         ¿Qué te interesa aprender?
@@ -98,8 +97,12 @@ const InscriptionData = ({
               {...register('career', { required: 'Selecciona una carrera' })}
               defaultValue={selectedCareer}
             >
-              <option value="front">Carrera en Desarrollo web front-end</option>
-              <option value="back">Carrera en Desarrollo web back-end</option>
+              <option value="frontend-online">
+                Carrera en Desarrollo web front-end
+              </option>
+              <option value="backend-en línea">
+                Carrera en Desarrollo web back-end
+              </option>
             </Select>
             <FormErrorMessage>{errors.career?.message}</FormErrorMessage>
           </FormControl>
@@ -125,8 +128,11 @@ const InscriptionData = ({
           <FormErrorMessage>{errors.basicKnowledge?.message}</FormErrorMessage>
         </FormControl>
         <HStack justifyContent="space-around" mt={4}>
-          <Button variant="link" onClick={prevStep}>
-            Ir atrás
+          <Button type="button" mt={4} onClick={prevStep}>
+            <HStack justifyContent="space-between" w="100%">
+              <Text> Ir atrás</Text>
+              <MdArrowForward />
+            </HStack>
           </Button>
           <Button type="submit" mt={4}>
             <HStack justifyContent="space-between" w="100%">

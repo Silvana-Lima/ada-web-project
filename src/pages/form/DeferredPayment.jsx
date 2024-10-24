@@ -11,27 +11,17 @@ import {
   Textarea,
   FormErrorMessage,
 } from '@chakra-ui/react'
+import { MdArrowForward } from 'react-icons/md'
 
-const DeferredPayment = ({
-  formData,
-  updateFormData,
-  handleNextStep,
-  handleBack,
-}) => {
+const DeferredPayment = ({ formData, onSubmit, handleBack }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({ defaultValues: formData })
 
-  const onSubmit = (data) => {
-    updateFormData({ ...formData, data })
-    handleNextStep()
-    console.log('avanzo4 deferred', data)
-  }
-
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <fieldset onSubmit={handleSubmit(onSubmit)}>
       <Text as="h4" fontSize="lg">
         Para poder solicitar el Pago Diferido deberás completar los siguientes
         campos.
@@ -117,11 +107,14 @@ const DeferredPayment = ({
 
       <HStack justifyContent="space-around" mt={4}>
         <Button variant="link" onClick={handleBack}>
-          Ir atrás
+          <HStack justifyContent="space-between" w="100%">
+            <Text> Ir atrás</Text>
+            <MdArrowForward />
+          </HStack>
         </Button>
         <Button type="submit">Siguiente</Button>
       </HStack>
-    </form>
+    </fieldset>
   )
 }
 
