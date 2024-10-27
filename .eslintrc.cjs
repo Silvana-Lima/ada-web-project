@@ -18,5 +18,6 @@ module.exports = {
     'prettier/prettier': ['warn', { endOfLine: 'auto' }],
     'simple-import-sort/imports': 'warn',
     'simple-import-sort/exports': 'warn',
+      'react/prop-types': 'off', 
   },
 }

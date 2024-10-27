@@ -9,13 +9,13 @@ import { Backend } from './pages/Backend'
 import { Frontend } from './pages/Frontend'
 import { Home } from './pages/Home'
 import { IACourse } from './pages/IACourse'
-import { InscriptionForm } from './pages/InscriptionForm'
 import { PythonCourse } from './pages/PythonCourse'
 import { QACourse } from './pages/QACourse'
 import { Training } from './pages/Training'
 import { UxUiCourse } from './pages/UxUiCourse'
 import ScrollToTop from './utils/scrollToTop'
 import { Careers } from './pages/Careers'
+import FormSteps from './pages/form/FormSteps'
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/aboutUs" element={<AboutUs />} />
             <Route path="/training" element={<Training />} />
-            <Route path="/inscription" element={<InscriptionForm />} />
+            <Route path="/inscription" element={<FormSteps />} />
             <Route path="/ia" element={<IACourse />} />
             <Route path="/ux-ui" element={<UxUiCourse />} />
             <Route path="/qa" element={<QACourse />} />
