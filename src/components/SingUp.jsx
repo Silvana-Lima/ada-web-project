@@ -219,15 +219,6 @@ export const SignUp = ({ career: { modules, classSchedule, duration } }) => {
           </Flex>
         </SimpleGrid>
         <ModalFormInscription />
-        {/* <Button
-          as={NavLink}
-          // to="/inscription"
-          variant={'buttonPrimary'}
-          px={'32px'}
-          mb={'10px'}
-        >
-          Inscribirme
-        </Button> */}
       </VStack>
     </Container>
   )

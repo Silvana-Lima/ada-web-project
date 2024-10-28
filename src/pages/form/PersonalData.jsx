@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 
-import { useForm } from 'react-hook-form'
 import {
   Box,
   Button,
@@ -11,17 +10,20 @@ import {
   GridItem,
   Heading,
   HStack,
+  Image,
   Input,
   // Select,
   Stack,
   Text,
-  Image,
 } from '@chakra-ui/react'
+import { useForm } from 'react-hook-form'
 import { MdArrowForwardIos } from 'react-icons/md'
-import bgVectorForm from '../../assets/bg-vector-form.png'
+
+// import womanTech from '../../assets/woman-tech.png'
+import womanTech from '../../assets/imgForm.png'
+import { useMultiStepFormContext } from '../../context/MultiStepFormContext'
 // import { countries } from '../../utils/countries'
 import { validationRules } from '../../utils/validation'
-import { useMultiStepFormContext } from '../../context/MultiStepFormContext'
 
 const PersonalData = ({ handleNextStep }) => {
   const { updateFormData, formData } = useMultiStepFormContext()
@@ -98,6 +100,7 @@ const PersonalData = ({ handleNextStep }) => {
           </FormControl>
 
           <HStack>
+            {/* TODO pais no va? */}
             {/* <FormControl isInvalid={errors.country}>
               <FormLabel htmlFor="country">Código de país</FormLabel>
               <Select
@@ -145,7 +148,7 @@ const PersonalData = ({ handleNextStep }) => {
           h="100%"
         >
           <Image
-            src={bgVectorForm}
+            src={womanTech}
             alt="Imagen de fondo"
             objectFit="cover"
             maxHeight="90%"

@@ -1,7 +1,4 @@
-import { useEffect } from 'react'
-import { useForm } from 'react-hook-form'
 import {
-  Image,
   Box,
   Button,
   FormControl,
@@ -9,12 +6,17 @@ import {
   FormLabel,
   Heading,
   HStack,
+  Image,
   Select,
   Text,
 } from '@chakra-ui/react'
-import womanWorking from '../../assets/woman-working.png'
+import { useEffect } from 'react'
+import { useForm } from 'react-hook-form'
 import { MdArrowForwardIos } from 'react-icons/md'
+
+import womanWorking from '../../assets/woman-working.png'
 import { useMultiStepFormContext } from '../../context/MultiStepFormContext'
+import { RiArrowLeftLine } from 'react-icons/ri'
 
 const InscriptionData = ({
   handleNextStep,
@@ -55,8 +57,6 @@ const InscriptionData = ({
       <Box display={{ base: 'none', md: 'flex' }} justifyContent="center">
         <Image src={womanWorking} alt="Persona trabajando" objectFit="cover" />
       </Box>
-      
-
       <Heading as={'h5'} fontSize={['h5.base', 'h5.base', 'h5.base', 'h5.xl']}>
         ¿Qué te interesa aprender?
       </Heading>
@@ -125,8 +125,8 @@ const InscriptionData = ({
           <FormErrorMessage>{errors.basicKnowledge?.message}</FormErrorMessage>
         </FormControl>
         <HStack justifyContent="space-around" mt={4}>
-          <Button variant="link" onClick={prevStep}>
-            Ir atrás
+          <Button color={'magenta.400'} variant="link" onClick={prevStep}>
+            <RiArrowLeftLine /> Ir atrás
           </Button>
           <Button type="submit" mt={4}>
             <HStack justifyContent="space-between" w="100%">

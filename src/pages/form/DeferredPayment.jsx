@@ -11,6 +11,7 @@ import {
   Textarea,
   FormErrorMessage,
 } from '@chakra-ui/react'
+import { RiArrowLeftLine } from 'react-icons/ri'
 
 const DeferredPayment = ({
   formData,
@@ -116,8 +117,8 @@ const DeferredPayment = ({
       </FormControl>
 
       <HStack justifyContent="space-around" mt={4}>
-        <Button variant="link" onClick={handleBack}>
-          Ir atrás
+        <Button color={'magenta.400'} variant="link" onClick={handleBack}>
+          <RiArrowLeftLine /> Ir atrás
         </Button>
         <Button type="submit">Siguiente</Button>
       </HStack>

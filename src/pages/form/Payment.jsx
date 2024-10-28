@@ -15,6 +15,7 @@ import DeferredPayment from './DeferredPayment'
 import { useForm } from 'react-hook-form'
 import { useMultiStepFormContext } from '../../context/MultiStepFormContext'
 import { MdArrowForwardIos } from 'react-icons/md'
+import { RiArrowLeftLine } from 'react-icons/ri'
 
 const Payment = ({ isCareer, handleNextStep, prevStep }) => {
   const { updateFormData, formData } = useMultiStepFormContext()
@@ -138,17 +139,23 @@ const Payment = ({ isCareer, handleNextStep, prevStep }) => {
 
         {/* Mostrar el formulario de pago diferido según la selección */}
         {selectedPaymentMethod === 'Diferido 25%' && (
-          <DeferredPayment onSubmit={handleSubmitDeferredPayment} />
+          <DeferredPayment
+            handleBack={prevStep}
+            onSubmit={handleSubmitDeferredPayment}
+          />
         )}
 
         {selectedPaymentMethod === 'Diferido 50%' && (
-          <DeferredPayment onSubmit={handleSubmitDeferredPayment} />
+          <DeferredPayment
+            handleBack={prevStep}
+            onSubmit={handleSubmitDeferredPayment}
+          />
         )}
 
         {selectedPaymentMethod === 'Pago tradicional' && (
           <HStack justifyContent="space-around" mt={4}>
-            <Button variant="link" onClick={prevStep}>
-              Ir atrás
+            <Button color={'magenta.400'} variant="link" onClick={prevStep}>
+              <RiArrowLeftLine /> Ir atrás
             </Button>
             <Button type="submit" mt={4}>
               <HStack justifyContent="space-between" w="100%">

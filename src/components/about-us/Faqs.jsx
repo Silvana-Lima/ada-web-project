@@ -43,7 +43,7 @@ export const Faqs = () => {
     <Stack
       maxW={'1440px'}
       bg="gray.200"
-      py={{ base: '40px', md: '40px', lg: '120px' }}
+      py={{ base: '40px', md: '40px', lg: '50px' }}
       justifyContent={'center'}
       alignItems={'center'}
       spacing={['16px', '52px']}

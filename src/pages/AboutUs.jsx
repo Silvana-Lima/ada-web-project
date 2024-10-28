@@ -1,6 +1,7 @@
 import { Container } from '@chakra-ui/react'
 
 import { AboutUsSection } from '../components/about-us/AboutUsSection'
+import { Faqs } from '../components/about-us/Faqs'
 import { FoundersProfiles } from '../components/about-us/FoundersProfiles'
 // import { BlogComponent } from '../components/about-us/BlogComponent'
 // import { OurStory } from '../components/about-us/OurStory'
@@ -19,6 +20,7 @@ export const AboutUs = () => {
       <TeamWork />
       <FoundersProfiles />
       <PaymentOptions />
+      <Faqs />
       <Testimonials />
       <SupportUs />
       <CivicHouseShowcase />

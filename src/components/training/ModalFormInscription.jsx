@@ -15,7 +15,7 @@ export const ModalFormInscription = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <>
-      <Button onClick={onOpen}>Inscribime</Button>
+      <Button onClick={onOpen}>Inscribirme</Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />

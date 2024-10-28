@@ -9,7 +9,7 @@ export const Testimonials = () => {
       <Container
         maxW={['100%', '1344px']}
         px={['spacingM.base', 'spacingM.base', 'spacingM.base', 'spacingXl.xl']}
-        py={['spacingXl.lg', 'spacingXl.lg', 'spacingXl.lg', '80px']}
+        py={['spacingXl.lg', 'spacingXl.lg', 'spacingXl.lg', '50px']}
       >
         {/* <Show below="lg"> */}
         <Container maxWidth={['100%', '100%', '100%', '838px']} p={0}>

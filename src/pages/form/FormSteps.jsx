@@ -10,13 +10,14 @@ import {
   useToast,
 } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
-import PersonalData from './PersonalData'
-import bgForm from '../../assets/bg-form.png'
 import { useForm } from 'react-hook-form'
-import InscriptionData from './InscriptionData'
-import Payment from './Payment'
+
+import bgForm from '../../assets/bg-form.png'
 import formSended from '../../assets/form-sended.png'
 import { useMultiStepFormContext } from '../../context/MultiStepFormContext'
+import InscriptionData from './InscriptionData'
+import Payment from './Payment'
+import PersonalData from './PersonalData'
 
 const FormSteps = () => {
   const toast = useToast()
@@ -127,7 +128,7 @@ const FormSteps = () => {
                   <HStack key={index}>
                     <Box
                       bg={step === index + 1 ? 'magenta.400' : 'gray.300'}
-                      color="gray.0"
+                      color="magenta.400"
                       borderRadius="50%"
                       w={8}
                       h={8}
