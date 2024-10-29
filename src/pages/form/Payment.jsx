@@ -45,12 +45,10 @@ const Payment = ({ isCareer, handleNextStep, prevStep }) => {
   const onSubmit = (data) => {
     updateFormData(data)
     handleNextStep()
-    console.log('avanzo3', data)
   }
   const handleSubmitDeferredPayment = (data) => {
     updateFormData(data)
     handleNextStep()
-    console.log('Datos del pago diferido:', data)
   }
 
   return (

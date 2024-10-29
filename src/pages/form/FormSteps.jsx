@@ -202,13 +202,13 @@ const FormSteps = () => {
                     maxW={['100%', '100%', '300px']}
                   />
                   <Text as="h4" fontSize="lg">
-                    haz postulado a: {formData.career || formData.course}
+                    Haz postulado a: {formData.career || formData.course}
                   </Text>
                   <Text as="h4" fontSize="lg">
-                    haz seleccionado el método de pago :{formData.paymentMethod}
+                    Haz seleccionado el método de pago :{formData.paymentMethod}
                   </Text>
                   <Text as="h4" fontSize="lg">
-                    haz en : {formData.installments}
+                    Haz en : {formData.installments}
                   </Text>
                   <Heading>¡Formulario enviado!</Heading>
                   <Text>

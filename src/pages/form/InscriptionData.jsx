@@ -47,7 +47,6 @@ const InscriptionData = ({
   const onSubmit = (data) => {
     updateFormData(data)
     handleNextStep()
-    console.log('avanzo2', data)
   }
 
   return (

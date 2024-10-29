@@ -34,7 +34,6 @@ const PersonalData = ({ handleNextStep }) => {
   const onSubmit = (data) => {
     updateFormData(data)
     handleNextStep()
-    console.log('avanzo', data, formData)
   }
 
   return (
