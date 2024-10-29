@@ -27,33 +27,29 @@ const Payment = ({ isCareer, handleNextStep, prevStep }) => {
   } = useForm({ defaultValues: formData })
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('')
   const [paymentOptions, setPaymentOptions] = useState([
-    '1 cuota',
-    '3 cuotas',
-    '6 cuotas',
+    '1-cuotas',
+    '3-cuotas',
+    '6-cuotas',
   ])
 
   const handlePaymentMethodChange = (e) => {
     const selectedMethod = e.target.value
     setSelectedPaymentMethod(selectedMethod)
 
-    if (selectedMethod === 'Pago tradicional') {
-      setPaymentOptions(['1 cuota', '3 cuotas', '6 cuotas'])
-    } else if (
-      selectedMethod === 'Diferido 25%' ||
-      selectedMethod === 'Diferido 50%'
-    ) {
-      setPaymentOptions(['12 cuotas', '24 cuotas'])
+    if (selectedMethod === 'Tradicional') {
+      setPaymentOptions(['1-cuota', '3-cuotas', '6-cuotas'])
+    } else if (selectedMethod === 'PD 25%' || selectedMethod === 'PD 50%') {
+      setPaymentOptions(['12-cuotas', '24-cuotas'])
     }
   }
 
   const onSubmit = (data) => {
     updateFormData(data)
     handleNextStep()
-    console.log('avanzo3', data)
   }
   const handleSubmitDeferredPayment = (data) => {
-    console.log('Datos del pago diferido:', data)
-    // Aquí puedes hacer el POST a tu backend con la información del formulario de pago diferido
+    updateFormData(data)
+    handleNextStep()
   }
 
   return (
@@ -93,18 +89,18 @@ const Payment = ({ isCareer, handleNextStep, prevStep }) => {
             borderColor="gray.400"
           >
             <option value="">Selecciona</option>
-            <option value="Pago tradicional">Pago tradicional</option>
+            <option value="Tradicional">Pago tradicional</option>
             {isCareer && (
               <>
-                <option value="Diferido 25%">Diferido 25%</option>
-                <option value="Diferido 50%">Diferido 50%</option>
+                <option value="PD 25%">Diferido 25%</option>
+                <option value="PD 50%">Diferido 50%</option>
               </>
             )}
           </Select>
           <Text color="red.500">{errors.paymentMethod?.message}</Text>
         </FormControl>
 
-        {selectedPaymentMethod === 'Diferido 25%' && (
+        {selectedPaymentMethod === 'PD 25%' && (
           <Text as="h4" fontSize="sm">
             Si optas por nuestro plan de pago diferido, solo pagas el 25% de la
             carrera mientras estudias y el resto lo abonas después de obtener un
@@ -112,7 +108,7 @@ const Payment = ({ isCareer, handleNextStep, prevStep }) => {
           </Text>
         )}
 
-        {selectedPaymentMethod === 'Diferido 50%' && (
+        {selectedPaymentMethod === 'PD 50%' && (
           <Text as="h4" fontSize="sm">
             Si optas por nuestro plan de pago diferido, solo pagas el 50% de la
             carrera mientras estudias y el resto lo abonas después de obtener un
@@ -138,21 +134,28 @@ const Payment = ({ isCareer, handleNextStep, prevStep }) => {
         </FormControl>
 
         {/* Mostrar el formulario de pago diferido según la selección */}
-        {selectedPaymentMethod === 'Diferido 25%' && (
+        {selectedPaymentMethod === 'PD 25%' && (
           <DeferredPayment
             handleBack={prevStep}
             onSubmit={handleSubmitDeferredPayment}
           />
         )}
 
-        {selectedPaymentMethod === 'Diferido 50%' && (
+        {selectedPaymentMethod === 'PD 50%' && (
           <DeferredPayment
             handleBack={prevStep}
             onSubmit={handleSubmitDeferredPayment}
           />
         )}
+        {selectedPaymentMethod === 'PD 25%' && (
+          <DeferredPayment onSubmit={handleSubmitDeferredPayment} />
+        )}
 
-        {selectedPaymentMethod === 'Pago tradicional' && (
+        {selectedPaymentMethod === 'PD 50%' && (
+          <DeferredPayment onSubmit={handleSubmitDeferredPayment} />
+        )}
+
+        {selectedPaymentMethod === 'Tradicional' && (
           <HStack justifyContent="space-around" mt={4}>
             <Button color={'magenta.400'} variant="link" onClick={prevStep}>
               <RiArrowLeftLine /> Ir atrás

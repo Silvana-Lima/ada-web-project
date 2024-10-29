@@ -36,7 +36,6 @@ const PersonalData = ({ handleNextStep }) => {
   const onSubmit = (data) => {
     updateFormData(data)
     handleNextStep()
-    console.log('avanzo', data, formData)
   }
 
   return (
@@ -87,37 +86,30 @@ const PersonalData = ({ handleNextStep }) => {
             />
             <FormErrorMessage>{errors.Email?.message}</FormErrorMessage>
           </FormControl>
-
-          <FormControl isInvalid={errors.date}>
-            <FormLabel htmlFor="date">Fecha de nacimiento</FormLabel>
-            <Input
-              id="date"
-              type="date"
-              borderColor="gray.400"
-              {...register('date', validationRules.date)}
-            />
-            <FormErrorMessage>{errors.date?.message}</FormErrorMessage>
-          </FormControl>
-
           <HStack>
-            {/* TODO pais no va? */}
-            {/* <FormControl isInvalid={errors.country}>
-              <FormLabel htmlFor="country">Código de país</FormLabel>
-              <Select
+            <FormControl isInvalid={errors.date}>
+              <FormLabel htmlFor="date">Fecha de nacimiento</FormLabel>
+              <Input
+                id="date"
+                type="date"
+                borderColor="gray.400"
+                {...register('date', validationRules.date)}
+              />
+              <FormErrorMessage>{errors.date?.message}</FormErrorMessage>
+            </FormControl>
+            <FormControl isInvalid={errors.country}>
+              <FormLabel htmlFor="country">País de residencia</FormLabel>
+              <Input
                 id="country"
-                placeholder="Código de país"
+                type="text"
+                placeholder="País de residencia"
                 borderColor="gray.400"
                 {...register('country', validationRules.country)}
-              >
-                {countries.map((code, index) => (
-                  <option key={index} value={code}>
-                    {'+1' + index}
-                  </option>
-                ))}
-              </Select>
+              />
               <FormErrorMessage>{errors.country?.message}</FormErrorMessage>
-            </FormControl> */}
-
+            </FormControl>
+          </HStack>
+          <HStack>
             <FormControl isInvalid={errors.Phone}>
               <FormLabel htmlFor="Phone">Número de teléfono</FormLabel>
               <Input

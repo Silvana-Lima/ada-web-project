@@ -18,6 +18,7 @@ import { useMultiStepFormContext } from '../../context/MultiStepFormContext'
 import InscriptionData from './InscriptionData'
 import Payment from './Payment'
 import PersonalData from './PersonalData'
+import { Link } from 'react-router-dom'
 
 const FormSteps = () => {
   const toast = useToast()
@@ -35,7 +36,7 @@ const FormSteps = () => {
   })
 
   useEffect(() => {
-    reset(formData) // Esto asegura que los datos en el contexto se sincronicen
+    reset(formData)
   }, [formData, reset])
 
   const selectedCareer = watch('career')
@@ -51,12 +52,13 @@ const FormSteps = () => {
         },
         body: JSON.stringify(formData),
       })
+      if (response.ok) {
+        updateFormData({})
+      }
       if (!response.ok) {
         throw new Error('Error en la solicitud: ' + response.statusText)
       }
-
       setStep(5)
-
       toast({
         title: 'Formulario enviado con éxito',
         status: 'success',
@@ -75,6 +77,7 @@ const FormSteps = () => {
       })
     }
   }
+
   const prevStep = () => setStep(step - 1)
 
   const nextStep = async () => {
@@ -171,10 +174,22 @@ const FormSteps = () => {
               )}
               {step === 4 && (
                 <>
+                  <Image
+                    src={formSended}
+                    alt="Imagen de éxito"
+                    mx="auto"
+                    maxW={['100%', '100%', '300px']}
+                  />
                   <Text as="h4" fontSize="lg">
                     Estas postulando a: {formData.career || formData.course}
                   </Text>
-
+                  <Text as="h4" fontSize="lg">
+                    Estas seleccionando el método de pago :{' '}
+                    {formData.paymentMethod}
+                  </Text>
+                  <Text as="h4" fontSize="lg">
+                    En {formData.installments}
+                  </Text>
                   <Button onClick={() => onSubmit()}>Enviar Formulario</Button>
                 </>
               )}
@@ -188,14 +203,20 @@ const FormSteps = () => {
                     maxW={['100%', '100%', '300px']}
                   />
                   <Text as="h4" fontSize="lg">
-                    haz postulando a: {formData.career || formData.course}
+                    Haz postulado a: {formData.career || formData.course}
+                  </Text>
+                  <Text as="h4" fontSize="lg">
+                    Haz seleccionado el método de pago :{formData.paymentMethod}
+                  </Text>
+                  <Text as="h4" fontSize="lg">
+                    Haz en : {formData.installments}
                   </Text>
                   <Heading>¡Formulario enviado!</Heading>
                   <Text>
                     En breve nos pondremos en contacto contigo para continuar
                     con el proceso de inscripción.
                   </Text>
-                  <Button onClick={() => (window.location.href = '/')}>
+                  <Button as={Link} to={'/'}>
                     Volver al inicio
                   </Button>
                 </Stack>

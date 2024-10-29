@@ -49,7 +49,6 @@ const InscriptionData = ({
   const onSubmit = (data) => {
     updateFormData(data)
     handleNextStep()
-    console.log('avanzo2', data)
   }
 
   return (
@@ -98,8 +97,12 @@ const InscriptionData = ({
               {...register('career', { required: 'Selecciona una carrera' })}
               defaultValue={selectedCareer}
             >
-              <option value="front">Carrera en Desarrollo web front-end</option>
-              <option value="back">Carrera en Desarrollo web back-end</option>
+              <option value="frontend-online">
+                Carrera en Desarrollo web front-end
+              </option>
+              <option value="backend-en línea">
+                Carrera en Desarrollo web back-end
+              </option>
             </Select>
             <FormErrorMessage>{errors.career?.message}</FormErrorMessage>
           </FormControl>
