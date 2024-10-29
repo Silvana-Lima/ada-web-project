@@ -19,6 +19,7 @@ import img1 from '../../assets/image/blogImg1.png'
 import img2 from '../../assets/image/blogImg2.png'
 import img3 from '../../assets/image/blogImg3.png'
 
+// TODO este componente se comenzo a hacer según diseño pero se decidio no renderizarlo aún por no tener de donde tomar la informacion (Decicion de Di)
 export const BlogComponent = () => {
   const isMobile = useBreakpointValue({ base: true, md: true, lg: false })
   return (

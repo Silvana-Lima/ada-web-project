@@ -6,6 +6,8 @@ import { Header } from './components/header/Header'
 import { Whatsapp } from './components/home/Whatsapp'
 import { AboutUs } from './pages/AboutUs'
 import { Backend } from './pages/Backend'
+import { Careers } from './pages/Careers'
+import FormSteps from './pages/form/FormSteps'
 import { Frontend } from './pages/Frontend'
 import { Home } from './pages/Home'
 import { IACourse } from './pages/IACourse'
@@ -14,8 +16,6 @@ import { QACourse } from './pages/QACourse'
 import { Training } from './pages/Training'
 import { UxUiCourse } from './pages/UxUiCourse'
 import ScrollToTop from './utils/scrollToTop'
-import { Careers } from './pages/Careers'
-import FormSteps from './pages/form/FormSteps'
 
 function App() {
   return (

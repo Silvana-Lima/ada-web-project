@@ -12,7 +12,7 @@ export const SuccessInfo = () => {
       py={{ base: '60px', md: '80px' }}
       alignItems={'center'}
       spacing={{ base: '16px', md: '24px' }}
-      bg={'purple.600'}
+      bg={'magenta.400'}
     >
       {/* IMAGEN */}
       <Box maxW={'400px'} maxH={'230px'}>
@@ -25,7 +25,7 @@ export const SuccessInfo = () => {
       <Box maxW={'857px'} maxH={'100px'} color={'gray.0'}>
         <Text textAlign={'center'} fontSize={['18px', '18px', '25px', '35px']}>
           ¿Sabías que más del 40% de nuestras egresAdas ya{' '}
-          <Mark bg="yellow.600" color="purple.600" fontWeight="bold">
+          <Mark bg="yellow.600" color="magenta.600" fontWeight="bold">
             consiguieron trabajo en tecnología?
           </Mark>
         </Text>

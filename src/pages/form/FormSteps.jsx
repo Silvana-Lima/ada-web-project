@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
 
 import bgForm from '../../assets/bg-form.png'
 import formSended from '../../assets/form-sended.png'
@@ -18,7 +19,6 @@ import { useMultiStepFormContext } from '../../context/MultiStepFormContext'
 import InscriptionData from './InscriptionData'
 import Payment from './Payment'
 import PersonalData from './PersonalData'
-import { Link } from 'react-router-dom'
 
 const FormSteps = () => {
   const toast = useToast()

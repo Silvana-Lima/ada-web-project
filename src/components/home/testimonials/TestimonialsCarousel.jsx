@@ -1,13 +1,10 @@
-// Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/grid'
 import 'swiper/css/pagination'
 import './swiperTestimonials.css'
 
 import { Box } from '@chakra-ui/react'
-// import required modules
 import { Grid, Pagination } from 'swiper/modules'
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { studentTestimonials } from '../../../utils/constants'

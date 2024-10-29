@@ -1,12 +1,9 @@
-// Import Swiper React components
-// Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import './styles.css'
 
 import { Image } from '@chakra-ui/react'
-// import required modules
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -45,6 +42,7 @@ export const HiringCompaniesCarousel = () => {
           },
         }}
       >
+        {/* TODO con el map en loop infinito no funciona - se deja codigo para mejorar a futuro */}
         {/* {employerLogos.map(({ id, logo }) => (
           <SwiperSlide key={id}>
             <Box boxSize={{ base: '80px', md: '220px' }} maxH="100%">

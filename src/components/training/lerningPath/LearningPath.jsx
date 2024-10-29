@@ -83,7 +83,6 @@ export const LearningPath = ({ type }) => {
         py={{ base: '40px', md: '40px', lg: '80px' }}
       >
         <Stepper
-          // TODO no logro modificarle el color del borde por defecto (azul) al primer step - al activeStep
           index={activeStep}
           color={'magenta.400'}
           orientation="vertical"

@@ -1,44 +1,56 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Tags Básicas -->
+    <title>Ada ITW</title>
+    <meta
+      name="description"
+      content="ADA ITW es una organización dedicada a empoderar mujeres a traves de la tecnología."
+    />
+    <meta name="author" content="ADA ITW" />
+    <meta
+      name="keywords"
+      content="ONG, ADA ITW, IT, mujeres, empoderar, frontend, desarrollo web, backend, AI, QA"
+    />
 
-  <!-- TODO revisar etiquetas meta y el script de la estructura de datos - temporalmente se agrega la url de instagram - hay que modificar por la url del sitio web -->
+    <!-- Open Graph -->
+    <meta property="og:title" content="ADA ITW" />
+    <meta
+      property="og:description"
+      content="ADA ITW es una organización dedicada a empoderar mujeres a traves de la tecnologia."
+    />
+    <meta
+      property="og:image"
+      content="https://adaitw.org/wp-content/uploads/2020/10/Programacion_linkedin2-1.png"
+    />
+    <meta property="og:url" content="https://www.instagram.com/adaitw/" />
+    <meta property="og:type" content="website" />
 
-  <!-- Meta Tags Básicas -->
-  <title>Ada ITW</title>
-  <meta name="description"
-    content="ADA ITW es una organización dedicada a empoderar mujeres a traves de la tecnología." />
-  <meta name="author" content="ADA ITW" />
-  <meta name="keywords" content="ONG, ADA ITW, IT, mujeres, empoderar, frontend, desarrollo web, backend, AI, QA" />
+    <!-- geo tags-->
+    <meta name="geo.region" content="AR-B" />
+    <meta name="geo.placename" content="Buenos Aires" />
+    <meta name="geo.position" content="-34.607568;-58.437089" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="ADA ITW" />
-  <meta property="og:description"
-    content="ADA ITW es una organización dedicada a empoderar mujeres a traves de la tecnologia." />
-  <meta property="og:image" content="https://adaitw.org/wp-content/uploads/2020/10/Programacion_linkedin2-1.png" />
-  <meta property="og:url" content="https://www.instagram.com/adaitw/" />
-  <meta property="og:type" content="website" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ADA ITW" />
+    <meta
+      name="twitter:description"
+      content="ADA ITW es una organización dedicada a empoderar mujeres a traves de la tecnologia."
+    />
+    <meta
+      name="twitter:image"
+      content="https://adaitw.org/wp-content/uploads/2020/10/Programacion_linkedin2-1.png"
+    />
 
-  <!-- geo tags-->
-  <meta name="geo.region" content="AR-B" />
-  <meta name="geo.placename" content="Buenos Aires" />
-  <meta name="geo.position" content="-34.607568;-58.437089" />
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.instagram.com/adaitw/" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ADA ITW" />
-  <meta name="twitter:description"
-    content="ADA ITW es una organización dedicada a empoderar mujeres a traves de la tecnologia." />
-  <meta name="twitter:image" content="https://adaitw.org/wp-content/uploads/2020/10/Programacion_linkedin2-1.png" />
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.instagram.com/adaitw/" />
-
-  <!-- Estructura de Datos -->
-  <script type="application/ld+json">
+    <!-- Estructura de Datos -->
+    <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -52,11 +64,10 @@
         }
       }
     </script>
-</head>
+  </head>
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
-
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

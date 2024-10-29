@@ -133,7 +133,6 @@ export const BannerDisplay = ({
             fontWeight={'bold'}
             order={{ base: 2, md: 1, lg: 1 }}
             pt={[5, 0]}
-            //   justifyContent={'space-between'}
           >
             <Heading
               color={txtColor}

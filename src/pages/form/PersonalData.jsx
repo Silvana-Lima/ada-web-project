@@ -19,7 +19,6 @@ import {
 import { useForm } from 'react-hook-form'
 import { MdArrowForwardIos } from 'react-icons/md'
 
-// import womanTech from '../../assets/woman-tech.png'
 import womanTech from '../../assets/imgForm.png'
 import { useMultiStepFormContext } from '../../context/MultiStepFormContext'
 // import { countries } from '../../utils/countries'

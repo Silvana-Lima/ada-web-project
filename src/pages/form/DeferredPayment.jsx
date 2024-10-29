@@ -1,7 +1,7 @@
-import { useForm } from 'react-hook-form'
 import {
   Button,
   FormControl,
+  FormErrorMessage,
   FormLabel,
   HStack,
   Radio,
@@ -9,8 +9,8 @@ import {
   Stack,
   Text,
   Textarea,
-  FormErrorMessage,
 } from '@chakra-ui/react'
+import { useForm } from 'react-hook-form'
 import { RiArrowLeftLine } from 'react-icons/ri'
 
 const DeferredPayment = ({ formData, onSubmit, handleBack }) => {

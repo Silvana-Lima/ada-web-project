@@ -11,7 +11,6 @@ export const Testimonials = () => {
         px={['spacingM.base', 'spacingM.base', 'spacingM.base', 'spacingXl.xl']}
         py={['spacingXl.lg', 'spacingXl.lg', 'spacingXl.lg', '50px']}
       >
-        {/* <Show below="lg"> */}
         <Container maxWidth={['100%', '100%', '100%', '838px']} p={0}>
           <Heading
             as="h1"
@@ -60,7 +59,6 @@ export const Testimonials = () => {
             ]}
             gap={'40px'}
           >
-            {/* <Show below="lg"> */}
             {studentTestimonials
               .slice(0, 6)
               .map(({ name, career, comment, photo, id, enterprise }) => {

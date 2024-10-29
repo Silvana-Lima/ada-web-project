@@ -13,10 +13,10 @@ import {
 import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { MdArrowForwardIos } from 'react-icons/md'
+import { RiArrowLeftLine } from 'react-icons/ri'
 
 import womanWorking from '../../assets/woman-working.png'
 import { useMultiStepFormContext } from '../../context/MultiStepFormContext'
-import { RiArrowLeftLine } from 'react-icons/ri'
 
 const InscriptionData = ({
   handleNextStep,
@@ -64,6 +64,7 @@ const InscriptionData = ({
         <FormControl isInvalid={!!errors.selection}>
           <FormLabel>Selecciona una opción:</FormLabel>
           <Select
+            borderColor="gray.400"
             placeholder="Selecciona Carrera o Curso"
             {...register('selection', { required: 'Selecciona una opción' })}
           >
@@ -77,6 +78,7 @@ const InscriptionData = ({
             <FormLabel>Curso:</FormLabel>
             <Select
               id="course"
+              borderColor="gray.400"
               placeholder="Lista de Cursos"
               {...register('course', { required: 'Selecciona un curso' })}
               defaultValue={selectedCourse}
@@ -93,6 +95,7 @@ const InscriptionData = ({
             <FormLabel>Carrera:</FormLabel>
             <Select
               id="career"
+              borderColor="gray.400"
               placeholder="Lista de Carreras"
               {...register('career', { required: 'Selecciona una carrera' })}
               defaultValue={selectedCareer}
@@ -116,6 +119,7 @@ const InscriptionData = ({
         <FormControl isInvalid={!!errors.basicKnowledge}>
           <FormLabel>Conocimientos básicos de ofimática:</FormLabel>
           <Select
+            borderColor="gray.400"
             placeholder="Selecciona"
             {...register('basicKnowledge', {
               required: 'Este campo es obligatorio',

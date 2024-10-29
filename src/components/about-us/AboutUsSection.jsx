@@ -6,9 +6,7 @@ import { AboutUsVideo } from './AboutUsVideo'
 export const AboutUsSection = () => {
   return (
     <>
-      {/* Video about us */}
       <AboutUsVideo />
-      {/* Banner about us */}
       <BannerDisplay
         bgColor={'magenta.400'}
         aboutUs={true}

@@ -13,7 +13,6 @@ import {
 import { Icon } from '@iconify/react/dist/iconify.js'
 import PropTypes from 'prop-types'
 
-// import { NavLink } from 'react-router-dom'
 import theme from '../themes/theme'
 import { ModalFormInscription } from './training/ModalFormInscription'
 

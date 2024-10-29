@@ -1,21 +1,22 @@
-import { useState } from 'react'
 import {
   Box,
+  Button,
   FormControl,
   FormLabel,
+  HStack,
   Image,
   Select,
   Text,
-  Button,
-  HStack,
 } from '@chakra-ui/react'
-import womanPay from '../../assets/woman-pay.png'
-import pay from '../../assets/pay.png'
-import DeferredPayment from './DeferredPayment'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { useMultiStepFormContext } from '../../context/MultiStepFormContext'
 import { MdArrowForwardIos } from 'react-icons/md'
 import { RiArrowLeftLine } from 'react-icons/ri'
+
+import pay from '../../assets/pay.png'
+import womanPay from '../../assets/woman-pay.png'
+import { useMultiStepFormContext } from '../../context/MultiStepFormContext'
+import DeferredPayment from './DeferredPayment'
 
 const Payment = ({ isCareer, handleNextStep, prevStep }) => {
   const { updateFormData, formData } = useMultiStepFormContext()
@@ -146,13 +147,6 @@ const Payment = ({ isCareer, handleNextStep, prevStep }) => {
             handleBack={prevStep}
             onSubmit={handleSubmitDeferredPayment}
           />
-        )}
-        {selectedPaymentMethod === 'PD 25%' && (
-          <DeferredPayment onSubmit={handleSubmitDeferredPayment} />
-        )}
-
-        {selectedPaymentMethod === 'PD 50%' && (
-          <DeferredPayment onSubmit={handleSubmitDeferredPayment} />
         )}
 
         {selectedPaymentMethod === 'Tradicional' && (

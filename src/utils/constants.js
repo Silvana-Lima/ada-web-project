@@ -44,7 +44,6 @@ const testimonials = [
     enterprise: false,
     career: 'Alumna de la comision 15va. de back-end',
     comment:
-      // se adapta el texto original a la cantidad de caracteres necesarios sin modificar la idea original
       'Hace un año decidí dar un volantazo en mi vida y estudiar programación, un mundo desconocido para mí. Elegí Ada por las facilidades de pago, sin ellas no habría podido acceder a una carrera IT. Invertí en mi futuro, y cada clase me deja más contenta. Estoy ansiosa por trabajar de esto, aprendo cada día y mi mente está activa como nunca. He conocido gente maravillosa que me ayuda en cada duda, en la cursada nos apoyamos mutuamente.',
     photo: '/testimonials/ailen-paez.png',
   },
@@ -80,7 +79,7 @@ export const beginningCards = [
     descriptionL:
       'Dominarás el lenguaje de programación JavaScript para dar vida a experiencias web y móviles sorprendentes. Desde la optimización de recursos hasta el diseño de interfaces de usuario, este campo te desafiará a crear soluciones innovadoras y cautivadoras. ',
     descriptionS:
-      'Conviértete en desarrolladora front-end y crea sitios web utilizándo las últimas tecnologías del mercado.', // confirmar texto - se usaria para mobile
+      'Conviértete en desarrolladora front-end y crea sitios web utilizándo las últimas tecnologías del mercado.',
     date: 'Fecha estimada de inicio a confirmar',
     duration: '9 meses : 3 clases por semana (9hs semanales).',
   },
