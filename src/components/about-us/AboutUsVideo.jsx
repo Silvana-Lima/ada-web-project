@@ -84,6 +84,10 @@ export const AboutUsVideo = () => {
                 color={'gray.0'}
                 bg={'gray.800'}
                 onClick={handleUnmute}
+                _hover={{
+                  bg: 'gray.0',
+                  color: 'gray.800',
+                }}
               >
                 Activar sonido
               </Button>
