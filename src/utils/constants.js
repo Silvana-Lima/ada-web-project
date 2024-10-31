@@ -81,8 +81,21 @@ export const beginningCards = [
     descriptionS:
       'Conviértete en desarrolladora front-end y crea sitios web utilizándo las últimas tecnologías del mercado.',
     date: 'Fecha estimada de inicio a confirmar',
-    duration: '9 meses : 3 clases por semana (9hs semanales).',
+    duration: '2 clases por semana (6hs semanales).',
   },
+  {
+    id: 2,
+    title: 'Carrera',
+    career: 'Desarrollo back-end',
+    color: '#ff7d00',
+    descriptionL:
+      ' Exploramos el corazón de las aplicaciones, donde los datos cobran vida y la seguridad es primordial. Descubre cómo optimizamos la funcionalidad y la eficiencia para crear experiencias digitales sólidas y confiables para los usuarios.',
+    descriptionS:
+      'Conviértete en desarrolladora back-end y crea aplicaciones seguras y optimizadas, donde los datos cobran vida.',
+    date: 'Fecha estimada de inicio a confirmar',
+    duration: '2 clases por semana (6hs semanales).',
+  },
+
   {
     id: 3,
     title: 'Curso',

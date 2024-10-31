@@ -1,12 +1,9 @@
-// Import Swiper styles
 import 'swiper/css'
 import './styles.css'
 import 'swiper/css/pagination'
 
 import { Box } from '@chakra-ui/react'
-// import required modules
 import { Pagination } from 'swiper/modules'
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { beginningCards } from '../../../utils/constants'
