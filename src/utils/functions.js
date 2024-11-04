@@ -2,5 +2,5 @@
 export const handleHashLink = (el) => {
   const yOffset = -100
   const y = el.getBoundingClientRect().top + window.scrollY + yOffset
-  window.scrollTo({ top: y, behavior: 'smooth' })
+  window.scrollTo({ top: y, behavior: 'auto' })
 }

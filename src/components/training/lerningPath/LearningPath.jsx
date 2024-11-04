@@ -4,11 +4,11 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
-  Button,
+  // Button,
   Container,
   Divider,
   Heading,
-  Link,
+  // Link,
   Stack,
   Step,
   StepIndicator,
@@ -150,10 +150,11 @@ export const LearningPath = ({ type }) => {
             </Step>
           ))}
         </Stepper>
-        <Button
+        {/* TODO no hay programas aprobados - se comenta hasta que esten
+        diseñados y activos */}
+        {/* <Button
           as={Link}
-          // TODO no hay programas aprobados - se comenta hasta que esten diseñados y activos
-          // href={brochureLink}
+          href={brochureLink}
           isExternal
           w={'max-content'}
           variant={'buttonPrimary'}
@@ -164,7 +165,7 @@ export const LearningPath = ({ type }) => {
           _visited={{ textDecoration: 'none' }}
         >
           Descargá el contenido completo
-        </Button>
+        </Button> */}
       </Stack>
     </Container>
   )

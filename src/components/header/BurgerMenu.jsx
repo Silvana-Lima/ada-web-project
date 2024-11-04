@@ -41,7 +41,7 @@ export const BurgerMenu = ({ isOpen, onClose, onToggle }) => {
   const handleCloseMenu = () => {
     setActiveSubMenu(false)
     onClose()
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({ top: 0, behavior: 'auto' })
   }
 
   // funcion para redireccionar a una seccion dentro de una page usando HashLink de router
@@ -50,7 +50,7 @@ export const BurgerMenu = ({ isOpen, onClose, onToggle }) => {
     const element = document.getElementById('network-builder')
     if (element) {
       const y = element.getBoundingClientRect().top + window.scrollY + yOffset
-      window.scrollTo({ top: y, behavior: 'smooth' })
+      window.scrollTo({ top: y, behavior: 'auto' })
     }
   }
   return (
