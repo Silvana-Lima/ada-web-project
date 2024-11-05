@@ -8,10 +8,11 @@ import {
   ModalOverlay,
   useDisclosure,
 } from '@chakra-ui/react'
+import PropTypes from 'prop-types'
 
 import { CourseInscriptionForm } from './CourseInscriptionForm'
 
-export const ModalFormInscription = () => {
+export const ModalFormInscription = ({ subjectCourse }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <>
@@ -27,10 +28,13 @@ export const ModalFormInscription = () => {
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <CourseInscriptionForm />
+            <CourseInscriptionForm subjectCourse={subjectCourse} />
           </ModalBody>
         </ModalContent>
       </Modal>
     </>
   )
+}
+ModalFormInscription.propTypes = {
+  subjectCourse: PropTypes.string,
 }

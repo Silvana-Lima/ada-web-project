@@ -52,7 +52,7 @@ export const Frontend = () => {
         vector={vector}
       />
       <LearningPath type="frontend" />
-      <SignUp career={singUpFrontend} />
+      <SignUp subjectCourse="Desarrollo Front-End" career={singUpFrontend} />
     </Container>
   )
 }

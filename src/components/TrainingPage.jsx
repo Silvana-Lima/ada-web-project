@@ -25,6 +25,7 @@ export const TrainingPage = ({
   week,
   hours,
   syllabus,
+  subjectCourse,
 }) => {
   return (
     <Container
@@ -111,7 +112,7 @@ export const TrainingPage = ({
           <Heading color="orange.800" fontSize={'h4.xl'}>
             INSCRIBITE
           </Heading>
-          <CourseInscriptionForm />
+          <CourseInscriptionForm subjectCourse={subjectCourse} />
         </VStack>
       </SimpleGrid>
     </Container>
@@ -126,4 +127,5 @@ TrainingPage.propTypes = {
   week: PropTypes.string.isRequired,
   hours: PropTypes.string.isRequired,
   syllabus: PropTypes.string.isRequired,
+  subjectCourse: PropTypes.string,
 }

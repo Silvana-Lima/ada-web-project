@@ -31,6 +31,7 @@ export const PythonCourse = () => {
       week="2 clases por semana"
       hours="2:30 horas por clase"
       syllabus="https://drive.google.com/file/d/198NFGs7O3RfrNvBTVo0gN0HUN_7yikf-/view"
+      subjectCourse="Programación en Python"
     />
   )
 }

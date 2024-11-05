@@ -45,6 +45,7 @@ export const IACourse = () => {
       week="2 clases por semana"
       hours="3 horas por clase"
       syllabus="https://drive.google.com/file/d/1Ac2utMIEXtADagbJ4fe4YRMORA39K3tQ/view"
+      subjectCourse="IA Generativa Aplicada"
     />
   )
 }

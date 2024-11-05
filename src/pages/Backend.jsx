@@ -51,7 +51,7 @@ export const Backend = () => {
         bgColor={'magenta.200'}
       />
       <LearningPath type="backend" />
-      <SignUp career={singUpBackend} />
+      <SignUp subjectCourse="Desarrollo Back-End" career={singUpBackend} />
     </Container>
   )
 }

@@ -16,7 +16,10 @@ import PropTypes from 'prop-types'
 import theme from '../themes/theme'
 import { ModalFormInscription } from './training/ModalFormInscription'
 
-export const SignUp = ({ career: { modules, classSchedule, duration } }) => {
+export const SignUp = ({
+  subjectCourse,
+  career: { modules, classSchedule, duration },
+}) => {
   return (
     <Container
       maxW={'1440px'}
@@ -217,7 +220,7 @@ export const SignUp = ({ career: { modules, classSchedule, duration } }) => {
             </Box>
           </Flex>
         </SimpleGrid>
-        <ModalFormInscription />
+        <ModalFormInscription subjectCourse={subjectCourse} />
       </VStack>
     </Container>
   )
@@ -229,4 +232,5 @@ SignUp.propTypes = {
     classSchedule: PropTypes.string.isRequired,
     duration: PropTypes.string.isRequired,
   }).isRequired,
+  subjectCourse: PropTypes.string,
 }

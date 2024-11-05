@@ -150,7 +150,7 @@ const StepDescription = ({ details, id, textLink }) => {
 
 export default StepDescription
 StepDescription.propTypes = {
-  details: PropTypes.string.isRequired,
+  details: PropTypes.object.isRequired,
   textLink: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
 }

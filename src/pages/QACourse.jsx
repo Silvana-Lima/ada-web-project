@@ -30,6 +30,7 @@ export const QACourse = () => {
       week="2 clases por semana"
       hours="3 horas por clase"
       syllabus="https://drive.google.com/file/d/1Zg8IIJ6WZOvak24OEav1ev25MwFb9Jvq/view"
+      subjectCourse="QA Testing"
     />
   )
 }

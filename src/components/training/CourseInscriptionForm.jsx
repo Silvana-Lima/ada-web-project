@@ -5,11 +5,13 @@ import {
   FormLabel,
   Input,
   Text,
+  useToast,
 } from '@chakra-ui/react'
 import { useForm } from 'react-hook-form'
 
 // eslint-disable-next-line react/prop-types
 export const CourseInscriptionForm = ({ subjectCourse }) => {
+  const toast = useToast()
   const {
     register,
     handleSubmit,
@@ -18,6 +20,8 @@ export const CourseInscriptionForm = ({ subjectCourse }) => {
 
   const onSubmit = async (data) => {
     const subject = `${subjectCourse} ${data.name}`
+
+    // TODO no se cierra el form al hacer el envio
 
     const formData = new URLSearchParams({
       ...data,
@@ -37,6 +41,14 @@ export const CourseInscriptionForm = ({ subjectCourse }) => {
           body: formData,
         }
       )
+      // TODO no se muestra el toast al hacer el envio tampoco
+      toast({
+        title: 'Envío de formulario',
+        description: 'El formulario se envió satisfactoriamente',
+        status: 'success',
+        duration: 1000,
+        isClosable: true,
+      })
 
       if (response.ok) {
         // Redirigir si el envío fue exitoso
